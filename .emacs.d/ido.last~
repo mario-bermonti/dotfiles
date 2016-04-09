@@ -1,0 +1,105 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/MBP/Documents/Proyectos/crear_hojas_trabajo_lectura/" . "Niveles de dificultad/")
+ ("/Users/MBP/Documents/Proyectos/" . "crear_hojas_trabajo_lectura/")
+ ("/Users/MBP/Documents/" . "Proyectos/")
+ ("/Users/MBP/python_modules/" . "libraryext/")
+ ("/Users/MBP/" . "python_practice/")
+ ("/Users/MBTP/Desktop/" . "analisis palabras/")
+ ("/Users/MBTP/" . "Desktop/")
+ ("/Users/MBTP/Documents/Proyectos/" . "crear_hojas_trabajo_lectura/")
+ ("/Users/MBTP/Documents/" . "Proyectos/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/MBP/python_practice/"
+ "/Users/MBP/Documents/Proyectos/Intervencion/"
+ "/Users/MBP/Desktop/analisis palabras/"
+ "/Users/MBP/Documents/Proyectos/crear_hojas_trabajo_lectura/"
+ "/Users/MBP/Documents/Proyectos/Word-analisis/"
+ "/Users/MBP/"
+ "/Users/MBP/python_modules/libraryext/"
+ "/Users/MBTP/Desktop/analisis palabras/"
+ "/Users/MBTP/"
+ "/Users/MBTP/Desktop/libraryext/"
+ "/Users/MBTP/Downloads/settings/"
+ "/Users/MBTP/.emacs.d/"
+ "/Users/MBTP/Desktop/"
+ "/Volumes/MBP/Linguistics Lab/randomization_spreadsheets/"
+ "/Users/MBTP/Documents/Proyectos/crear_hojas_trabajo_lectura/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "imgbutton.py"
+ "palabras validas finales.txt"
+ "clean_non_words.py"
+ "palabras validas finales"
+ "palabras no validas finales"
+ "p.txt"
+ "palabras finales.txt"
+ "clean_empty_lines.py"
+ "validWords.txt"
+ "no lines.txt"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/MBP/python_practice/" (22279 48343 0 0) "imgbutton.py~" "imgbutton.py" "happy_face.png" "checkmark.png" "../" "./")
+
+ ("/Users/MBP/" (22279 48451 0 0) "VirtualBox VMs/" "Sites/" "python_practice/" "python_modules/" "Public/" "Pictures/" "Music/" "Movies/" "Library/" "Google Drive/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "code_sharing/" "Box Sync (backup)/" "Box Sync/" "Applications/" ".vimrc.rtf" ".vimrc" ".viminfo" ".vim/" ".Trash/" ".t.py" ".ssh/" ".spss/" ".python_history" ".oracle_jre_usage/" ".matplotlib/" ".kivy/" ".ipython/" ".InstallAnywhere/" ".idlerc/" ".gitconfig" ".emacs~" ".emacs.d/" ".emacs" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile" ".bash_history" "../" "./")
+
+ ("/Users/MBP/Documents/Proyectos/Intervencion/" (22279 50605 0 0) "testintervention.py~" "testintervention.py" "test.py~" "test.py" "t.py~" "t.py" "storage.py~" "storage.py" "stimuli/" "settings.py~" "settings.py" "scoring.py~" "scoring.py" "ReadStimulus.py~" "past/" "libraryext/" "intervention.py~" "intervention.py" "interface.py~" "interface.py" "images/" "f.py~" "f.py" "data.py~" "data.py" "data/" "Config.txt" "cd_dir.bat" "audio.py~" "audio.py" "__pycache__/" "__init__.py~" "__init__.py" ".git/" ".DS_Store" ".#intervention.py" "#testintervention.py#" "#Admi.py#" "../" "./")
+
+ ("/Users/" (22273 51974 0 0) "Shared/" "MBP/" "Guest/" ".localized" "../" "./")
+
+ ("/Users/MBP/Desktop/analisis palabras/" (22277 9705 0 0) "~$palabras rae.xlsx" "written_sa_wordlist_out.txt" "words3.txt" "words2.txt" "word_freq_cleaned_words_2.txt" "word_freq_cleaned_words.txt" "validWords.txt" "utilizadas.txt~" "utilizadas.txt" "sort.py" "para_limpieza.txt" "palabras validas finales~" "palabras validas finales.txt~" "palabras validas finales.txt" "palabras validas finales" "palabras utilizadas/" "palabras sin usar.txt" "palabras rae.xlsx" "palabras para prueba simbolos_utf.txt" "palabras no validas finales" "palabras finales.txt" "palabras en orden alfabetico" "palabras eliminadas.txt~" "palabras eliminadas.txt" "palabras cortas.txt" "p.txt~" "p.txt" "no lines.txt" "Niveles de dificultad_VERSION 5/" "Niveles de dificultad_VERSION 4/" "Niveles de dificultad_VERSION 3/" "Niveles de dificultad_VERSION 2/" "Niveles de dificultad_VERSION 1/" "MBP@Marios-MacBook-Pro-2.local.20856~" "MBP@Marios-MacBook-Pro-2.local.20856" "limpieza.py~" "limpieza.py" "libraryext/" "get_short_words.py~" "get_short_words.py" "eliminar_palabras_utilizadas.py~" "eliminar_palabras_utilizadas.py" "eliminar_palabras_muy_cortas.py~" "eliminar_palabras_muy_cortas.py" "descripcion_documentos.txt" "cleaned_words.txt" "clean_non_words.py~" "clean_non_words.py" "clean_invalid_words.py~" "clean_invalid_words.py" "clean_empty_lines.py~" "clean_empty_lines.py" "checking.xlsx" "banco palabras enlace GC.txt" "__init__.py" ".projectile" ".DS_Store" "#clean_words_with_symbols.py#" "../" "./")
+
+ ("/Users/MBP/Documents/Proyectos/crear_hojas_trabajo_lectura/" (22273 47190 0 0) "words2.txt" "randomize.py~" "randomize.py" "Niveles de dificultad/" "libraryext/" "hojas de trabajo/" "hoja de trabajo 4" "hoja de trabajo 1" "crear_hojas.py~" "crear_hojas.py" "cleaned_words.txt" "clean_words.py~" "clean_words.py" "__init__.py" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Proyectos/Word-analisis/" (22273 49119 0 0) "words3.txt" "words2.txt" "words.txt" "word_analysis.py~" "word_analysis.py" "w.txt" "testing/" "results.csv" "libraryext/" "invalid words.txt" "analyzer.py~" "analyzer.pyc" "analyzer.py" "anagrams.txt" "anagrams.csv" "__pycache__/" "__init__.py" ".gitattributes" ".git/" ".DS_Store" "#word_analysis.py#" "#analyzer.py#" "../" "./")
+
+ ("/Users/MBP/Documents/Proyectos/crear_hojas_trabajo_lectura/Niveles de dificultad/" (22273 20548 0 0) "nivel7.txt" "nivel6.txt" "nivel5.txt" "nivel4.txt" "nivel3.txt" "nivel2.txt" "nivel1.txt" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Proyectos/" (22239 22945 0 0) "Word-analisis/" "Intervencion/" "crear_hojas_trabajo_lectura/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/" (22240 55967 0 0) "Windows 8.1 with Update (multiple editions) (x64) - DVD (English)/" "Universidad/" "Tami/" "SPSSInc/" "Shared_code/" "Recibos/" "Psicología - Papers y recursos/" "Proyectos/" "Programas/" "programacion/" "Préstamos/" "pendrive/" "Libros/" "Leer/" "Investigación/" "Info caso Zoraida Pérez.docx" "EVITA/" "Estiramiento/" "Escuela Graduada/" "emacs config/" "Curriculum Vitae/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/python_modules/libraryext/" (22267 13882 0 0) "words.txt" "test.py" "iofiles.py~" "iofiles.pyc" "iofiles.py" "cd_dir.bat" "__pycache__/" "__init__.pyc" "__init__.py" ".gitignore" ".gitattributes" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/python_modules/" (22267 14115 0 0) "libraryext/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Desktop/" (22272 10477 0 0) "~$banco palabras_info freq.xlsx" "comparacion documentos/" "analisis palabras/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/" (22273 13236 0 0) "Library/" "../" "./")
+
+ ("/Users/MBTP/.emacs.d/" (22272 15665 0 0) "projectile-bookmarks.eld" "places" "ido.last~" "ido.last" "highlight-current-line-0.57/" "elpa/" "auto-save-list/" "ac-comphist.dat" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/Desktop/analisis palabras/" (22272 12551 0 0) "written_sa_wordlist_out.txt" "word_freq_cleaned_words.txt" "para_limpieza.txt" "palabras para prueba simbolos_utf.txt" "palabras finales.txt" "palabras eliminadas.txt" "Niveles de dificultad_VERSION 4/" "Niveles de dificultad_VERSION 3/" "Niveles de dificultad_VERSION 2/" "Niveles de dificultad_VERSION 1/" "limpieza.py~" "limpieza.py" "libraryext/" "eliminar_palabras_muy_cortas.py~" "eliminar_palabras_muy_cortas.py" "descripcion_documentos.txt" "cleaned_words.txt" "checking.xlsx" "banco palabras enlace GC.txt" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/Documents/Proyectos/crear_hojas_trabajo_lectura/" (22270 43891 0 0) "randomize.py~" "randomize.py" "Niveles de dificultad/" "libraryext/" "hojas de trabajo_1/" "hojas de trabajo/" "hoja de trabajo 4" "hoja de trabajo 1" "crear_hojas.py~" "crear_hojas.py" "clean_words.py~" "clean_words.py" "__init__.py" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/Desktop/" (22272 10477 0 0) "~$banco palabras_info freq.xlsx" "comparacion documentos/" "analisis palabras/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/Desktop/libraryext/" (22267 7572 0 0) "words.txt" "test.py" "iofiles.py~" "iofiles.pyc" "iofiles.py" "cd_dir.bat" "__pycache__/" "__init__.pyc" "__init__.py" ".gitignore" ".gitattributes" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/Documents/Proyectos/Word-analisis/" (22255 28235 0 0) "words2.txt" "words.txt" "word_analysis.py~" "word_analysis.py" "w.txt" "testing/" "results.csv" "libraryext/" "invalid words.txt" "analyzer.py~" "analyzer.pyc" "analyzer.py" "anagrams.txt" "anagrams.csv" "__pycache__/" "__init__.py" ".gitattributes" ".git/" ".DS_Store" "#word_analysis.py#" "#analyzer.py#" "../" "./")
+
+ ("/Users/MBTP/Downloads/settings/" (22255 26301 0 0) "window-settings.el" "ui-settings.el" "text-settings.el" "python-settings.el" "ido-settings.el" "fill-column-indicator-settings.el" "cursor-settings.el" "color-theme-settings.el" "auto-complete-settings.el" "../" "./")
+
+ ("/Users/MBTP/Downloads/" (22255 26000 0 0) "~$rph Asgnt2 Turkish_NabilaFonseca.docx" "~$lyaneth Laureano Vidal [english].docx" "written_sa_constraints_out.txt" "vrp-test transc99.wav" "VirtualBox-5.0.14-105127-OSX.dmg" "VirtualBox-5.0.12-104815-OSX.dmg" "Story Syntax Counts_final.xlsx" "sreb1.10.1630.dmg" "solicitud degi.docx" "Skype_7.20.378.dmg" "Silverlight.dmg" "Silverlight-3.dmg" "Silverlight-2.dmg" "settings/" "screen_recorder_setup.exe" "Scanned from a Xerox Multifunction Device.pdf" "Recibo" "rcpt10080313744296.pdf" "Razer_Synapse_Mac_Driver_v1.45.1.dmg" "quinto-congreso-est-inv-graduada-solicitud_Mario Bermonti.docx" "quinto-congreso-est-inv-graduada-solicitud.docx" "quinto-congreso-est-inv-graduada-solicitud (1).docx" "Psic 3002H-enero 2016.pdf" "prueba (Autosaved).xlsx" "Oracle_VM_VirtualBox_Extension_Pack-5.0.12-104815.vbox-extpack" "mwords.tar.Z" "mwords/" "Milyaneth Laureano Vidal [english].docx" "Microsoft_Office_2016_Installer.pkg" "Materiales hoja de trabajo/" "Materiales copy.docx" "mario bermonti perez cong enmienda-0001.pdf" "mario bermonti perez cong enmienda-0001-1.pdf" "lpmacosx.zip" "lpmacosx/" "jre-7u55-macosx-x64 (1).dmg" "JavaForOSX2014-001.dmg" "javaforosx.dmg" "Jabra Suite for Mac_2.5.dmg" "Invitacion participantes psicologos_M Bermonti.pdf" "Installing Jabra Suite for Mac.pdf" "installgoogledrive.dmg" "googlechrome.dmg" "Gitter-1.162.dmg" "GitHub Desktop 216.zip" "Firefox 42.0.dmg" "emacs-settings.zip" "DropboxInstaller.dmg" "deluge-1.3.12-osx-x64-inst.dmg" "deluge-1.3.11-osx-x86.tbz2" "Deluge 2.app/" "Curriculum Vitae_Mario Bermonti_Ingles (2015_12_10 01_06_09 UTC).docx" "Cipshi_Solicitud_Modificacion.doc" "CAS2 Chapter 3_February 25, 2016_REV MBP.doc" "Carta CIPSHI 1 de mayo 2015.docx" "Box Sync Installer.dmg" "blackhole.jpg" "Beca viaje DEGI Mario Bermonti.pdf" "b-flac-converter-mac-custom-cnet.dmg" "Advanced Search_ EBSCOhost_files/" "Advanced Search_ EBSCOhost.html" "AdobeReader_dc_en_a_install.dmg" "AdobeFlashPlayer_19_a_install.dmg" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/Desktop/analisis palabras/libraryext/" (22254 62715 0 0) "words.txt" "test.py" "iofiles.py~" "iofiles.pyc" "iofiles.py" "cd_dir.bat" "__pycache__/" "__init__.pyc" "__init__.py" ".gitignore" ".gitattributes" ".git/" ".DS_Store" "../" "./")
+
+ ("/Volumes/MBP/Linguistics Lab/randomization_spreadsheets/" (22248 7620 0 0) "testing.txt" "._A1_1.txt~" "A1_1.txt~" "._CB2_18.txt" "CB2_18.txt" "._CB2_17.txt" "CB2_17.txt" "._CB2_16.txt" "CB2_16.txt" "._C1_9.txt" "C1_9.txt" "._C1_8.txt" "C1_8.txt" "._C1_7.txt" "C1_7.txt" "._B2_15.txt" "B2_15.txt" "._B2_14.txt" "B2_14.txt" "._B2_13.txt" "B2_13.txt" "._B1_6.txt" "B1_6.txt" "._B1_5.txt" "B1_5.txt" "._B1_4.txt" "B1_4.txt" "._A2_12.txt" "A2_12.txt" "._A2_11.txt" "A2_11.txt" "._A2_10.txt" "A2_10.txt" "._A1_3.txt" "A1_3.txt" "._A1_2.txt" "A1_2.txt" "A1_1.txt" "._.DS_Store" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/Documents/Proyectos/" (22239 22945 0 0) "Word-analisis/" "Intervencion/" "crear_hojas_trabajo_lectura/" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/Documents/" (22240 55967 0 0) "Windows 8.1 with Update (multiple editions) (x64) - DVD (English)/" "Universidad/" "Tami/" "SPSSInc/" "Shared_code/" "Recibos/" "Psicología - Papers y recursos/" "Proyectos/" "Programas/" "programacion/" "Préstamos/" "pendrive/" "Libros/" "Leer/" "Investigación/" "Info caso Zoraida Pérez.docx" "EVITA/" "Estiramiento/" "Escuela Graduada/" "emacs config/" "Curriculum Vitae/" ".localized" ".DS_Store" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
