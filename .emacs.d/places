@@ -1,5 +1,9 @@
 ;;; -*- coding: utf-8 -*-
-(("/Users/MBP/.emacs" . 8161)
+(("/Users/MBP/.emacs" . 353)
+ ("/Users/MBP/Documents/proyectos/prepare_words-scripts/realwords.py" . 607)
+ ("/Users/MBP/Documents/proyectos/prepare_words-scripts/testdict.py" . 541)
+ ("/Users/MBP/Documents/proyectos/prepare_words-scripts/repeated.py~" . 603)
+ ("/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/ej9.py" . 54)
  ("/Users/MBP/Documents/proyectos/prepare_words-scripts/limpieza.py" . 49)
  ("/Users/MBP/Documents/proyectos/prepare_words-scripts/"
   (dired-filename . "/Users/MBP/Documents/proyectos/prepare_words-scripts/readme.txt"))
@@ -23,7 +27,6 @@
  ("/Users/MBP/Documents/proyectos/Intervencion/intervention.py" . 29279)
  ("/Users/MBP/python_practice/iteratorex.py" . 59)
  ("/Users/MBP/python_practice/iterex.txt" . 33)
- ("/Users/MBP/Documents/proyectos/prepare_words-scripts/todo.txt" . 248)
  ("/Users/MBP/Documents/Proyectos/Word-analisis/words.txt" . 63676)
  ("/Users/MBP/.emacs.d/elpa/auctex-11.89.5/auctex-autoloads.el" . 10331)
  ("/Users/MBP/Documents/proyectos/prepare_words-scripts/testsmockfiles/mock_clean_empty_lines.txt" . 38)

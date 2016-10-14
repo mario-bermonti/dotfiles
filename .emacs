@@ -9,7 +9,7 @@
 (setq column-number-mode t)
 
 ;; Default font size
-(set-default-font "Arial 16")
+(set-default-font "Inconsolata 17")
 
 ;; show matching parens
 (show-paren-mode 1)
@@ -39,6 +39,19 @@
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
+
+;;====================================
+;; Using utf-8 symbols
+(set-language-environment "UTF-8")
+(set-default-coding-systems 'utf-8)
+;; insert special symbols
+(define-key key-translation-map (kbd "C-' a") (kbd "á"))
+(define-key key-translation-map (kbd "C-' e") (kbd "é"))
+(define-key key-translation-map (kbd "C-' i") (kbd "í"))
+(define-key key-translation-map (kbd "C-' o") (kbd "ó"))
+(define-key key-translation-map (kbd "C-' u") (kbd "ú"))
+(define-key key-translation-map (kbd "C-' n") (kbd "ñ"))
+(define-key key-translation-map (kbd "C-` u") (kbd "ü"))
 
 ;;====================================
 ;; Para usar melpa en vez de elpa. Melpa esta up-to-date.
@@ -131,7 +144,20 @@
     ("0fb6369323495c40b31820ec59167ac4c40773c3b952c264dd8651a3b704f6b5" "05c3bc4eb1219953a4f182e10de1f7466d28987f48d647c01f1f0037ff35ab9a" "a041a61c0387c57bb65150f002862ebcfe41135a3e3425268de24200b82d6ec9" "64581032564feda2b5f2cf389018b4b9906d98293d84d84142d90d7986032d33" default)))
  '(inhibit-startup-screen t)
  '(python-shell-interpreter "ipython")
- '(save-place t nil (saveplace)))
+ '(save-place t nil (saveplace))
+ '(show-paren-mode t))
+
+
+;#############################################
+;Load a template for python
+ 
+(add-hook 'find-file-hooks 'maybe-load-template)
+(defun maybe-load-template ()
+  (interactive)
+  (when (and
+         (string-match "\\.py$" (buffer-file-name))
+         (eq 1 (point-max)))
+    (insert-file "~/.emacs.d/pythontemplate.py")))
 
 ;;=================================================
 ;; EVIL MODE
@@ -205,3 +231,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+;;####################

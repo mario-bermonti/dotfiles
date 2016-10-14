@@ -17,6 +17,7 @@
 ;; ----- ido-work-directory-list -----
 (
  "/Users/MBP/"
+ "/Users/MBP/Documents/proyectos/prepare_words-scripts/testingfiles/"
  "/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/"
  "/Users/MBP/Documents/proyectos/prepare_words-scripts/"
  "/Users/MBP/Documents/proyectos/Intervencion/"
@@ -41,6 +42,7 @@
 ;; ----- ido-work-file-list -----
 (
  ".emacs"
+ "position.txt"
  "ej8.py"
  "test2.py"
  "ej7.py"
@@ -49,18 +51,21 @@
  "palabras validas.txt"
  "iteratorex.py"
  "iterex.txt"
- "testdesign.txt"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/" (22516 62298 0 0) "t.py" "ej8.py" "ej7.py~" "ej7.py" "__init__.py" ".projectile" "../" "./")
+ ("/Users/MBP/" (22529 1330 0 0) "VirtualBox VMs/" "Sites/" "python_practice/" "python_modules/" "Public/" "Pictures/" "Music/" "Movies/" "Library/" "Google Drive/" "Downloads/" "Documents/" "Desktop/" "Box Sync (backup)/" "Box Sync/" "Applications/" ".vimrc.rtf" ".vimrc" ".viminfo" ".vim/" ".Trash/" ".ssh/" ".sqlanywhere16/" ".spss/" ".python_history" ".psychopy2/" ".oracle_jre_usage/" ".matplotlib/" ".lesshst" ".kivy/" ".jupyter/" ".ipython/" ".ipynb_checkpoints/" ".InstallAnywhere/" ".idlerc/" ".gitconfig" ".git/" ".emacs~" ".emacs.d/" ".emacs" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile" ".bash_history" "../" "./")
 
- ("/Users/MBP/Desktop/" (22516 20742 0 0) "~$banco palabras_info freq.xlsx" "Tabla Sattler.png" "OFERTAS DE EMPLEO, 16 DE SEPTIEMBRE DE 2016.pdf" "fotos pc ram/" "CV_Mario Bermonti.pdf" "analisis palabras/" ".localized" ".DS_Store" "../" "./")
+ ("/Users/MBP/Desktop/" (22527 63342 0 0) "~$banco palabras_info freq.xlsx" "fotos pc ram/" "CV_Mario Bermonti.pdf" "Box Sync/" "analisis palabras/" ".localized" ".DS_Store" "../" "./")
 
- ("/Users/MBP/" (22515 61181 0 0) "VirtualBox VMs/" "Sites/" "python_practice/" "python_modules/" "Public/" "Pictures/" "Music/" "Movies/" "Library/" "Google Drive/" "Downloads/" "Documents/" "Desktop/" "Box Sync (backup)/" "Box Sync/" "Applications/" ".vimrc.rtf" ".vimrc" ".viminfo" ".vim/" ".Trash/" ".ssh/" ".sqlanywhere16/" ".spss/" ".python_history-" ".psychopy2/" ".oracle_jre_usage/" ".matplotlib/" ".lesshst" ".kivy/" ".jupyter/" ".ipython/" ".ipynb_checkpoints/" ".InstallAnywhere/" ".idlerc/" ".gitconfig" ".git/" ".emacs~" ".emacs.d/" ".emacs" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile" ".bash_history" "../" "./")
+ ("/Users/MBP/Documents/proyectos/prepare_words-scripts/testingfiles/" (22521 31585 0 0) "position.txt~" "position.txt" "../" "./")
 
- ("/Users/MBP/Documents/proyectos/prepare_words-scripts/" (22515 61011 0 0) "todo.txt" "testsmockfiles/" "tests.py" "sort.py" "shortwords.py~" "shortwords.py" "repeated.py~" "repeated.py" "realwords.py~" "realwords.py" "readme.txt" "raewords.txt" "palabras validas.txt" "palabras finales.txt" "limpieza.py~" "limpieza.py" "invalid.py" "get_short_words.py~" "get_short_words.py" "eliminar_palabras_utilizadas.py~" "eliminar_palabras_utilizadas.py" "eliminar_palabras_muy_cortas.py~" "cleanwords.py" "clean_non_words.py~" "clean_non_words.py" "clean_invalid_words.py~" "clean_empty_lines.py~" "clean_empty_lines.py" "__pycache__/" "__init__.py" ".projectile" ".git/" "#shortwords.py#" "#clean_words_with_symbols.py#" "../" "./")
+ ("/Users/MBP/Documents/proyectos/prepare_words-scripts/" (22526 37680 0 0) "testsmockfiles/" "tests.py" "testingfiles/" "testdict.py~" "testdict.py" "sort.py" "shortwords.py~" "shortwords.py" "repeated.py~" "repeated.py" "realwords.py~" "realwords.py" "readme.txt" "raewords.txt" "palabras validas.txt" "palabras finales.txt" "limpieza.py~" "limpieza.py" "invalid.py" "get_short_words.py~" "get_short_words.py" "eliminar_palabras_utilizadas.py~" "eliminar_palabras_utilizadas.py" "eliminar_palabras_muy_cortas.py~" "clean_non_words.py~" "clean_non_words.py" "clean_invalid_words.py~" "clean_empty_lines.py~" "clean_empty_lines.py" "__pycache__/" "__init__.py" ".projectile" ".git/" "#shortwords.py#" "#clean_words_with_symbols.py#" "../" "./")
+
+ ("/Users/MBP/python_practice/" (22521 30345 0 0) "simbolos.txt" "readwithwhile.py~" "readwithwhile.py" "read_symbols.py" "iterex.txt~" "iterex.txt" "iteratorex.py~" "iteratorex.py" "importtests.pyc" "importtests.py" "imgbutton.py~" "imgbutton.py" "happy_face.png" "data.txt" "checkmark.png" "a.py" ".projectile" "../" "./")
+
+ ("/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/" (22517 188 0 0) "t.py" "ej9.py" "ej8.py" "ej7.py~" "ej7.py" "__init__.py" ".projectile" "../" "./")
 
  ("/Users/MBP/python_modules/libraryext/" (22513 20366 0 0) "words.txt" "test.py" "iofiles.py~" "iofiles.pyc" "iofiles.py" "cd_dir.bat" "__pycache__/" "__init__.pyc" "__init__.py" ".gitignore" ".gitattributes" ".git/" ".DS_Store" "../" "./")
 
@@ -71,8 +76,6 @@
  ("/Users/MBP/Documents/Proyectos/Word-analisis/" (22502 51199 0 0) "words3.txt" "words2.txt" "words.txt" "word_analysis.py~" "word_analysis.py" "w.txt" "testing/" "results.csv" "Palabras para hojas de trabajo_6_abril_2016.txt" "invalid words.txt" "analyzer.py~" "analyzer.pyc" "analyzer.py" "anagrams.txt" "anagrams.csv" "__pycache__/" "__init__.py" ".gitattributes" ".git/" ".DS_Store" "#word_analysis.py#" "#analyzer.py#" "../" "./")
 
  ("/Users/MBP/Documents/proyectos/Intervencion/" (22505 24216 0 0) "test.py~" "test.py" "storage.py~" "storage.py" "stimuli/" "settings.py~" "settings.py" "scoring.py~" "scoring.py" "ReadStimulus.py~" "past/" "intervention.py~" "intervention.py" "interface.py~" "interface.py" "images/" "data.py~" "data.py" "data/" "Config.txt" "cd_dir.bat" "audio.py~" "audio.py" "__pycache__/" "__init__.py~" "__init__.py" ".git/" ".DS_Store" "#testintervention.py#" "#Admi.py#" "../" "./")
-
- ("/Users/MBP/python_practice/" (22498 33854 0 0) "simbolos.txt" "read_symbols.py" "iterex.txt~" "iterex.txt" "iteratorex.py~" "iteratorex.py" "importtests.pyc" "importtests.py" "imgbutton.py~" "imgbutton.py" "happy_face.png" "checkmark.png" "a.py" "../" "./")
 
  ("/Users/MBP/Documents/proyectos/prepare_words-scripts/testsmockfiles/" (22430 48434 0 0) "mock_clean_empty_lines.txt~" "mock_clean_empty_lines.txt" "../" "./")
 
