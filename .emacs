@@ -9,7 +9,7 @@
 (setq column-number-mode t)
 
 ;; Default font size
-(set-default-font "Inconsolata 17")
+(set-default-font "Monaco 17")
 
 ;; show matching parens
 (show-paren-mode 1)
@@ -26,12 +26,16 @@
 (setq highlight-current-line-whole-line nil)
 (setq hl-line-face (quote highlight))
 
-;; Formatting
+;; FORMATTING
 ;; Eliminate trailing white space when buffer is saved
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ; require final newlines in files when they are saved
 (setq require-final-newline t)
+
+;; Stop making backups and autosave files
+(setq make-backup-files nil)
+(setq auto-save-default nil)
 
 ;; CONTROL UI
 ; window modifications
@@ -69,6 +73,14 @@
 
 ;; Git
 (require 'magit)
+;; Shortcuts
+(global-set-key (kbd "C-x g b") 'magit-branch-and-checkout)
+(global-set-key (kbd "C-x g s") 'magit-status)
+(global-set-key (kbd "C-x g d") 'magit-diff)
+(global-set-key (kbd "C-x g l") 'magit-log)
+(global-set-key (kbd "C-x g c") 'magit-checkout)
+(global-set-key (kbd "C-x g p") 'magit-push)
+
 
 ;; PYTHON
 ;; Estas son config a emacs para Python.
@@ -143,14 +155,19 @@
    (quote
     ("0fb6369323495c40b31820ec59167ac4c40773c3b952c264dd8651a3b704f6b5" "05c3bc4eb1219953a4f182e10de1f7466d28987f48d647c01f1f0037ff35ab9a" "a041a61c0387c57bb65150f002862ebcfe41135a3e3425268de24200b82d6ec9" "64581032564feda2b5f2cf389018b4b9906d98293d84d84142d90d7986032d33" default)))
  '(inhibit-startup-screen t)
+ '(package-selected-packages
+   (quote
+    (ac-js2 js2-mode web-mode projectile monokai-theme key-chord jedi flymake-python-pyflakes evil-tutor evil-org evil-magit elhome autotest auctex)))
  '(python-shell-interpreter "ipython")
+ ;; Fixeds ipython trying to use colors and emacs displaying it wrong
+ '(python-shell-interpreter-args "--simple-prompt -i")
  '(save-place t nil (saveplace))
  '(show-paren-mode t))
 
 
 ;#############################################
 ;Load a template for python
- 
+
 (add-hook 'find-file-hooks 'maybe-load-template)
 (defun maybe-load-template ()
   (interactive)
@@ -234,3 +251,10 @@
 
 
 ;;####################
+
+;; JAVASCRIPT
+;; Enable js mode
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+;; Enable autocompletion for js
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+(global-set-key (kbd "C-c .") 'ac-js2-jump-to-definition)
