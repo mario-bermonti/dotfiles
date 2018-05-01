@@ -157,9 +157,8 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (ac-js2 js2-mode web-mode projectile monokai-theme key-chord jedi flymake-python-pyflakes evil-tutor evil-org evil-magit elhome autotest auctex)))
+    (ein ac-js2 js2-mode web-mode projectile monokai-theme key-chord jedi flymake-python-pyflakes evil-tutor evil-org evil-magit elhome autotest auctex)))
  '(python-shell-interpreter "ipython")
- ;; Fixeds ipython trying to use colors and emacs displaying it wrong
  '(python-shell-interpreter-args "--simple-prompt -i")
  '(save-place t nil (saveplace))
  '(show-paren-mode t))
@@ -258,3 +257,11 @@
 ;; Enable autocompletion for js
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 (global-set-key (kbd "C-c .") 'ac-js2-jump-to-definition)
+
+
+;; EMACS IPYTHON NOTEBOOK
+(package-initialize)
+(require 'ein)
+(require 'ein-loaddefs)
+(require 'ein-notebook)
+(require 'ein-subpackages)
