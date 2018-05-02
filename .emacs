@@ -9,7 +9,7 @@
 (setq column-number-mode t)
 
 ;; Default font size
-(set-default-font "Monaco 17")
+(set-default-font "Hack 16")
 
 ;; show matching parens
 (show-paren-mode 1)
