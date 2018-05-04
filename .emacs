@@ -224,6 +224,39 @@
     (insert-file "~/.emacs.d/pythontemplate.py")))
 
 ;;=================================================
+;; Leader Key
+(global-evil-leader-mode)
+(evil-leader/set-leader "<SPC>")
+;; General commands
+(evil-leader/set-key
+  "f" 'evil-scroll-page-down
+  "b" 'evil-scroll-page-up
+  "lb" 'ido-switch-buffer
+  "ff" 'find-file
+  )
+
+;; Projectile
+(evil-leader/set-key
+  "pf" 'projectile-find-file
+  "pw" 'projectile-find-file-other-window
+  )
+
+;; Jedi
+(evil-leader/set-key
+  "jd" 'jedi:goto-definition
+  "ji" 'jedi:show-doc
+  )
+
+;; Magit
+(evil-leader/set-key
+  "gs" 'magit-status
+  "gc" 'magit-commit
+  "gb" 'magit-branch-and-checkout
+  "gd" 'magit-diff
+  "gl" 'magit-log
+  "gp" 'magit-push
+  )
+
 ;; EVIL MODE
 (add-to-list 'load-path "~/.emacs.d/evil")
      (require 'evil)
