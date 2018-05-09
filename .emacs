@@ -1,4 +1,4 @@
-;; -*- lexical-binding: t -*-
+; -*- lexical-binding: t -*-
 
 
 ;; VISUAL ASPECTS
@@ -256,6 +256,14 @@
   "gl" 'magit-log
   "gp" 'magit-push
   )
+
+;; EIN
+(evil-leader/set-key
+  "nn" 'ein:worksheet-goto-next-input
+  "np" 'ein:worksheet-goto-prev-input
+  "ns" 'ein:notebook-save-notebook-command
+  )
+
 
 ;; EVIL MODE
 (add-to-list 'load-path "~/.emacs.d/evil")
