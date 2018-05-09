@@ -232,7 +232,6 @@
   "f" 'evil-scroll-page-down
   "b" 'evil-scroll-page-up
   "lb" 'ido-switch-buffer
-  "ff" 'find-file
   )
 
 ;; Projectile
