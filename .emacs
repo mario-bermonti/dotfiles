@@ -235,15 +235,15 @@
   )
 
 ;; Projectile
-(evil-leader/set-key
+(evil-leader/set-key-for-mode 'python-mode
   "pf" 'projectile-find-file
   "pw" 'projectile-find-file-other-window
   )
 
 ;; Jedi
 (evil-leader/set-key
-  "jd" 'jedi:goto-definition
-  "ji" 'jedi:show-doc
+  "jg" 'jedi:goto-definition
+  "jd" 'jedi:show-doc
   )
 
 ;; Magit
