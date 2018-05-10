@@ -261,6 +261,10 @@
   "nn" 'ein:worksheet-goto-next-input
   "np" 'ein:worksheet-goto-prev-input
   "ns" 'ein:notebook-save-notebook-command
+  "ng" 'ein:jupyter-server-start
+  "nc" 'ein:connect-mode
+  "nm" 'ein:connect-to-notebook-command
+  "ne" 'ein:connect-eval-region
   )
 
 
