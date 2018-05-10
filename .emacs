@@ -179,7 +179,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (pynt ein ac-js2 js2-mode web-mode projectile monokai-theme key-chord jedi flymake-python-pyflakes evil-tutor evil-org evil-magit elhome autotest auctex)))
+    (ein ac-js2 js2-mode web-mode projectile monokai-theme key-chord jedi flymake-python-pyflakes evil-tutor evil-org evil-magit elhome autotest auctex)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(python-shell-interpreter "ipython")
