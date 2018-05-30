@@ -265,9 +265,17 @@
   "np" 'ein:worksheet-goto-prev-input
   "ns" 'ein:notebook-save-notebook-command
   "ng" 'ein:jupyter-server-start
-  "nc" 'ein:connect-mode
-  "nm" 'ein:connect-to-notebook-command
-  "ne" 'ein:connect-eval-region
+  "nf" 'ein:jupyter-server-stop
+  "nk" 'ein:worksheet-kill-cell
+  "nia" 'ein:worksheet-insert-cell-above
+  "nib" 'ein:worksheet-insert-cell-below
+  "nc" 'ein:worksheet-copy-cell
+  "ny" 'ein:worksheet-yank-cell
+  "nr" 'ein:worksheet-execute-all-cell
+  "ne" 'ein:worksheet-execute-cell
+  "nh" 'ein:pytools-request-tooltip-or-help
+  "nj" 'ein:pytools-jump-to-source-command
+  "nb" 'ein:pytools-jump-back-command
   )
 
 
