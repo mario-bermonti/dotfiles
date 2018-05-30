@@ -378,3 +378,9 @@
 ;; use python 3 instead of python 2
 (setq org-babel-python-command "python3")
 (setq org-confirm-babel-evaluate nil)
+
+;; ######################
+;; Yasnippet
+;; Code templating
+(require 'yasnippet)
+(yas-global-mode 1)
