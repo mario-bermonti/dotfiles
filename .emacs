@@ -368,3 +368,13 @@
 (require 'ein-loaddefs)
 (require 'ein-notebook)
 (require 'ein-subpackages)
+
+;; ######################
+;; org mode configuration
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)))
+
+;; use python 3 instead of python 2
+(setq org-babel-python-command "python3")
+(setq org-confirm-babel-evaluate nil)
