@@ -356,6 +356,17 @@
  'org-babel-load-languages
  '((python . t)))
 
+;; Dont require confirmation to run code from source blocks
+(setq org-confirm-babel-evaluate nil)
+
+;; Display images inline after regular execution
+(add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
+
+;; Remove numbering from headings
+(setq org-export-with-section-numbers nil)
+
+
+
 ;; use python 3 instead of python 2
 (setq org-babel-python-command "python3")
 (setq org-confirm-babel-evaluate nil)
