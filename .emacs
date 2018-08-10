@@ -230,27 +230,25 @@
 (evil-leader/set-leader "<SPC>")
 ;; General commands
 (evil-leader/set-key
-  "f" 'evil-scroll-page-down
-  "b" 'evil-scroll-page-up
   "lb" 'ido-switch-buffer
-  "sof" 'scroll-other-window
-  "sob" 'scroll-other-window-down
+  "sd" 'scroll-other-window
+  "su" 'scroll-other-window-down
   )
 
 ;; Projectile
-(evil-leader/set-key-for-mode 'python-mode
+ (evil-leader/set-key-for-mode 'python-mode
   "pf" 'projectile-find-file
   "pw" 'projectile-find-file-other-window
   )
 
 ;; Jedi
-(evil-leader/set-key
+ (evil-leader/set-key
   "jg" 'jedi:goto-definition
   "jd" 'jedi:show-doc
   )
 
 ;; Magit
-(evil-leader/set-key
+ (evil-leader/set-key
   "gs" 'magit-status
   "gc" 'magit-commit
   "gb" 'magit-branch-and-checkout
@@ -259,8 +257,15 @@
   "gp" 'magit-push
   )
 
+;; ORG
+ (evil-leader/set-key-for-mode 'org-mode
+  "is" 'org-edit-special
+  "es" 'org-edit-src-exit
+  "eab" 'org-babel-execute-buffer
+  "nh" 'org-next-visible-heading
+  "ph" 'org-previous-visible-heading
+  "ct" 'org-todo
   )
-
 
 ;; EVIL MODE
 (add-to-list 'load-path "~/.emacs.d/evil")
