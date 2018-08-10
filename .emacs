@@ -180,7 +180,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (yasnippet-snippets yasnippet ein ac-js2 js2-mode web-mode projectile monokai-theme key-chord jedi flymake-python-pyflakes evil-tutor evil-org evil-magit elhome autotest auctex)))
+    (htmlize yasnippet-snippets yasnippet ac-js2 js2-mode web-mode projectile monokai-theme key-chord jedi flymake-python-pyflakes evil-tutor evil-org evil-magit elhome autotest auctex)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(python-shell-interpreter "ipython")
@@ -259,23 +259,6 @@
   "gp" 'magit-push
   )
 
-;; EIN
-(evil-leader/set-key
-  "nn" 'ein:worksheet-goto-next-input
-  "np" 'ein:worksheet-goto-prev-input
-  "ns" 'ein:notebook-save-notebook-command
-  "ng" 'ein:jupyter-server-start
-  "nf" 'ein:jupyter-server-stop
-  "nk" 'ein:worksheet-kill-cell
-  "nia" 'ein:worksheet-insert-cell-above
-  "nib" 'ein:worksheet-insert-cell-below
-  "nc" 'ein:worksheet-copy-cell
-  "ny" 'ein:worksheet-yank-cell
-  "nr" 'ein:worksheet-execute-all-cell
-  "ne" 'ein:worksheet-execute-cell
-  "nh" 'ein:pytools-request-tooltip-or-help
-  "nj" 'ein:pytools-jump-to-source-command
-  "nb" 'ein:pytools-jump-back-command
   )
 
 
@@ -361,13 +344,6 @@
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 (global-set-key (kbd "C-c .") 'ac-js2-jump-to-definition)
 
-
-;; EMACS IPYTHON NOTEBOOK
-(package-initialize)
-(require 'ein)
-(require 'ein-loaddefs)
-(require 'ein-notebook)
-(require 'ein-subpackages)
 
 ;; ######################
 ;; org mode configuration
