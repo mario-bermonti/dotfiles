@@ -23,7 +23,7 @@
  ("/Users/MBP/Documents/Proyectos/" . "crear_hojas_trabajo_lectura/")
  ("/Users/MBP/Documents/" . "proyectos/")
  ("/Users/MBP/python_modules/" . "libraryext/")
- ("/Users/MBP/" . "programming practice/")
+ ("/Users/MBP/" . "Desktop/")
  ("/Users/MBTP/Desktop/" . "analisis palabras/")
  ("/Users/MBTP/" . "Desktop/")
  ("/Users/MBTP/Documents/Proyectos/" . "crear_hojas_trabajo_lectura/")
@@ -32,6 +32,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/MBP/Desktop/"
  "/Users/MBP/"
  "/Users/MBP/programming practice/python_practice/"
  "/Users/MBP/Documents/proyectos/Word-analisis/"
@@ -48,7 +49,6 @@
  "/Users/MBP/python_practice/"
  "/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3981/Personal statement/"
  "/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/Juego geografia/"
- "/Users/MBP/Desktop/"
  "/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/listas/"
  "/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/functions/"
  "/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/"
@@ -90,13 +90,13 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/MBP/" (23284 19025 0 0) "VirtualBox VMs/" "Sites/" "Public/" "programming practice/" "Pictures/" "package-lock.json" "node_modules/" "Music/" "Movies/" "Library/" "Google Drive/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Box Sync/" "Applications/" ".vimrc.rtf" ".vimrc" ".viminfo" ".vim/" ".Trash/" ".ssh/" ".sqlanywhere16/" ".spss/" ".python_history-11360.tmp" ".python_history" ".psychopy2/" ".oracle_jre_usage/" ".npm/" ".matplotlib/" ".lesshst" ".kivy/" ".jupyter/" ".ipython/" ".ipynb_checkpoints/" ".InstallAnywhere/" ".idlerc/" ".gitconfig" ".git/" ".emacs~" ".emacs.d/" ".emacs" ".dvdcss/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile" ".bash_history" "../" "./")
+ ("/Users/MBP/Desktop/" (23405 49480 0 0) "~$banco palabras_info freq.xlsx" "Horario alias" "foremacs/" "Fechas límites alias" "exp.psyexp" "configemacs.txt" "configemacs.emacs" "codigos participantes ces.xlsx" "CODIGOS ESTUDIANTES EVALUADOS.docx" ".localized" ".emacs" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/" (23405 54572 0 0) "VirtualBox VMs/" "Sites/" "Research/" "Public/" "programming practice/" "Pictures/" "package-lock.json" "node_modules/" "Music/" "Movies/" "Library/" "Google Drive/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Box Sync/" "Blog programación investigación cognitivav/" "Applications/" ".vimrc.rtf" ".vimrc" ".viminfo" ".vim/" ".Trash/" ".ssh/" ".sqlanywhere16/" ".spss/" ".python_history-11360.tmp" ".python_history-02134.tmp" ".python_history" ".python-environments/" ".pyosf/" ".psychopy3/" ".psychopy2/" ".org-id-locations" ".oracle_jre_usage/" ".npm/" ".matplotlib/" ".lesshst" ".kivy/" ".jupyter/" ".ipython/" ".ipynb_checkpoints/" ".InstallAnywhere/" ".idlerc/" ".gitconfig" ".git/" ".emacs~" ".emacs.d/" ".emacs" ".dvdcss/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".bash_sessions/" ".bash_profile" ".bash_history" "../" "./")
 
  ("/Users/MBP/Documents/Investigación/Trabajos consultoría/PHSU/Autoestudio APA/psmsystem/" (23284 19067 0 0) "~$PhD Clinical Psychology.xlsx" "Untitled.ipynb" "testdata.xlsx" "test.py" "runevaluation.py" "results.csv" "psm analysis_april 2018.ipynb" "evaluationsystem.py" "Entrada de datos/" "database report.html" "cleaning.py" "analysisapril.py" "__pycache__/" ".ipynb_checkpoints/" ".git/" ".DS_Store" "../" "./")
 
  ("/Users/MBP/.emacs.d/" (23276 35843 0 0) "url/" "request/" "pythontemplate.py" "projectile.cache" "projectile-bookmarks.eld" "places" "ido.last~" "ido.last" "highlight-current-line-0.57/" "games/" "elpa/" "auto-save-list/" "ac-comphist.dat" ".python-environments/" ".DS_Store" "../" "./")
-
- ("/Users/MBP/Desktop/" (23276 24672 0 0) "~$banco palabras_info freq.xlsx" "Horario alias" "Fechas límites alias" "codigos participantes ces.xlsx" "CODIGOS ESTUDIANTES EVALUADOS.docx" "Apt/" ".localized" ".DS_Store" "../" "./")
 
  ("/Users/MBP/Downloads/" (23276 28058 0 0) "~$sumen_entrevista_Psic8017.docx" "~$rph Asgnt2 Turkish_NabilaFonseca.docx" "~$lyaneth Laureano Vidal [english].docx" "~$anscripción entrevista PSIC 8017.docx" "Vienna3.1.16.tar.gz" "Videojuego_Lluvia de Zanahorias_ Mario Bermonti, Wilmarie Diaz.docx" "Videojuego_Lluvia de Zanahorias_ Mario Bermonti, Wilmarie Diaz (1).docx" "Unconfirmed 825980.crdownload" "ttf/" "testpsm_notebook.py.tex" "testpsm_notebook.py.py" "testpsm_notebook.py.pdf" "testpsm_notebook.py (3).pdf" "testpsm_notebook.py (2).pdf" "testpsm_notebook.py (1).pdf" "test.tex" "test.log" "test.aux" "stage.js-0.8.8.zip" "spellngdevelop.pdf" "Skim-1.4.30.dmg" "sanagustin y el alma.txt" "sanagustin y el alma.rtfd/" "sanagustin y el alma.rtf" "sanagustin y el alma.pdfd/" "sanagustin y el alma.pdf" "sanagustin y el alma.fdf" "Rúbrica para evaluar trabajos de investigación.docx" "Resumen Carlson (2005) & Raichle (2009)_Mario Bermonti.docx" "Reporte notas PHDPSY.pdf" "realwords.py.pdf" "Qué dice la literatura_Mario Bermonti (1).docx" "QSG_SculptMobileKeyboard_X18-31806-01.pdf" "QSG_SculptErgonomicKeyboard_X188777801bkt_online.pdf" "psm analysis_april 2018.pdf" "PlainLanguageDisclosure.pdf" "Picture1.png" "PG_Microsoft-Product-Guide.pdf" "PG_Microsoft-Product-Guide (1).pdf" "pc.jpeg" "Notas reunión CES:UNE.pdf" "new doc 2018-03-27 18.12.11-20180327181235.pdf" "move.js-master.zip" "Microsoft_Outlook.pkg" "Microsoft Product Guide.pdf" "mbermonti1132@gmail.com.ics" "mbermonti1132@gmail.com.ical.zip" "mbermonti1132@gmail.com 2.ics" "Mario BermontiAcuerdo PEAF 001 rev jun 2017 PJRE 2.docx" "Manuscrito_Bermonti, Cordero, Moreno (1).docx" "live coding session.jpeg" "live coding session png.png" "labeljs.js" "jaws-docs.zip" "IMG_0283.JPG" "HP_Easy_Start.app.zip" "HP-ePrint_v2.5.0.dmg" "HP-DeskJet_3520_SW_v12.34.40.dmg" "HP Easy Start.app/" "HP Easy Start 2.app/" "HCL Handouts.pdf" "Hack-v3.003-ttf.zip" "gametest.html" "fwinformacinparaautoestudio.zip" "fwinformacinparaautoestudio/" "FORO 2. Alexandra. EDUC 8021.docx" "FORO 1. ALEXANDRA. EDUC 8021.docx" "Foro #1.docx" "Foro # 3 Ambientes virtuales de aprendizaje.rtf" "Foro # 2 Ecosistemas de aprendizaje y curación de contenido.rtf" "Foro # 2 Ecosistemas de aprendizaje y curación de contenido (2).rtf" "Foro # 2 Ecosistemas de aprendizaje y curación de contenido (1).rtf" "Fase 1.docx" "evaluacion videojuegos_Mario Bermonti.docx" "Entrega de requisitos de clase.xlsx" "enchant.js-builds-0.8.3-b.zip" "enchant.js-builds-0.8.3-b/" "enchant.js/" "EDICT-2016-2182.pdf" "Ecosistemas de Aprendizaje .pdf" "Ecosistemas de Aprendizaje  (2).pdf" "Ecosistemas de Aprendizaje  (1).pdf" "download.jpeg" "Dialnet-LaurenceKohlberg-117615.pdf" "Dialnet-LaEticaDeAristotelesYSuRelacionConLaCienciaYLaTecn-2095558.pdf" "devdocs.json" "DatosMarioEvals.csv" "DatosMarioEvals 2.csv" "DatosMarioComp.csv" "Datos_Todo_180118.zip" "Datos_Todo_180118 (5).zip" "Datos_Todo_180118 (5)/" "Datos_Todo_180118 (4).zip" "Datos_Todo_180118 (4)/" "Datos_Todo_180118 (3).zip" "Datos_Todo_180118 (3) 2/" "Datos_Todo_180118 (3)/" "Datos_Todo_180118 (2).zip" "Datos_Todo_180118 (2)/" "Datos_Todo_180118 (1).zip" "Datos_Todo_180118 (1)/" "Datos_Todo_180118/" "Datos Moreno_cleaning.pdf" "Datos Moreno_cleaning.html" "Data_All_180119.zip" "Data_All_180119 (1).zip" "Data_All_180119 (1)/" "Comentarios generales.docx" "Certificado CITI_Mario Bermonti.pdf" "CertfCT-2018.zip" "CertfCT-2018/" "calendar.pdf" "AnonymousPro-1.002.zip" "AnonymousPro-1.002.001/" "Acerca_del_alma.ris" "Acerca_del_alma.enw" "Acerca_del_alma.bibtex" "_region_.tex" "8e97216983d9d9a2473b105330ab1c1c--computer-engineering-computer-programming.jpg" "74392_Chapter_#1content analysis.pdf" "6b021c061024a99d1c575e0afcefed54441b.pdf" "3_BodyPart_5b6e0cce-34a3-4a49-9363-bbd462b23bd5.doc" "384-1302-1-PB.pdf" "379-1296-1-PB.pdf" "2936-10532-1-PB.pdf" "293-886-1-PB.pdf" "0522af_1574b3ff42ef45509781c80b42ecb17f.pdf" ".localized" ".DS_Store" ".com.google.Chrome.ZCqgJt" ".com.google.Chrome.tv7rkN" ".com.google.Chrome.dXPNoV" ".com.google.Chrome.AGMkWg" "../" "./")
 
