@@ -369,7 +369,7 @@
 
 
 ;; Org-mode Data Science workflow
-;; use python 3 instead of python 2
+;; Use python 3 instead of python 2
 (setq org-babel-python-command "python3")
 
 ;; Eliminate starting characters from python's session mode
