@@ -181,7 +181,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (htmlize yasnippet-snippets yasnippet ac-js2 js2-mode web-mode projectile monokai-theme key-chord jedi flymake-python-pyflakes evil-tutor evil-org evil-magit elhome autotest auctex)))
+    (org-ref htmlize yasnippet-snippets yasnippet ac-js2 js2-mode web-mode projectile monokai-theme key-chord jedi flymake-python-pyflakes evil-tutor evil-org evil-magit elhome autotest auctex)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(python-shell-interpreter "ipython")
@@ -398,6 +398,27 @@
             (kill-line)))))))
 
 (add-hook 'org-babel-after-execute-hook 'org-babel-python-strip-session-chars)
+
+;; org-ref config
+;; Setting path for pdf files
+(setq org-ref-pdf-directory "~/Research/Mendeley_lib/pdf_bib")
+
+;; Set up for helm-bibtex
+; (setq bibtex-completion-library-path "~/Research/Mendeley_lib/pdf_bib")
+
+;; open pdf with system pdf viewer
+;(setq bibtex-completion-pdf-open-function
+;  (lambda (fpath)
+;    (start-process "open" "*open*" "open" fpath)))
+
+;; Exporting to latex with bibliography
+;(setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
+
+;; Specific for using Mendeley
+(setq org-ref-open-pdf-function 'org-ref-get-mendeley-filename)
+
+(require 'org-ref)
+
 
 ;; ######################
 ;; Yasnippet
