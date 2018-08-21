@@ -425,3 +425,13 @@
 ;; Code templating
 (require 'yasnippet)
 (yas-global-mode 1)
+
+;; #####################
+;; Spell checking
+;; Checks wheter aspell exists before renaming ispell
+(cond
+ ((executable-find "aspell")
+  (setq ispell-program-name "aspell")))
+
+;; Just spell check comments
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
