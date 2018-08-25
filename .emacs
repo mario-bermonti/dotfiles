@@ -159,7 +159,6 @@
    ["#272822" "#F92672" "#A6E22E" "#E6DB74" "#66D9EF" "#FD5FF0" "#A1EFE4" "#F8F8F2"])
  '(column-number-mode t)
  '(compilation-message-face (quote default))
- '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (monokai)))
  '(custom-safe-themes
    (quote
@@ -399,7 +398,9 @@
             (kill-line)))))))
 
 (add-hook 'org-babel-after-execute-hook 'org-babel-python-strip-session-chars)
+;; ------------------------------
 
+;; ------------------------------
 ;; org-ref config
 ;; Setting path for pdf files
 (setq org-ref-pdf-directory "~/Research/Mendeley_lib/pdf_bib")
@@ -419,6 +420,7 @@
 (setq org-ref-open-pdf-function 'org-ref-get-mendeley-filename)
 
 (require 'org-ref)
+;; ------------------------------
 
 
 ;; ######################
