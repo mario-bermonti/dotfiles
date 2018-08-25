@@ -365,10 +365,11 @@
 
 ;; Remove numbering from headings
 (setq org-export-with-section-numbers nil)
-
+(setq org-startup-indented t)
 
 
 ;; Org-mode Data Science workflow
+;; ------------------------------
 ;; Use python 3 instead of python 2
 (setq org-babel-python-command "python3")
 
