@@ -233,6 +233,14 @@
   "lb" 'ido-switch-buffer
   "sd" 'scroll-other-window
   "su" 'scroll-other-window-down
+  "f" 'find-file
+  "gc" 'move-to-column
+  )
+
+;; Spell check
+(evil-leader/set-key
+  "scb" 'ispell-buffer
+  "scr" 'ispell-region
   )
 
 ;; Projectile
