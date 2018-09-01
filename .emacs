@@ -273,6 +273,11 @@
   "nh" 'org-next-visible-heading
   "ph" 'org-previous-visible-heading
   "ct" 'org-todo
+  "o2b" 'org2blog/wp-mode
+  "pbd" 'org2blog/wp-post-buffer
+  "pbp" 'org2blog/wp-post-buffer-and-publish
+  "ppd" 'org2blog/wp-post-buffer-as-page
+  "ppp" 'org2blog/wp-post-buffer-as-page-and-publish
   )
 
 ;; EVIL MODE
@@ -373,7 +378,6 @@
 ;; Remove numbering from headings
 (setq org-export-with-section-numbers nil)
 (setq org-startup-indented t)
-
 
 ;; Org-mode Data Science workflow
 ;; ------------------------------
