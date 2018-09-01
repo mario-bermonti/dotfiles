@@ -430,6 +430,19 @@
 (require 'org-ref)
 ;; ------------------------------
 
+;; ------------------------------
+;; org2blog config
+;; Export org files to wordpress
+(setq load-path (cons "~/.emacs.d/org2blog/" load-path))
+(require 'org2blog-autoloads)
+
+(setq load-path (cons "~/.emacs.d/xml-rpc-el/" load-path))
+(setq load-path (cons "~/.emacs.d/metaweblog/" load-path))
+(setq org2blog/wp-blog-alist
+      '(("codin cognitive research"
+	 :url "https://codingcognitiveresearch.wordpress.com/xmlrpc.php"
+	 :username "mbermonti"
+	 :default-categories ("python" "coding" "research" "cognition" "psychology"))))
 
 ;; ######################
 ;; Yasnippet
