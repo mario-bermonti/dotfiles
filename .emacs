@@ -258,11 +258,9 @@
 ;; Magit
  (evil-leader/set-key
   "gs" 'magit-status
-  "gc" 'magit-commit
   "gb" 'magit-branch-and-checkout
   "gd" 'magit-diff
   "gl" 'magit-log
-  "gp" 'magit-push
   )
 
 ;; ORG
@@ -274,6 +272,7 @@
   "ph" 'org-previous-visible-heading
   "ct" 'org-todo
   "o2b" 'org2blog/wp-mode
+  "bne" 'org2blog/wp-new-entry
   "pbd" 'org2blog/wp-post-buffer
   "pbp" 'org2blog/wp-post-buffer-and-publish
   "ppd" 'org2blog/wp-post-buffer-as-page
