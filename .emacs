@@ -108,7 +108,7 @@
 ;; Para activar auto-complete al abrir emacs.
 (require 'auto-complete-config)
 (ac-config-default)
-;Menu para auto-complete
+; Menu para auto-complete
 (setq ac-show-menu-immediately-on-auto-complete t)
 
 
