@@ -91,6 +91,21 @@
 ;; PYTHON
 ;; Estas son config a emacs para Python.
 
+;; Fixes autocompletion being disabled because the original code (python.el)
+;; returns '' if autocompletion should be enabled, which evaluated to nil
+;; and doesn't work. (This is supposed to be fixed on emacs v. 25.3 but I
+;; still got the error)
+
+(with-eval-after-load 'python
+  (defun python-shell-completion-native-try ()
+    "Return non-nil if can trigger native completion."
+    (let ((python-shell-completion-native-enable t)
+          (python-shell-completion-native-output-timeout
+           python-shell-completion-native-try-output-timeout))
+      (python-shell-completion-native-get-completions
+       (get-buffer-process (current-buffer))
+       nil "_"))))
+
 ; use IPython
 (setq-default py-shell-name "ipython")
 (setq-default py-which-bufname "IPython")
