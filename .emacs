@@ -133,7 +133,7 @@
 (setq jedi:complete-on-dot t)
 
 ;; Para que el pop al llamar una función no salga automático.
-;(setq jedi:get-in-function-call-delay 1000)
+(setq jedi:get-in-function-call-delay 1000)
 
 ;; Para bind el pop al key C-c /
 (global-set-key (kbd "C-c /") 'jedi:get-in-function-call)
