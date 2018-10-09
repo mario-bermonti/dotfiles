@@ -393,7 +393,8 @@
 ;; org mode configuration
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((python . t)))
+ '((python . t)
+   (ipython . t)))
 
 ;; Dont require confirmation to run code from source blocks
 (setq org-confirm-babel-evaluate nil)
