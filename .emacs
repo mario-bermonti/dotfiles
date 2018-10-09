@@ -411,6 +411,7 @@
 ;; Use python 3 instead of python 2
 (setq org-babel-python-command "python3")
 
+;; Taken from John Kitchin's website
 ;; Eliminate starting characters from python's session mode
 (defun org-babel-python-strip-session-chars ()
   "Remove >>> and ... from a Python session output."
