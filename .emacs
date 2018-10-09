@@ -267,6 +267,7 @@
 (evil-leader/set-key
   "scb" 'ispell-buffer
   "scr" 'ispell-region
+  "scs" 'ispell-change-dictionary "spanish"
   )
 
 ;; Projectile
