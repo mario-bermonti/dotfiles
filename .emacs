@@ -120,7 +120,7 @@
 ; use IPython
 (setq-default py-shell-name "ipython")
 (setq-default py-which-bufname "IPython")
-; use the wx backend, for both mayavi and matplotlib
+;; use the wx backend, for both mayavi and matplotlib
 (setq py-python-command-args
   '("--gui=wx" "--pylab=wx" "-colors" "Linux"))
 (setq py-force-py-shell-name-p t)
@@ -438,7 +438,6 @@
             (kill-line)))))))
 
 (add-hook 'org-babel-after-execute-hook 'org-babel-python-strip-session-chars)
-;; ------------------------------
 
 ;; ------------------------------
 ;; org-ref config
@@ -460,7 +459,6 @@
 (setq org-ref-open-pdf-function 'org-ref-get-mendeley-filename)
 
 (require 'org-ref)
-;; ------------------------------
 
 ;; ------------------------------
 ;; org2blog config
