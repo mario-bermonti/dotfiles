@@ -54,14 +54,25 @@
 ;; Using utf-8 symbols
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
+
 ;; insert special symbols
+;; Lower case letters
 (define-key key-translation-map (kbd "C-; a") (kbd "á"))
 (define-key key-translation-map (kbd "C-; e") (kbd "é"))
 (define-key key-translation-map (kbd "C-; i") (kbd "í"))
 (define-key key-translation-map (kbd "C-; o") (kbd "ó"))
 (define-key key-translation-map (kbd "C-; u") (kbd "ú"))
 (define-key key-translation-map (kbd "C-; n") (kbd "ñ"))
+(define-key key-translation-map (kbd "C-; ?") (kbd "¿"))
 (define-key key-translation-map (kbd "C-` u") (kbd "ü"))
+;; Upper case letters
+(define-key key-translation-map (kbd "C-; A") (kbd "Á"))
+(define-key key-translation-map (kbd "C-; E") (kbd "É"))
+(define-key key-translation-map (kbd "C-; I") (kbd "Í"))
+(define-key key-translation-map (kbd "C-; O") (kbd "Ó"))
+(define-key key-translation-map (kbd "C-; U") (kbd "Ú"))
+(define-key key-translation-map (kbd "C-; N") (kbd "Ñ"))
+(define-key key-translation-map (kbd "C-` U") (kbd "Ü"))
 
 ;;====================================
 ;; Para usar melpa en vez de elpa. Melpa esta up-to-date.
