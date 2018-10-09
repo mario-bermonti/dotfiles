@@ -206,7 +206,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (ace-window org-ref htmlize yasnippet-snippets yasnippet ac-js2 js2-mode web-mode projectile monokai-theme key-chord jedi flymake-python-pyflakes evil-tutor evil-org evil-magit elhome autotest auctex)))
+    (ox-pandoc ob-ipython ace-window org-ref htmlize yasnippet-snippets yasnippet ac-js2 js2-mode web-mode projectile monokai-theme key-chord jedi flymake-python-pyflakes evil-tutor evil-org evil-magit elhome autotest auctex)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(python-shell-interpreter "ipython")
@@ -472,6 +472,10 @@
 	 :url "https://codingcognitiveresearch.wordpress.com/xmlrpc.php"
 	 :username "mbermonti"
 	 :default-categories ("python" "coding" "research" "cognition" "psychology"))))
+
+;; ------------------------------
+;; ox-pandoc
+(require 'ox-pandoc)
 
 ;; ######################
 ;; Yasnippet
