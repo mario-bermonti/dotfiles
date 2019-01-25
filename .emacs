@@ -293,10 +293,12 @@
 ;; ORG
  (evil-leader/set-key-for-mode 'org-mode
   "is" 'org-edit-special
-  "es" 'org-edit-src-exit
   "eab" 'org-babel-execute-buffer
+  "est" 'org-babel-execute-subtree
   "nh" 'org-next-visible-heading
   "ph" 'org-previous-visible-heading
+  "nsb" 'org-babel-next-src-block
+  "npb" 'org-babel-previous-src-block
   "ct" 'org-todo
   "o2b" 'org2blog/wp-mode
   "bne" 'org2blog/wp-new-entry
