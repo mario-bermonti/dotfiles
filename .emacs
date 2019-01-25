@@ -406,6 +406,11 @@
 (setq org-export-with-section-numbers nil)
 (setq org-startup-indented t)
 
+;; Modify TODO sequences
+(setq org-todo-keywords
+      '((sequence "TODO" "IN PROGRESS" "VERIFY/REVIEW" "|" "DONE" "DELEGATED")))
+
+
 ;; Org-mode Data Science workflow
 ;; ------------------------------
 ;; Use python 3 instead of python 2
