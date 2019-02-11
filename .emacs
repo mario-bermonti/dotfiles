@@ -313,54 +313,6 @@
      (require 'evil)
      (evil-mode 1)
 
- ;; Note: lexical-binding must be t in order for this to work correctly.
-   (defun make-conditional-key-translation (key-from key-to translate-keys-p)
-     "Make a Key Translation such that if the translate-keys-p function returns true,
-   key-from translates to key-to, else key-from translates to itself.  translate-keys-p
-   takes key-from as an argument. "
-     (define-key key-translation-map key-from
-       (lambda (prompt)
-         (if (funcall translate-keys-p key-from) key-to key-from))))
-   (defun my-translate-keys-p (key-from)
-     "Returns whether conditional key translations should be active.  See make-conditional-key-translation function. "
-     (and
-       ;; Only allow a non identity translation if we're beginning a Key Sequence.
-       (equal key-from (this-command-keys))
-       (or (evil-motion-state-p) (evil-normal-state-p) (evil-visual-state-p))))
-   (define-key evil-normal-state-map "c" nil)
-   (define-key evil-motion-state-map "cu" 'universal-argument)
-   (make-conditional-key-translation (kbd "ch") (kbd "C-h") 'my-translate-keys-p)
-   (make-conditional-key-translation (kbd "g") (kbd "C-x") 'my-translate-keys-p)
-
-;;
-(when (fboundp 'cl-loop)
-      ;; cl-loop iterates from ASCII '!' to ASCII '~'.
-      (cl-loop for ascii-code-i from 33 to 126 by 1 do
-	       (make-conditional-key-translation (kbd (format "c%c" ascii-code-i))
-						 (kbd (format "C-%c" ascii-code-i))
-						 'my-translate-keys-p)))
-;;
- ;;; C-c as general purpose escape key sequence.
-   ;;;
-   (defun my-esc (prompt)
-     "Functionality for escaping generally.  Includes exiting Evil insert state and C-g binding. "
-     (cond
-      ;; If we're in one of the Evil states that defines [escape] key, return [escape] so as
-      ;; Key Lookup will use it.
-      ((or (evil-insert-state-p) (evil-normal-state-p) (evil-replace-state-p) (evil-visual-state-p)) [escape])
-      ;; This is the best way I could infer for now to have C-c work during evil-read-key.
-      ;; Note: As long as I return [escape] in normal-state, I don't need this.
-      ;;((eq overriding-terminal-local-map evil-read-key-map) (keyboard-quit) (kbd ""))
-      (t (kbd "C-g"))))
-   (define-key key-translation-map (kbd "C-,") 'my-esc)
-   ;; Works around the fact that Evil uses read-event directly when in operator state, which
-   ;; doesn't use the key-translation-map.
-   (define-key evil-operator-state-map (kbd "C-,") 'keyboard-quit)
-   ;; Not sure what behavior this changes, but might as well set it, seeing the Elisp manual's
-   ;; documentation of it.
-   (set-quit-char "C-,")
-
-
 
 ;;==========================================
 ;; KEYCHORD
