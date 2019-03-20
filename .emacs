@@ -107,15 +107,15 @@
 ;; and doesn't work. (This is supposed to be fixed on emacs v. 25.3 but I
 ;; still got the error)
 
-(with-eval-after-load 'python
-  (defun python-shell-completion-native-try ()
-    "Return non-nil if can trigger native completion."
-    (let ((python-shell-completion-native-enable t)
-          (python-shell-completion-native-output-timeout
-           python-shell-completion-native-try-output-timeout))
-      (python-shell-completion-native-get-completions
-       (get-buffer-process (current-buffer))
-       nil "_"))))
+;; (with-eval-after-load 'python
+;;   (defun python-shell-completion-native-try ()
+;;     "Return non-nil if can trigger native completion."
+;;     (let ((python-shell-completion-native-enable t)
+;;           (python-shell-completion-native-output-timeout
+;;            python-shell-completion-native-try-output-timeout))
+;;       (python-shell-completion-native-get-completions
+;;        (get-buffer-process (current-buffer))
+;;        nil "_"))))
 
 ; use IPython
 (setq-default py-shell-name "ipython")
@@ -204,9 +204,13 @@
      ("#49483E" . 100))))
  '(inhibit-startup-screen t)
  '(magit-diff-use-overlays nil)
+ '(org-agenda-files
+   (quote
+    ("~/Box Sync/Disertación/dissertation_protocol.org")))
+ '(org-src-window-setup (quote other-window))
  '(package-selected-packages
    (quote
-    (ox-pandoc ob-ipython ace-window org-ref htmlize yasnippet-snippets yasnippet ac-js2 js2-mode web-mode projectile monokai-theme key-chord jedi flymake-python-pyflakes evil-tutor evil-org evil-magit elhome autotest auctex)))
+    (ox-pandoc org-ref htmlize ac-js2 monokai-theme key-chord jedi flymake-python-pyflakes evil-tutor evil-org evil-magit elhome autotest)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(python-shell-interpreter "ipython")
@@ -257,6 +261,7 @@
 ;; General commands
 (evil-leader/set-key
   "lb" 'ido-switch-buffer
+  "k" 'ido-kill-buffer
   "sd" 'scroll-other-window
   "su" 'scroll-other-window-down
   "f" 'find-file
@@ -343,6 +348,12 @@
 (global-set-key (kbd "C-c .") 'ac-js2-jump-to-definition)
 
 
+;; #####################
+;; Scimax config
+(add-to-list 'load-path "~/.emacs.d/scimax-master")
+(require 'ob-ipython)
+(require 'scimax-org-babel-ipython-upstream)
+
 ;; ######################
 ;; org mode configuration
 (org-babel-do-load-languages
@@ -362,7 +373,7 @@
 
 ;; Modify TODO sequences
 (setq org-todo-keywords
-      '((sequence "TODO" "IN PROGRESS" "VERIFY/REVIEW" "|" "DONE" "DELEGATED")))
+      '((sequence "TODO" "IN PROGRESS" "DELEGATED" "VERIFY/REVIEW" "|" "DONE" "PENDING OTHER TASKS" )))
 
 
 ;; Org-mode Data Science workflow
@@ -452,3 +463,7 @@
 
 ;; Just spell check comments
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+(put 'scroll-left 'disabled nil)
+
+
+(setq org-element-use-cache nil)
