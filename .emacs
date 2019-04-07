@@ -167,9 +167,7 @@
      ("#49483E" . 100))))
  '(inhibit-startup-screen t)
  '(magit-diff-use-overlays nil)
- '(org-agenda-files
-   (quote
-    ("~/Box Sync/Disertación/dissertation_protocol.org")))
+ '(org-agenda-files nil)
  '(org-src-window-setup (quote other-window))
  '(package-selected-packages
    (quote
