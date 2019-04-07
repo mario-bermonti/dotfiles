@@ -334,7 +334,7 @@
 
 ;; Modify TODO sequences
 (setq org-todo-keywords
-      '((sequence "TODO" "IN PROGRESS" "DELEGATED" "VERIFY/REVIEW" "|" "DONE" "PENDING OTHER TASKS" )))
+      '((sequence "TODO" "IN PROGRESS" "DELEGATED" "VERIFY/REVIEW" "|" "PENDING OTHER TASKS" "DONE" )))
 
 
 ;; Org-mode Data Science workflow
