@@ -1,14 +1,25 @@
 ; -*- lexical-binding: t -*-
 
+;; This sets up the load path so that we can override it
+(package-initialize)
+
+;;====================================
+;; USE-PACKAGE
+;;====================================
+(eval-when-compile
+  (add-to-list 'load-path "~/.emacs.d/elpa/use-package-20190405.2047")
+  (require 'use-package))
+(setq use-package-verbose t)
+(setq use-package-always-ensure t)
 
 ;;====================================
 ;; VISUAL ASPECTS
 ;;====================================
 ;; Number lines
-(global-linum-mode t)
+(setq global-linum-mode 1)
 
 ;; Show column number from start
-(setq column-number-mode t)
+(setq column-number-mode 1)
 
 ;; Default font size
 (set-default-font "Hack 18")
@@ -20,13 +31,17 @@
 (electric-pair-mode 1)
 
 ;; Highlight current line
-(add-to-list 'load-path "~/.emacs.d/highlight-current-line-0.57")
-(require 'highlight-current-line)
-(global-hl-line-mode t)
-(setq highlight-current-line-globally t)
-(setq highlight-current-line-high-faces nil)
-(setq highlight-current-line-whole-line nil)
-(setq hl-line-face (quote highlight))
+
+(use-package highlight-current-line
+  :ensure nil
+  :init
+  (add-to-list 'load-path "~/.emacs.d/highlight-current-line-0.57")
+  (setq highlight-current-line-globally t)
+  (setq highlight-current-line-high-faces nil)
+  (setq highlight-current-line-whole-line nil)
+  (setq hl-line-face (quote highlight))
+  :config
+  (setq global-hl-line-mode t))
 
 ;; Display time
 (display-time-mode 1)
@@ -74,43 +89,54 @@
 
 ;; Ido mode
 ;;=====================================
-(require 'ido)
-(ido-mode 1)
+(use-package ido
+  :config
+  (ido-mode t))
 
 ;; Git
 ;;=====================================
-(require 'magit)
-;; Git Shortcuts
-(global-set-key (kbd "C-x g b") 'magit-branch-and-checkout)
-(global-set-key (kbd "C-x g s") 'magit-status)
-(global-set-key (kbd "C-x g d") 'magit-diff)
-(global-set-key (kbd "C-x g l") 'magit-log)
-(global-set-key (kbd "C-x g c") 'magit-checkout)
-(global-set-key (kbd "C-x g p") 'magit-push)
+(use-package magit
+  :bind (("C-x g b" . magit-branch)
+	 ("C-x g s" . magit-status)
+	 ("C-x g d" . magit-diff)
+	 ("C-x g l" . magit-log)
+	 ("C-x g c" . magit-checkout)
+	 ("C-x g p" . magit-push)))
 
 ;; Evil mode
 ;;==========================================
-(add-to-list 'load-path "~/.emacs.d/evil")
-     (require 'evil)
-     (evil-mode 1)
+(use-package evil
+  :ensure nil
+  :init
+  (add-to-list 'load-path "~/.emacs.d/evil")
+  :config
+  (evil-mode t))
 
 ;; KEYCHORD
 ;;==========================================
 ;; Package for executing commands with two-key combinations
-(require 'key-chord)
-(key-chord-mode 1)
-(key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+(use-package key-chord
+  :config
+  (key-chord-mode t)
+  (key-chord-define evil-insert-state-map "jf" 'evil-normal-state))
 
 ;; Scimax
 ;;=================================================
-(add-to-list 'load-path "~/.emacs.d/scimax-master")
-(require 'ob-ipython)
-(require 'scimax-org-babel-ipython-upstream)
+(use-package ob-ipython
+  :ensure nil
+  :init
+  (add-to-list 'load-path "~/.emacs.d/scimax-master"))
+
+(use-package scimax-org-babel-ipython-upstream
+  :ensure nil
+  :init
+  (add-to-list 'load-path "~/.emacs.d/scimax-master"))
 
 ;; Yasnippet (code templates)
 ;;==========================================
-(require 'yasnippet)
-(yas-global-mode 1)
+(use-package yasnippet
+  :config
+  (yas-global-mode 1))
 
 ;; Spell checking
 ;;==========================================
@@ -125,7 +151,7 @@
 
 ;; Hydra
 ;;==========================================
-(require 'hydra)
+(use-package hydra)
 
 ;; Org mode
 ;;=================================================
@@ -192,24 +218,29 @@
 (setq org-ref-open-pdf-function 'org-ref-get-mendeley-filename)
 
 ;; Load org-ref after setting things up
-(require 'org-ref)
+(use-package org-ref)
 
 ;; ox-pandoc (export to different formats using pandoc)
 ;; ------------------------------
-(require 'ox-pandoc)
+(use-package ox-pandoc)
 
 ;; org2blog config (blogging)
 ;;==========================================
-(setq load-path (cons "~/.emacs.d/org2blog/" load-path))
-(require 'org2blog-autoloads)
-
-(setq load-path (cons "~/.emacs.d/xml-rpc-el/" load-path))
-(setq load-path (cons "~/.emacs.d/metaweblog/" load-path))
-(setq org2blog/wp-blog-alist
-      '(("codin cognitive research"
-	 :url "https://codingcognitiveresearch.wordpress.com/xmlrpc.php"
-	 :username "mbermonti"
-	 :default-categories ("python" "coding" "research" "cognition" "psychology"))))
+(use-package org2blog-autoloads
+  :ensure nil
+  :init
+  (setq load-path (cons "~/.emacs.d/org2blog/" load-path))
+  (setq load-path (cons "~/.emacs.d/xml-rpc-el/" load-path))
+  (setq load-path (cons "~/.emacs.d/metaweblog/" load-path))
+  :config
+  (setq org2blog/wp-blog-alist
+	'(("codin cognitive research"
+	   :url "https://codingcognitiveresearch.wordpress.com/xmlrpc.php"
+	   :username "mbermonti"
+	   :default-categories ("python" "coding" "research" "cognition" "psychology"))))
+  (setq org2blog/wp-use-sourcecode-shortcode t)
+  (setq org2blog/wp-shortcode-langs-map '(("ipython" . "python")))
+  (setq org2blog/wp-use-wp-latex t))
 ;;==========================================
 
 ;;============================================
@@ -220,6 +251,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(font-lock-comment-face ((t (:foreground "dark gray"))))
+ '(highlight-current-line-face ((t (:background "gray34"))))
  '(region ((t (:inherit highlight :background "selectedTextBackgroundColor")))))
 ;;============================================
 
@@ -326,6 +359,17 @@
   "ppp" 'org2blog/wp-post-buffer-as-page-and-publish
   )
 
+;; use y/n instead of yes/no
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; uncomment when packages are installed
+(use-package windmove
+  :bind
+  (("<f2> <right>" . windmove-right)
+   ("<f2> <left>" . windmove-left)
+   ("<f2> <up>" . windmove-up)
+   ("<f2> <down>" . windmove-down)))
+
 ;; ======================================
 ;; PROGRAMMING LANGUAGE SPECIFIC CONFIGS
 ;; ======================================
@@ -416,8 +460,10 @@
  '(custom-safe-themes
    (quote
     ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "50e9ef789d599d39a9ecb6e983757306ea19198d1a8f182be7fd3242b613f00e" "0fb6369323495c40b31820ec59167ac4c40773c3b952c264dd8651a3b704f6b5" "05c3bc4eb1219953a4f182e10de1f7466d28987f48d647c01f1f0037ff35ab9a" "a041a61c0387c57bb65150f002862ebcfe41135a3e3425268de24200b82d6ec9" "64581032564feda2b5f2cf389018b4b9906d98293d84d84142d90d7986032d33" default)))
+ '(display-time-mode t)
  '(doc-view-continuous t)
  '(fci-rule-color "#49483E")
+ '(global-display-line-numbers-mode t)
  '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
  '(highlight-tail-colors
    (quote
@@ -435,12 +481,13 @@
  '(org-src-window-setup (quote other-window))
  '(package-selected-packages
    (quote
-    (hydra org2blog ox-pandoc org-ref htmlize ac-js2 monokai-theme key-chord jedi flymake-python-pyflakes evil-tutor evil-org evil-magit elhome autotest)))
+    (use-package hydra org2blog ox-pandoc org-ref htmlize ac-js2 monokai-theme key-chord jedi flymake-python-pyflakes evil-tutor evil-org evil-magit elhome autotest)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(python-shell-interpreter "ipython")
  '(python-shell-interpreter-args "--simple-prompt -i")
  '(save-place t nil (saveplace))
+ '(send-mail-function (quote mailclient-send-it))
  '(show-paren-mode t)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
