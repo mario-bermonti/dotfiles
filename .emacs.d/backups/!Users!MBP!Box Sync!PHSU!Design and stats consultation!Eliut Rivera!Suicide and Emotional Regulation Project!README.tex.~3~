@@ -1,0 +1,124 @@
+% Created 2019-04-14 Sun 16:55
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\date{}
+\title{Emotional Stroop task - Spanish}
+\hypersetup{
+ pdfauthor={Mario Bermonti Perez},
+ pdftitle={Emotional Stroop task - Spanish},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 8.3.4)},
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+This is a Spanish Emotional Stroop task (EST) developed for a research project
+conducted in the neurocognitive laboratory at Ponce Health Sciences University.
+This project compares people with a history of suicidal behavior vs a control
+group (non-clinical population) on this and other tasks.
+
+The EST was developed using Psychopy 3 (citation) builder but includes code
+components. It can't be run with Psychopy 2 because it uses Unicode
+characters (i.e., words with accents) and Psychopy crashes with this sort of
+stimuli or doesn't display it correctly. It includes practice and experiment trials.
+
+The EST was translated from the extended Stroop task (includes
+instructions and practice trials) found in the demos that Psychopy provides. The
+materials were translated and the trial document (csv file) was adapted.
+
+\section*{Practice trials}
+\label{sec:orgheadline2}
+The EST includes 24 practice trials consisting of congruent word and colors.
+The words presented are azul, rojo, and verde (i.e., Spanish words for
+blue, red, and green) and are presented in colors blue, red, and green.
+Participants respond by pressing:
+\begin{itemize}
+\item f for red
+\item j for green
+\item "space bar" for blue
+\end{itemize}
+
+
+\subsection*{Practice trial's structure:}
+\label{sec:orgheadline1}
+\begin{itemize}
+\item instructions
+\item fixation cross for .5 sec
+\item blank screen for .5 sec
+\item the word is presented until a response is made
+\item participant makes a response with the keyboard (f, j, space bar)
+\item the participant receive feedback
+\end{itemize}
+
+
+Practice trials are organized into blocks of 6 words (two of each color) and
+blocks are presented randomly.
+
+\section*{Experimental trials}
+\label{sec:orgheadline5}
+There are 48 words from each valence (i.e., positive, negative, and neutral)
+for a total of 144 words. Each word is presented only once.
+
+\subsection*{Experimental trial's structure:}
+\label{sec:orgheadline3}
+\begin{itemize}
+\item instructions
+\item fixation cross for .5 sec
+\item blank screen for .5 sec
+\item word is presented until response is made
+\item participant makes repines with the keyboard (f, j, space bar)
+\end{itemize}
+
+\subsection*{Technical details about blocks:}
+\label{sec:orgheadline4}
+\begin{itemize}
+\item Trials (stimuli) are organized into blocks to get semi-randomization:
+\begin{itemize}
+\item 16 blocks
+\item Each block has 9 trials: 3 words from each valence, with 1 word for
+each valence - color combination
+\end{itemize}
+\end{itemize}
+
+The following table represents one block.
+\begin{center}
+\begin{tabular}{llll}
+\hline
+text & letterColor & corrAns & condition\\
+\hline
+positive1 & blue & j & positive\\
+negative1 & blue & j & negative\\
+neutral1 & blue & j & neutral\\
+positive2 & green & space & positive\\
+negative2 & green & space & negative\\
+neutral2 & green & space & neutral\\
+positive3 & red & f & positive\\
+negative3 & red & f & negative\\
+neutral3 & red & f & neutral\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item These blocks for randomization are organized into 4 large experimental
+blocks of 36 trials each.
+\item Participants are allowed 3 breaks to rest (one rest after completing every 36
+trials. The participant continues by pressing a key.
+\item Conditions are balanced in terms of word length
+\end{itemize}
+\end{document}

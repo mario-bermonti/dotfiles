@@ -1,0 +1,57 @@
+% Created 2019-04-11 Thu 15:23
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Mario Bermonti Perez}
+\date{\today}
+\title{By academic program}
+\hypersetup{
+ pdfauthor={Mario Bermonti Perez},
+ pdftitle={By academic program},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 8.3.4)},
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+Attrition was calculated in the following manner:
+\begin{equation}
+Attrition rate=Withdrawal/{Total enrollment}
+\end{equation}
+
+\begin{center}
+\begin{tabular}{lrrr}
+\hline
+ & Active & Withdrawal & Attrition\\
+\hline
+Biomedical Sciences & 21 & 1 & 4.34783\\
+Clinical Psychology & 236 & 7 & 2.61194\\
+Family and Couples Therapy & nan & nan & nan\\
+Medical Sciences & 7 & 3 & 4.83871\\
+Medicine & 268 & 2 & 0.581395\\
+Neuroscience of Learning & 2 & 1 & 3.84615\\
+Nursing & 8 & 4 & 33.3333\\
+Psychology & 102 & 1 & 0.632911\\
+Public Health & 41 & 3 & 4\\
+Public Health - Epidemiology & 49 & 3 & 5.17241\\
+School Psychology & 12 & 4 & 23.5294\\
+Total & 747 & 29 & 2.74882\\
+\hline
+\end{tabular}
+\end{center}
+\end{document}

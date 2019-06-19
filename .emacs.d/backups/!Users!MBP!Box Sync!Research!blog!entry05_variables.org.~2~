@@ -1,0 +1,71 @@
+#+BLOG: codin cognitive research
+#+POSTID: 349
+#+DATE: [2019-04-02 Tue 13:10]
+#+BLOG: codin cognitive research
+#+ORG2BLOG:
+#+OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+#+CATEGORY: python, coding, research, cognition, psychology
+#+TAGS:
+#+DESCRIPTION: Discussion about variables
+#+TITLE: Programming Basics: Variables
+
+In this post we will discuss Variables and how they are used in programming.
+
+
+Variables are the fundamental building blocks of any software so it's important
+you have a good understanding of them.
+
+
+You can think of them as a place in memory where you can store data.
+
+
+** Variables
+ #+HTML: https://youtu.be/OH86oLzVzzw
+ 
+** Example applied to cognition research
+Imagine you design an experiment to test working memory. You will need to store
+the ID for each participant in order to identify their data. In python, you can
+easily create a variable called "id" and store the ID typed into the program
+by the person administering the working memory task until the experiment ends
+and the ID is needed to identify the data.
+
+Here is the code:
+#+BEGIN_SRC python :session  :exports code :results output
+  id = input("Write the participant's ID: ")
+  # the input(...) part asks the user for their ID. You can ignore that part for now
+
+  #########################################
+  # Here goes the code for the experiment #
+  #########################################
+
+  print("Participant's data:", id)
+  # This code just shows the contents of the id variable in the console
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[3]:
+# output
+
+StdinNotImplementedErrorTraceback (most recent call last)
+<python-input-3-967fb3947514> in <module>()
+----> 1 id = input("Write the participant's ID: ")
+      2 # the input(...) part asks the user for their ID. You can ignore that part for now
+      3
+      4 # Here goes the code for the experiment
+      5
+
+/usr/local/lib/python3.6/site-packages/ipykernel/kernelbase.py in raw_input(self, prompt)
+    697         if not self._allow_stdin:
+    698             raise StdinNotImplementedError(
+--> 699                 "raw_input was called, but this frontend does not support input requests."
+    700             )
+    701         return self._input_request(str(prompt),
+
+StdinNotImplementedError: raw_input was called, but this frontend does not support input requests.
+:END:
+
+* Additional resources (diving deeper into variables):
+  - [[https://www.tutorialspoint.com/python/python_variable_types.htm][Tutorials point]]
+  - [[https://docs.python.org/3.6/tutorial/introduction.html][Official Python tutorial (first part)]]
+  - [[http://www.djmannion.net/psych_programming/fundamentals/data_nvf/data_nvf.html][Damien J. Mannion's blog]]

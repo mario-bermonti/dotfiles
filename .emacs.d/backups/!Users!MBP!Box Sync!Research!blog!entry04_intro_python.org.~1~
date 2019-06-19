@@ -1,0 +1,21 @@
+#+POSTID: 232
+#+ORG2BLOG:
+#+DATE: [2018-09-07 Fri 18:09]
+#+OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+#+CATEGORY: python, coding, research, cognition, psychology
+#+TAGS:
+#+DESCRIPTION:
+#+TITLE: Intro to python programming
+
+In this post you will learn how to install Python. You will also learn how to use
+Python to develop programs (i.e. scripts).
+
+
+It is really important that you install python and write the programs for yourself.
+This will help to grasp the concepts.
+
+
+** _Installing Python_
+#+BEGIN_EXAMPLE
+https://youtu.be/YYXdXT2l-Gg
+#+END_EXAMPLE

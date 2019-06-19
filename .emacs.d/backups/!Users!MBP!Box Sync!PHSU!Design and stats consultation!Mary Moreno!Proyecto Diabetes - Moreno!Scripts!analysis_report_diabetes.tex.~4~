@@ -1,0 +1,547 @@
+% Created 2019-05-13 Mon 14:58
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Mario Bermonti Perez}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Mario Bermonti Perez},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 8.3.4)},
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section*{Group comparisons (objective 1)}
+\label{sec:orgheadline13}
+\subsection*{Notes}
+\label{sec:orgheadline1}
+There are differences between the results of Mann-Whitnes and t tests.
+\subsection*{Assumptions}
+\label{sec:orgheadline2}
+These are in SPSS format.
+\subsection*{Group comparisons}
+\label{sec:orgheadline12}
+\subsubsection*{Descriptive stats}
+\label{sec:orgheadline7}
+\begin{itemize}
+\item Tables
+\label{sec:orgheadline3}
+\begin{verbatim}
+Group                Control  Diabetes
+cas2_att_ado  count    20.00     28.00
+              mean     89.45     86.82
+              std      18.13     13.67
+              min      61.00     61.00
+              25%      78.25     75.25
+              50%      89.50     94.00
+              75%     100.00     97.75
+              max     129.00    106.00
+cas2_plan_ado count    20.00     27.00
+              mean     89.95     84.19
+              std      14.94     10.83
+              min      61.00     61.00
+              25%      81.25     77.00
+              50%      94.00     82.00
+              75%      97.00     91.00
+              max     119.00    105.00
+\end{verbatim}
+
+Confidence intervals
+\#\#\#\#\#\#\#\#\#
+
+\#\#\#\#\#\#\#\#\#
+
+NameErrorTraceback (most recent call last)
+<ipython-input-401-f5470c70429d> in <module>()
+----> 1 descr\(_{\text{object}}_{\text{control}}_{\text{att}}\) = DescrStatsW(data\(_{\text{control}}\)['cas2\(_{\text{att}}_{\text{ado}}\)'].dropna(how='all'))
+      2 CI\(_{\text{cog}}_{\text{control}}_{\text{att}}\) = descr\(_{\text{object}}_{\text{control}}_{\text{att.tconfint}}_{\text{mean}}\)()
+      3 descr\(_{\text{object}}_{\text{control}}_{\text{plan}}\) = DescrStatsW(data\(_{\text{control}}\)['cas2\(_{\text{plan}}_{\text{ado}}\)'].dropna(how='all'))
+      4 CI\(_{\text{cog}}_{\text{control}}_{\text{plan}}\) = descr\(_{\text{object}}_{\text{control}}_{\text{plan.tconfint}}_{\text{mean}}\)()
+      5 descr\(_{\text{object}}_{\text{diabetes}}_{\text{att}}\) = DescrStatsW(data\(_{\text{diabetes}}\)['cas2\(_{\text{att}}_{\text{ado}}\)'].dropna(how='all'))
+
+NameError: name 'data\(_{\text{control}}\)' is not defined
+
+\item Figures
+\label{sec:orgheadline6}
+\begin{itemize}
+\item Attention
+\label{sec:orgheadline4}
+\begin{verbatim}
+boxplot_att = sns.boxplot(x='Group', y='cas2_att_ado', data=data_att)
+
+boxplot_att_fig = boxplot_att.get_figure()
+boxplot_att_fig_path = '{}boxplot_att_bygroup.jpg'.format(fig_dir)
+boxplot_att_fig.savefig(boxplot_att_fig_path)
+\end{verbatim}
+
+\includegraphics[width=.9\linewidth]{obipy-resources/2a184861c8c9b35cf32116fe352ae791-7XH2J5.png}
+
+
+\item Planning
+\label{sec:orgheadline5}
+\begin{verbatim}
+boxplot_plan = sns.boxplot(x='Group', y='cas2_plan_ado', data=data_plan)
+boxplot_plan_fig = boxplot_plan.get_figure()
+boxplot_plan_fig_path = '{}boxplot_plan_bygroup.jpg'.format(fig_dir)
+boxplot_plan_fig.savefig(boxplot_plan_fig_path)
+\end{verbatim}
+
+\includegraphics[width=.9\linewidth]{obipy-resources/2a184861c8c9b35cf32116fe352ae791-ycmLEj.png}
+\end{itemize}
+\end{itemize}
+
+
+
+\subsubsection*{Group comparisons}
+\label{sec:orgheadline10}
+\begin{itemize}
+\item Attention
+\label{sec:orgheadline8}
+
+Test for equality of means
+\texttt{============================================================================}
+                 coef    std err          t      P>|t|      [0.025      0.975]
+
+\rule{\linewidth}{0.5pt}
+subset \#1      2.6286      4.808      0.547      0.588      -7.146      12.403
+\texttt{============================================================================}
+
+\begin{verbatim}
+MannwhitneyuResult(statistic=256.5, pvalue=0.226655059160439)
+\end{verbatim}
+
+
+\item Planning
+\label{sec:orgheadline9}
+\begin{verbatim}
+MannwhitneyuResult(statistic=213.5, pvalue=0.052311815567260174)
+\end{verbatim}
+\end{itemize}
+
+\subsubsection*{Multiple comparisons corrections}
+\label{sec:orgheadline11}
+Corrected pvalues for group comparisons:
+Attention: \texttt{results\_comp\_pvalues[0]} 0.588
+Planning: \texttt{results\_comp\_pvalues[1]} 0.153
+
+\section*{Regression analysis (objective 2)}
+\label{sec:orgheadline41}
+\subsection*{Regression analysis preparation}
+\label{sec:orgheadline14}
+\begin{verbatim}
+   Code     group  Hb1c  demo_pad16_ageofdiagnosis  cas2_att_ado  \
+0     1  Diabetes   7.0                        2.0          70.0
+1     2  Diabetes   6.6                       10.0          67.0
+2     3  Diabetes   8.1                        8.0          73.0
+3     4  Diabetes   5.6                       11.0          73.0
+4     5  Diabetes   NaN                       11.0         100.0
+
+   cas2_plan_ado
+0           82.0
+1           88.0
+2           68.0
+3           91.0
+4           82.0
+\end{verbatim}
+
+\subsection*{Assumptions}
+\label{sec:orgheadline23}
+\subsubsection*{Predictor: Hb1c}
+\label{sec:orgheadline18}
+The boxplot below shows that there are 3 outliers.
+\begin{itemize}
+\item Boxplot
+\label{sec:orgheadline15}
+\begin{verbatim}
+sns.boxplot(y='Hb1c',
+data=data_reg)
+\end{verbatim}
+
+\includegraphics[width=.9\linewidth]{obipy-resources/2a184861c8c9b35cf32116fe352ae791-IMvuB7.png}
+
+\item Attention
+\label{sec:orgheadline16}
+\begin{verbatim}
+fig_scatter_hb1c_att = sns.regplot(x='Hb1c',
+            y='cas2_att_ado',
+            data=data_reg)
+fig_scatter_hb1c_att = fig_scatter_hb1c_att.get_figure()
+fig_path = '{}scatterdot_hb1c_att.jpg'.format(fig_dir)
+fig_scatter_hb1c_att.savefig(fig_path)
+\end{verbatim}
+
+/usr/local/lib/python3.6/site-packages/scipy/stats/stats.py:1706: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
+
+\includegraphics[width=.9\linewidth]{obipy-resources/2a184861c8c9b35cf32116fe352ae791-FZTsl7.png}
+
+With outliers removed
+/usr/local/lib/python3.6/site-packages/scipy/stats/stats.py:1706: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
+
+
+
+\begin{verbatim}
+<Figure size 432x288 with 1 Axes>
+\end{verbatim}
+
+\includegraphics[width=.9\linewidth]{obipy-resources/2a184861c8c9b35cf32116fe352ae791-IWXrEJ.png}
+
+\item Planning
+\label{sec:orgheadline17}
+/usr/local/lib/python3.6/site-packages/scipy/stats/stats.py:1706: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
+
+\includegraphics[width=.9\linewidth]{obipy-resources/2a184861c8c9b35cf32116fe352ae791-oWW8k5.png}
+
+/usr/local/lib/python3.6/site-packages/scipy/stats/stats.py:1706: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
+
+\includegraphics[width=.9\linewidth]{obipy-resources/2a184861c8c9b35cf32116fe352ae791-8oNAm0.png}
+\end{itemize}
+
+\subsubsection*{Predictor: Age of onset}
+\label{sec:orgheadline22}
+The boxplot below shows that there are 3 outliers.
+\begin{itemize}
+\item Boxplot
+\label{sec:orgheadline19}
+\includegraphics[width=.9\linewidth]{obipy-resources/2a184861c8c9b35cf32116fe352ae791-5mEYSF.png}
+
+\item Attention
+\label{sec:orgheadline20}
+\begin{verbatim}
+fig_scatter_hb1c_att = sns.regplot(x='demo_pad16_ageofdiagnosis',
+            y='cas2_att_ado',
+            data=data_reg)
+fig_scatter_hb1c_att = fig_scatter_hb1c_att.get_figure()
+fig_path = '{}scatterdot_ageofonset_att.jpg'.format(fig_dir)
+fig_scatter_hb1c_att.savefig(fig_path)
+\end{verbatim}
+
+/usr/local/lib/python3.6/site-packages/scipy/stats/stats.py:1706: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
+
+\includegraphics[width=.9\linewidth]{obipy-resources/2a184861c8c9b35cf32116fe352ae791-yUUWqG.png}
+
+\item Planning
+\label{sec:orgheadline21}
+\begin{verbatim}
+fig_scplaner_hb1c_plan = sns.regplot(x='demo_pad16_ageofdiagnosis',
+            y='cas2_plan_ado',
+            data=data_reg)
+fig_scplaner_hb1c_plan = fig_scplaner_hb1c_plan.get_figure()
+fig_path = '{}scatterdot_ageofonset_plan.jpg'.format(fig_dir)
+fig_scplaner_hb1c_plan.savefig(fig_path)
+\end{verbatim}
+
+/usr/local/lib/python3.6/site-packages/scipy/stats/stats.py:1706: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
+
+\includegraphics[width=.9\linewidth]{obipy-resources/2a184861c8c9b35cf32116fe352ae791-N1Citd.png}
+\end{itemize}
+
+\subsection*{Descriptive stats}
+\label{sec:orgheadline24}
+\begin{verbatim}
+                           count   mean    std   min    25%   50%     75%  \
+Hb1c                        24.0   8.02   1.87   5.6   6.88   7.7    8.25
+demo_pad16_ageofdiagnosis   28.0   8.71   3.80   1.0   6.75   9.5   11.00
+cas2_att_ado                48.0  87.92  15.56  61.0  76.00  92.5  100.00
+cas2_plan_ado               47.0  86.64  12.92  61.0  78.00  85.0   97.00
+
+                             max
+Hb1c                        12.0
+demo_pad16_ageofdiagnosis   15.0
+cas2_att_ado               129.0
+cas2_plan_ado              119.0
+\end{verbatim}
+
+\subsection*{Regression model: Hb1c}
+\label{sec:orgheadline33}
+\subsubsection*{Attention}
+\label{sec:orgheadline28}
+\begin{itemize}
+\item Correlation analysis
+\label{sec:orgheadline25}
+\begin{verbatim}
+                  Hb1c  cas2_att_ado
+Hb1c          1.000000      0.520097
+cas2_att_ado  0.520097      1.000000
+\end{verbatim}
+\item All cases
+\label{sec:orgheadline26}
+/usr/local/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2389: FutureWarning: Method .ptp is deprecated and will be removed in a future version. Use numpy.ptp instead.
+  return ptp(axis=axis, out=out, **kwargs)
+
+\begin{verbatim}
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                            OLS Regression Results
+==============================================================================
+Dep. Variable:           cas2_att_ado   R-squared:                       0.271
+Model:                            OLS   Adj. R-squared:                  0.237
+Method:                 Least Squares   F-statistic:                     8.158
+Date:                Mon, 13 May 2019   Prob (F-statistic):            0.00918
+Time:                        14:50:36   Log-Likelihood:                -91.430
+No. Observations:                  24   AIC:                             186.9
+Df Residuals:                      22   BIC:                             189.2
+Df Model:                           1
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         57.1671     10.488      5.451      0.000      35.416      78.918
+Hb1c           3.6408      1.275      2.856      0.009       0.997       6.284
+==============================================================================
+Omnibus:                        0.719   Durbin-Watson:                   1.662
+Prob(Omnibus):                  0.698   Jarque-Bera (JB):                0.682
+Skew:                          -0.060   Prob(JB):                        0.711
+Kurtosis:                       2.183   Cond. No.                         37.6
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+"""
+\end{verbatim}
+
+\item Outliers removed
+\label{sec:orgheadline27}
+This model doesn't fit the data well at all.
+/usr/local/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2389: FutureWarning: Method .ptp is deprecated and will be removed in a future version. Use numpy.ptp instead.
+  return ptp(axis=axis, out=out, **kwargs)
+
+\begin{verbatim}
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                            OLS Regression Results
+==============================================================================
+Dep. Variable:           cas2_att_ado   R-squared:                       0.051
+Model:                            OLS   Adj. R-squared:                 -0.002
+Method:                 Least Squares   F-statistic:                    0.9598
+Date:                Mon, 13 May 2019   Prob (F-statistic):              0.340
+Time:                        14:50:37   Log-Likelihood:                -77.772
+No. Observations:                  20   AIC:                             159.5
+Df Residuals:                      18   BIC:                             161.5
+Df Model:                           1
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         60.9477     23.340      2.611      0.018      11.912     109.984
+Hb1c           3.1133      3.178      0.980      0.340      -3.563       9.790
+==============================================================================
+Omnibus:                        2.360   Durbin-Watson:                   1.676
+Prob(Omnibus):                  0.307   Jarque-Bera (JB):                1.108
+Skew:                          -0.042   Prob(JB):                        0.575
+Kurtosis:                       1.850   Cond. No.                         62.7
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+"""
+\end{verbatim}
+\end{itemize}
+
+\subsubsection*{Planning}
+\label{sec:orgheadline32}
+\begin{itemize}
+\item Correlation analysis
+\label{sec:orgheadline29}
+\begin{verbatim}
+                   Hb1c  cas2_plan_ado
+Hb1c           1.000000       0.147555
+cas2_plan_ado  0.147555       1.000000
+\end{verbatim}
+
+\item All cases
+\label{sec:orgheadline30}
+/usr/local/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2389: FutureWarning: Method .ptp is deprecated and will be removed in a future version. Use numpy.ptp instead.
+  return ptp(axis=axis, out=out, **kwargs)
+
+\begin{verbatim}
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                            OLS Regression Results
+==============================================================================
+Dep. Variable:          cas2_plan_ado   R-squared:                       0.022
+Model:                            OLS   Adj. R-squared:                 -0.025
+Method:                 Least Squares   F-statistic:                    0.4674
+Date:                Mon, 13 May 2019   Prob (F-statistic):              0.502
+Time:                        14:50:38   Log-Likelihood:                -86.045
+No. Observations:                  23   AIC:                             176.1
+Df Residuals:                      21   BIC:                             178.4
+Df Model:                           1
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         78.4226      9.813      7.992      0.000      58.016      98.830
+Hb1c           0.8161      1.194      0.684      0.502      -1.666       3.299
+==============================================================================
+Omnibus:                        0.121   Durbin-Watson:                   1.893
+Prob(Omnibus):                  0.941   Jarque-Bera (JB):                0.344
+Skew:                           0.000   Prob(JB):                        0.842
+Kurtosis:                       2.401   Cond. No.                         36.8
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+"""
+\end{verbatim}
+
+\item Outliers removed
+\label{sec:orgheadline31}
+This model doesn't fit the data well at all.
+/usr/local/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2389: FutureWarning: Method .ptp is deprecated and will be removed in a future version. Use numpy.ptp instead.
+  return ptp(axis=axis, out=out, **kwargs)
+/usr/local/lib/python3.6/site-packages/scipy/stats/stats.py:1390: UserWarning: kurtosistest only valid for n>=20 \ldots{} continuing anyway, n=19
+  "anyway, n=\%i" \% int(n))
+
+\begin{verbatim}
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                            OLS Regression Results
+==============================================================================
+Dep. Variable:          cas2_plan_ado   R-squared:                       0.015
+Model:                            OLS   Adj. R-squared:                 -0.043
+Method:                 Least Squares   F-statistic:                    0.2581
+Date:                Mon, 13 May 2019   Prob (F-statistic):              0.618
+Time:                        14:50:39   Log-Likelihood:                -67.930
+No. Observations:                  19   AIC:                             139.9
+Df Residuals:                      17   BIC:                             141.7
+Df Model:                           1
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         93.2099     17.735      5.256      0.000      55.793     130.627
+Hb1c          -1.2368      2.434     -0.508      0.618      -6.373       3.900
+==============================================================================
+Omnibus:                        0.509   Durbin-Watson:                   2.275
+Prob(Omnibus):                  0.775   Jarque-Bera (JB):                0.604
+Skew:                           0.275   Prob(JB):                        0.739
+Kurtosis:                       2.321   Cond. No.                         62.8
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+"""
+\end{verbatim}
+\end{itemize}
+
+
+\subsection*{Regression model: Age of onset}
+\label{sec:orgheadline40}
+\subsubsection*{Attention}
+\label{sec:orgheadline36}
+\begin{itemize}
+\item Correlation analysis
+\label{sec:orgheadline34}
+\begin{verbatim}
+                           demo_pad16_ageofdiagnosis  cas2_att_ado
+demo_pad16_ageofdiagnosis                    1.00000       0.01253
+cas2_att_ado                                 0.01253       1.00000
+\end{verbatim}
+\item All cases
+\label{sec:orgheadline35}
+/usr/local/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2389: FutureWarning: Method .ptp is deprecated and will be removed in a future version. Use numpy.ptp instead.
+  return ptp(axis=axis, out=out, **kwargs)
+
+\begin{verbatim}
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                            OLS Regression Results
+==============================================================================
+Dep. Variable:           cas2_att_ado   R-squared:                       0.000
+Model:                            OLS   Adj. R-squared:                 -0.038
+Method:                 Least Squares   F-statistic:                  0.004083
+Date:                Mon, 13 May 2019   Prob (F-statistic):              0.950
+Time:                        14:50:40   Log-Likelihood:                -112.45
+No. Observations:                  28   AIC:                             228.9
+Df Residuals:                      26   BIC:                             231.6
+Df Model:                           1
+Covariance Type:            nonrobust
+=============================================================================================
+                                coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+const                        86.4285      6.689     12.921      0.000      72.679     100.178
+demo_pad16_ageofdiagnosis     0.0451      0.706      0.064      0.950      -1.405       1.496
+==============================================================================
+Omnibus:                        5.946   Durbin-Watson:                   1.993
+Prob(Omnibus):                  0.051   Jarque-Bera (JB):                2.491
+Skew:                          -0.415   Prob(JB):                        0.288
+Kurtosis:                       1.797   Cond. No.                         24.3
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+"""
+\end{verbatim}
+\end{itemize}
+
+\subsubsection*{Planning}
+\label{sec:orgheadline39}
+\begin{itemize}
+\item Correlation analysis
+\label{sec:orgheadline37}
+\begin{verbatim}
+                           demo_pad16_ageofdiagnosis  cas2_plan_ado
+demo_pad16_ageofdiagnosis                   1.000000      -0.048183
+cas2_plan_ado                              -0.048183       1.000000
+\end{verbatim}
+
+\item All cases
+\label{sec:orgheadline38}
+/usr/local/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2389: FutureWarning: Method .ptp is deprecated and will be removed in a future version. Use numpy.ptp instead.
+  return ptp(axis=axis, out=out, **kwargs)
+
+\begin{verbatim}
+<class 'statsmodels.iolib.summary.Summary'>
+"""
+                            OLS Regression Results
+==============================================================================
+Dep. Variable:          cas2_plan_ado   R-squared:                       0.002
+Model:                            OLS   Adj. R-squared:                 -0.038
+Method:                 Least Squares   F-statistic:                   0.05817
+Date:                Mon, 13 May 2019   Prob (F-statistic):              0.811
+Time:                        14:50:41   Log-Likelihood:                -102.09
+No. Observations:                  27   AIC:                             208.2
+Df Residuals:                      25   BIC:                             210.8
+Df Model:                           1
+Covariance Type:            nonrobust
+=============================================================================================
+                                coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+const                        85.3562      5.299     16.109      0.000      74.443      96.269
+demo_pad16_ageofdiagnosis    -0.1357      0.563     -0.241      0.811      -1.294       1.023
+==============================================================================
+Omnibus:                        0.009   Durbin-Watson:                   2.407
+Prob(Omnibus):                  0.996   Jarque-Bera (JB):                0.154
+Skew:                          -0.038   Prob(JB):                        0.926
+Kurtosis:                       2.638   Cond. No.                         23.7
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+"""
+\end{verbatim}
+\end{itemize}
+\end{document}

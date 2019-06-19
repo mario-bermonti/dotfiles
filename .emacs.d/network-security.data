@@ -1,0 +1,3 @@
+(
+ (:id "sha1:1ff261b535bd14e0c5da7a08ab4faebdf775e172" :fingerprint "sha1:92:a5:ee:cb:d2:73:7e:c3:5d:73:51:a2:cf:0c:8d:76:fb:23:65:28" :host "codingcognitiveresearch.wordpress.com:443" :conditions (:insecure :unknown-ca :invalid))
+)

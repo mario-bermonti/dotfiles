@@ -1,0 +1,1668 @@
+** General
+*** Frequencies [0%]
+**** Gender distribution
+**** Transfer rates
+**** First generation students
+**** Hours enrolled
+**** Diversity
+**** Low socioeconomic students
+**** Professional boards results
+**** Career placement rates
+**** “First destination” survey placement rates
+*** Requires calculations [80%]
+**** DONE Age distribution (18-24; 25-64; 65+)
+Requires continuous data to be categorized
+**** DONE Retention rates
+  Requires extensive calculations
+**** DONE Graduation rates 
+  Requires extensive calculations
+**** DONE Mean-time to graduation
+  Requires calculation of mean
+**** TODO Graduation Survey Satisfaction results
+** Analysis plan [0%]                                             :noexport:
+
+** By program and total
+*** Achievement
+**** TODO Fall Enrollment (same table if possible)
+***** DONE by Gender distribution and Age distribution (18-24; 25-64; 65+)
+***** TODO [#A] by Age distribution (18-24; 25-64; 65+)
+***** TODO [#A] By gender and ethnicity (Fall)
+***** IN PROGRESS by Gender and Major (only needs totals; see comment)
+**** TODO Transfer rates
+**** TODO Hours enrolled
+**** TODO [#A] Diversity (1 tabla) (only required for MD)
+***** TODO [#A] Ethnicity (non-hispanic)
+***** TODO [#A] Low socioeconomic students (less than $25,000)
+***** TODO [#A] First generation students
+*** Post-institutional
+**** IN PROGRESS [#A] Retention rates
+  Requires extensive calculations
+**** TODO [#A] Graduation rates
+**** DONE [#A] Mean-time to graduation
+***** TODO [#A] Only needs length and maximum time frame added
+**** TODO Completions (both in same table if possible)
+***** TODO By gender
+***** TODO Ethnicity
+**** TODO [#A] Professional boards results
+***** DONE [#A] USMLE step results
+***** TODO [#A] Psych license exam
+****** TODO by PsyD and PhD
+**** TODO Career placement rates
+***** TODO Placement of MSMS
+***** TODO [#A] Residency placements MD
+***** TODO “First destination” survey placement rates
+**** TODO [#A] Psych internship placements
+**** TODO [#A] Graduation Survey Satisfaction results
+
+*** TODO [#B] Other things to do
+**** Formatting [50%]
+***** DONE Format values (currently abrreviations)
+***** TODO [#A] Left aligned tables
+
+
+* Organization of report                                           :noexport:
+** Achievement
+*** Gender distribution
+*** Age distribution (18-24; 25-64; 65+)
+*** Transfer rates
+*** First generation students
+*** Hours enrolled
+*** Diversity
+*** Low socioeconomic students
+** Post-institutional
+*** Retention rates
+  Requires extensive calculations
+*** Graduation rates 
+  Requires extensive calculations
+*** Mean-time to graduation
+  Requires calculation of mean
+*** Professional boards results
+*** Career placement rates
+*** “First destination” survey placement rates
+*** Graduation Survey Satisfaction results
+
+* *Important notes about post-institutional*: :noexport:
+- Integrating the post-institutional data provided by academic programs
+  requires to carefully integrate it into the main data file ("...READY FOR
+  ANALYSIS"). I have thought about the following ways to do it:
+  + Integrate them manually
+    * Program by program into the main file or integrate them among
+      themselves (every program) and then into the main file.
+  + Integrate them automatically with pandas methods
+
+* General functions :noexport:UsefulScript: :noexport:
+#+BEGIN_SRC ipython :session  :exports both :results output
+import tabulate
+import pandas as pd
+import numpy as np
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[1]:
+:END:
+
+
+This function formats df's as orgmode tables.
+#+BEGIN_SRC ipython :session  :exports results :results output
+  def format_as_table(data, showindex='always', series=False):
+      """Returns an orgmode table."""
+      if series:
+          data.name = data.index[0]
+          data = data.to_frame()
+          showindex = False
+      table = tabulate.tabulate(
+          data,
+          headers='keys',
+          tablefmt='orgtbl',
+          showindex=showindex
+      )
+      return table
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[2]:
+:END:
+
+This function formats .describe() results.
+#+BEGIN_SRC ipython :session  :exports results :results output
+  def format_descriptive_stats(data, toframe=False, transpose=False, reduce=False):
+      """Formats the results of descriptive statistics conducted by
+      the pandas' describe method into a format suitable for reporting
+      in stats reports.
+      """
+      data_formatted = data.round(2)
+      if toframe:
+          data_formatted = data_formatted.to_frame()
+      if transpose:
+          data_formatted = data_formatted.transpose()
+      # has to happen here so it SD gets the correct sentence case
+      data_formatted.rename(columns=str.capitalize, inplace=True)
+      data_formatted.rename(columns={'50%': 'Median', 'Std': 'SD'}, inplace=True)
+      if reduce:
+          data_formatted.drop(['Count', '25%', '75%'], axis=1)
+      data_formatted = data_formatted[['Mean', 'Median', 'SD', 'Min', 'Max']]
+      return data_formatted
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[3]:
+:END:
+
+This function formats the results of freq analysis (.value_counts()).
+#+BEGIN_SRC ipython :session  :exports results :results output
+  def freq_of_multiple_columns(data):
+      """Conducts frequency analysis (value_counts) to each column of a
+      pandas df and format it as a table sui
+      table for statistical
+      analysis reports.
+
+      Parameters:
+      -----------
+      data: pandas df that may contain multiple columns. This contains the
+            data that will be analyzed.
+
+      Returns: a str that contains the results for all the columns.
+      -------
+
+      Notes:
+      -----
+      1. You need to print the return value of the function in order
+         for it to appear in orgmode results.
+      2. Uses tabulate for formatting the table.
+      3. value_counts are normalized
+
+      """
+      results_formatted = ''
+      for var in data:
+          results = data[var].value_counts(normalize=True)
+          results = results.round(4).to_frame() * 100
+          na_count = data[var].isna().sum()
+          # Doesn't work (it works with similar examples
+          #results.loc['Missing values'] = na_count
+          results.columns = results.columns.str.capitalize() + ' (%)'
+          results = tabulate.tabulate(results, headers='keys', tablefmt='orgtbl', showindex='always')
+          results_formatted += '{} \n #+begin_tablenotes \n Missing values: {} \n' \
+              '#+end_tablenotes \n\n'.format(results, na_count)
+      return results_formatted
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[4]:
+:END:
+
+
+#+BEGIN_SRC ipython :session  :exports results :results output
+  def freq_of_multiple_columns1(data):
+      """Conducts frequency analysis (value_counts) to each column of a
+      pandas df and format it as a table suitable for statistical
+      analysis reports.
+
+      Parameters:
+      -----------
+      data: pandas df that may contain multiple columns. This contains the
+            data that will be analyzed.
+
+      Returns: a str that contains the results for all the columns.
+      -------
+
+      Notes:
+      -----
+      1. You need to print the return value of the function in order
+         for it to appear in orgmodes results.
+      2. Uses tabulate for formatting the table.
+      3. value_counts are normalized
+
+      """
+      results_formatted = ''
+      for var in data:
+          results = data[var].value_counts(normalize=True)
+          results = results.round(4).to_frame() * 100
+          print(results.info())
+          na_count = data[var].isna().sum()
+          # Doesn't work (it works with similar examples
+          #results.loc['d'] = na_count
+          print('c', results.columns)
+          if isinstance(results.index, pd.CategoricalIndex):
+              print('i', results.index.categories)
+          results.columns = results.columns.str.capitalize() + ' (%)'
+          results = tabulate.tabulate(results, headers='keys', tablefmt='orgtbl', showindex='always')
+          results_formatted += '{} \n #+begin_tablenotes \n Missing values: {} \n' \
+              '#+end_tablenotes \n\n'.format(results, na_count)
+      return results_formatted
+  d = pd.DataFrame({'a':[1, 2, 3, 4, 5], 'b': [11, 12, 13, 14, 15]})
+  print(freq_of_multiple_columns1(d))
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[5]:
+# output
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 5 entries, 5 to 1
+Data columns (total 1 columns):
+a    5 non-null float64
+dtypes: float64(1)
+memory usage: 80.0 bytes
+None
+c Index(['a'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 5 entries, 15 to 11
+Data columns (total 1 columns):
+b    5 non-null float64
+dtypes: float64(1)
+memory usage: 80.0 bytes
+None
+c Index(['b'], dtype='object')
+|----+---------|
+|    |   A (%) |
+|----+---------|
+|  5 |      20 |
+|  4 |      20 |
+|  3 |      20 |
+|  2 |      20 |
+|  1 |      20 |
+|----+---------|
+ #+begin_tablenotes
+ Missing values: 0
+#+end_tablenotes
+
+|----+---------|
+|    |   B (%) |
+|----+---------|
+| 15 |      20 |
+| 14 |      20 |
+| 13 |      20 |
+| 12 |      20 |
+| 11 |      20 |
+|----+---------|
+ #+begin_tablenotes
+ Missing values: 0
+#+end_tablenotes
+
+
+
+:END:
+
+
+* Data preparation :noexport:
+** General
+#+BEGIN_SRC ipython :session  :exports results :results output
+  filename = 'AIU data_2019-03-20_READY FOR ANALYSIS.xlsx'
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[6]:
+:END:
+
+** Achievement data :usefulScript:
+
+#+begin_src ipython :exports none :session :results output :display text/plain
+  data_achievement = pd.read_excel(
+      filename,
+      sheet_name='Total enrollment'
+  )
+  data_achievement.info
+  ()
+#+end_src
+
+#+RESULTS:
+:RESULTS:
+# Out[7]:
+# text/plain
+: ()
+:END:
+
+Fill blanks that were not missing values, but actually represent
+values (issues with IT's report).
+#+begin_src ipython :session :exports both :results output
+  data_achievement['Transfer'].fillna('No', inplace=True)
+  data_achievement['Status'].fillna('Active', inplace=True)
+#+end_src
+
+#+RESULTS:
+:RESULTS:
+# Out[8]:
+:END:
+
+These data were renamed to have more descriptive names.
+#+begin_src ipython :session :exports none :results output
+  data_achievement.rename({
+      'P/F Time Fall': 'Enrollment classification Fall',
+      'P/F Time Spring': 'Enrollment classification Spring',
+      'P/F Time First Trimester': 'Enrollment classification First Trimester',
+      'P/F Time Second Trimester': 'Enrollment classification Second Trimester',
+      'P/F Time Third Trimester': 'Enrollment classification Third Trimester',
+      'P/F Time Summer': 'Enrollment classification Summer',
+      'P/F Time Fall Trimester': 'Enrollment classification Fall Trimester',
+      'P/F Time Spring Trimester': 'Enrollment classification Spring Trimester',
+      'P/F Time Summer Trimester': 'Enrollment classification Summer Trimester',
+  }, axis='columns', inplace=True)
+  data_achievement.info()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[9]:
+# output
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1132 entries, 0 to 1131
+Data columns (total 26 columns):
+Student ID                                    1132 non-null int64
+Name (last, first)                            1132 non-null object
+Age                                           1128 non-null float64
+Gender                                        1132 non-null object
+Academic School                               1054 non-null object
+Academic Program                              1131 non-null object
+Major                                         1098 non-null object
+Acceptance year                               1130 non-null float64
+Hours enrolled                                1132 non-null int64
+Enrollment classification Fall                863 non-null object
+Enrollment classification Spring              853 non-null object
+Enrollment classification First Trimester     141 non-null object
+Enrollment classification Second Trimester    137 non-null object
+Enrollment classification Third Trimester     137 non-null object
+Enrollment classification Summer              153 non-null object
+Enrollment classification Fall Trimester      11 non-null object
+Enrollment classification Spring Trimester    9 non-null object
+Enrollment classification Summer Trimester    137 non-null object
+First generation student                      64 non-null object
+Parent income                                 55 non-null float64
+Student income                                228 non-null float64
+Ethnicity                                     1028 non-null object
+Ethnicity_specify                             0 non-null float64
+Transfer                                      1132 non-null object
+Status                                        1132 non-null object
+Expected graduation date                      1130 non-null float64
+dtypes: float64(6), int64(2), object(18)
+memory usage: 230.0+ KB
+
+:END:
+
+This converts whitespaces in cells to nan. :usefulScript:
+#+BEGIN_SRC ipython :session :exports results :results output
+data_achievement.replace(r'^\s+$', np.nan, regex=True, inplace=True)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[10]:
+:END:
+
+
+This has all been commented out because these groups are to be included
+in the analysis.
+
+There are entries for students with classifications that are not to
+be included in the analysis (e.g., visiting students). This code removes
+them from the data.
+
+Only international/visiting students will be excluded from analysis. This
+is done in the next code block.
+
+# #+BEGIN_SRC ipython :session  :exports results :results output
+#   data_achievement = data_achievement[~data_achievement['Academic Program'].isin(
+#           ['International Visiting St',
+#            'Postgraduate Certificate',
+#            'Visiting Students',
+#           ]
+#       )
+#   ]
+#   data_achievement['Academic Program'].value_counts()
+# #+END_SRC
+
+# #+RESULTS:
+# :RESULTS:
+# # Out[11]:
+# # text/plain
+# : Doctor of Medicine          344
+# : Doctor of Clinical Psych    268
+# : Doctor of Philosophy        148
+# : Master of Science           112
+# : Master of Public Health      75
+# : Doctor of Public Health      58
+# : Bachelor of Science          12
+# : Name: Academic Program, dtype: int64
+# :END:
+
+Only international/visiting students are removed.
+#+BEGIN_SRC ipython :session  :exports results :results output
+  data_achievement = data_achievement[~data_achievement['Academic Program'].isin(
+          ['International Visiting St',
+           'Visiting Students',
+          ]
+      )
+  ]
+  data_achievement['Academic Program'].value_counts()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[11]:
+# text/plain
+: Doctor of Medicine          344
+: Doctor of Clinical Psych    268
+: Doctor of Philosophy        148
+: Master of Science           112
+: Master of Public Health      75
+: Doctor of Public Health      58
+: Postgraduate Certificate     37
+: Bachelor of Science          12
+: Name: Academic Program, dtype: int64
+:END:
+
+This code makes the values of enrolled time classification (Full-time, Part-time)
+to make them more descriptive.
+#+BEGIN_SRC ipython :session  :exports results :results output
+  enrollment_hours_classification = data_achievement.loc[
+      :,
+      'Enrollment classification Fall': 'Enrollment classification Summer Trimester'
+  ]
+  data_achievement.loc[
+      :,
+      'Enrollment classification Fall': 'Enrollment classification Summer Trimester'
+  ] = enrollment_hours_classification.replace(
+      {
+          'F': 'Full-time',
+          'P': 'Part-time'
+      }
+  )
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[12]:
+:END:
+
+e makes the values of enrolled time classification (Full-time, Part-time)
+to make them more descriptive.
+#+BEGIN_SRC ipython :session  :exports results :results output
+  enrollment_hours_classification = data_achievement.loc[
+      :,
+      'Enrollment classification Fall': 'Enrollment classification Summer Trimester'
+  ]
+  data_achievement.loc[
+      :,
+      'Enrollment classification Fall': 'Enrollment classification Summer Trimester'
+  ] = enrollment_hours_classification.replace(
+      {
+          'F': 'Full-time',
+          'P': 'Part-time'
+      }
+  )
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[13]:
+:END:
+
+This code makes the values of Gender more descriptive.
+#+BEGIN_SRC ipython :session  :exports results :results output
+  gender = data_achievement.loc[:, 'Gender']
+  data_achievement.loc[:, 'Gender'] = \
+      gender.replace(
+          {'F': 'Female', 'M': 'Male'}
+      )
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[14]:
+:END:
+
+
+Let's collapse Public Health - Epidemiology to just Public Health.
+#+BEGIN_SRC ipython :session  :exports results :results output
+  data_achievement['Major'].replace(
+      {"Public Health - Epidemiology": "Public Health"},
+      inplace=True
+  )
+  data_achievement['Major'].value_counts()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[15]:
+# text/plain
+: Medicine                      344
+: Clinical Psychology           268
+: Psychology                    158
+: Public Health                 133
+: Medical Sciences               62
+: Neuroscience of Learning       26
+: Biomedical Sciences            23
+: School Psychology              17
+: Nursing                        12
+: Family and Couples Therapy     11
+: Name: Major, dtype: int64
+:END:
+
+#+BEGIN_SRC ipython :session  :exports results :results output
+  data_achievement['Age ranges'] = pd.cut(
+      data_achievement.Age,
+      bins=[18, 25, 65, 100],
+      right=False,
+      include_lowest=True,
+      labels=['18-24', '25-64', '65+']
+  )
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[16]:
+:END:
+
+** Post-institutional data
+There are entries for students with classifications that are not to
+be included in the analysis (e.g., visiting students). This code removes
+them from the data.
+#+BEGIN_SRC ipython :session  :exports results :results output
+  data_post_institutional = pd.read_excel(
+      filename,
+      sheet_name='Alumni'
+  )
+  data_post_institutional.info()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[17]:
+# output
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 243 entries, 0 to 242
+Data columns (total 23 columns):
+ Student ID                                 243 non-null int64
+Name (last, first)                          243 non-null object
+Age                                         243 non-null int64
+Gender                                      239 non-null object
+Academic School                             243 non-null object
+Major                                       243 non-null object
+Acceptance year                             240 non-null float64
+Phone number                                119 non-null float64
+Address line 1                              243 non-null object
+Address line 2                              132 non-null object
+City                                        243 non-null object
+State                                       241 non-null object
+Zip                                         243 non-null object
+email                                       243 non-null object
+Time to complete degree                     240 non-null float64
+Professional board results_MD_Step 1        69 non-null float64
+Professional board results_MD_Step 2        69 non-null float64
+Professional board results_MD_Step 3        69 non-null float64
+Professional board results_psych_outcome    0 non-null float64
+Placement_general_job                       0 non-null float64
+Placement_first destination                 0 non-null float64
+Placement_continued education               0 non-null float64
+Placement_MD                                0 non-null float64
+dtypes: float64(11), int64(2), object(10)
+memory usage: 43.7+ KB
+
+:END:
+
+
+Let's collapse Public Health - Epidemiology to just Public Health.
+#+BEGIN_SRC ipython :session  :exports results :results output
+  data_post_institutional['Major'].replace(
+      {"Public Health - Epidemiology": "Public Health"},
+      inplace=True
+  )
+  data_post_institutional['Major'].value_counts()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[18]:
+# text/plain
+: Medicine                      69
+: Medical Sciences              50
+: Public Health                 40
+: Psychology                    31
+: Neuroscience of Learning      23
+: Clinical Psychology           19
+: Family and Couples Therapy    11
+: Name: Major, dtype: int64
+:END:
+
+Make MD steps columns names more managable and fix the
+mixed up in the database.
+
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_post_institutional.rename(
+      columns={
+          'Professional board results_MD_Step 1': 'Step1',
+          'Professional board results_MD_Step 2': 'Step3',
+          'Professional board results_MD_Step 3': 'Step2'
+      },
+      inplace=True
+  )
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[119]:
+:END:
+
+
+* Original Analysis                                            :usefulScript:
+
+** Achievement data
+*** General
+#+BEGIN_SRC ipython :session :exports none :results output
+  data_freq_analysis = data_achievement[
+      [
+          'Gender',
+          'Age ranges',
+          'Enrollment classification Fall', 'Enrollment classification Spring',
+          'Enrollment classification First Trimester',
+          'Enrollment classification Second Trimester',
+          'Enrollment classification Third Trimester',
+          'Enrollment classification Summer',
+          'Enrollment classification Fall Trimester',
+          'Enrollment classification Spring Trimester',
+          'Enrollment classification Summer Trimester',
+          'Transfer', 'First generation student', 'Ethnicity',
+      ]
+  ]
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[19]:
+:END:
+
+#+BEGIN_SRC ipython :session :exports results :results raw drawer
+print(freq_of_multiple_columns(data_freq_analysis))
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[20]:
+# output
+|--------+--------------|
+|        |   Gender (%) |
+|--------+--------------|
+| Female |        65.97 |
+| Male   |        34.03 |
+|--------+--------------|
+ #+begin_tablenotes
+ Missing values: 0
+#+end_tablenotes
+
+|-------+------------------|
+|       |   Age ranges (%) |
+|-------+------------------|
+| 25-64 |            91.44 |
+| 18-24 |             8.46 |
+| 65+   |             0.1  |
+|-------+------------------|
+ #+begin_tablenotes
+ Missing values: 3
+#+end_tablenotes
+
+|-----------+--------------------------------------|
+|           |   Enrollment classification fall (%) |
+|-----------+--------------------------------------|
+| Full-time |                                98.71 |
+| Part-time |                                 1.29 |
+|-----------+--------------------------------------|
+ #+begin_tablenotes
+ Missing values: 277
+#+end_tablenotes
+
+|-----------+----------------------------------------|
+|           |   Enrollment classification spring (%) |
+|-----------+----------------------------------------|
+| Full-time |                                  98.18 |
+| Part-time |                                   1.82 |
+|-----------+----------------------------------------|
+ #+begin_tablenotes
+ Missing values: 287
+#+end_tablenotes
+
+|-----------+-------------------------------------------------|
+|           |   Enrollment classification first trimester (%) |
+|-----------+-------------------------------------------------|
+| Full-time |                                           86.57 |
+| Part-time |                                           13.43 |
+|-----------+-------------------------------------------------|
+ #+begin_tablenotes
+ Missing values: 921
+#+end_tablenotes
+
+|-----------+--------------------------------------------------|
+|           |   Enrollment classification second trimester (%) |
+|-----------+--------------------------------------------------|
+| Full-time |                                            85.27 |
+| Part-time |                                            14.73 |
+|-----------+--------------------------------------------------|
+ #+begin_tablenotes
+ Missing values: 926
+#+end_tablenotes
+
+|-----------+-------------------------------------------------|
+|           |   Enrollment classification third trimester (%) |
+|-----------+-------------------------------------------------|
+| Full-time |                                            80.6 |
+| Part-time |                                            19.4 |
+|-----------+-------------------------------------------------|
+ #+begin_tablenotes
+ Missing values: 921
+#+end_tablenotes
+
+|-----------+----------------------------------------|
+|           |   Enrollment classification summer (%) |
+|-----------+----------------------------------------|
+| Part-time |                                  83.95 |
+| Full-time |                                  14.81 |
+| 9         |                                   1.23 |
+|-----------+----------------------------------------|
+ #+begin_tablenotes
+ Missing values: 974
+#+end_tablenotes
+
+|-----------+------------------------------------------------|
+|           |   Enrollment classification fall trimester (%) |
+|-----------+------------------------------------------------|
+| Full-time |                                            100 |
+|-----------+------------------------------------------------|
+ #+begin_tablenotes
+ Missing values: 1044
+#+end_tablenotes
+
+|-----------+--------------------------------------------------|
+|           |   Enrollment classification spring trimester (%) |
+|-----------+--------------------------------------------------|
+| Full-time |                                              100 |
+|-----------+--------------------------------------------------|
+ #+begin_tablenotes
+ Missing values: 1046
+#+end_tablenotes
+
+|-----------+--------------------------------------------------|
+|           |   Enrollment classification summer trimester (%) |
+|-----------+--------------------------------------------------|
+| Full-time |                                             80.6 |
+| Part-time |                                             19.4 |
+|-----------+--------------------------------------------------|
+ #+begin_tablenotes
+ Missing values: 921
+#+end_tablenotes
+
+|-----+----------------|
+|     |   Transfer (%) |
+|-----+----------------|
+| No  |          85.88 |
+| YES |          14.12 |
+|-----+----------------|
+ #+begin_tablenotes
+ Missing values: 0
+#+end_tablenotes
+
+|----+--------------------------------|
+|    |   First generation student (%) |
+|----+--------------------------------|
+| N  |                          83.05 |
+| Y  |                          16.95 |
+|----+--------------------------------|
+ #+begin_tablenotes
+ Missing values: 996
+#+end_tablenotes
+
+|---------------------+-----------------|
+|                     |   Ethnicity (%) |
+|---------------------+-----------------|
+| Hispanic/Latino     |           96.33 |
+| Not Hispanic/Latino |            3.26 |
+| Unreported          |            0.41 |
+|---------------------+-----------------|
+ #+begin_tablenotes
+ Missing values: 73
+#+end_tablenotes
+
+
+
+:END:
+
+#+BEGIN_SRC ipython :session  :exports none :results output
+print(freq_of_multiple_columns1(data_freq_analysis))
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[21]:
+# output
+<class 'pandas.core.frame.DataFrame'>
+Index: 2 entries, Female to Male
+Data columns (total 1 columns):
+Gender    2 non-null float64
+dtypes: float64(1)
+memory usage: 32.0+ bytes
+None
+c Index(['Gender'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+CategoricalIndex: 3 entries, 25-64 to 65+
+Data columns (total 1 columns):
+Age ranges    3 non-null float64
+dtypes: float64(1)
+memory usage: 131.0 bytes
+None
+c Index(['Age ranges'], dtype='object')
+i Index(['18-24', '25-64', '65+'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+Index: 2 entries, Full-time to Part-time
+Data columns (total 1 columns):
+Enrollment classification Fall    2 non-null float64
+dtypes: float64(1)
+memory usage: 32.0+ bytes
+None
+c Index(['Enrollment classification Fall'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+Index: 2 entries, Full-time to Part-time
+Data columns (total 1 columns):
+Enrollment classification Spring    2 non-null float64
+dtypes: float64(1)
+memory usage: 32.0+ bytes
+None
+c Index(['Enrollment classification Spring'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+Index: 2 entries, Full-time to Part-time
+Data columns (total 1 columns):
+Enrollment classification First Trimester    2 non-null float64
+dtypes: float64(1)
+memory usage: 32.0+ bytes
+None
+c Index(['Enrollment classification First Trimester'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+Index: 2 entries, Full-time to Part-time
+Data columns (total 1 columns):
+Enrollment classification Second Trimester    2 non-null float64
+dtypes: float64(1)
+memory usage: 32.0+ bytes
+None
+c Index(['Enrollment classification Second Trimester'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+Index: 2 entries, Full-time to Part-time
+Data columns (total 1 columns):
+Enrollment classification Third Trimester    2 non-null float64
+dtypes: float64(1)
+memory usage: 32.0+ bytes
+None
+c Index(['Enrollment classification Third Trimester'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+Index: 3 entries, Part-time to 9
+Data columns (total 1 columns):
+Enrollment classification Summer    3 non-null float64
+dtypes: float64(1)
+memory usage: 48.0+ bytes
+None
+c Index(['Enrollment classification Summer'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+Index: 1 entries, Full-time to Full-time
+Data columns (total 1 columns):
+Enrollment classification Fall Trimester    1 non-null float64
+dtypes: float64(1)
+memory usage: 16.0+ bytes
+None
+c Index(['Enrollment classification Fall Trimester'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+Index: 1 entries, Full-time to Full-time
+Data columns (total 1 columns):
+Enrollment classification Spring Trimester    1 non-null float64
+dtypes: float64(1)
+memory usage: 16.0+ bytes
+None
+c Index(['Enrollment classification Spring Trimester'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+Index: 2 entries, Full-time to Part-time
+Data columns (total 1 columns):
+Enrollment classification Summer Trimester    2 non-null float64
+dtypes: float64(1)
+memory usage: 32.0+ bytes
+None
+c Index(['Enrollment classification Summer Trimester'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+Index: 2 entries, No to YES
+Data columns (total 1 columns):
+Transfer    2 non-null float64
+dtypes: float64(1)
+memory usage: 32.0+ bytes
+None
+c Index(['Transfer'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+Index: 2 entries, N to Y
+Data columns (total 1 columns):
+First generation student    2 non-null float64
+dtypes: float64(1)
+memory usage: 32.0+ bytes
+None
+c Index(['First generation student'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+Index: 3 entries, Hispanic/Latino to Unreported
+Data columns (total 1 columns):
+Ethnicity    3 non-null float64
+dtypes: float64(1)
+memory usage: 48.0+ bytes
+None
+c Index(['Ethnicity'], dtype='object')
+|--------+--------------|
+|        |   Gender (%) |
+|--------+--------------|
+| Female |        65.97 |
+| Male   |        34.03 |
+|--------+--------------|
+ #+begin_tablenotes
+ Missing values: 0
+#+end_tablenotes
+
+|-------+------------------|
+|       |   Age ranges (%) |
+|-------+------------------|
+| 25-64 |            91.44 |
+| 18-24 |             8.46 |
+| 65+   |             0.1  |
+|-------+------------------|
+ #+begin_tablenotes
+ Missing values: 3
+#+end_tablenotes
+
+|-----------+--------------------------------------|
+|           |   Enrollment classification fall (%) |
+|-----------+--------------------------------------|
+| Full-time |                                98.71 |
+| Part-time |                                 1.29 |
+|-----------+--------------------------------------|
+ #+begin_tablenotes
+ Missing values: 277
+#+end_tablenotes
+
+|-----------+----------------------------------------|
+|           |   Enrollment classification spring (%) |
+|-----------+----------------------------------------|
+| Full-time |                                  98.18 |
+| Part-time |                                   1.82 |
+|-----------+----------------------------------------|
+ #+begin_tablenotes
+ Missing values: 287
+#+end_tablenotes
+
+|-----------+-------------------------------------------------|
+|           |   Enrollment classification first trimester (%) |
+|-----------+-------------------------------------------------|
+| Full-time |                                           86.57 |
+| Part-time |                                           13.43 |
+|-----------+-------------------------------------------------|
+ #+begin_tablenotes
+ Missing values: 921
+#+end_tablenotes
+
+|-----------+--------------------------------------------------|
+|           |   Enrollment classification second trimester (%) |
+|-----------+--------------------------------------------------|
+| Full-time |                                            85.27 |
+| Part-time |                                            14.73 |
+|-----------+--------------------------------------------------|
+ #+begin_tablenotes
+ Missing values: 926
+#+end_tablenotes
+
+|-----------+-------------------------------------------------|
+|           |   Enrollment classification third trimester (%) |
+|-----------+-------------------------------------------------|
+| Full-time |                                            80.6 |
+| Part-time |                                            19.4 |
+|-----------+-------------------------------------------------|
+ #+begin_tablenotes
+ Missing values: 921
+#+end_tablenotes
+
+|-----------+----------------------------------------|
+|           |   Enrollment classification summer (%) |
+|-----------+----------------------------------------|
+| Part-time |                                  83.95 |
+| Full-time |                                  14.81 |
+| 9         |                                   1.23 |
+|-----------+----------------------------------------|
+ #+begin_tablenotes
+ Missing values: 974
+#+end_tablenotes
+
+|-----------+------------------------------------------------|
+|           |   Enrollment classification fall trimester (%) |
+|-----------+------------------------------------------------|
+| Full-time |                                            100 |
+|-----------+------------------------------------------------|
+ #+begin_tablenotes
+ Missing values: 1044
+#+end_tablenotes
+
+|-----------+--------------------------------------------------|
+|           |   Enrollment classification spring trimester (%) |
+|-----------+--------------------------------------------------|
+| Full-time |                                              100 |
+|-----------+--------------------------------------------------|
+ #+begin_tablenotes
+ Missing values: 1046
+#+end_tablenotes
+
+|-----------+--------------------------------------------------|
+|           |   Enrollment classification summer trimester (%) |
+|-----------+--------------------------------------------------|
+| Full-time |                                             80.6 |
+| Part-time |                                             19.4 |
+|-----------+--------------------------------------------------|
+ #+begin_tablenotes
+ Missing values: 921
+#+end_tablenotes
+
+|-----+----------------|
+|     |   Transfer (%) |
+|-----+----------------|
+| No  |          85.88 |
+| YES |          14.12 |
+|-----+----------------|
+ #+begin_tablenotes
+ Missing values: 0
+#+end_tablenotes
+
+|----+--------------------------------|
+|    |   First generation student (%) |
+|----+--------------------------------|
+| N  |                          83.05 |
+| Y  |                          16.95 |
+|----+--------------------------------|
+ #+begin_tablenotes
+ Missing values: 996
+#+end_tablenotes
+
+|---------------------+-----------------|
+|                     |   Ethnicity (%) |
+|---------------------+-----------------|
+| Hispanic/Latino     |           96.33 |
+| Not Hispanic/Latino |            3.26 |
+| Unreported          |            0.41 |
+|---------------------+-----------------|
+ #+begin_tablenotes
+ Missing values: 73
+#+end_tablenotes
+
+
+
+:END:
+*** By program
+
+
+** Post-institutional data
+*** Mean-time to graduation
+#+BEGIN_SRC ipython :session  :exports results :results output
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[21]:
+:END:
+
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  time_to_grad_results = data_post_institutional['Time to complete degree'].describe()
+  time_to_grad_results = format_descriptive_stats(
+      time_to_grad_results,
+      toframe=True,
+      transpose=True
+  )
+  print(format_as_table(time_to_grad_results))
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[22]:
+# output
+|-------------------------+--------+----------+------+-------+-------|
+|                         |   Mean |   Median |   SD |   Min |   Max |
+|-------------------------+--------+----------+------+-------+-------|
+| Time to complete degree |   3.22 |        3 | 2.14 |     1 |    10 |
+|-------------------------+--------+----------+------+-------+-------|
+
+:END:
+
+
+*** Graduation rates
+#+BEGIN_SRC ipython :session  :exports results :results table
+  graduation_rates_total = round(len(data_post_institutional)/len(data_achievement) * 100, 2)
+  graduation_rates_total = pd.Series(graduation_rates_total, index=['Graduation Rates (%)'])
+  table = format_as_table(graduation_rates_total, series=True)
+  # New
+  students_post_institutional_byprog = data_post_institutional.groupby('Major')
+  students_achievement_byprog = data_achievement.groupby('Major')
+  print(students_post_institutional_byprog)
+  print()
+  print(students_achievement_byprog)
+  #student_status_counts = student_status_byprog.value_counts().unstack()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[23]:
+# output
+<pandas.core.groupby.DataFrameGroupBy object at 0x110a628d0>
+
+<pandas.core.groupby.DataFrameGroupBy object at 0x1108a6fd0>
+
+:END:
+
+*** Attrition and Retention rates
+**** General
+#+BEGIN_SRC ipython :session  :exports results :results output
+  students_active = data_achievement.loc[data_achievement['Status'] == 'Active']
+  students_dismissed_withdraw = data_achievement[
+      data_achievement['Status'].isin(
+          ['Dismissed', 'Withdrawal']
+      )
+  ]
+  retention_rates = (len(data_achievement) - len(students_dismissed_withdraw))/len(data_achievement)
+  retention_rates = round(retention_rates * 100, 2)
+  retention_rates = pd.Series(retention_rates, index=['Graduation Rates (%)'])
+  print(format_as_table(retention_rates, series=True))
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[24]:
+# output
+|------------------------|
+|   Graduation Rates (%) |
+|------------------------|
+|                  95.92 |
+|------------------------|
+
+:END:
+
+**** By academic program
+
+Attrition was calculated in the following manner:
+\begin{equation}
+Attrition rate=Withdrawal/{Total enrollment}
+\end{equation}
+
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  student_status_byprog = data_achievement.groupby('Major')['Status']
+  student_status_counts = student_status_byprog.value_counts().unstack()
+  total_status_counts = data_achievement['Status'].value_counts().to_frame().transpose()
+  total_status_counts.index = ['Total']
+  complete_status_counts = student_status_counts.append(total_status_counts)
+  complete_status_counts['Attrition (%)'] = complete_status_counts['Withdrawal']/complete_status_counts.sum(axis=1) * 100
+  complete_status_counts = complete_status_counts[['Active', 'Withdrawal', 'Attrition (%)']]
+  complete_status_counts['Retention (%)'] = 100 - complete_status_counts['Attrition (%)']
+  print(format_as_table(complete_status_counts.round(2)))
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[25]:
+# output
+|----------------------------+----------+--------------+-----------------+-----------------|
+|                            |   Active |   Withdrawal |   Attrition (%) |   Retention (%) |
+|----------------------------+----------+--------------+-----------------+-----------------|
+| Biomedical Sciences        |       21 |            1 |            4.35 |           95.65 |
+| Clinical Psychology        |      236 |            7 |            2.61 |           97.39 |
+| Family and Couples Therapy |      nan |          nan |          nan    |          nan    |
+| Medical Sciences           |        7 |            3 |            4.84 |           95.16 |
+| Medicine                   |      268 |            2 |            0.58 |           99.42 |
+| Neuroscience of Learning   |        2 |            1 |            3.85 |           96.15 |
+| Nursing                    |        8 |            4 |           33.33 |           66.67 |
+| Psychology                 |      102 |            1 |            0.63 |           99.37 |
+| Public Health              |       90 |            6 |            4.51 |           95.49 |
+| School Psychology          |       12 |            4 |           23.53 |           76.47 |
+| Total                      |      747 |           29 |            2.75 |           97.25 |
+|----------------------------+----------+--------------+-----------------+-----------------|
+
+:END:
+* Current analysis
+#+BEGIN_SRC ipython :session  :exports none :results output
+# This will be used to store all results and
+# then save them into an Excel file
+results_list = []
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[26]:
+:END:
+
+** Achievement
+*** Enrollment by age and gender
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_gender_age_count = data_achievement[
+      ['Student ID', 'Age ranges', 'Gender']
+  ]
+  data_gender_age_count = data_gender_age_count.rename(
+      columns={'Student ID': 'Age Range'}
+  )
+  results_age_gender_dist = data_gender_age_count.groupby(
+      ['Gender', 'Age ranges']
+  ).count()
+  results_age_gender_dist = results_age_gender_dist.unstack()
+
+  # Calculate Totals
+  results_age_gender_dist.loc['Total'] = results_age_gender_dist.sum(axis=0)
+  results_age_gender_dist.columns = [
+      results_age_gender_dist.columns[0][-1],
+      results_age_gender_dist.columns[1][-1],
+      results_age_gender_dist.columns[2][-1]
+  ]
+  results_age_gender_dist['Total'] = results_age_gender_dist.sum(axis=1)
+
+  # Format the results
+  results_age_gender_dist.columns.names = [None]
+
+  print(format_as_table(results_age_gender_dist))
+
+  # Count nans
+  print('\n')
+  results_age_gender_dist_na = data_achievement[
+      ['Age ranges', 'Gender']
+  ].isna().sum(axis=0)
+  results_age_gender_dist_na = results_age_gender_dist_na.to_frame()
+  results_age_gender_dist_na.rename(columns={0: 'Missing data'}, inplace=True)
+  print(format_as_table(results_age_gender_dist_na))
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[27]:
+# output
+|----------+---------+---------+-------+---------|
+| Gender   |   18-24 |   25-64 |   65+ |   Total |
+|----------+---------+---------+-------+---------|
+| Female   |      65 |     627 |     1 |     693 |
+| Male     |      24 |     335 |   nan |     359 |
+| Total    |      89 |     962 |     1 |    1052 |
+|----------+---------+---------+-------+---------|
+
+
+|------------+----------------|
+|            |   Missing data |
+|------------+----------------|
+| Age ranges |              3 |
+| Gender     |              0 |
+|------------+----------------|
+
+:END:
+*** Enrollment by gender and major
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_gender_major = data_achievement[
+      ['Student ID', 'Major', 'Gender']
+  ]
+
+  # Calculate enrollment by major (totals)
+  data_by_maj = data_gender_major.groupby(
+      ['Major']
+    )
+  enrollment_by_maj = data_by_maj.count()
+  enrollment_by_maj = enrollment_by_maj['Student ID'].to_frame()
+
+  # Format the column name
+  enrollment_by_maj.columns = ['Enrollment (N)']
+
+  # Enrollment by gender by Major
+  enrollment_by_maj_gender = data_by_major['Gender'].value_counts(normalize=True)
+
+  # Format results
+  enrollment_by_maj_gender = round(enrollment_by_maj_gender * 100, 2)
+  enrollment_by_maj_gender = enrollment_by_maj_gender.unstack()
+
+  # Results: by Major, by gender and totals
+  enrollment_total_maj_gender = enrollment_by_maj_gender.copy()
+  enrollment_total_maj_gender.insert(0, "Enrollment (N)", enrollment_by_maj['Enrollment (N)'])
+
+  # Format results
+  enrollment_total_maj_gender.index.name = 'Academic Program'
+  enrollment_total_maj_gender.rename(
+      columns={
+          'Male': 'Male (%)',
+          'Female': 'Female (%)'
+      },
+      inplace=True
+  )
+
+
+  # ADD TOTAL (SEE TABLES PERELES)
+ #+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[28]:
+# output
+
+NameErrorTraceback (most recent call last)
+<ipython-input-28-c0ac4e159f8b> in <module>()
+     14
+     15 # Enrollment by gender by Major
+---> 16 enrollment_by_maj_gender = data_by_major['Gender'].value_counts(normalize=True)
+     17
+     18 # Format results
+
+NameError: name 'data_by_major' is not defined
+:END:
+
+*** Priority
+**** Enrollment by age
+#+BEGIN_SRC ipython :session  :exports results :results value :display text/plain
+  data_enrollment_age_count = data_achievement[
+      ['Student ID', 'Major', 'Age ranges', "Enrollment classification Fall"]
+  ]
+  data_enrollment_age_count = data_enrollment_age_count.rename(
+      columns={'Student ID': 'Age Range'}
+  )
+
+  results_age_enrollment_dist = data_enrollment_age_count.groupby(
+      ["Major", "Enrollment classification Fall", 'Age ranges']
+  ).count()
+  print(results_age_enrollment_dist)
+  results_age_enrollment_dist = results_age_enrollment_dist.unstack(fill_value=0)
+
+  # Calculate Totals
+  results_age_enrollment_dist.loc['Total'] = results_age_enrollment_dist.sum(axis=0)
+  results_age_enrollment_dist.columns = [
+      results_age_enrollment_dist.columns[0][-1],
+      results_age_enrollment_dist.columns[1][-1],
+      results_age_enrollment_dist.columns[2][-1]
+  ]
+  results_age_enrollment_dist['Total'] = results_age_enrollment_dist.sum(axis=1)
+
+  # Format the results
+  results_age_enrollment_dist.columns.names = [None]
+  print(results_age_enrollment_dist)
+
+  # Count nans
+  print('\n')
+  results_age_enrollment_dist_na = data_achievement[
+      ['Age ranges', "Enrollment classification Fall"]
+  ].isna().sum(axis=0)
+  results_age_enrollment_dist_na = results_age_enrollment_dist_na.to_frame()
+  results_age_enrollment_dist_na.rename(columns={0: 'Missing data'}, inplace=True)
+  print(format_as_table(results_age_enrollment_dist_na))
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[29]:
+# output
+                                                                      Age Range
+Major                      Enrollment classification Fall Age ranges
+Biomedical Sciences        Full-time                      18-24             NaN
+                                                          25-64            18.0
+                                                          65+               NaN
+                           Part-time                      18-24             NaN
+                                                          25-64             NaN
+                                                          65+               NaN
+Clinical Psychology        Full-time                      18-24            18.0
+                                                          25-64           183.0
+                                                          65+               NaN
+                           Part-time                      18-24             NaN
+                                                          25-64             6.0
+                                                          65+               NaN
+Family and Couples Therapy Full-time                      18-24             NaN
+                                                          25-64             3.0
+                                                          65+               NaN
+                           Part-time                      18-24             NaN
+                                                          25-64             NaN
+                                                          65+               NaN
+Medical Sciences           Full-time                      18-24            10.0
+                                                          25-64            50.0
+                                                          65+               NaN
+                           Part-time                      18-24             NaN
+                                                          25-64             1.0
+                                                          65+               NaN
+Medicine                   Full-time                      18-24            30.0
+                                                          25-64           290.0
+                                                          65+               NaN
+                           Part-time                      18-24             1.0
+                                                          25-64             NaN
+                                                          65+               NaN
+Neuroscience of Learning   Full-time                      18-24             2.0
+                                                          25-64            24.0
+                                                          65+               NaN
+                           Part-time                      18-24             NaN
+                                                          25-64             NaN
+                                                          65+               NaN
+Nursing                    Full-time                      18-24             NaN
+                                                          25-64             NaN
+                                                          65+               NaN
+                           Part-time                      18-24             NaN
+                                                          25-64             NaN
+                                                          65+               NaN
+Psychology                 Full-time                      18-24             5.0
+                                                          25-64           118.0
+                                                          65+               NaN
+                           Part-time                      18-24             NaN
+                                                          25-64             2.0
+                                                          65+               NaN
+Public Health              Full-time                      18-24             NaN
+                                                          25-64             NaN
+                                                          65+               NaN
+                           Part-time                      18-24             NaN
+                                                          25-64             NaN
+                                                          65+               NaN
+School Psychology          Full-time                      18-24             4.0
+                                                          25-64            13.0
+                                                          65+               NaN
+                           Part-time                      18-24             NaN
+                                                          25-64             NaN
+                                                          65+               NaN
+                                         18-24  25-64  65+  Total
+(Biomedical Sciences, Full-time)           NaN   18.0  NaN   18.0
+(Biomedical Sciences, Part-time)           NaN    NaN  NaN    0.0
+(Clinical Psychology, Full-time)          18.0  183.0  NaN  201.0
+(Clinical Psychology, Part-time)           NaN    6.0  NaN    6.0
+(Family and Couples Therapy, Full-time)    NaN    3.0  NaN    3.0
+(Family and Couples Therapy, Part-time)    NaN    NaN  NaN    0.0
+(Medical Sciences, Full-time)             10.0   50.0  NaN   60.0
+(Medical Sciences, Part-time)              NaN    1.0  NaN    1.0
+(Medicine, Full-time)                     30.0  290.0  NaN  320.0
+(Medicine, Part-time)                      1.0    NaN  NaN    1.0
+(Neuroscience of Learning, Full-time)      2.0   24.0  NaN   26.0
+(Neuroscience of Learning, Part-time)      NaN    NaN  NaN    0.0
+(Nursing, Full-time)                       NaN    NaN  NaN    0.0
+(Nursing, Part-time)                       NaN    NaN  NaN    0.0
+(Psychology, Full-time)                    5.0  118.0  NaN  123.0
+(Psychology, Part-time)                    NaN    2.0  NaN    2.0
+(Public Health, Full-time)                 NaN    NaN  NaN    0.0
+(Public Health, Part-time)                 NaN    NaN  NaN    0.0
+(School Psychology, Full-time)             4.0   13.0  NaN   17.0
+(School Psychology, Part-time)             NaN    NaN  NaN    0.0
+Total                                     70.0  708.0  0.0  778.0
+
+
+|--------------------------------+----------------|
+|                                |   Missing data |
+|--------------------------------+----------------|
+| Age ranges                     |              3 |
+| Enrollment classification Fall |            277 |
+|--------------------------------+----------------|
+
+:END:
+
+** Post-institutional
+*** Attrition and Retention rates
+Attrition was calculated with the following formula:
+\begin{equation}
+Attrition rate=Withdrawal/{Total enrollment}
+\end{equation}
+
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  student_status_byprog = data_achievement.groupby('Major')['Status']
+  student_status_counts = student_status_byprog.value_counts().unstack()
+  total_status_counts = data_achievement['Status'].value_counts().to_frame().transpose()
+  total_status_counts.index = ['Total']
+  complete_status_counts = student_status_counts.append(total_status_counts)
+  complete_status_counts['Attrition (%)'] = complete_status_counts['Withdrawal']/complete_status_counts.sum(axis=1) * 100
+  complete_status_counts = complete_status_counts[['Active', 'Withdrawal', 'Attrition (%)']]
+  complete_status_counts['Retention (%)'] = 100 - complete_status_counts['Attrition (%)']
+  print(format_as_table(complete_status_counts.round(2).fillna(0)))
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[30]:
+# output
+|----------------------------+----------+--------------+-----------------+-----------------|
+|                            |   Active |   Withdrawal |   Attrition (%) |   Retention (%) |
+|----------------------------+----------+--------------+-----------------+-----------------|
+| Biomedical Sciences        |       21 |            1 |            4.35 |           95.65 |
+| Clinical Psychology        |      236 |            7 |            2.61 |           97.39 |
+| Family and Couples Therapy |        0 |            0 |            0    |            0    |
+| Medical Sciences           |        7 |            3 |            4.84 |           95.16 |
+| Medicine                   |      268 |            2 |            0.58 |           99.42 |
+| Neuroscience of Learning   |        2 |            1 |            3.85 |           96.15 |
+| Nursing                    |        8 |            4 |           33.33 |           66.67 |
+| Psychology                 |      102 |            1 |            0.63 |           99.37 |
+| Public Health              |       90 |            6 |            4.51 |           95.49 |
+| School Psychology          |       12 |            4 |           23.53 |           76.47 |
+| Total                      |      747 |           29 |            2.75 |           97.25 |
+|----------------------------+----------+--------------+-----------------+-----------------|
+
+:END:
+
+*** Graduation rates
+Graduation rates was calculated with the following formula:
+
+\begin{equation}
+Graduation rates=Graduates/total enrollment
+\end{equation}
+
+#+BEGIN_SRC ipython :session  :exports results :results table
+  graduation_rates_total = round(len(data_post_institutional)/len(data_achievement) * 100, 2)
+  graduation_rates_total = pd.Series(graduation_rates_total, index=['Graduation Rates (%)'])
+  table = format_as_table(graduation_rates_total, series=True)
+  # New
+  students_post_institutional_byprog = data_post_institutional.groupby('Major')
+  students_achievement_byprog = data_achievement.groupby('Major')
+  print(students_post_institutional_byprog)
+  print()
+  print(students_achievement_byprog)
+  #student_status_counts = student_status_byprog.value_counts().unstack()
+  print(graduation_rates_total)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[31]:
+# output
+<pandas.core.groupby.DataFrameGroupBy object at 0x10d178d30>
+
+<pandas.core.groupby.DataFrameGroupBy object at 0x1109d1668>
+Graduation Rates (%)    23.03
+Name: Graduation Rates (%), dtype: float64
+
+:END:
+
+*** Mean-time to graduation
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_post_institutional_by_prog = data_post_institutional.groupby('Major')
+  time_to_grad_results = data_post_institutional_by_prog['Time to complete degree'].describe()
+  #print(time_to_grad_results)
+  time_to_grad_results = format_descriptive_stats(
+      time_to_grad_results,
+      reduce=True
+  )
+  print(format_as_table(time_to_grad_results))
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[32]:
+# output
+|----------------------------+--------+----------+------+-------+-------|
+| Major                      |   Mean |   Median |   SD |   Min |   Max |
+|----------------------------+--------+----------+------+-------+-------|
+| Clinical Psychology        |   6    |        6 | 0.82 |     5 |     7 |
+| Family and Couples Therapy |   1    |        1 | 0    |     1 |     1 |
+| Medical Sciences           |   1.04 |        1 | 0.2  |     1 |     2 |
+| Medicine                   |   4.46 |        4 | 1.09 |     2 |     8 |
+| Neuroscience of Learning   |   1    |        1 | 0    |     1 |     1 |
+| Psychology                 |   4.65 |        4 | 1.4  |     3 |     8 |
+| Public Health              |   3.1  |        2 | 2.45 |     2 |    10 |
+|----------------------------+--------+----------+------+-------+-------|
+
+:END:
+*** COMMENT Medicine Students Passing Rates on Licensure Exams
+
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  results_md_steps = pd.DataFrame()
+  md_steps_passers = pd.DataFrame()
+  md_students = data_post_institutional.loc[
+      data_post_institutional['Major'] == 'Medicine',
+      :
+      ]
+
+  # get takers
+  md_steps_takers = md_students[['Step1', 'Step2', 'Step3']]
+  # count takers
+  results_md_steps['Tested count'] = md_steps_takers.count()
+
+  # add passers to their dataframe
+  md_steps_passers['Step1'] = md_steps_takers.loc[
+      md_steps_takers['Step1'] >= 194,
+      'Step1'
+  ]
+  md_steps_passers['Step2'] = md_steps_takers.loc[
+      md_steps_takers['Step2'] >= 209,
+      'Step2'
+  ]
+  md_steps_passers['Step3'] = md_steps_takers.loc[
+      md_steps_takers['Step3'] >= 1,
+      'Step3'
+  ]
+  # count passers
+  results_md_steps['Passing count'] = md_steps_passers.count()
+
+  # calculate passing rate
+  md_step1_passing_rate = md_steps_passers['Step1'].count() / md_steps_takers['Step1'].count()
+  md_step2_passing_rate = md_steps_passers['Step2'].count() / md_steps_takers['Step2'].count()
+  md_step3_passing_rate = md_steps_passers['Step3'].count() / md_steps_takers['Step3'].count()
+  # add passing rate to results
+  results_md_steps['Passing rate (%)'] = [
+      md_step1_passing_rate,
+      md_step2_passing_rate,
+      md_step3_passing_rate,
+  ]
+
+
+  # general mean and SD
+  results_md_steps_descrip = md_steps_takers.agg(['mean', 'std']).transpose()
+
+  # format results
+  def f(row):
+      """Formats the mean and SD to the required format Mean (SD)."""
+
+      result = '{} ({})'.format(row[0].round(0), row[1].round(0))
+
+      return result
+
+
+  results_md_steps['Mean (SD)'] = results_md_steps_descrip[
+      [
+          'mean', 'std'
+      ]
+  ].apply(f, axis=1)
+  results_md_steps['Passing rate (%)'] = results_md_steps['Passing rate (%)'] * 100
+  print(format_as_table(results_md_steps.round(0)))
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[222]:
+# output
+|-------+----------------+-----------------+--------------------+--------------|
+|       |   Tested count |   Passing count |   Passing rate (%) | Mean (SD)    |
+|-------+----------------+-----------------+--------------------+--------------|
+| Step1 |             69 |              67 |                 97 | 217.0 (17.0) |
+| Step2 |             69 |              67 |                 97 | 233.0 (15.0) |
+| Step3 |             69 |              65 |                 94 | 1.0 (0.0)    |
+|-------+----------------+-----------------+--------------------+--------------|
+
+:END:

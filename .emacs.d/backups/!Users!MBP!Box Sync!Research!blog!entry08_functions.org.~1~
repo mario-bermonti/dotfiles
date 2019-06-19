@@ -1,0 +1,36 @@
+#+BLOG: codin cognitive research
+#+POSTID: 356
+#+DATE: [2019-04-02 Tue 13:14]
+#+ORG2BLOG:
+#+OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+#+CATEGORY: python, coding, research, cognition, psychology
+#+TAGS:
+#+DESCRIPTION:
+#+TITLE: Programmig Basics: Functions
+
+In this post we will discuss functions and how they are used to help us not
+repeat ourselves.
+
+
+Functions are also used to abstract away the details of pieces of code and makes
+it easier for others to use our code and for us to use it in the future.
+
+** Using functions
+#+BEGIN_EXAMPLE
+https://youtu.be/zbW5NCSn5q8
+#+END_EXAMPLE
+
+** Defining functions
+#+BEGIN_EXAMPLE
+https://youtu.be/d_Oa6oH1l6c
+#+END_EXAMPLE
+
+** Using multiple parameters and returning values
+#+BEGIN_EXAMPLE
+https://youtu.be/GocXrnwBrAs
+#+END_EXAMPLE
+
+Additional resources (diving deeper into functions):
+
+- [[https://www.tutorialspoint.com/python/python_functions.htm][Tutorials point]]
+- [[https://docs.python.org/3/tutorial/controlflow.html#more-on-defining-functions][Official Python tutorial (sections 4.6 to 4.7)]]

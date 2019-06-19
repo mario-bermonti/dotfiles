@@ -1,0 +1,464 @@
+% Created 2019-04-14 Sun 16:50
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\date{}
+\title{Emotional Regulation and Suicidal Behavior}
+\hypersetup{
+ pdfauthor={Mario Bermonti Perez},
+ pdftitle={Emotional Regulation and Suicidal Behavior},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 8.3.4)},
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section*{Tasks pending [0\%]}
+\label{sec:orgheadline40}
+\subsection*{{\bfseries\sffamily TODO} Material preparation [0\%]}
+\label{sec:orgheadline35}
+\subsubsection*{{\bfseries\sffamily TODO} Prepare the emotional Stroop task [88\%]}
+\label{sec:orgheadline29}
+\begin{itemize}
+\item {\bfseries\sffamily DONE} Translate the materials
+\label{sec:orgheadline1}
+\item {\bfseries\sffamily DONE} Create a emo stroop (adapted from the traditional Stroop)
+\label{sec:orgheadline2}
+\item {\bfseries\sffamily DONE} Add practice trials
+\label{sec:orgheadline3}
+\item {\bfseries\sffamily DONE} Add exp trials
+\label{sec:orgheadline4}
+\item {\bfseries\sffamily DONE} Review lit determine randomization
+\label{sec:orgheadline5}
+\item {\bfseries\sffamily DONE} Indicate blocks on file
+\label{sec:orgheadline6}
+\item {\bfseries\sffamily DONE} Calculate number of blocks automatically
+\label{sec:orgheadline7}
+\item {\bfseries\sffamily DONE} Balance practice trials with blocks
+\label{sec:orgheadline8}
+\item {\bfseries\sffamily DONE} Verifiy if exp trials are balanced with current config\hfill{}\textsc{future:assigned\_task}
+\label{sec:orgheadline9}
+\item {\bfseries\sffamily DONE} Add a fixation cross at the start of each trial
+\label{sec:orgheadline10}
+\item {\bfseries\sffamily DONE} Review lit to determine if positive condition is removed
+\label{sec:orgheadline11}
+\item {\bfseries\sffamily DONE} Identify emotional words
+\label{sec:orgheadline12}
+\item {\bfseries\sffamily DONE} Push updated emo stroop
+\label{sec:orgheadline13}
+\item {\bfseries\sffamily TODO} Create a readme file for the repository
+\label{sec:orgheadline14}
+\item {\bfseries\sffamily DONE} Add the experimental words [100\%]\hfill{}\textsc{awatingOtherTask}
+\label{sec:orgheadline20}
+\begin{itemize}
+\item {\bfseries\sffamily DONE} Add wods to Emo stroop [100\%]
+\label{sec:orgheadline19}
+\begin{itemize}
+\item {\bfseries\sffamily DONE} Identify numer of words used in literature
+\label{sec:orgheadline15}
+\item {\bfseries\sffamily DONE} Add words to practice trials
+\label{sec:orgheadline16}
+\item {\bfseries\sffamily DONE} Select words for experimental trials
+\label{sec:orgheadline17}
+\item Balance experimental trial blocks
+\label{sec:orgheadline18}
+\end{itemize}
+\end{itemize}
+\item {\bfseries\sffamily TODO} Include a resting break [50\%]
+\label{sec:orgheadline23}
+\begin{itemize}
+\item {\bfseries\sffamily DONE} Determine when to allow resting period (considered blocks)
+\label{sec:orgheadline21}
+\item {\bfseries\sffamily TODO} Include a resting break
+\label{sec:orgheadline22}
+\end{itemize}
+\item {\bfseries\sffamily DONE} Determine ISI\hfill{}\textsc{couldBeImproved}
+\label{sec:orgheadline24}
+\item {\bfseries\sffamily DONE} Modify choose\(_{\text{blocks.xlsx}}\) to add new blocks
+\label{sec:orgheadline25}
+\item Optional
+\label{sec:orgheadline28}
+\begin{itemize}
+\item {\bfseries\sffamily TODO} Prepare a list of things to learn (keep in mind) in the dev of PC cognitive tasks
+\label{sec:orgheadline26}
+\item {\bfseries\sffamily TODO} Determine blocks automatically (postponed)
+\label{sec:orgheadline27}
+\end{itemize}
+\end{itemize}
+\subsubsection*{{\bfseries\sffamily TODO} Prepare the free-recall task}
+\label{sec:orgheadline34}
+\begin{itemize}
+\item {\bfseries\sffamily TODO} Determine how to present words (together or individually)
+\label{sec:orgheadline31}
+\begin{itemize}
+\item {\bfseries\sffamily TODO} Review lit\hfill{}\textsc{assigned\_task}
+\label{sec:orgheadline30}
+\end{itemize}
+\item {\bfseries\sffamily TODO} Determine format of response
+\label{sec:orgheadline32}
+\item {\bfseries\sffamily TODO} Prepare task template
+\label{sec:orgheadline33}
+\end{itemize}
+
+\subsection*{{\bfseries\sffamily TODO} IRB [100\%]}
+\label{sec:orgheadline39}
+\subsubsection*{{\bfseries\sffamily DONE} First draft by Paola}
+\label{sec:orgheadline36}
+\subsubsection*{{\bfseries\sffamily DONE} Revision by Mario}
+\label{sec:orgheadline37}
+\subsubsection*{{\bfseries\sffamily DONE} Final revision by Eliut}
+\label{sec:orgheadline38}
+
+\section*{Project description}
+\label{sec:orgheadline41}
+\begin{itemize}
+\item Objective: Determine differences in emotional regulation and brain activity to language
+with emotional content between persons with a history of suicidal behavior and
+without a history suicidal behavior
+\item Materials and Methods:
+\begin{itemize}
+\item Exploratory study
+\item Subjects will be compared on the following measures:
+\begin{enumerate}
+\item Attentional bias: positive, negative, and neutral words
+\begin{itemize}
+\item Emotional Stroop task
+\item Free recall task
+\end{itemize}
+\item Emotional regulation questionnaire
+\item EEG recordings in response to words of different valence
+\end{enumerate}
+\end{itemize}
+\item Computerized measures will be developed to measure attentional bias
+\item Team: Eliut Rivera Segarra (PI), Mario E. Bermonti Pérez (cognitive paradigms,
+stats, and methodology), Ismael Castillo (EEG), Paola Velázquez (Research assistant)
+\item Secondary research questions
+\begin{itemize}
+\item What is the relationship between the self-report measure (questionnaire) and the emo stroop task?
+\item What is the relationship between the attentional bias and memory bias?
+\end{itemize}
+\end{itemize}
+\section*{Materials}
+\label{sec:orgheadline59}
+  Cognitive tasks will be presented using Psychopy and ERP will be recorded using
+the Freedom 7b equipment.
+
+\subsection*{Code to prepare words}
+\label{sec:orgheadline46}
+\begin{itemize}
+\item Balance words based on word length\hfill{}\textsc{usefulScript}
+\label{sec:orgheadline42}
+
+This code balances the words on their length. It extracts the same amount of
+words of each length from each valence.
+This analysis is just to show that the was no significant variation in word
+length beteen the word valence. It's obvious because there are exactly the
+same amount of words.
+\item Get words organized by valence (all words)
+\label{sec:orgheadline43}
+\item Extract words for emotional stroop task
+\label{sec:orgheadline44}
+\#+END\(_{\text{SRC}}\)
+
+
+
+\item Extract words for free-recall task
+\label{sec:orgheadline45}
+\end{itemize}
+
+\subsection*{Emotional Stroop Task}
+\label{sec:orgheadline54}
+\subsubsection*{Description}
+\label{sec:orgheadline50}
+This is a Spanish Emotional Stroop task (EST) developed for a research project
+conducted in the neurocognitive laboratory at Ponce Health Sciences University.
+This project compares people with a history of suicidal behavior vs a control
+group (non-clinical population) on this and other tasks.
+
+The EST was developed using Psychopy 3 (citation) builder but includes code
+components. It can't be run with Psychopy 2 because it uses Unicode
+characters (i.e., words with accents) and Psychopy crashes with this sort of
+stimuli or doesn't display it correctly. It includes practice and experiment trials.
+
+The EST was translated from the extended Stroop task (includes
+instructions and practice trials) found in the demos that Psychopy provides. The
+materials were translated and the trial document (csv file) was adapted.
+
+\begin{itemize}
+\item Practice trials
+\label{sec:orgheadline47}
+The EST includes 24 practice trials consisting of congruent word and colors.
+The words presented are azul, rojo, and verde (i.e., Spanish words for
+blue, red, and green) and are presented in colors blue, red, and green.
+Participants respond by pressing:
+\begin{itemize}
+\item f for red
+\item j for green
+\item "space bar" for blue
+\end{itemize}
+
+The practice trials consist of:
+\begin{itemize}
+\item instructions
+\item fixation cross for .5 sec
+\item blank screen for .5 sec
+\item the word is presented until a response is made
+\item participant makes a response with the keyboard (f, j, space bar)
+\item the participant receive feedback
+\end{itemize}
+
+Practice trials are organized into blocks of 6 words (two of each color) and
+blocks are presented randomly.
+
+\item Experimental trials
+\label{sec:orgheadline49}
+There are 48 words from each valence (i.e., positive, negative, and neutral)
+for a total of 144 words. Each word is presented only once.
+
+The experimental trials consist of:
+\begin{itemize}
+\item instructions
+\item fixation cross for .5 sec
+\item blank screen for .5 sec
+\item word is presented until response is made
+\item participant makes repines with the keyboard (f, j, space bar)
+\end{itemize}
+
+\begin{itemize}
+\item Technical details about blocks:
+\label{sec:orgheadline48}
+\begin{itemize}
+\item Trials (stimuli) are organized into blocks to get semi-randomization:
+\begin{itemize}
+\item 16 blocks
+\item Each block has 9 trials: 3 words from each valence, with 1 word for
+each valence - color combination
+\end{itemize}
+\end{itemize}
+
+The following table represents one block.
+\begin{center}
+\begin{tabular}{llll}
+\hline
+text & letterColor & corrAns & condition\\
+\hline
+positive1 & blue & j & positive\\
+negative1 & blue & j & negative\\
+neutral1 & blue & j & neutral\\
+positive2 & green & space & positive\\
+negative2 & green & space & negative\\
+neutral2 & green & space & neutral\\
+positive3 & red & f & positive\\
+negative3 & red & f & negative\\
+neutral3 & red & f & neutral\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item These blocks for randomization are organized into 4 large experimental
+blocks of 36 trials each.
+\item Participants are allowed 3 breaks to rest (one rest after completing every 36
+trials. The participant continues by pressing a key.
+\item Conditions are balanced in terms of word length
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsubsection*{Procedure to prepare experiment}
+\label{sec:orgheadline51}
+\begin{itemize}
+\item Trials need to be placed in a csv file (i.e. exp\(_{\text{trials.csv}}\)) following the
+format of table block example
+\item Blocks must be manually organized: each must have 9 trials, 3 for each condition,
+with 1 for every color (one from each condition - color pair)
+\item The length of each block is specified as a range in the choose\(_{\text{blocks.csv}}\) file
+\begin{itemize}
+\item Notes: psychopy starts counting from 0, so the first trial (row) is 0 and
+the range for every block starts as 1 less than the 'normal' value. Also,
+the last index is not included (so it has to be 1 more than would be expected)
+if we started counting from 0 (if its row number 8, it should be specified as 9,
+as seen below).
+
+Example:
+\begin{center}
+\begin{tabular}{c}
+\hline
+block ranges\\
+\hline
+0:9\\
+9:18\\
+\hline
+\end{tabular}
+\end{center}
+\end{itemize}
+\end{itemize}
+
+\subsubsection*{Code component to balance blocks}
+\label{sec:orgheadline52}
+import random
+import pandas as pd
+block\(_{\text{ranges}}\) = pd.read\(_{\text{csv}}\)('choose\(_{\text{blocks.csv}}\)')
+
+block\(_{\text{ranges}}_{\text{practice}}\) = list(block\(_{\text{ranges.choose}}_{\text{blocks}}_{\text{practice}}\))
+print(block\(_{\text{ranges}}_{\text{practice}}\))
+random.shuffle(block\(_{\text{ranges}}_{\text{practice}}\))
+
+block\(_{\text{ranges}}_{\text{exp}}\) = list(block\(_{\text{ranges.choose}}_{\text{blocks}}_{\text{exp}}\))
+random.shuffle(block\(_{\text{ranges}}_{\text{exp}}\))
+print (2, block\(_{\text{ranges}}_{\text{exp}}\))
+
+\subsubsection*{Code components to determine blocks automatically}
+\label{sec:orgheadline53}
+Currently not working. After I sort them by condition and color I need to
+get one trial from each condition, color (3 x condition/every color).
+
+\begin{verbatim}
+import pandas as pd
+import random
+
+trial_file = 'Emotional Stroop/exp_trials.csv'
+trials = pd.read_csv(trial_file)
+trials.sort_values(['condition', 'letterColor'], inplace=True)
+organized_trial_blocks = []
+conditions = list(trials.condition.value_counts().index)
+colors = list(trials.letterColor.value_counts().index)
+for cond in conditions:
+    for color in colors:
+        selected_trials = trials.loc[
+            (trials_ordered.condition == cond) &
+            (trials_ordered.letterColor == color)
+        ]
+        selected_trials
+        #selected_trials.sample(random.randint(0, 1))
+\end{verbatim}
+
+\begin{verbatim}
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/parsers.py", line 709, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/parsers.py", line 449, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/parsers.py", line 818, in __init__
+    self._make_engine(self.engine)
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/parsers.py", line 1049, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/parsers.py", line 1695, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 402, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 718, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: File b'Emotional Stroop/exp_trials.csv' does not exist
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'trials' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'trials' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'trials' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'conditions' is not defined
+\end{verbatim}
+:noexport:
+
+\subsection*{Free-recall Task}
+\label{sec:orgheadline58}
+\subsubsection*{Description}
+\label{sec:orgheadline57}
+The Free recall task consists of presenting a "list" of words to the participant
+and then asking the participant to recall as many as possible.
+
+\begin{itemize}
+\item Notes:
+\label{sec:orgheadline55}
+\begin{itemize}
+\item Studies present words in one of two ways: visual or auditory
+\item Studies vary in the way the collect the participant's response:
+\begin{itemize}
+\item Participants write the responses: easier to determine number of correct responses
+\item Participants say aloud the responses (more common): Requires responses to be recorded (audio),
+transcribed, and then analyzed to determine if responses were correct. Transcription
+and analysis requires validation.
+\end{itemize}
+\item \uline{Recency and primacy effects need to be considered}: This could be balanced by randomization
+across participants.
+\end{itemize}
+
+\item Details:
+\label{sec:orgheadline56}
+\begin{itemize}
+\item There needs to be the same number of words for each condition (i.e. valence)
+\item There should be various lists of words (blocks) with equal distribution of
+the conditions.
+\item Should include practice trials (1 list)
+\end{itemize}
+\end{itemize}
+
+\section*{Project Log}
+\label{sec:orgheadline60}
+\begin{itemize}
+\item Everything is working as expected with the Emo Stroop task \textit{<2018-08-08 Wed>}
+\item Working on semi-random order issue \textit{<2018-08-24 Fri>}
+\begin{itemize}
+\item Currently got the trials to be presented as balanced blocks that are presented
+randomly (random blocks and random trials within blocks) but only if each block
+is in a separate file (master branch). On the current branch I'm working on
+using only one file with all the blocks and specifying each block (selected
+randomly) with a combination of loops and code but it is not currently
+working correctly. Need to investigate this further
+\end{itemize}
+\item Semi-randomization with just one trials file complete \textit{<2018-08-29 Wed>}
+\begin{itemize}
+\item This code exists in the onefile branch and allows to use one file for exp
+trials and to specify the number of blocks and their length in psychopy
+\item Block of trials range are now specified in a csv file. All block ranges must
+be specified in order for it to work.\textit{<2018-09-05 Wed>}
+\item Number of blocks are now determined automatically. Merged into the onefile
+branch  \textit{<2018-09-15 Sat>}
+\end{itemize}
+\item Working on having one excel file with all trials and automatize the process
+determining, building, and presenting blocks: Code in the determine-blocks-automatically
+branch :postponed:
+\item Both practice and experiment trials are now presented balanced to participants. \textit{<2018-09-26 Wed>}
+  This required the restructuration of the code component and experiment structure.
+\item Emo Stroop lit reviewed and the positive condition will be included. New elements
+to add to the Emo Stroop were identified.
+\item Ismael is going to make the payment for the EEG cable and request a reimbursement
+\item Paola will work on the first draft of the IRB protocol (November, 10). Then I will review
+it and send it to Eliut. The IRB must be submitted in December.
+\item As soon as I have the words, Paola will set up the blocks of trials.
+\item I'm waiting for Paola to set up the blocks of trials. Once they are ready, I
+will verify them and add them to the emo Stroop task.
+\end{itemize}
+\section*{Project updates}
+\label{sec:orgheadline62}
+\subsection*{Update for network meeting \textit{<2018-10-24 Wed>}}
+\label{sec:orgheadline61}
+\begin{itemize}
+\item The project is currently in the material-preparing phase. The Emotional Stroop
+task is almost ready. It just needs some minor modifications and to select
+the words that will be used. Paola has identified several word banks to
+select these words.
+\item EEG: A cable was ordered to be able to send triggers from the computer running
+the cognitive task to the EEG. As soon as it arrives we could start testing
+the integration of the cognitive and EEG components.
+\end{itemize}
+\end{document}

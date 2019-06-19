@@ -1,0 +1,40 @@
+#+POSTID: 196
+#+ORG2BLOG:
+#+DATE: [2018-09-01 Sat 15:15]
+#+OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+#+CATEGORY: python, coding, research, cognition, psychology
+#+TAGS:
+#+DESCRIPTION: Advice on getting the most out of this website
+#+TITLE: A note about using this website
+
+* Outline :noexport:
+	•  Write it
+	• Change code (experiment)
+	• Difficulty with concepts or examples from other disciplines
+		○ If you feel lost with external resources, make suggestions about writing basics
+	• Python will be used, python 3 recommended
+
+* Getting the most of this site
+A few notes are in order about how to use this blog:
+- You should write the code yourself in your computer and tested. I just can’t
+  emphasize it enough. It’s essential to getting the hang of it and practicing.
+
+
+- You should play with the code changing specific parts of it (one at the time)
+  at testing how the results change. It’s really useful for understanding the
+  code and concepts.
+
+
+- It is completely normal, although frustrating, to experience difficulty
+  understanding specific concepts. Sometimes its because the examples
+  used are from disciplines like computer science and math. I tried identifying
+  resources that don’t use examples too alien to behavioral and cognitive sciences
+  but if you feel lost with the external resources I include, tell me in the
+  comments and I will consider writing the posts myself.
+
+
+- We will use the Python programming language. Although there are a lot of
+  great programming languages, Python is awesome because of its simple syntax
+  and support for research and open source science. I recommend using Python
+  version 3, it’s the one I use and it’s great. Although version 2 is great
+  and still used extensively.

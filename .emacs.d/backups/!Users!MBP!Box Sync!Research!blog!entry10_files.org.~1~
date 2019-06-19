@@ -1,0 +1,24 @@
+#+BLOG: codin cognitive research
+#+POSTID: 360
+#+DATE: [2019-04-02 Tue 13:15]
+#+OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+#+CATEGORY: python, coding, research, cognition, psychology
+#+DESCRIPTION: Post about working with files
+#+title: Programming Basics: Working with files
+
+In this post we will discuss how to read files stores in your
+computer (i.e. input/output).
+
+ This skill is really important because it will give our programs the ability to
+read datasets, stimulus banks or any other file we choose and use its contents.
+
+
+** Reading files
+#+BEGIN_EXAMPLE
+https://youtu.be/0MxTZiZkAe0
+#+END_EXAMPLE
+
+
+ Additional resources (diving deeper into using files):
+- [[https://www.tutorialspoint.com/python/python_files_io.htm][Tutorials point]]
+- [[https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files][Official Python tutorial (section 7.2)]] 

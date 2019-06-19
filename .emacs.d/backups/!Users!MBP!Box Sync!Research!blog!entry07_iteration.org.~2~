@@ -1,0 +1,54 @@
+#+BLOG: codin cognitive research
+#+POSTID: 354
+#+DATE: [2019-04-02 Tue 13:14]
+#+ORG2BLOG:
+#+OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+#+CATEGORY: python, coding, research, cognition, psychology
+#+TAGS:
+#+DESCRIPTION:
+#+TITLE: Programming Basics: Iteration
+
+In this post we will discuss iteration. Iteration is used by programs to go over
+a list (or any other sequence of data) and do something with each element (i.e.
+value) in the list.
+
+
+Iteration will be extremely useful whenever you have to go over a list of stimuli,
+files, conditions, data points or any other sequence of data (remember that in
+this context data means any piece of information that the computer can process).
+
+** Iteration
+Note: relevant content only up to minute 3:35.
+#+HTML: https://youtu.be/zqkDFcknZeM
+
+** Example applied to cognitive research
+Let's continue with out working memory task example. Remember that we need to
+present a series of words to the participant and gather their responses.
+
+In the [[https://codingcognitiveresearch.wordpress.com/2019/04/02/programming-basics-lists/][previous post on lists]] we defined a list of words to be presented to the
+participant. Now we will use iteration to actually present the words one at the
+time to the participant.
+
+Here is the code:
+#+BEGIN_SRC python :session  :exports both :results output
+# we define the list of words (illustrates
+# one trial)
+word_set = ['cat', 'dog', 'mouse', 'bird']
+
+# we go over each word in the list and
+# present it to the participant
+for word in word_set:
+    print(word)
+#+END_SRC
+
+#+RESULTS:
+: cat
+: dog
+: mouse
+: bird
+
+** Additional resources (diving deeper into iteration):
+
+- [[https://www.tutorialspoint.com/python/python_loops.htm][Tutorials point: conceptual explanation]]
+- [[https://docs.python.org/3/tutorial/controlflow.html][Official Python tutorial (sections 4.2 to 4.5)]]
+- [[http://www.djmannion.net/psych_programming/fundamentals/flow_loops/flow_loops.html][Damien Mannion's blog]]

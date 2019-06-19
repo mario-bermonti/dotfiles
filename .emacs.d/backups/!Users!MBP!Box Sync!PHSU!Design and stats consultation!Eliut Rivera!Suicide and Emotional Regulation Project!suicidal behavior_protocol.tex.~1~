@@ -1,0 +1,69 @@
+% Created 2019-03-12 Tue 16:32
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\date{}
+\title{Technical details about blocks:}
+\hypersetup{
+ pdfauthor={Mario Bermonti Perez},
+ pdftitle={Technical details about blocks:},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 8.3.4)},
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\begin{itemize}
+\item Trials (stimuli) are organized into blocks to get semi-randomization:
+\begin{itemize}
+\item 16 blocks
+\item Each block has 9 trials: 3 words from each valence, with 1 word for
+each valence - color combination
+
+The following table represents one block.
+
+Table: block example
+\end{itemize}
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{llll}
+\hline
+text & letterColor & corrAns & condition\\
+\hline
+positiva1 & blue & right & positive\\
+negativa1 & blue & right & negative\\
+neutral1 & blue & right & neutral\\
+positiva2 & green & down & positive\\
+negativa2 & green & down & negative\\
+neutral2 & green & down & neutral\\
+positiva3 & red & left & positive\\
+negativa3 & red & left & negative\\
+neutral3 & red & left & neutral\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item These blocks for randomization are organized into 3 large experimental
+blocks
+\item Participants are allowed 3 breaks to rest. One after completing every 36
+trials (4 pseudo-randomization blocks). The participant continued by
+pressing a key.
+\item Conditions balanced in terms of word length
+\end{itemize}
+\end{document}

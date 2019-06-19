@@ -1,0 +1,433 @@
+#+Latex_header: \usepackage{booktabs}
+#+OPTIONS: toc:nil author:nil date:nil
+#+TITLE: Emotional Regulation and Suicidal Behavior
+
+* General functions :noexport:
+#+begin_src ipython :exports none :session :results output
+import IPython
+import tabulate
+
+class OrgFormatter(IPython.core.formatters.BaseFormatter):
+    format_type = IPython.core.formatters.Unicode('text/org')
+    print_method = IPython.core.formatters.ObjectName('_repr_org_')
+
+def pd_dataframe_to_org(df):
+    return tabulate.tabulate(df, headers='keys', tablefmt='orgtbl', showindex='always')
+
+ip = get_ipython()
+ip.display_formatter.formatters['text/org'] = OrgFormatter()
+
+f = ip.display_formatter.formatters['text/org']
+f.for_type_by_name('pandas.core.frame', 'DataFrame', pd_dataframe_to_org)
+#+end_src
+
+#+RESULTS:
+:RESULTS:
+# Out[4]:
+:END:
+
+#+RESULTS:
+
+* Tasks pending [50%]
+** TODO Material preparation [50%]
+*** DONE Prepare the emotional Stroop task [100%]
+**** DONE Translate the materials
+**** DONE Create a emo stroop (adapted from the traditional Stroop)
+**** DONE Add practice trials
+**** DONE Add exp trials
+**** DONE Review lit determine randomization
+**** DONE Indicate blocks on file
+**** DONE Calculate number of blocks automatically
+**** DONE Balance practice trials with blocks
+**** DONE Verifiy if exp trials are balanced with current config :future:assigned_task:
+**** DONE Add a fixation cross at the start of each trial
+**** DONE Review lit to determine if positive condition is removed
+**** DONE Identify emotional words
+**** DONE Push updated emo stroop
+**** DONE Create a readme file for the repository
+**** DONE Add the experimental words [100%]             :awatingOtherTask:
+***** DONE Add wods to Emo stroop [100%]
+****** DONE Identify numer of words used in literature
+****** DONE Add words to practice trials
+****** DONE Select words for experimental trials
+****** Balance experimental trial blocks
+**** DONE Include a resting break [100%]
+***** DONE Determine when to allow resting period (considered blocks)
+***** DONE Include a resting break
+**** DONE Determine ISI :couldBeImproved:
+**** DONE Modify choose_blocks.xlsx to add new blocks
+**** Optional
+***** TODO Prepare a list of things to learn (keep in mind) in the dev of PC cognitive tasks
+***** TODO Determine blocks automatically (postponed)
+*** TODO Prepare the free-recall task
+**** DONE Review lit                                       :assigned_task:
+**** DONE Determine how to present words (together or individually)
+**** DONE Determine format of response
+**** TODO Prepare task [0%] [0/1]
+***** IN PROGRESS Experimental trials [76%]
+****** DONE Basic structure
+****** DONE Create stim file template
+****** DONE Create choose blocks file (randomization)
+****** DONE Present list of words (one at a time)
+****** DONE Collect response
+****** DONE Display response feedback
+****** DONE Add blank screen between stim
+****** DONE Add choose blocks template
+****** DONE Randomize presented words
+****** TODO [#A] Add instructions
+****** DONE Add basic rest
+****** DONE Add a fixation cross
+****** TODO [#B] Add correct number of words to test exp
+****** TODO [#B] Add other blocks to choose blocks
+****** TODO Add exp words
+****** DONE Add ISI
+****** DONE Save results
+****** Optional
+******* TODO Improve results file (duplicated column)
+***** [#B] Add practice [%]
+****** DONE Present list of words (one at a time)
+****** DONE Collect response
+****** DONE Display response feedback
+****** DONE Add instructions
+*** EEG integration
+**** Send simple triggers
+**** Send complex triggers
+**** Add sending trigger support to emotional stroop task
+**** Add sending trigger support to free recall task
+** DONE IRB [100%]
+*** DONE First draft by Paola
+DEADLINE: <2018-11-10 Sat>
+*** DONE Revision by Mario
+DEADLINE: <2018-12-01 Sat>
+*** DONE Final revision by Eliut
+
+* Project description
+   :PROPERTIES:
+   :EXPORT_TITLE: Emotional Regulation and Suicidal Behavior
+   :EXPORT_FILE_NAME: Suicide behavior and emo regulation description
+   :END:
+
+- Objective: Determine differences in emotional regulation and brain activity to language
+  with emotional content between persons with a history of suicidal behavior and
+  without a history suicidal behavior
+- Materials and Methods:
+  + Exploratory study
+  + Subjects will be compared on the following measures:
+    1) Attentional bias: positive, negative, and neutral words
+       - Emotional Stroop task
+       - Free recall task
+    2) Emotional regulation questionnaire
+    3) EEG recordings in response to words of different valence
+- Computerized measures will be developed to measure attentional bias
+- Team: Eliut Rivera Segarra (PI), Mario E. Bermonti Pérez (cognitive paradigms,
+  stats, and methodology), Ismael Castillo (EEG), Paola Velázquez (Research assistant)
+- Secondary research questions
+  + What is the relationship between the self-report measure (questionnaire) and the emo stroop task?
+  + What is the relationship between the attentional bias and memory bias?
+* Materials
+  Cognitive tasks will be presented using Psychopy and ERP will be recorded using
+the Freedom 7b equipment.
+
+** Code to prepare words
+**** Balance words based on word length :usefulScript:
+
+#+begin_src python :exports none :session materials :results output
+  import pandas as pd
+  words_master = pd.read_excel('Stimuli/Word bank.xlsx', sheet_name='Word bank_ready to use')
+  words_master.columns = words_master.columns.str.lower()
+  words_master.info()
+#+end_src
+
+#+RESULTS:
+: <class 'pandas.core.frame.DataFrame'>
+: RangeIndex: 875 entries, 0 to 874
+: Data columns (total 3 columns):
+: word             875 non-null object
+: clasification    875 non-null int64
+: length_lett      875 non-null int64
+: dtypes: int64(2), object(1)
+: memory usage: 20.6+ KB
+
+**** Get words organized by valence (all words)
+#+begin_src python :exports none :session materials :results output
+  def organize_by_condition(data, which=None, by=None):
+     organizers = data[by].unique()
+     organized_data = pd.DataFrame()
+     for organizer in organizers:
+        organized_data[organizer] = list(data.loc[(data[by] == organizer), which])
+     return organized_data
+#+end_src
+
+#+RESULTS:
+
+#+begin_src python :exports none :session materials :results output
+  words_balanced_with_labels = words_balanced.copy()
+  words_balanced_with_labels['clasification'].replace({
+     0: "negative", 1: "neutral", 2: "positive"}, inplace=True)
+  organized_words = organize_by_condition(
+     words_balanced_with_labels, which="word", by='clasification'
+  )
+  organized_words.info()
+#+end_src
+
+#+RESULTS:
+: <class 'pandas.core.frame.DataFrame'>
+: RangeIndex: 226 entries, 0 to 225
+: Data columns (total 3 columns):
+: negative    226 non-null object
+: neutral     226 non-null object
+: positive    226 non-null object
+: dtypes: object(3)
+: memory usage: 5.4+ KB
+
+**** Extract words for emotional stroop task
+#+begin_src python :exports none :session materials :results output
+  words_emo_stroop_task = organized_words.sample(48)
+  words_emo_stroop_task.to_excel('Stimuli/Word bank_emo stroop.xlsx', index=False)
+#+end_src
+
+#+RESULTS:
+
+#+END_SRC
+
+
+**** Extract words for free-recall task
+
+** Emotional Stroop Task
+*** Description
+:PROPERTIES:
+:EXPORT_TITLE: Emotional Stroop task - Spanish
+:EXPORT_FILE_NAME: README.org
+:END:
+This is a Spanish Emotional Stroop task (EST) developed for a research project
+conducted in the neurocognitive laboratory at Ponce Health Sciences University.
+This project compares people with a history of suicidal behavior vs a control
+group (non-clinical population) on this and other tasks.
+
+The EST was developed using Psychopy 3 (citation) builder but includes code
+components. It can't be run with Psychopy 2 because it uses Unicode
+characters (i.e., words with accents) and Psychopy crashes with this sort of
+stimuli or doesn't display it correctly. It includes practice and experiment trials.
+
+The EST was translated from the extended Stroop task (includes
+instructions and practice trials) found in the demos that Psychopy provides. The
+materials were translated and the trial document (csv file) was adapted.
+
+***** Practice trials
+The EST includes 24 practice trials consisting of congruent word and colors.
+The words presented are azul, rojo, and verde (i.e., Spanish words for
+blue, red, and green) and are presented in colors blue, red, and green.
+Participants respond by pressing:
+- f for red
+- j for green
+- "space bar" for blue
+
+
+****** Practice trial's structure:
+- instructions
+- fixation cross for .5 sec
+- blank screen for .5 sec
+- the word is presented until a response is made
+- participant makes a response with the keyboard (f, j, space bar)
+- the participant receive feedback
+
+
+Practice trials are organized into blocks of 6 words (two of each color) and
+blocks are presented randomly.
+
+***** Experimental trials
+There are 48 words from each valence (i.e., positive, negative, and neutral)
+for a total of 144 words. Each word is presented only once.
+
+****** Experimental trial's structure:
+- instructions
+- fixation cross for .5 sec
+- blank screen for .5 sec
+- word is presented until response is made
+- participant makes repines with the keyboard (f, j, space bar)
+
+****** Technical details about blocks:
+- Trials (stimuli) are organized into blocks to get semi-randomization:
+  + 16 blocks
+  + Each block has 9 trials: 3 words from each valence, with 1 word for
+      each valence - color combination
+
+The following table represents one block.
+|-----------+-------------+---------+-----------|
+| text      | letterColor | corrAns | condition |
+|-----------+-------------+---------+-----------|
+| positive1 | blue        | j       | positive  |
+| negative1 | blue        | j       | negative  |
+| neutral1  | blue        | j       | neutral   |
+| positive2 | green       | space   | positive  |
+| negative2 | green       | space   | negative  |
+| neutral2  | green       | space   | neutral   |
+| positive3 | red         | f       | positive  |
+| negative3 | red         | f       | negative  |
+| neutral3  | red         | f       | neutral   |
+|-----------+-------------+---------+-----------|
+
+- These blocks for randomization are organized into 4 large experimental
+  blocks of 36 trials each.
+- Participants are allowed 3 breaks to rest (one rest after completing every 36
+  trials. The participant continues by pressing a key.
+- Conditions are balanced in terms of word length
+
+***** Contact
+If you have any questions don't hesitate to conctact me at [[mailto:mbermonti@psm.edu][mbermonti@psm.edu]].
+If you find any errors or bugs, please open an issue and I'll work on it
+as soon as possible.
+*** Procedure to prepare experiment
+- Trials need to be placed in a csv file (i.e. exp_trials.csv) following the
+  format of table block example
+- Blocks must be manually organized: each must have 9 trials, 3 for each condition,
+  with 1 for every color (one from each condition - color pair)
+- The length of each block is specified as a range in the choose_blocks.csv file
+  + Notes: psychopy starts counting from 0, so the first trial (row) is 0 and
+           the range for every block starts as 1 less than the 'normal' value. Also,
+           the last index is not included (so it has to be 1 more than would be expected)
+           if we started counting from 0 (if its row number 8, it should be specified as 9,
+           as seen below).
+
+    Example:
+    |--------------|
+    | block ranges |
+    |--------------|
+    | <c>          |
+    | 0:9          |
+    | 9:18         |
+    |--------------|
+
+*** Code component to balance blocks
+# begin experiment component
+import random
+import pandas as pd
+block_ranges = pd.read_csv('choose_blocks.csv')
+
+# Prepare practice blocks
+block_ranges_practice = list(block_ranges.choose_blocks_practice)
+print(block_ranges_practice)
+random.shuffle(block_ranges_practice)
+
+# Prepare experiment blocks
+block_ranges_exp = list(block_ranges.choose_blocks_exp)
+random.shuffle(block_ranges_exp)
+print (2, block_ranges_exp)
+
+*** Code components to determine blocks automatically
+Currently not working. After I sort them by condition and color I need to
+get one trial from each condition, color (3 x condition/every color).
+
+#+begin_src python :exports both :session materials :results output
+  import pandas as pd
+  import random
+
+  trial_file = 'Emotional Stroop/exp_trials.csv'
+  trials = pd.read_csv(trial_file)
+  trials.sort_values(['condition', 'letterColor'], inplace=True)
+  organized_trial_blocks = []
+  conditions = list(trials.condition.value_counts().index)
+  colors = list(trials.letterColor.value_counts().index)
+  for cond in conditions:
+      for color in colors:
+          selected_trials = trials.loc[
+              (trials_ordered.condition == cond) &
+              (trials_ordered.letterColor == color)
+          ]
+          selected_trials
+          #selected_trials.sample(random.randint(0, 1))
+
+#+end_src
+
+#+RESULTS:
+#+begin_example
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/parsers.py", line 702, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/parsers.py", line 429, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/parsers.py", line 895, in __init__
+    self._make_engine(self.engine)
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/parsers.py", line 1122, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/parsers.py", line 1853, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 387, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 705, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: [Errno 2] File b'Emotional Stroop/exp_trials.csv' does not exist: b'Emotional Stroop/exp_trials.csv'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'trials' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'trials' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'trials' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'conditions' is not defined
+#+end_example
+ :noexport:
+
+** Free-recall Task
+*** Description
+The Free recall task consists of presenting a "list" of words to the participant
+and then asking the participant to recall as many as possible.
+
+**** Notes:
+- Studies present words in one of two ways: visual or auditory
+- Studies vary in the way the collect the participant's response:
+  + Participants write the responses: easier to determine number of correct responses
+  + Participants say aloud the responses (more common): Requires responses to be recorded (audio),
+    transcribed, and then analyzed to determine if responses were correct. Transcription
+    and analysis requires validation.
+- _Recency and primacy effects need to be considered_: This could be balanced by randomization
+  across participants.
+
+**** Details:
+- There needs to be the same number of words for each condition (i.e. valence)
+- There should be various lists of words (blocks) with equal distribution of
+  the conditions.
+- Should include practice trials (1 list)
+
+* Project Log
+- Everything is working as expected with the Emo Stroop task <2018-08-08 Wed>
+- Working on semi-random order issue <2018-08-24 Fri>
+  + Currently got the trials to be presented as balanced blocks that are presented
+    randomly (random blocks and random trials within blocks) but only if each block
+    is in a separate file (master branch). On the current branch I'm working on
+    using only one file with all the blocks and specifying each block (selected
+    randomly) with a combination of loops and code but it is not currently
+    working correctly. Need to investigate this further
+- Semi-randomization with just one trials file complete <2018-08-29 Wed>
+  + This code exists in the onefile branch and allows to use one file for exp
+    trials and to specify the number of blocks and their length in psychopy
+  + Block of trials range are now specified in a csv file. All block ranges must
+    be specified in order for it to work.<2018-09-05 Wed>
+  + Number of blocks are now determined automatically. Merged into the onefile
+    branch  <2018-09-15 Sat>
+- Working on having one excel file with all trials and automatize the process
+  determining, building, and presenting blocks: Code in the determine-blocks-automatically
+  branch :postponed:
+- Both practice and experiment trials are now presented balanced to participants. <2018-09-26 Wed>
+  This required the restructuration of the code component and experiment structure.
+- Emo Stroop lit reviewed and the positive condition will be included. New elements
+  to add to the Emo Stroop were identified.
+- Ismael is going to make the payment for the EEG cable and request a reimbursement
+- Paola will work on the first draft of the IRB protocol (November, 10). Then I will review
+  it and send it to Eliut. The IRB must be submitted in December.
+- As soon as I have the words, Paola will set up the blocks of trials.
+- I'm waiting for Paola to set up the blocks of trials. Once they are ready, I
+  will verify them and add them to the emo Stroop task.
+* Project updates
+** Update for network meeting <2018-10-24 Wed>
+- The project is currently in the material-preparing phase. The Emotional Stroop
+  task is almost ready. It just needs some minor modifications and to select
+  the words that will be used. Paola has identified several word banks to
+  select these words.
+- EEG: A cable was ordered to be able to send triggers from the computer running
+  the cognitive task to the EEG. As soon as it arrives we could start testing
+  the integration of the cognitive and EEG components.
