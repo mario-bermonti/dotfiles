@@ -34,7 +34,7 @@
  ("/Users/MBP/Documents/Proyectos/" . "crear_hojas_trabajo_lectura/")
  ("/Users/MBP/Documents/" . "proyectos/")
  ("/Users/MBP/python_modules/" . "libraryext/")
- ("/Users/MBP/" . "programming practice/")
+ ("/Users/MBP/" . "programming_practice/")
  ("/Users/MBTP/Desktop/" . "analisis palabras/")
  ("/Users/MBTP/" . "Desktop/")
  ("/Users/MBTP/Documents/Proyectos/" . "crear_hojas_trabajo_lectura/")
@@ -43,9 +43,10 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/MBP/programming_practice/"
+ "/Users/MBP/Box Sync/Research/blog/"
  "/Users/MBP/programming practice/"
  "/Users/MBP/"
- "/Users/MBP/Box Sync/Research/blog/"
  "/Users/MBP/Downloads/"
  "/Users/MBP/Box Sync/Programacion/"
  "/Users/MBP/Box Sync/Research/Consultation services/PHSU/Autoestudio APA/APA_self-study_evaluation_system/"
@@ -92,12 +93,13 @@
  "/Users/MBTP/Desktop/libraryext/"
  "/Users/MBTP/Downloads/settings/"
  "/Users/MBTP/.emacs.d/"
- "/Users/MBTP/Desktop/"
 )
 
 ;; ----- ido-work-file-list -----
 (
  "report_error_pythonorgmode.org"
+ "blog_home.org"
+ "sss.org"
  ".emacs"
  "entry06_lists.org"
  "Box Sync Installer (1).dmg"
@@ -105,21 +107,25 @@
  "Reference_cards.odt"
  "entry01_about.org"
  "entry10_files.org"
- "entry09_libraries.org"
- "entry08_functions.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/MBP/programming practice/" (23789 50220 118943 637000) "results.log" "results.aux" "report_error_pythonorgmode.tex" "t.py" "testapa.toc" "testlines.pdf" "fig8.png" "test.tex" "testapa.tex" "te.log" "te.aux" "testingapa6.tex" "a.png" "testanalysis.tex" "testapa.out" "c.png" "testtable.log" "b.png" "testtable.aux" "useapa.log" "testlines.out" "test.org" "testanalysis.pdf" "report_error_pythonorgmode.org" "obipy-resources/" "sss" "db.png" "_region_.log" "fig9.svg" "fig8.svg" "testlines.tex" "testapa.pdf" "test.pdf" ".drag.html.swp" "da.png" "testanalysis.org" "python_practice/" "report_error_pythonorgmode.pdf" "data.csv" "te.tex" "te.toc" "results.out" "texput.log" "testingapa6.log" "testt.org" "newtest.docx" "sss.org" "testtable.tex" "testtable.toc" "results.tex" "testing.docx" "results.toc" "te.out" "prv_testapa.log" ".move.html.swp" "testapa.aux" "test.prv/" "sss.pdf" "testapa.log" "web/" "testt.pdf" "testtable.out" "testt.odt" "_region_.tex" "te.html" "testlines.log" "testlines.aux" "testt.tex" "testt.docx" "sss.tex" "fig.svg" "results.pdf" ".DS_Store" "sss.html" "testtable.pdf" "testanalysis.py" "useapa.tex" "test.docx" "te.pdf" "testapa.dvi" "../" "./")
+ ("/Users/MBP/programming_practice/" (23820 8917 946530 274000) "results.log" "results.aux" "report_error_pythonorgmode.tex" "t.py" "testapa.toc" "testlines.pdf" "fig8.png" "test.tex" "testapa.tex" "backups/" "data/" "te.log" "test_ideas.org" "te.aux" "testingapa6.tex" "a.png" "testanalysis.tex" "testapa.out" "c.png" "testtable.log" "b.png" "testtable.aux" "useapa.log" "testlines.out" "test.org" "testanalysis.pdf" "report_error_pythonorgmode.org" "obipy-resources/" "sss" "db.png" "_region_.log" "fig9.svg" "fig8.svg" "testlines.tex" "test.html" "testapa.pdf" "test.pdf" ".drag.html.swp" "da.png" "testanalysis.org" "python_practice/" "report_error_pythonorgmode.pdf" "todo/" "data.csv" "te.tex" "te.toc" "results.out" "texput.log" "testingapa6.log" "testt.org" "newtest.docx" "sss.org" "testtable.tex" "testtable.toc" "results.tex" "testing.docx" "results.toc" "te.out" "prv_testapa.log" ".move.html.swp" "testapa.aux" "test.prv/" "sss.pdf" "testapa.log" "web/" "testt.pdf" "testtable.out" "testt.odt" "_region_.tex" "te.html" "testlines.log" "testlines.aux" "testt.tex" "testt.docx" "sss.tex" "fig.svg" "results.pdf" ".DS_Store" "sss.html" "testtable.pdf" "testanalysis.py" "useapa.tex" "test.docx" "te.pdf" "testapa.dvi" "../" "./")
 
- ("/Users/MBP/" (23792 2818 211844 818000) ".viminfo" ".bash_history" ".pyosf/" ".aspell.es.prepl" ".gitconfig" "Ponce Health Sciences University/" ".python_history" "Downloads/" "AndroidStudioProjects/" ".sqlanywhere16/" ".aspell.en.pws" ".dvdcss/" ".bash_profile" ".spss/" ".git/" "Documents/" ".npm/" ".jupyter/" ".aspell.en.prepl" ".ipynb_checkpoints/" "spacemacs/" ".Trash/" "Dropbox/" ".emacs~" ".gradle/" "programming practice/" "Applications/" ".emacs" ".vimrc" "Movies/" ".ssh/" ".org-id-locations" ".idlerc/" ".python_history-11360.tmp" "package-lock.json" ".dropbox/" "Public/" "Google Drive/" ".bash_sessions/" "Sites/" ".cups/" ".android/" "Box Sync/" ".emacs.d/" ".python_history-02134.tmp" ".python-environments/" ".oracle_jre_usage/" ".lesshst" ".psychopy2/" "programming_projects/" ".matplotlib/" "Library/" "Desktop/" "OneDrive - Ponce Health Sciences University/" ".ipython/" ".psychopy3/" "Pictures/" ".local/" "OneDrive/" "org/" ".python_history-00771.tmp" ".pandoc/" ".DS_Store" ".python_history-14139.tmp" ".aspell.es.pws" "Music/" "Research/" "../" "./")
+ ("/Users/MBP/Box Sync/Research/blog/" (23722 49169 977616 50000) ".git/" "entry04_intro_python.org" "blog_home.org" "entry05_variables.org" "entry11_extract_content.org.txt" "_config.yml" "stimuli.xlsx" "entry08_functions.org" "entry03_using this site.org" "entry01_about.html" "docs/" "entry10_files.org" "entry02_why_coding.org" "Entrada 10/" "planning_experimental_posts.org.txt" "Guion secuencia multimedia_Mario Bermonti.docx" "entry01_about.tex" "entry01_about.pdf" ".DS_Store" "index.html" "entry01_about.org" "entry06_lists.org" "entry07_iteration.org" "entry09_libraries.org" "../" "./")
+
+ ("/Users/MBP/Box Sync/Research/" (23811 61266 931316 383000) "Funding/" "Revisión manuscritos para revistas/" "Consultation services/" "desktop (2014_01_07 02_16_51 UTC) (2015_12_10 01_06_09 UTC).ini" "Ayudantías/" "Tesina BA-UPRM.docx" "Promo.pdf" "Certificados para investigacion/" "Doble excepcionalidad_2019.pdf" "Recursos/" "Becas/" "Ayuda a otros/" "Presentations/" "blog/" "Talleres/" "Publications/" "Important Lit/" "Mentoria/" "Curriculum Vitae/" ".DS_Store" "Thumbs (2014_01_07 02_16_51 UTC) (2015_12_10 01_06_09 UTC).db" "Mendeley_lib/" "Research Projects/" "../" "./")
+
+ ("/Users/MBP/Box Sync/" (23815 44524 243952 388000) "comienzo.docx" "Programacion/" "firma digital MBP.jpg" "Proyectos Intervención neurocognitiva/" "Progreso phd.docx" "PHSU/" "costo de vida.xlsx" "saludoalsol/" "Dragon profiles/" "Plan de trabajo (horas semanales).xlsx" "Literature/" ".DS_Store" "Coleccion Edgar Allan Poe-E/" "Research/" "../" "./")
+
+ ("/Users/MBP/" (23818 57600 731169 60000) "programming_practice/" ".viminfo" ".bash_history" ".pyosf/" ".aspell.es.prepl" ".gitconfig" "Ponce Health Sciences University/" ".python_history" "Downloads/" "AndroidStudioProjects/" ".sqlanywhere16/" ".aspell.en.pws" ".dvdcss/" ".bash_profile" ".spss/" "Documents/" ".npm/" ".jupyter/" ".aspell.en.prepl" ".ipynb_checkpoints/" ".zoomus/" "spacemacs/" ".Trash/" "Dropbox/" ".gradle/" "Applications/" ".vimrc" "Movies/" ".ssh/" ".org-id-locations" ".idlerc/" ".python_history-11360.tmp" "package-lock.json" ".dropbox/" "Public/" "Google Drive/" ".bash_sessions/" "Sites/" ".cups/" ".android/" "Box Sync/" ".emacs.d/" ".python_history-02134.tmp" ".dotfiles/" ".python-environments/" ".oracle_jre_usage/" ".lesshst" ".psychopy2/" "programming_projects/" ".matplotlib/" "Library/" "Desktop/" "OneDrive - Ponce Health Sciences University/" ".ipython/" ".psychopy3/" "Pictures/" ".local/" "OneDrive/" "org/" ".python_history-00771.tmp" ".pandoc/" ".DS_Store" ".vim/" ".python_history-14139.tmp" ".aspell.es.pws" "Music/" "Research/" "../" "./")
+
+ ("/Users/MBP/programming practice/" (23789 50220 118943 637000) "results.log" "results.aux" "report_error_pythonorgmode.tex" "t.py" "testapa.toc" "testlines.pdf" "fig8.png" "test.tex" "testapa.tex" "te.log" "te.aux" "testingapa6.tex" "a.png" "testanalysis.tex" "testapa.out" "c.png" "testtable.log" "b.png" "testtable.aux" "useapa.log" "testlines.out" "test.org" "testanalysis.pdf" "report_error_pythonorgmode.org" "obipy-resources/" "sss" "db.png" "_region_.log" "fig9.svg" "fig8.svg" "testlines.tex" "testapa.pdf" "test.pdf" ".drag.html.swp" "da.png" "testanalysis.org" "python_practice/" "report_error_pythonorgmode.pdf" "data.csv" "te.tex" "te.toc" "results.out" "texput.log" "testingapa6.log" "testt.org" "newtest.docx" "sss.org" "testtable.tex" "testtable.toc" "results.tex" "testing.docx" "results.toc" "te.out" "prv_testapa.log" ".move.html.swp" "testapa.aux" "test.prv/" "sss.pdf" "testapa.log" "web/" "testt.pdf" "testtable.out" "testt.odt" "_region_.tex" "te.html" "testlines.log" "testlines.aux" "testt.tex" "testt.docx" "sss.tex" "fig.svg" "results.pdf" ".DS_Store" "sss.html" "testtable.pdf" "testanalysis.py" "useapa.tex" "test.docx" "te.pdf" "testapa.dvi" "../" "./")
 
  ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/Eliut Rivera/Suicide and Emotional Regulation Project/Free recall task/" (23780 17251 23738 901000) "free recall task.py" "data/" ".git/" "free recall task.psyexp" "free recall task_lastrun.py" "free recall task_template.psyexp" ".DS_Store" "choose_blocks.csv" "exp_trials.csv" "../" "./")
 
  ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/Eliut Rivera/Suicide and Emotional Regulation Project/" (23790 34967 688532 16000) ".git/" "Free recall task/" ".#suicidal behavior_protocol.org" "Stimuli/" "Documentos/" "suicidal behavior_protocol.org" ".DS_Store" "Emotional Stroop Task/" "../" "./")
-
- ("/Users/MBP/Box Sync/" (23718 21397 95022 532000) "comienzo.docx" "Programacion/" "firma digital MBP.jpg" "Proyectos Intervención neurocognitiva/" "Progreso phd.docx" "PHSU/" "costo de vida.xlsx" "saludoalsol/" "Dragon profiles/" "Plan de trabajo (horas semanales).xlsx" "Libros/" ".DS_Store" "Coleccion Edgar Allan Poe-E/" "Research/" "../" "./")
 
  ("/Users/MBP/.emacs.d/" (23718 38373 670274 718000) "metaweblog/" "org2blog/" "games/" "elpa/" "network-security.data" ".org-id-locations" "highlight-current-line-0.57/" "curl-cookie-jar" ".python-environments/" "url/" "auto-save-list/" "xml-rpc-el/" "org-mode/" "scimax-master/" "projectile.cache" "projectile-bookmarks.eld" "places" "pythontemplate.py" "ido.last~" ".DS_Store" "ido.last" "snippets/" "ac-comphist.dat" "../" "./")
 
@@ -127,15 +133,11 @@
 
  ("/Users/MBP/Desktop/" (23718 26161 233579 684000) "Plan de trabajo (horas semanales).xlsx alias" ".DS_Store" "../" "./")
 
- ("/Users/MBP/Box Sync/Research/blog/" (23718 34947 627707 330000) ".git/" "entry04_intro_python.org" "blog_home.org" "entry05_variables.org" "entry11_extract_content.org.txt" "_config.yml" "entry08_functions.org" "entry03_using this site.org" "entry01_about.html" "docs/" "entry10_files.org" "entry02_why_coding.org" "Entrada 10/" "planning_experimental_posts.org.txt" "Guion secuencia multimedia_Mario Bermonti.docx" "entry01_about.tex" "entry01_about.pdf" ".DS_Store" "index.html" "entry01_about.org" "entry06_lists.org" "entry07_iteration.org" "entry09_libraries.org" "../" "./")
-
  ("/Users/MBP/Box Sync/Programacion/" (23717 22576 774143 658000) "CS50/" "Data Science/" "Emacs/" "A/" "Reference_cards.odt" "Configuraciones/" "web/" "python/" ".DS_Store" "Reference_cards.org" "todo_emacs.org" "../" "./")
 
  ("/Users/" (23505 56550 110158 470000) "MBP/" "Shared/" ".localized" "../" "./")
 
  ("/Users/MBP/Research/" (23625 50114 725356 787000) "Mendeley_lib/" "../" "./")
-
- ("/Users/MBP/Box Sync/Research/" (23678 54042 46429 567000) "Revisión manuscritos para revistas/" "Consultation services/" "desktop (2014_01_07 02_16_51 UTC) (2015_12_10 01_06_09 UTC).ini" "Ayudantías/" "Publicaciones/" "Tesina BA-UPRM.docx" "Promo.pdf" "Certificados para investigacion/" "Recursos/" "Becas/" "Ayuda a otros/" "Presentaciones/" "blog/" "Talleres/" "Important Lit/" "programming projects/" "Mentoria/" "Curriculum Vitae/" ".DS_Store" "Thumbs (2014_01_07 02_16_51 UTC) (2015_12_10 01_06_09 UTC).db" "Mendeley_lib/" "Research Projects/" "../" "./")
 
  ("/Users/MBP/Box Sync/Research/blog/Entrada 10/" (23417 37201 0 0) "estimulos_crudos.txt" "Entrada _10.docx" "Entrada _10_2.docx" "clean_stimulus.py" "../" "./")
 

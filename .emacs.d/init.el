@@ -1,13 +1,28 @@
 ; -*- lexical-binding: t -*-
 
+;;====================================
+;; Add plugins dir to load-path
+;;====================================
+;; Specify the root-dir based on this init.el file
+(setq root-dir (file-name-directory
+                (or (buffer-file-name) load-file-name)))
+
+;; Specify plugins dir
+(setq plugins-dir (concat root-dir "plugins"))
+
+;; Add plugins dir and subdir
+(let ((default-directory  root-dir))
+  (normal-top-level-add-subdirs-to-load-path))
+;;====================================
+
 ;; This sets up the load path so that we can override it
 (package-initialize)
+;;====================================
 
 ;;====================================
 ;; USE-PACKAGE
 ;;====================================
 (eval-when-compile
-  (add-to-list 'load-path "~/.emacs.d/elpa/use-package-20190405.2047")
   (require 'use-package))
 (setq use-package-verbose t)
 (setq use-package-always-ensure t)
@@ -35,7 +50,6 @@
 (use-package highlight-current-line
   :ensure nil
   :init
-  (add-to-list 'load-path "~/.emacs.d/highlight-current-line-0.57")
   (setq highlight-current-line-globally t)
   (setq highlight-current-line-high-faces nil)
   (setq highlight-current-line-whole-line nil)
@@ -61,7 +75,7 @@
 ;; BACKUPS
 ;;====================================
 ;; Save backups in a special directory
-(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq backup-directory-alist '(("." . "/backups/")))
 
 ;; Disable autosave files
 (setq auto-save-default nil)
@@ -70,7 +84,7 @@
 (setq delete-old-versions -1)
 (setq version-control t)
 (setq vc-make-backup-files t)
-(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-save-list/" t)))
+(setq auto-save-file-name-transforms '((".*" "/auto-save-list/" t)))
 ;;====================================
 
 ;;====================================
@@ -107,8 +121,6 @@
 ;;==========================================
 (use-package evil
   :ensure nil
-  :init
-  (add-to-list 'load-path "~/.emacs.d/evil")
   :config
   (evil-mode t))
 
@@ -123,14 +135,10 @@
 ;; Scimax
 ;;=================================================
 (use-package ob-ipython
-  :ensure nil
-  :init
-  (add-to-list 'load-path "~/.emacs.d/scimax-master"))
+  :ensure nil)
 
 (use-package scimax-org-babel-ipython-upstream
-  :ensure nil
-  :init
-  (add-to-list 'load-path "~/.emacs.d/scimax-master"))
+  :ensure nil)
 
 ;; Yasnippet (code templates)
 ;;==========================================
@@ -228,10 +236,6 @@
 ;;==========================================
 (use-package org2blog-autoloads
   :ensure nil
-  :init
-  (setq load-path (cons "~/.emacs.d/org2blog/" load-path))
-  (setq load-path (cons "~/.emacs.d/xml-rpc-el/" load-path))
-  (setq load-path (cons "~/.emacs.d/metaweblog/" load-path))
   :config
   (setq org2blog/wp-blog-alist
 	'(("codin cognitive research"
