@@ -451,7 +451,7 @@ you should place your code here."
 (setq org-export-with-section-numbers nil)
 ;;====================================
 
-;; Yasnippet
+)  ;; This closes the function
 
 
 ;;====================================
