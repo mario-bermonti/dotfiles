@@ -33,7 +33,8 @@ values."
    '(
      html
      (python :variables
-             python-enable-yapf-format-on-save t)
+             python-enable-yapf-format-on-save t
+             python-test-runner '(pytest nose))
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
