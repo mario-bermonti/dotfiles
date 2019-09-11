@@ -384,13 +384,13 @@ you should place your code here."
 ;;============================================
 ;; Eliminate trailing white space when buffer is saved
 ;;============================================
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 ;;============================================
 
 ;;============================================
 ;; Require final newline in files when they are saved
 ;;============================================
-(setq require-final-newline t)
+;; (setq require-final-newline t)
 ;;============================================
 
 ;;====================================
