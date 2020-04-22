@@ -482,11 +482,57 @@ you should place your code here."
  '(cua-normal-cursor-color "#839496")
  '(cua-overwrite-cursor-color "#b58900")
  '(cua-read-only-cursor-color "#859900")
+ '(diary-entry-marker (quote font-lock-variable-name-face))
+ '(emms-mode-line-icon-image-cache
+   (quote
+    (image :type xpm :ascent center :data "/* XPM */
+static char *note[] = {
+/* width height num_colors chars_per_pixel */
+\"    10   11        2            1\",
+/* colors */
+\". c #358d8d\",
+\"# c None s None\",
+/* pixels */
+\"###...####\",
+\"###.#...##\",
+\"###.###...\",
+\"###.#####.\",
+\"###.#####.\",
+\"#...#####.\",
+\"....#####.\",
+\"#..######.\",
+\"#######...\",
+\"######....\",
+\"#######..#\" };")))
  '(evil-want-Y-yank-to-eol nil)
  '(fci-rule-character-color "#192028")
- '(fci-rule-color "#192028")
+ '(fci-rule-color "#192028" t)
  '(flycheck-color-mode-line-face-to-color (quote mode-line-buffer-id))
  '(frame-background-mode (quote dark))
+ '(gnus-logo-colors (quote ("#0d7b72" "#adadad")) t)
+ '(gnus-mode-line-image-cache
+   (quote
+    (image :type xpm :ascent center :data "/* XPM */
+static char *gnus-pointer[] = {
+/* width height num_colors chars_per_pixel */
+\"    18    13        2            1\",
+/* colors */
+\". c #358d8d\",
+\"# c None s None\",
+/* pixels */
+\"##################\",
+\"######..##..######\",
+\"#####........#####\",
+\"#.##.##..##...####\",
+\"#...####.###...##.\",
+\"#..###.######.....\",
+\"#####.########...#\",
+\"###########.######\",
+\"####.###.#..######\",
+\"######..###.######\",
+\"###....####.######\",
+\"###..######.######\",
+\"###########.######\" };")) t)
  '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
  '(highlight-symbol-colors
    (--map
@@ -510,8 +556,9 @@ you should place your code here."
  '(hl-fg-colors
    (quote
     ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
- '(hl-paren-colors (quote ("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900")))
+ '(hl-paren-colors (quote ("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900")) t)
  '(hl-sexp-background-color "#1c1f26")
+ '(linum-format " %7i ")
  '(magit-diff-use-overlays nil)
  '(nrepl-message-colors
    (quote
