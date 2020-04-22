@@ -566,5 +566,5 @@ you should place your code here."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Source Code Pro" :foundry "nil" :slant normal :weight normal :height 170 :width normal))))
- '(hl-line ((t (:background "gray25"))))
+ '(hl-line ((t (:background "wheat"))))
  '(region ((t (:background "lightskyblue4")))))
