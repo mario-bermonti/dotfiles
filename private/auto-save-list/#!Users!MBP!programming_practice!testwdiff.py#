@@ -1,4 +1,0 @@
-from wdiff import wdiff
-
-words = ["gato", "perro", "cacatua"]
-wdiff.

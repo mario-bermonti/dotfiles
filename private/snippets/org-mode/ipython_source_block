@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: python source block
-# key: pys
-# --
-#+begin_src python :exports ${1:none} :session ${2: } :results ${3:output}
-$0
-#+end_src
