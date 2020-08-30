@@ -418,6 +418,12 @@ you should place your code here."
 ;;====================================
 
 ;;============================================
+;; Python
+;;============================================
+(setq python-shell-interpreter "ipython")
+;; (setq python-shell-interpreter-args "-i")
+
+;;============================================
 ;; ORG-MODE
 ;;============================================
 
@@ -580,7 +586,6 @@ static char *gnus-pointer[] = {
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")
- '(python-shell-interpreter "ipython")
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
  '(term-default-bg-color "#002b36")
  '(term-default-fg-color "#839496")
