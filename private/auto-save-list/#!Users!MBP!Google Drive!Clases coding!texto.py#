@@ -1,0 +1,8 @@
+# pedir texto
+texto = input("Escribe el texto: ")
+
+# modificarlo
+texto_modificado = texto.upper()
+
+# presentar texto modificado
+print("Mensaje modificado:", texto_modificado)

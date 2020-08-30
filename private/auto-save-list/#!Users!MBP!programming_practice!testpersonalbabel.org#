@@ -1,0 +1,8 @@
+#+begin_src python :exports both :results outpuj
+import pandas as pd
+d = pd.DataFrame([1, 2], columns=['widecolumn'])
+print(d)
+#+end_src
+
+#+RESULTS:
+: None
