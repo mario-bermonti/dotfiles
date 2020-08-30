@@ -1,0 +1,24 @@
+# -*- mode: snippet -*-
+# name: data preprocessing script
+# key: dps
+# --
+
+* General code
+#+begin_src ipython :exports none :session  :results drawer output
+import pandas as pd $1
+#+end_src
+
+* Define paths
++begin_src ipython :exports none :session  :results drawer output
+path_data_dir = "$2"
+path_data_$3 = "{$4}$5".format(path_data_dir)
+#+end_src
+
+* Load data
+#+begin_src ipython :exports none :session  :results drawer output
+data_ = pd.read_$6($7)
+#+end_src
+* Preprocessing
+#+begin_src ipython :exports none :session  :results drawer output
+$0
+#+end_src
