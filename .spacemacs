@@ -68,6 +68,7 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(ob-ipython)
+                                      ;; (scimax :location local))
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -456,6 +457,11 @@ you should place your code here."
 ;; Remove numbering from headings
 ;;====================================
 (setq org-export-with-section-numbers nil)
+;;====================================
+
+;; Scimax functionality
+;; ===================================
+;; (require 'scimax-org-babel-ipython-upstream)
 ;;====================================
 
 )  ;; This closes the function
