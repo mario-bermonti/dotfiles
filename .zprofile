@@ -26,6 +26,7 @@ alias gotoapa="cd ~/programming_projects/APA_self-study_evaluation_system"
 #######################
 # python
 #######################
+# export PYTHONPATH="~/Library/Python/3.7/bin"
 
 #######################
 # Ruby
