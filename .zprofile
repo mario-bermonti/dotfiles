@@ -28,6 +28,11 @@ alias gotoapa="cd ~/programming_projects/APA_self-study_evaluation_system"
 #######################
 # export PYTHONPATH="~/Library/Python/3.7/bin"
 
+# pyenv
+#if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+#fi
+
 #######################
 # Ruby
 #######################
@@ -37,3 +42,9 @@ export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH" 
 
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
