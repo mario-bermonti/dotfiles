@@ -26,11 +26,6 @@ alias gotoapa="cd ~/programming_projects/APA_self-study_evaluation_system"
 #######################
 # python
 #######################
-#export PYTHONPATH="/usr/local/lib/python3.6/site-packages (0.0.1)"
-#export PYTHONPATH="/Users/MBP/Library/Python/3.6/bin"
-#export PYTHONPATH="/usr/local/lib/python3.6/site-packages/pip (python 3.6)"
-# dir where python packages are dev
-#export PYTHONPATH="/Users/MBP/programming_projects"
 
 #######################
 # Ruby
