@@ -28,6 +28,9 @@ alias gotoapa="cd ~/programming_projects/APA_self-study_evaluation_system"
 #######################
 # export PYTHONPATH="~/Library/Python/3.7/bin"
 
+# config tkinter to work with pyenv's pythons
+export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+
 # pyenv
 #if command -v pyenv 1>/dev/null 2>&1; then
 #  eval "$(pyenv init -)"
