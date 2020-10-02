@@ -1,0 +1,57 @@
+* Average of each field
+** Description
+   The mean for each column is required for a report to APA.
+
+** Analysis plan
+   1. Fix the headers in the file
+   2. Convert the current values (str) to numeric values
+   3. Calculate the mean for each numeric column
+   4. Organize results in a shareable format (Excel)
+  
+** General code
+ #+begin_src ipython :exports none :session  :results drawer output
+ import pandas as pd
+ #+end_src
+
+ #+RESULTS:
+ :results:
+ :end:
+
+** Prepare data
+*** Faculty
+ #+begin_src ipython :exports none :session  :results drawer 
+ data_path = "../Data/Surveys/"
+ data_path_faculty = "{}survey_faculty.xlsx".format(data_path)
+ data_faculty_master = pd.read_excel(data_path_faculty)
+ data_faculty_master.info()
+ #+end_src
+
+ #+RESULTS:
+ :results:
+ # Out[6]:
+ :end:
+
+* Freq (%) of each field
+** Description
+   The freq (%) for each column is required for a report to APA.
+
+** Analysis plan
+   1. Fix the headers in the file
+   3. Calculate the freq for each column
+   4. Organize results in a shareable format (Excel)
+  
+** General code
+ #+begin_src ipython :exports none :session  :results drawer output
+ import pandas as pd
+ #+end_src
+
+ #+RESULTS:
+ :results:
+ :end:
+
+** Prepare data
+#+begin_src ipython :exports none :session  :results drawer output
+:qa:qafaculty
+#+end_src
+
+

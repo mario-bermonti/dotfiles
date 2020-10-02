@@ -1,0 +1,39 @@
+# -*- mode: snippet -*-
+# name: readme template
+# key: readmetemp
+# --
+* $1
+$2
+
+* Getting Started
+** Prerequisites
+You will need to install the following ${3:package} to be able to use this
+module.
+To install the package you can use pip =pip install $4=.
+
+** Installing
+Installing $5
+=pip install $6=
+
+** Usage
+#+begin_src ipython :exports code :session :results drawer output
+$7
+#+end_src
+
+* Contributing to this project
+All contributions are welcome!
+
+If you encounter any bugs, please open an issue on GitHub.
+
+To contribute to this project, clone the repository, add your contribution, 
+and submit a pull request. Be sure to run the tests or provided a test-case
+if adding new functionality.
+
+* Author
+This project was developed by Mario E. Bermonti-Perez as part of
+his academic research. Feel free to contact me at [[mbermonti@psm.edu]] or
+[[mbermonti1132@gmail.com]]
+
+* License
+This project is licensed under the ${8: GPL} License. See the LICENSE.txt file for
+details.

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: ipython source block
+# key: ipys
+# --
+#+begin_src ipython :exports ${1:none} :session ${2:} :results ${3:drawer output}
+$0
+#+end_src

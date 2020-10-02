@@ -1,2 +1,2 @@
 /.DS_Store
-/.emacs.d/.DS_Store
+*.DS_Store*

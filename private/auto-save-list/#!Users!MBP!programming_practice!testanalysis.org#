@@ -1,0 +1,375 @@
+#+OPTIONS: toc:nil
+#+begin_src python :exports results :session :results output
+import random
+#+end_src
+
+#+RESULTS:
+
+#+begin_src ipython :exports results :session :results output
+import pandas as pd
+data = pd.read_csv('data.csv')
+data
+ 
+#+end_src
+
+#+RESULTS:
+
+
+#+begin_src python :exports none :session   :results drawer output
+import pandas_profiling as pp
+d = pp.ProfileReport(data)
+results = d.get_description()
+for name, value in results["variables"].items():
+    print(name, value)
+    print()
+
+
+#+end_src
+
+#+RESULTS:
+:results:
+type fl      NUM
+in      NUM
+in2    CORR
+wo      CAT
+Name: type, dtype: object
+
+correlation_var fl     NaN
+in     NaN
+in2     in
+wo     NaN
+Name: correlation_var, dtype: object
+
+correlation fl     NaN
+in     NaN
+in2      1
+wo     NaN
+Name: correlation, dtype: object
+
+count fl       5
+in       4
+in2    NaN
+wo       3
+Name: count, dtype: object
+
+distinct_count fl       4
+in       5
+in2    NaN
+wo       4
+Name: distinct_count, dtype: object
+
+p_missing fl       0
+in     0.2
+in2    NaN
+wo     0.4
+Name: p_missing, dtype: object
+
+n_missing fl       0
+in       1
+in2    NaN
+wo       2
+Name: n_missing, dtype: object
+
+p_infinite fl       0
+in       0
+in2    NaN
+wo       0
+Name: p_infinite, dtype: object
+
+n_infinite fl       0
+in       0
+in2    NaN
+wo       0
+Name: n_infinite, dtype: object
+
+is_unique fl     False
+in      True
+in2      NaN
+wo     False
+Name: is_unique, dtype: object
+
+mode fl      4.1
+in        1
+in2     NaN
+wo     casa
+Name: mode, dtype: object
+
+p_unique fl     0.8
+in       1
+in2    NaN
+wo     0.8
+Name: p_unique, dtype: object
+
+memorysize fl     120
+in     120
+in2    NaN
+wo     120
+Name: memorysize, dtype: object
+
+top fl       NaN
+in       NaN
+in2      NaN
+wo     casa5
+Name: top, dtype: object
+
+freq fl     NaN
+in     NaN
+in2    NaN
+wo       1
+Name: freq, dtype: object
+
+mean fl     20.924
+in          3
+in2       NaN
+wo        NaN
+Name: mean, dtype: object
+
+std fl     24.8762
+in     1.82574
+in2        NaN
+wo         NaN
+Name: std, dtype: object
+
+variance fl     618.824
+in     3.33333
+in2        NaN
+wo         NaN
+Name: variance, dtype: object
+
+min fl     1.12
+in        1
+in2     NaN
+wo      NaN
+Name: min, dtype: object
+
+max fl     54.3
+in        5
+in2     NaN
+wo      NaN
+Name: max, dtype: object
+
+range fl     53.18
+in         4
+in2      NaN
+wo       NaN
+Name: range, dtype: object
+
+5% fl     1.716
+in      1.15
+in2      NaN
+wo       NaN
+Name: 5%, dtype: object
+
+25% fl      4.1
+in     1.75
+in2     NaN
+wo      NaN
+Name: 25%, dtype: object
+
+50% fl     4.1
+in       3
+in2    NaN
+wo     NaN
+Name: 50%, dtype: object
+
+75% fl       41
+in     4.25
+in2     NaN
+wo      NaN
+Name: 75%, dtype: object
+
+95% fl     51.64
+in      4.85
+in2      NaN
+wo       NaN
+Name: 95%, dtype: object
+
+iqr fl     36.9
+in      2.5
+in2     NaN
+wo      NaN
+Name: iqr, dtype: object
+
+kurtosis fl    -2.39408
+in        -3.3
+in2        NaN
+wo         NaN
+Name: kurtosis, dtype: object
+
+skewness fl     0.757329
+in            0
+in2         NaN
+wo          NaN
+Name: skewness, dtype: object
+
+sum fl     104.62
+in         12
+in2       NaN
+wo        NaN
+Name: sum, dtype: object
+
+mad fl     21.3808
+in         1.5
+in2        NaN
+wo         NaN
+Name: mad, dtype: object
+
+cv fl      1.18888
+in     0.608581
+in2         NaN
+wo          NaN
+Name: cv, dtype: object
+
+n_zeros fl       0
+in       0
+in2    NaN
+wo     NaN
+Name: n_zeros, dtype: object
+
+p_zeros fl       0
+in       0
+in2    NaN
+wo     NaN
+Name: p_zeros, dtype: object
+
+histogram fl     data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...
+in     data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...
+in2                                                  NaN
+wo                                                   NaN
+Name: histogram, dtype: object
+
+mini_histogram fl     data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...
+in     data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...
+in2                                                  NaN
+wo                                                   NaN
+Name: mini_histogram, dtype: object
+:end:
+#+begin_src ipython :exports none :session  :results drawer output
+print(data.head())
+#+end_src
+
+#+RESULTS:
+:results:
+      wo   in   in2     fl
+0   casa  1.0   6.0   1.12
+1    NaN  NaN   7.0   4.10
+2    NaN  2.0   NaN  54.30
+3  casa4  4.0   9.0   4.10
+4  casa5  5.0  10.0  41.00
+:end:
+
+This code can be used to  describe the df (I can decide which variables
+to include) and get the descriptive stats. The downside is that there is
+a lot of overhead because it calculates everything and I extract just
+the parts that I want. I can use this code for now and then modify it
+to have be more efficient (only using the parts that I want, maybe even
+getting these parts out of pandas-profiling).
+#+begin_src ipython :exports none :session   :results drawer output
+  from pandas_profiling import describe
+  res = describe(data, check_correlation=False)
+  res_var = res["variables"]
+  # descriptive stats
+  print("descriptive stats")
+  print(res_var)
+  # freq
+  print()
+  print()
+  print("freq")
+  print(res["freq"])
+
+#+end_src
+
+#+RESULTS:
+:results:
+descriptive stats
+    count distinct_count p_missing n_missing p_infinite n_infinite is_unique  \
+fl      5              4         0         0          0          0     False   
+in      4              5       0.2         1          0          0      True   
+in2     4              5       0.2         1          0          0      True   
+wo      3              4       0.4         2          0          0     False   
+
+     mode p_unique memorysize  ...   iqr kurtosis  skewness     sum      mad  \
+fl    4.1      0.8        120  ...  36.9 -2.39408  0.757329  104.62  21.3808   
+in      1        1        120  ...   2.5     -3.3         0      12      1.5   
+in2     6        1        120  ...   2.5     -3.3         0      32      1.5   
+wo   casa      0.8        120  ...   NaN      NaN       NaN     NaN      NaN   
+
+           cv n_zeros p_zeros  \
+fl    1.18888       0       0   
+in   0.608581       0       0   
+in2  0.228218       0       0   
+wo        NaN     NaN     NaN   
+
+                                             histogram  \
+fl   data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...   
+in   data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...   
+in2  data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...   
+wo                                                 NaN   
+
+                                        mini_histogram  
+fl   data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...  
+in   data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...  
+in2  data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...  
+wo                                                 NaN  
+
+[4 rows x 34 columns]
+
+
+freq
+{'wo': casa4    1
+casa     1
+casa5    1
+Name: wo, dtype: int64, 'in': 5.0    1
+4.0    1
+2.0    1
+1.0    1
+Name: in, dtype: int64, 'in2': 10.0    1
+9.0     1
+7.0     1
+6.0     1
+Name: in2, dtype: int64, 'fl': 4.10     2
+1.12     1
+41.00    1
+54.30    1
+Name: fl, dtype: int64}
+:end:
+
+
+
+
+
+* oiu
+oiu
+
+* Getting Started
+** Prerequisites
+   You will need to install the following oiu to be able to use this
+   module.
+   To install the package you can use pip =pip install oi=.
+
+** Installing
+   Installing u
+   =pip install =
+
+** Usage
+   #+begin_src ipython :exports code :session :results drawer output
+
+   #+end_src
+
+* Contributing to this project
+  All contributions are welcome!
+
+  If you encounter any bugs, please open an issue on GitHub.
+
+  To contribute to this project, clone the repository, add your contribution, 
+  and submit a pull request. Be sure to run the tests or provided a test-case
+  if adding new functionality.
+
+* Author
+  This project was developed by Mario E. Bermonti-Perez as part of
+  his academic research. Feel free to contact me at [[mbermonti@psm.edu]] or
+  [[mbermonti1132@gmail.com]]
+
+* License
+  This project is licensed under the  GPL License. See the LICENSE.txt file for
+  details.

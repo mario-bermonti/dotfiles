@@ -1,0 +1,15 @@
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+
+def pars(gello, p1):
+    """Shoud see error"""
+    pass
+
+def df(kdf,dsklfj):
+    """dslkfj hello world ls;dkfj sdflksd kd jlsda;lkjsdfsd fds fas df sdf k
+    kkksdf ds f dsf sdf sd fs df sdf"""
+
+    [1, 2, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,1, 1, 1, 1, 1, 1]
+    pass
+

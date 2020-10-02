@@ -1,0 +1,30 @@
+#+begin_src python :exports  :session  :results drawer output
+import pandas as pd
+# most recent
+data_name = "data_2020-04-29.xlsx"
+
+path_data_master = "{}".format(data_name)
+data_master = pd.read_excel(path_data_master)
+#+end_src
+
+#+RESULTS:
+:results:
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/var/folders/n3/hq2nm4qj70sd8g1dlksyds6w0000gp/T/babel-C0raZ7/python-VKwRAD", line 6, in <module>
+    data_master = pd.read_excel(path_data_master)
+  File "/usr/local/lib/python3.6/site-packages/pandas/util/_decorators.py", line 188, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/pandas/util/_decorators.py", line 188, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/excel.py", line 350, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/excel.py", line 653, in __init__
+    self._reader = self._engines[engine](self._io)
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/excel.py", line 424, in __init__
+    self.book = xlrd.open_workbook(filepath_or_buffer)
+  File "/usr/local/lib/python3.6/site-packages/xlrd/__init__.py", line 116, in open_workbook
+    with open(filename, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data_2020-04-29.xlsx'
+:end:
+
