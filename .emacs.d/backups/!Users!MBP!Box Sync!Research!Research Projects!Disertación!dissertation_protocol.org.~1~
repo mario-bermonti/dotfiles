@@ -1,0 +1,1195 @@
+#+latex_header: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage{tabu}
+#+OPTIONS: toc:nil
+
+* Things to do: [33%]
+** DONE Generales [%]
+*** DONE Considerar nombre para intervención
+*** DONE Informar al comité decisiones discutidas en presentación
+** TODO Conceptuales (documento disertación) [0%]
+*** TODO Cambiar título: viabilidad por eficacia, lectura por deletreo, añadir población :cipshi:
+*** TODO Introducción [0%]
+**** TODO Actualizar literatura
+**** TODO Elaborar secciones
+**** TODO Definir destrezas básicas de lectura
+**** TODO Explicar relación conceptual entre lectura (deletreo) y procesamiento sucesivo (y simultáneo de forma secundaria)
+*** TODO Método [0%]
+**** TODO Añadir problemas del lenguaje severos como criterio de exclusión
+*** TODO Cambios a protocolo a añadir a documento
+**** TODO Entrega de un perfil de los estudiantes:
+**** TODO Cambios por CIPSHI (octubre 2018)
+** TODO Protocolo del proyecto [0%]
+*** Instrumentos [33%]
+**** DONE Preparar palabras [100%]
+***** DONE Identificar banco general de palabras
+***** DONE Clean words
+**** DONE Select words to be used [100%]
+***** DONE Determine method to select words
+***** DONE Calculate number of words
+***** DONE Select words to be analyzed
+***** DONE Analizar palabras
+***** DONE Clean words
+***** DONE Select actual words to be used by instruments
+**** TODO Prepare audio files [0%]
+***** [#B] Intervention [%]
+****** Words [%]
+******* TODO Prepare audio files for each word
+******* TODO Review audio file quality (editing)
+****** Letters [%]
+******* TODO Prepare audio files for each letter
+******* TODO Review audio file quality (editing)
+****** Instructions [%]
+******* TODO Prepare audio files for each letter
+******* TODO Review audio file quality (editing)
+***** [#A] Spelling measure [100%]
+****** DONE Prepare audio files for each word
+****** DONE Review audio file quality (editing)
+****** DONE Fix audio file errors
+****** DONE [#A] Record audio for practice words
+**** TODO Modificar intervención
+***** TODO Eliminar uso de iofiles
+***** TODO Add words
+***** TODO Add audio of words
+***** TODO Add audio of letters
+***** TODO Code [0%]
+****** TODO [#A] Increase time interval between steps with each word
+****** Present instructions in audio
+****** TODO [#A] Repeat the word on each step
+****** TODO [#A] Allow the student to repeat the presentation of the word
+****** TODO [#B] Provide feedback on the letter sound when it is dropped to a box
+****** TODO [#B] Produce the sound of the letter when the participant grabs it (for draggin)
+****** Use an image as background
+****** TODO Add practice trials
+**** TODO Desarrollar medida de deletreo [72%]
+***** DONE Interface
+***** DONE Select words
+***** DONE Present audio
+***** DONE Retrieve answer
+***** DONE Save results
+***** DONE Practice
+***** DONE Other improvements
+****** DONE Add accents
+****** DONE Self-paced start
+***** DONE Add words
+***** DONE Add word audios
+***** DONE Add stop when 10 minutes pass
+***** DONE Record new words
+***** DONE Verify everything works fine
+***** DONE Increase interval between audio presentations
+***** TODO Make path behave correctly on different OS
+***** IN PROGRESS Test on other pc
+***** TODO Buy headphones for children
+***** TODO record audio for word gusano
+***** TODO Develop instructions for running the spelling measure
+***** Add time measure                                         :optional:
+**** TODO Materiales [%]
+***** TODO Comprar computadora
+***** TODO Preparar computadoras
+*** Procedimiento [0%]
+**** Reclutamiento [100%]
+***** DONE Reclutar escuelas
+***** DONE Identificar participantes
+***** Reclutar participantes [%]
+****** Participante 1
+****** Participante 2
+****** Participante 3
+****** Participante 4
+**** Adiestrar a equipo [100%]
+***** DONE Evaluación general (con niños)
+***** DONE Conducta en escuelas
+*** Project coordination [25%]
+**** Protocols [%]
+***** DONE Evaluation
+***** TODO Intervention
+***** TODO Coordinate evaluation sessions
+***** TODO Coordinate intervention session
+**** Materials [0%]
+***** TODO Monitor recruitment
+***** TODO Monitor the progress of evaluation
+***** TODO Monitor the progress of interventions
+***** TODO Monitorear progreso general
+***** TODO [#A] Prepare project IDs
+* CIPSHI
+** DONE Primera entrega [100%]
+*** DONE Completar solicitud [100%]
+**** DONE Verificar que la letra sea times new roman, 12 pts
+**** DONE Eliminar instrucciones
+*** DONE Modificar apéndices [100%]
+**** DONE Hoja sociodemo
+**** DONE Consentimiento
+**** DONE Asentimiento
+**** DONE Promo
+**** DONE Descripción instrumentos
+**** DONE Hoja determinación de participación
+**** DONE Cualificaciones de evaluadores
+*** Cotejo general de los documentos [100%]
+**** DONE Verificar fecha actual en documentos
+**** DONE Verificar que docs tengan el papel timbrado de UPR
+**** DONE Ajustar el título del estudio en los docs
+**** DONE Añadir en todos los docs que habrán asistentes de investigación
+**** DONE Añadir que se entregarán informes de resultados
+**** DONE Nombres de documentos de 50 caracteres o menos
+**** DONE Asegurarme que se indique en el consentimiento que se compartirán los datos y sea consistente cómo se almacenarán
+*** Cotejo de documentos
+- [X] Solicitud
+- [X] Certificado aprobación propuesta
+- [X] Hoja Consentimiento
+- [X] Asentimiento
+- [X] Promo
+- [X] Descripción instrumentos
+- [X] Hoja determinación de participación
+- [X] Cualificaciones de evaluadores
+- [X] Certificado citi Nelson
+- [X] Certificado citi Juan
+- [X] Certificado citi Mario
+- [X] Hoja de datos sociodemo
+- [X] Informe de resultados
+
+** DONE Segunda entrega [100%]
+*** DONE Preparar tabla con cambios
+*** DONE Hacer cambios en indicados en la tabla
+*** DONE Verificar que todos los documentos mencionan el cas como cognitivo (no neuropsicológico)
+*** DONE Verificar que en ningún lado haga referencia a una evaluación cognitiva o psicológica
+*** DONE Incluir citi de Mary, Elixmahir y asistentes
+*** DONE Revisar consistencia en tiempo y sesiones
+*** DONE Actualizar fecha de revisión en docs
+*** DONE Verificar el hecho de que el niño indicará su nombre al prog
+- Pueden resultar en dos códigos (docs, datos). Una opción sería que escriba el código en el programa.
+*** DONE Actualizar periodos de conservación de docs en consentimiento
+*** DONE Aclarar que los datos recolectados por la intervención no serán utilizados
+*** DONE Hacer referencia a todos los apéndices
+*** DONE Incluir la cantidad de participantes a los cuales se les realizará el acercamiento, (diferente al número de participantes)
+*** DONE Verificar ortografía
+*** DONE Añadir firmas
+*** DONE Revisión de documentos
+- [X] Solicitud
+- [X] Certificado aprobación propuesta
+- [X] Hoja Consentimiento 1
+- [X] Hoja Consentimiento 2
+- [X] Asentimiento 1
+- [X] Asentimiento 2
+- [X] Promo
+- [X] Descripción instrumentos
+- [X] Hoja determinación de participación
+- [X] Cualificaciones de evaluadores
+- [X] Certificado citi Nelson
+- [X] Certificado citi Mario
+- [X] Certificado citi Mary
+- [X] Certificado citi Elix
+- [X] Certificado citi Johanna
+- [X] Certificado citi Stephanie
+- [X] Hoja de datos sociodemo
+- [X] Informe de resultados
+
+*** DONE Cotejo de documentos
+- [X] Solicitud
+- [X] Certificado aprobación propuesta
+- [X] Hoja Consentimiento 1
+- [X] Hoja Consentimiento 2
+- [X] Asentimiento 1
+- [X] Asentimiento 2
+- [X] Promo
+- [X] Descripción instrumentos
+- [X] Hoja determinación de participación
+- [X] Cualificaciones de evaluadores
+- [X] Certificado citi Nelson
+- [X] Certificado citi Mario
+- [X] Certificado citi Mary
+- [X] Certificado citi Elix
+- [X] Certificado citi Johanna
+- [X] Certificado citi Stephanie
+- [X] Hoja de datos sociodemo
+- [X] Informe de resultados
+****
+** DONE Tercer entrega [100%]
+*** DONE Modificaciones [100%]
+**** DONE Modificar consentimientos
+***** DONE Subtítulo
+***** DONE Fecha de revisión
+**** DONE Modificar asentimientos
+***** DONE Subtítulo
+***** DONE Fecha de revisión
+**** DONE Modificar hoja de determinación
+**** DONE Actualizar fecha de revisión otros docs
+**** DONE Preparar carta sobre CUSEP
+*** Cotejo de documentos
+- [X] Carta de presentación
+- [X] Hoja Consentimiento 1
+- [X] Hoja Consentimiento 2
+- [X] Asentimiento 1
+- [X] Asentimiento 2
+- [X] Hoja determinación de participación
+- [X] Certificado citi Vicmarie
+- [X] Certificado citi Fabiola
+- [X] Carta de acuerdo CUSEP
+* Descripción del estudio
+:PROPERTIES:
+:Export_title: Eficacia de una intervención cognitiva computarizada para mejorar el procesamiento sucesivo y deletreo en estudiantes de escuela elemental
+:export_file_name: Descripción del proyecto_DeMo_Bermonti
+:END:
+
+- Nombre: Deletreo Móvil (DeMo)
+- Objetivo: Determinar la eficacia de una intervención cognitiva computarizada para mejorar el procesamiento sucesivo y deletreo en estudiantes con dificultades en lectura
+- Diseño
+  + Diseño de Caso Unico
+
+      |--------------------------+--------------------+--------------------------|
+      | A                        | B                  | A                        |
+      |--------------------------+--------------------+--------------------------|
+      | Medida Deletreo          | Medida de Deletreo | Medida Deletreo          |
+      | Actividad no relacionada | Intervención       | Actividad no relacionada |
+      |--------------------------+--------------------+--------------------------|
+ \\
+  + Diseño de preprueba y posprueba
+     |------------------------+------------------------|
+     | Pre                    | Pos                    |
+     |------------------------+------------------------|
+     | Medida proc cognitivos | Medida proc cognitivos |
+     | Medida lectura         | Medida lectura         |
+     |------------------------+------------------------|
+
+- Participantes:
+  + 4 estudiantes de tercer o cuarto grado
+
+  #+caption: Criterios de elegibilidad
+|----------------------------------------------+------------------------------------------------|
+| Criterios inclusión                          | Criterios exclusión                            |
+|----------------------------------------------+------------------------------------------------|
+| Destrezas básicas de lectura < 90 (promedio) | Dificultades auditivas o visuales sin corregir |
+| Procesamiento sucesivo < 90 (promedio)       | Dificultades motoras severas                   |
+| Español como idioma principal                | Condiciones severas de salud física o mental   |
+| Cociente intelectual >= 70                   | Medicamentos que afecten desempeño             |
+|                                              | Intevenciones o terapias que afecten desempeño |
+|----------------------------------------------+------------------------------------------------|
+
+\\
+
+- Instrumentos
+
+#+caption: Instrumentos del estudio
+|-----------------------+-----------------------+---------------------------------|
+| Cernimiento           | Pre y posprueba       | Intervención                    |
+|-----------------------+-----------------------+---------------------------------|
+| Hoja sociodemográfica | CAS (cognción)        | Ordenando Letras (intervención) |
+| WISC-IV (IQ)          | Batería III (lectura) | Actividad no relacionada        |
+|                       |                       | Medida de Deletreo en pc        |
+|-----------------------+-----------------------+---------------------------------|
+
+\\
+- Procedimiento
+  1) Fase: Reclutamiento
+  2) Fase: Cernimiento y preprueba
+     + Una sesión de 90 minutos
+  3) Fase: Intervención
+     + Periodo de base (A): tres medidas en una semana
+       * Actividad no relacionada (colorear): 10 minutos
+       * Medida de deletreo en pc: 10 minutos
+     + Periodo de intervención (B): (2 sesiones semanales por 4 semanas = 8 sesiones)
+       * Intervención en pc: 10 minutos
+       * Medida de deletreo en pc: 10 minutos
+     + Periodo de base (A): tres medidas en una semana
+       * Actividad no relacionada (colorear): 10 minutos
+       * Medida de deletreo en pc: 10 minuto
+  4) Fase: Pospueba
+     + Una sesión de 90 minutos
+
+- Estrategias de Análisis
+  + Diseño de Caso Único: Estadísticas descriptivas
+    * Mínimo, promedio, desviación estándar y máximo
+    * Inspección visual de datos: Gráfica lineal
+  + Diseño preprueba-posprueba:
+    * Inpsección visual de datos: Gráfica de barra
+
+* Protocolo de investigación
+** Plan de trabajo
+*** Protocolo de tareas y duración por tarea
+
+| Actividad                        | Duración (semanas) |
+|----------------------------------+--------------------|
+| Entrega borrador propuesta       |                    |
+| Lectura del comité               | 2 semanas          |
+| Integrar cambios                 | 1 semanas          |
+| Presentación de propuesta        |                    |
+| Preparar documentos CIPSHI       | 1 semanas          |
+| Someter a CIPSHI (27 septiembre) | 6 semanas          |
+| Preparación de Materiales        | 12 semanas         |
+| Reclutamiento                    | 8 semanas          |
+| Tamizaje y Preprueba             | 1 sesión*          |
+| Intervención                     | 6 semanas*         |
+| Posprueba                        | 1 sesión*          |
+| Análisis de Datos                | 2 semanas          |
+| Redacción (cap. 3 y 4)           | 2 semanas          |
+| Redacción (cap. 3 y 4)           | 2  semanas         |
+| Entrega de borrador disetación   |                    |
+| Integración de cambios           | 2 semanas          |
+| Defensa de disertación           |                    |
+| Integración de cambios           | 2 semanas          |
+| Entrega documento final          |                    |
+*Tiempo total depende del reclutamiento
+
+*** Tareas y periodo en el cuál se completará
+| Actividad                      | Fecha a completarse         |
+|--------------------------------+-----------------------------|
+| Entrega Borrador Propuesta     | 24 agosto                   |
+| Presentación de Propuesta      | 15 - 20 septiembre          |
+| Someter a CIPSHI               | 27 septiembre - 1 diciembre |
+| Preparación de Materiales      | 25 agosto - 1 diciembre     |
+| Reclutamiento                  | 1 diciembre - 30 enero      |
+| Tamizaje y Preprueba           | 15 diciembre -30 enero      |
+| Intervención                   | 1 enero - 28 febrero        |
+| Posprueba                      | 15 febrero - 10 marzo       |
+| Análisis de Datos              | 15 diciembre - 30 marzo     |
+| Redacción (cap. 3 y 4)         | 1 abril - 15 abril          |
+| Defensa de disertación         | 1 mayo - 30 mayo            |
+| Entrega documento encuadernado | 15 junio - 30 junio         |
+*Muchas tareas serán realizadas simultáneamente para usar efectivamente el tiempo.
+
+*** Timetable gráfico
+|                                | 2018   |            |         |           |           | 2019  |         |       |       |      |       |
+| /                              | <      |            |         |           | >         | <     |         |       |       |      | >     |
+|                                | Agosto | Septiembre | Octubre | Noviembre | Diciembre | Enero | Febrero | Marzo | Abril | Mayo | Junio |
+| Entrega Borrador Propuesta     | X      |            |         |           |           |       |         |       |       |      |       |
+| Presentación de Propuesta      |        | X          |         |           |           |       |         |       |       |      |       |
+| Someter a CIPSHI               |        | X          | X       | X         | X         |       |         |       |       |      |       |
+| Preparación de Materiales      | X      | X          | X       | X         | X         |       |         |       |       |      |       |
+| Reclutamiento                  |        |            |         |           | X         | X     |         |       |       |      |       |
+| Tamizaje y Preprueba           |        |            |         |           | X         | X     |         |       |       |      |       |
+| Intervención                   |        |            |         |           |           | X     | X       |       |       |      |       |
+| Posprueba                      |        |            |         |           |           |       | X       | X     |       |      |       |
+| Análisis de Datos              |        |            |         |           | X         | X     | X       | X     |       |      |       |
+| Redacción (cap. 3 y 4)         |        |            |         |           |           |       |         |       | X     |      |       |
+| Defensa de disertación         |        |            |         |           |           |       |         |       |       | X    | X     |
+| Entrega documento encuadernado |        |            |         |           |           |       |         |       |       |      | X     |
+
+** Planificación del proyecto y decisiones importantes
+- Mortalidad de participantes (lo idea es tener al menos tres participantes)
+  + Para atenderlo: Participantes adicionales
+    - Cons: requiere de una mayor cantidad de equipos o días adicionales en la escuela
+- Irregularidad en cantidad de sesiones semanales (deben ser dos sesiones semanales)
+  + Tener más de dos disponibles semanalmente
+    - Pros: Mayor flexibilidad para que participen en el estudio
+    - Cons: necesitaría asistentes porque no necesariamente me es posible
+- Efecto de techo en la medida de deletreo (con 30 palabras en el proyecto de GC)
+  + Serán 50 palabras por sesión para evitar el efecto de techo pero no se
+    logra descartar por completo
+- Las escuelas usualmente no proveen un espacio fijo dónde ofrecer la intervención.
+  + Se solicitará un espacio fijo a las escuelas pero si esto no es posible, se tomarán
+    medidas para minimizar las distracciones:
+    - Los participantes trabajarán en sus respectivas computadoras y se les proveerá audígonos
+      para evitar distracciones. Además estaré pendiente de cualquier distracción para evitar
+      que afecte la administración de la intervención.
+
+_Organizado en tabla_
+
+      | Situación                             | Forma de atenderlo                                          | Pro y Cons                                              |
+      |---------------------------------------+-------------------------------------------------------------+---------------------------------------------------------|
+      | Mortalidad de participantes           | Participantes adicionales                                   | Cons: requiere más equipos o más visitas a las escuelas |
+      | Irregularidad en cantidad de sesiones | Días adicionales disponibles (asistente)                    | Cons: reclutamiento asistentes                          |
+      | Efecto de techo en medida de deletreo | 50 palabras por sesión                                      | Cons: mayor cantidad de palabras para identificar       |
+      | Escenario de intervención             | Solicitar espacio fijo; utilizar audífonos, estar pendiente | Cons: mayor número de recursos                          |
+
+- San Juan vs Ponce
+
+| Ponce                                        |                                          | San Juan                          |                                      |
+|----------------------------------------------+------------------------------------------+-----------------------------------+--------------------------------------|
+| Pros                                         | Cons                                     | Pros                              | Cons                                 |
+| Tener varios asistentes con entrenamiento    | Necesito todas las pc disponibles en pc  | Puedo utilizar mi equipo personal | Pocos asistentes                     |
+|                                              | (posible inversión de recursos)          |                                   |                                      |
+| Crear infraestructura para futuros proyectos | Id escuelas privadas (esfuerzo mayor)    | Acceso a EEUPR                    | Mayor involucramiento de mi parte    |
+| Colaborar con MM (compartir recursos)        | Puede requerir días adicionales en Ponce |                                   | Desvinculación con futuros proyectos |
+| Recibir apoyo del programa                   |                                          |                                   |                                      |
+| Alexandra Ramos tiene contactos              |                                          |                                   |                                      |
+|----------------------------------------------+------------------------------------------+-----------------------------------+--------------------------------------|
+** Procedimiento
+*** Reclutamiento
+- Contacto inicial con las escuelas (lo más pronto posible)
+** Instrumentos
+*** Material preparation
+**** Word preparation
+The words were obtained from [[https://extensions.openoffice.org/en/project/diccionario-de-correccion-ortografica-separacion-silabica-y-sinonimos-en-espanol-puerto-rico][here]]. They are part of the OpenOffice extensions
+(dictionary for the Spanish language for Puerto Rico). The downloaded package
+is an oxt file and contains the words in a file named es_PR.dic. The cleaning
+process is described below.
+
+***** Extract words
+   I changed the oxt file's extension to zip in order and the dic file to txt to
+open them.
+   #+begin_src python :exports none :session materials :results output
+     import pandas as pd
+     base_dir_words = 'Metodo/Instrumentos/Materiales/Palabras/'
+     path_words_master = base_dir_words + 'es_PR/es_PR.txt'
+   #+end_src
+
+   #+RESULTS:
+
+   :
+   :
+   :
+   :
+
+   :
+   :
+   :
+   :
+
+   :
+   :
+
+   :
+   :
+
+   :
+   :
+
+   #+begin_src python :exports none :session materials :results output
+     words_master = pd.read_csv(path_words_master, squeeze=True)
+   #+end_src
+
+   #+RESULTS:
+
+   :
+   :
+
+   :
+   :
+
+***** Initial word cleanup
+
+**** Select representative sample of words to analyze         :limitation:
+Because of computing power limitations to analyze the complete word bank
+(src_python[:session materials]{words_clean.size} {{{results(=46720=)}}} words),
+a representative sample of words was selected using simple random sampling,
+following the recommendations by Lohr (2010).
+
+#+begin_src python :exports none :session materials :results output
+  def formula_conchran(z=1.96, p=.5, q=.5, e=.01):
+      """Calculates sample size based on Conchran's formula."""
+      return ((z**2)*p*q)/(e**2)
+
+
+  def formula_correction_finite_population(n, N):
+      """A correction to Conchran's formula for finite samples."""
+      return n/(1+(n/N))
+
+
+  n0 = formula_conchran()
+  n = formula_correction_finite_population(n0, words_clean.size)
+#+end_src
+
+#+RESULTS:
+
+The sample size is calculated using Cocharan's formula (1977) and a correction to
+it (Lohr, 2010). The sample size is src_python[:session materials]{round(n)} {{{results(=7966=)}}}
+
+Lorh, S. L. (2010). Sampling: Design and analysis (2a ed.). Boston, MA: Brooks/Cole.
+
+**** Analyze words and determine word difficulty index
+A representative sample of the words was analyzed using the [[https://github.com/mario-bermonti/Word-analisis.git][word_analysis]]
+package developed by the author to analyze words using the difficulty model
+developed by the author and Dr. Giselle Cordero.
+
+# #+begin_src python :exports none :session materials :results output :tangle ~/Box Sync/Disertación/Scripts/analyze_words.py
+#   import pandas as pd
+#   from wdiff import wdiff
+
+#   words_to_analyze = pd.read_excel('../Metodo/Instrumentos/Materiales/Palabras/words_clean.xlsx', squeeze=True)
+#   wanalyzer = wdiff.WordAnalyzer()
+#   # The sample must be updated (n) if the sample size is recalculated
+#   n = 7966
+#   wanalyzer.set_words(words_to_analyze.sample(n, random_state=1))
+#   print("Analyzing length difficulty...")
+#   wanalyzer.determine_length_difficulty()
+#   print("Analyzing silent letter difficulty...")
+#   wanalyzer.determine_silent_letter_difficulty()
+#   print("Analyzing same sound letter difficulty...")
+#   wanalyzer.determine_same_sound_letter_difficulty()
+#   print("Analyzing anagram difficulty...")
+#   wanalyzer.determine_anagrams_difficulty()
+#   print("Determining total difficulty")
+#   wanalyzer.determine_total_difficulty_index()
+#   print("Saving results")
+#   wanalyzer.save_results()
+#   print("Done...")
+# #+end_src
+
+***** Word difficulty analysis (examining results)
+****** Read word difficulty results and configure things
+Set things up for inspection of the results of the word difficulty analysis.
+#+begin_src python :exports none :session word_diff :results output
+  import seaborn as sns
+  import pandas as pd
+  base_path_words = 'Methods/Instrumentos/Materiales/Palabras/'
+  words_analyzed = pd.read_csv(base_path_words + 'words_analyzed representative sample.csv')
+  words_analyzed_total_diff = words_analyzed['total difficulty']
+  difficulty_levels = ['level 1','level 2','level 3','level 4','level 5','level 6']
+#+end_src
+
+#+RESULTS:
+
+Because the words column doesn't have a name in the csv file, it
+must be rename to make it asier to work with.
+
+#+begin_src python :exports none :session word_diff :results output
+words_analyzed.rename(columns={'Unnamed: 0': 'word'}, inplace=True)
+#+end_src
+
+#+RESULTS:
+
+
+# Configure seaborn
+#+begin_src python :exports none :session word_diff :results output
+sns.set(color_codes=True)
+sns.set_context('paper')
+sns.set_style('whitegrid', {
+    'font.family': 'serif',
+    'font.serif': 'Times New Roman',
+    'font.size': 12
+    })
+#+end_src
+
+#+RESULTS:
+
+****** Word difficulty statistics
+#+begin_src python :exports none :session word_diff :results output
+  words_analyzed_total_diff.describe().round(2)
+#+end_src
+
+#+RESULTS:
+: count    7891.00
+: mean       25.93
+: std         7.74
+: min         3.00
+: 25%        21.00
+: 50%        26.00
+: 75%        30.00
+: max        66.00
+: Name: total difficulty, dtype: float64
+
+****** Word difficulty distribution
+The word difficulty distribution approaches normality based on visual
+inspection, although it shows more easier words than difficult ones.
+
+#+begin_src python :exports none :session word_diff :results file
+  plot_word_difficulty = sns.distplot(words_analyzed_total_diff, bins=len(difficulty_levels))
+  plot_word_difficulty_fig = plot_word_difficulty.get_figure()
+  plot_word_difficulty_fig_path = base_path_words + 'word difficulty distribution_representative sample.png'
+  plot_word_difficulty_fig.savefig(plot_word_difficulty_fig_path)
+  plot_word_difficulty_fig_path
+#+end_src
+
+#+RESULTS:
+[[file:Methods/Instrumentos/Materiales/Palabras/word difficulty distribution_representative sample.png]]
+
+**** Select words
+***** Determine number of words needed
+   This file describes the procedure [[https://app.box.com/s/7bb2skzgnk71e8ohykr0yvm6gv8e2bt0][total words calculation]]. The calculation
+takes into account the number of words per session and the total number of words.
+
+***** Create word difficulty levels
+This procedure splits the words into 6 difficulty levels, based on their
+total difficulty. This means that the last level (6) will be repeated until the
+intervention phase ends for participants who approve it (80% precision).
+
+#+begin_src python :exports none :session word_diff :results output
+  words_analyzed['difficulty level'] = pd.qcut(words_analyzed['total difficulty'], len(difficulty_levels), labels=difficulty_levels)
+  words_analyzed['difficulty level'].value_counts()
+#+end_src
+
+#+RESULTS:
+: level 1    1537
+: level 5    1474
+: level 3    1449
+: level 4    1196
+: level 2    1157
+: level 6    1078
+: Name: difficulty level, dtype: int64
+
+***** Review words
+The words are saved to an Excel file so that they can be reviewed. Words will
+be cleaned based on the criteria described below.
+
+#+begin_src python :exports none :session word_diff :results output
+  words_analyzed.sort_values(by=['difficulty level'], inplace=True)
+  words_analyzed.to_excel(base_path_words + 'words_to review.xlsx')
+#+end_src
+
+#+RESULTS:
+
+****** Criteria to eliminate words
+- Words with sexual content
+- Words with negative meaning
+- Elements that don't constitute real words or with innappropriate phonemes.
+  + Words that haven't been approved by the RAE
+  + Words that represent anglicisms
+
+****** Read clean words                                  :useful_script:
+The following code was written in order to get the difficulty data for the words
+that were approved after revision. This was necessary because during revision the
+correspondence between words and their difficulty was broken (minor error).
+
+#+begin_src python :exports none :session word_diff :results output
+  import pandas as pd
+
+
+  def get_intersection(original, other, var):
+      """Returns the intersection between a dataframe's column and another
+      sequence of elements.
+
+      parameters
+      ----------
+      original: pd.DataFrame; contains the data to analyze
+      other: list-like; array of elements for which all information in original
+             is desired.
+      var: str; specifies the column from original that should be evaluated to
+           determine if information is kept.
+
+      returns
+      -------
+      Dataframe with the data from original.var that is found in other.
+      """
+      words_clean = original[original[var].isin(other)]
+      return words_clean.dropna()
+
+
+  def test_get_intersection():
+      original = pd.DataFrame({
+          'w': ['house', 'car', 'airplane', 'dog', 'elephant'],
+          'var 1': [1, 2, 3, 4, 5]
+      })
+      other = ['car', 'dog', 'elephant']
+      expected = pd.DataFrame({
+          'w': ['car', 'dog', 'elephant'],
+          'var 1': [2, 4, 5]
+      })
+      obs = get_intersection(original, other, var='w').reset_index(drop=True)
+      assert obs.equals(expected)
+
+
+  test_get_intersection()
+#+end_src
+
+#+RESULTS:
+
+The word difficulty info was extracted for words that passed the revision process.
+
+#+begin_src python :exports none :session word_diff :results output
+  import pandas as pd
+  words_path = 'Methods/Instrumentos/Materiales/Palabras/'
+  path_words_data = words_path+ 'words_to review.xlsx'
+  path_words_reviewed = words_path + 'words_reviewed_final.xlsx'
+
+
+  words_list_after_revision = pd.read_excel(path_words_reviewed, squeeze=True)
+  words_list_after_revision.dropna(inplace=True)
+  words_data = pd.read_excel(path_words_data)
+  words_data_after_revision = get_intersection(words_data, list(words_list_after_revision.values), 'word')
+  words_data_after_revision['difficulty level'].value_counts()
+#+end_src
+
+#+RESULTS:
+#+begin_example
+
+level 1    779
+level 5    718
+level 6    490
+level 3    445
+level 4    401
+level 2    332
+Name: difficulty level, dtype: int64
+3166
+7891
+#+end_example
+
+
+****** Word loss
+#+begin_src python :exports none :session word_diff :results output
+word_loss = (len(words_data) - len(words_list_after_revision))/len(words_data)*100
+#+end_src
+
+#+RESULTS:
+
+The percentage of words lost in the reviewing process was
+src_python[:session word_diff]{word_loss} {{{results(=59.87834241540996=)}}}       %.
+
+***** Selecting words to be used for all instruments
+After words were reviewed, simple random sampling is used to select the words
+needed from each difficulty level (stratified sampling). This will contain the words for the
+intervention and the spelling measure.
+
+****** Words by difficulty level for all instruments
+Now I extract the needed number of words for each difficulty level (all instruments).
+#+begin_src python :exports none :session word_diff :results output
+  words_selected_instruments = pd.DataFrame()
+  for level in set(words_data_after_revision['difficulty level']):
+      words_selected_for_level = words_data_after_revision.loc[words_data_after_revision['difficulty level'] == level, :]
+      words_selected_instruments = words_selected_instruments.append(
+          words_selected_for_level.sample(
+              191, random_state=1
+          )
+      )
+
+
+  words_selected_instruments.info()
+#+end_src
+
+#+RESULTS:
+#+begin_example
+
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 1146 entries, 4907 to 627
+Data columns (total 7 columns):
+word                        1146 non-null object
+length_difficulty           1146 non-null int64
+silent_letter_difficulty    1146 non-null int64
+same_sound_difficulty       1146 non-null int64
+anagrams_difficulty         1146 non-null int64
+total difficulty            1146 non-null int64
+difficulty level            1146 non-null object
+dtypes: int64(5), object(2)
+memory usage: 71.6+ KB
+#+end_example
+
+
+***** Select numer of words for each instrument     :useful_script:refine_it:
+
+Because the words for both instruments are mixed, I need a way to separate them,
+given the number of words from each level for each instrument. This function was
+developed to divide the words but its use is more general. It can be used to
+identify which elements (in this case words) have not been used. I included some
+unit tests for it, but it needs more refinement (e.g. handle invalid elements).
+
+#+begin_src python :exports none :session word_diff :results output
+  def removed_used_elements(master, used, n=None):
+      """Returns a list of size n that contains the elements from master
+      that are not in used. If n is not specified, it will return a list
+      of all the elements in master that are not contained in used.
+
+      parameters
+      ----------
+      master: list with elements to be cleaned
+      used: list of elements to be eliminated from master (already used)
+      n: int; the size of the list to return. Useful when only a set of the
+         master list, that has not been used is desired.
+
+      returns
+      -------
+      list of items from master not contained in used.
+
+      note
+      ____
+      1. Words in the master list must contain valid elements. It can't
+         contain elements that evaluate to False.
+      """
+      elements_cleaned = []
+      if not n:
+          n = len(master) - len(used)
+      i = 0
+      while len(elements_cleaned) < n:
+          element = master[i].strip()
+          if element and element not in used:
+              elements_cleaned.append(element)
+          i += 1
+      return elements_cleaned
+
+
+  def test_removed_used_elements_specify_n():
+      """Tests the remove used function."""
+      master = ['casa', 'perro', 'escritorio', 'computadora']
+      used = ['casa', 'escritorio']
+      n = 2
+      assert removed_used_elements(master, used, n) == ['perro', 'computadora']
+
+  def test_removed_used_elements_n_not_specified():
+      """Tests the remove used function."""
+      master = ['casa', 'perro', 'escritorio', 'computadora']
+      used = ['casa', 'escritorio']
+      assert removed_used_elements(master, used) == ['perro', 'computadora']
+
+
+  test_removed_used_elements_specify_n()
+  test_removed_used_elements_n_not_specified()
+#+end_src
+
+#+RESULTS:
+
+
+This represents a second version of the above code. Its simpler to read and use
+but it's limited to cases where the original data comes from a dataframe.
+#+begin_src python :exports none :session word_diff :results output
+  import pandas as pd
+
+
+  def remove_intersection(original, other, var):
+      """Removes the intersection between a dataframe's column and another
+      sequence of elements.
+
+      parameters
+      ----------
+      original: pd.DataFrame; contains the data to analyze
+      other: list-like; array of elements for which all information in original
+              should to be eliminated.
+      var: str; specifies the column from original that should be evaluated to
+          determine if information is kept.
+
+      returns
+      -------
+      ## FIX DESCRIPTION
+      Dataframe with the data from original.var that is found in other.
+      """
+      words_clean = original[~original[var].isin(other)]
+      return words_clean.dropna()
+
+
+  def test_remove_intersection():
+      original = pd.DataFrame({
+          'w': ['house', 'car', 'airplane', 'dog', 'elephant'],
+          'var 1': [1, 2, 3, 4, 5]
+      })
+      other = ['car', 'dog', 'elephant']
+      expected = pd.DataFrame({
+          'w': ['house', 'airplane'],
+          'var 1': [1, 3]
+      })
+      obs = remove_intersection(original, other, var='w').reset_index(drop=True)
+      assert obs.equals(expected)
+
+
+  test_remove_intersection()
+#+end_src
+
+#+RESULTS:
+
+Now I use the above function to separate words for each instrument.
+
+==== Important: Compare the two above functions and use the second one if
+possible, because its simplier. I use the second one.
+
+#+begin_src python :exports none :session word_diff :results output
+  number_words_interv_by_level = 60
+  number_words_measure_by_level = 131
+  words_selected_interv = pd.DataFrame()
+  words_selected_measure = pd.DataFrame()
+  for level in set(words_selected_instruments['difficulty level']):
+      words_selected_instruments_level = words_selected_instruments.loc[words_selected_instruments['difficulty level'] == level, :]
+      words_selected_interv_level_sample = words_selected_instruments_level.sample(
+      number_words_interv_by_level, random_state=1
+      )
+      words_selected_interv = words_selected_interv.append(words_selected_interv_level_sample)
+      words_not_in_interv = remove_intersection(
+          words_selected_instruments_level,
+          list(words_selected_interv_level_sample['word'].values),
+          'word'
+      )
+      words_selected_measure = words_selected_measure.append(words_not_in_interv)
+
+
+  words_selected_interv.sort_values('difficulty level', axis=0, inplace=True)
+  words_selected_measure.sort_values('difficulty level', axis=0, inplace=True)
+  print('intervention words')
+  words_selected_interv['difficulty level'].value_counts(sort=False)
+  print('measure words')
+  words_selected_measure['difficulty level'].value_counts(sort=False)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+
+intervention words
+level 6    60
+level 1    60
+level 5    60
+level 2    60
+level 3    60
+level 4    60
+Name: difficulty level, dtype: int64
+measure words
+level 1    131
+level 2    131
+level 3    131
+level 4    131
+level 6    131
+level 5    131
+Name: difficulty level, dtype: int64
+#+end_example
+
+
+
+Now lets save the words to an excel file.
+#+begin_src python :exports none :session word_diff :results output
+  base_path_words = "Methods/Instrumentos/Materiales/Palabras/"
+  with pd.ExcelWriter(base_path_words + 'words_interv_measure_final.xlsx') as writer:
+   words_selected_interv.to_excel(writer, sheet_name='Intervention words', index=False)
+   words_selected_measure.to_excel(writer, sheet_name='Measure words', index=False)
+#+end_src
+
+#+RESULTS:
+
+***** Manual correction
+Because tkinter's input box can't handle unicode characters, any word
+with the character "ñ" was replaced with a word from the same difficulty
+level.
+For the intervention 3 words were replaced with: portero, gorila, comprobatorio
+For the spelling measure 5 words were replaced with: punto, ingenuo, seminal,
+hisopo, agitadamente
+
+This correction was done manually to documents that had the words.
+**** Organize words for instruments
+***** Organize word for intervention
+****** Organize word lists
+****** Organize word audio for instruments
+***** Organize words for measure
+****** Organize word lists
+****** Organize word audio for instruments
+**** Known limitations                             :modifications_scripts:
+The algorithms for determining same sound letters have to be revised because
+some minor logical errores have been identified. For example, for the word
+"oscurecer" the alorightm detects the "ce" and "s" as swappable (having /s/),
+but that is not the case. If they were to be swapped, the word would sound
+differently because there would be a double "c" (i.e., cc).
+
+**** Prepare worksheets :usefulScript:
+***** Spelling measure
+Every worksheet will contain 56 words:
+- level 6: 11 words
+- All other levels: 9 words
+
+#+BEGIN_SRC python :session word_diff :exports none :results output
+  import pandas as pd
+  path_to_words = 'Methods/Materiales/Instrumentos/Materiales/Palabras/'
+  words_spelling_measure = pd.read_excel(
+      "{}words_interv_measure_final2.xlsx".format(path_to_words),
+      sheet_name='Measure words'
+  )
+  words_spelling_measure.info()
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 786 entries, 0 to 785
+Data columns (total 7 columns):
+word                        786 non-null object
+length_difficulty           786 non-null int64
+silent_letter_difficulty    786 non-null int64
+same_sound_difficulty       786 non-null int64
+anagrams_difficulty         786 non-null int64
+total difficulty            786 non-null int64
+difficulty level            786 non-null object
+dtypes: int64(5), object(2)
+memory usage: 43.1+ KB
+#+end_example
+
+#+RESULTS:
+:RESULTS:
+# Out[9]:
+# text/plain
+: 0      level 1
+: 1      level 1
+: 2      level 1
+: 3      level 1
+: 4      level 1
+: 5      level 1
+: 6      level 1
+: 7      level 1
+: 8      level 1
+: 9      level 1
+: 10     level 1
+: 11     level 1
+: 12     level 1
+: 13     level 1
+: 14     level 1
+: 15     level 1
+: 16     level 1
+: 17     level 1
+: 18     level 1
+: 19     level 1
+: 20     level 1
+: 21     level 1
+: 22     level 1
+: 23     level 1
+: 24     level 1
+: 25     level 1
+: 26     level 1
+: 27     level 1
+: 28     level 1
+: 29     level 1
+:         ...
+: 756    level 6
+: 757    level 6
+: 758    level 6
+: 759    level 6
+: 760    level 6
+: 761    level 6
+: 762    level 6
+: 763    level 6
+: 764    level 6
+: 765    level 6
+: 766    level 6
+: 767    level 6
+: 768    level 6
+: 769    level 6
+: 770    level 6
+: 771    level 6
+: 772    level 6
+: 773    level 6
+: 774    level 6
+: 775    level 6
+: 776    level 6
+: 777    level 6
+: 778    level 6
+: 779    level 6
+: 780    level 6
+: 781    level 6
+: 782    level 6
+: 783    level 6
+: 784    level 6
+: 785    level 6
+: Name: difficulty level, Length: 786, dtype: object
+:END:
+
+There will be 54 words in every worksheet (9 from every level * 6 levels). I
+originally planned for there to be 56 (because of some calculation I made)
+but this way there are the same number of words per difficulty level, per
+worksheet.
+#+BEGIN_SRC python :session word_diff :exports none :results output
+  words_spelling_measure_copy = words_spelling_measure.copy()
+  diff_levels = set(words_spelling_measure_copy['difficulty level'])
+  worksheet_list = []
+  for ws in range(14):
+      worksheet = pd.DataFrame()
+      for level in diff_levels:
+          words_diff_level = words_spelling_measure_copy.loc[
+              words_spelling_measure_copy['difficulty level'] == level, :
+          ]
+          words_sample = words_diff_level.sample(9, random_state=1)
+          worksheet = worksheet.append(words_sample, ignore_index=True)
+          words_spelling_measure_copy = remove_intersection(
+              words_spelling_measure_copy,
+              list(words_sample.word.values),
+              'word'
+          )
+      worksheet_list.append(worksheet)
+#+END_SRC
+
+#+RESULTS:
+
+Now lets save each worksheet to a different Excel file in order to be able to
+use them.
+
+#+begin_src python :exports none :session word_diff :results output
+  n = 1
+  worksheet_path = 'Methods/Materiales/Instrumentos/Materiales/Palabras/worksheets/spelling measure/'
+  for worksheet in worksheet_list:
+      worksheet_path_current = '{}worksheet_{}.xlsx'.format(worksheet_path, n)
+      worksheet.to_excel(worksheet_path_current, index=False)
+      n += 1
+#+end_src
+
+#+RESULTS:
+
+** Adiestramientos a equipo
+:PROPERTIES:
+:Export_title: Proyecto Deletreo Móvil (DeMo)
+:export_file_name: Adiestramientos a equipo_DeMo
+:END:
+*** Evaluación
+  + General
+  + Batería III
+  + CAS2-Español
+  + WISC-IV Spanish
+*** Procedimiento medida de base
+**** Actividades no relacionadas a la intervención
+**** Administración medida de deletreo PC
+:PROPERTIES:
+:Export_title: Proyecto Deletreo Móvil (DeMo)
+:export_file_name: Adiestramiento medida de deletreo_DeMo
+:EXPORT_DATE: nil
+:END:
+  + *Descripción de la medida de deletreo*
+
+
+    Consiste en en escuchar las palabras que el programa presenta en audio y
+    escribirlas con el teclado en el espacio provisto. Al terminar cada palabra,
+    presionar "Listo". El programa automáticamente presenta la próxima palabra.
+    El programa grabará los resultados y cerrará automáticamente una vez el
+    estudiante complete todas las palabras (54 palabras por sesión) o una vez
+    transcurran 10 minutos.
+
+
+    Un aspecto bien importante es que las *palabras no se pueden repetir*, así
+    que el participante tiene que estar bien atento para escucharla.
+
+
+  + *Procedimiento para administrar la medida de deletreo*
+    - El programa estará en un pendrive
+    - **Habrá un pendrive para cada participante, identificado con su código**
+    - Conectar el pendrive a la pc y abrir el pendrive
+    - Abrir el pyspell
+    - Abrir el archivo pyspell
+    - Una vez se abra una pantalla nueva con texto, hacer click en esa pantalla
+    - En el menú de la aplicación presionar "Run" y escoger "Run Module" dentro
+        de las opciones que aprecen
+    - Poner los *audífonos* al participante
+    - Esto abrirá una pantalla que requerirá el código del participante
+    - Antes de continuar, debe *explicar el procedimiento al participante*. Se le
+        pueden ofrecer instrucciones como:
+      + Escucharás una palabra en los audífonos
+      + Debes escribirla con el teclado y presionar "Listo"
+      + Una vez lo hagas escucharás otra palabra y harás lo mismo nuevamente
+      + Vas a trabajar con varias palabras y el programa te avisará cuando
+        hayas terminado.
+      + *Presta mucha atención porque las palabras no se pueden repetir*
+    - *Si es la primera vez que el participante trabaja en la medida de deletreo*,
+        dejar el espacio del código vacío y presionar "Listo". Esto le presentartá
+        al participante 5 ítems de práctica. *Ofrecerle las instruciones y todo el apoyo*
+        que el participante necesite para completar la práctica.
+    - *Si no es la primera vez del participante trabajando en la medida de deletreo*,
+        deben escrbir el *código del participante (ej., 001, 002, 003, 004)*
+        y presionar "Listo".
+
+***  Adiestramiento en intervención computarizada
+*** Adiestramiento en investigación (adiestramiento formal en la medida de los posible)
+    + Conceptualización
+    + Management
+    + Línea de investigación
+    + Definición de variables
+    + Revisar literatura
+    + Conceptualización de Métodos
+    + Conceptualización de análisis estadísticos
+** Responsabilidades principales del PI
+- ID palabras
+- Analizar palabras
+- Modificar intervención
+- Desarrollar medida de deletreo PC
+- Coordinar evaluación
+- Coordinar intervenciones
+** Project coordination
+*** Tareas a asistentes
+- Revisar palabras
+- Grabar voces (sino las consigo online)
+- Editar audio de voces
+- Evaluación
+- Intervención
+- Revisar literatura
+*** Team meetings
+**** Meeting 1 <2018-11-13 Tue>
+- Overview de investigación
+- Estatus actual del proyecto
+  + IRB
+  + Reclutamiento (reuniones para ID escuelas, sites)
+- Site del proyecto (Sharepoint, planner, onedrive, outlook, Onenote)
+  + Nube, mobile app
+  + Sincronizar Onedrive
+- Asignación de tareas (Planner)
+  + Deadlines, fases
+- Anuncio de adiestramiento (6 de diciembre, 9:30am)
+- Otros
+**** Meeting 2 <2019-01-29 Tue>
+***** Agenda
+****** Aprobación CIPSHI
+****** Coordinar adiestramiento final
+****** Práctica de evaluación
+****** Coordinar demostraciones de evalaución
+****** Limpiar base de palabras
+****** Coordinar reuniones programaticas

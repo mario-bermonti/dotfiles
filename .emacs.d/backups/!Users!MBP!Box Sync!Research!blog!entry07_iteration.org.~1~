@@ -1,0 +1,30 @@
+#+BLOG: codin cognitive research
+#+POSTID: 354
+#+DATE: [2019-04-02 Tue 13:14]
+#+ORG2BLOG:
+#+OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+#+CATEGORY: python, coding, research, cognition, psychology
+#+TAGS:
+#+DESCRIPTION:
+#+TITLE: Programming Basics: Iteration
+
+In this post we will discuss iteration. Iteration is used by programs to go over
+a list (or any other sequence of data) and do something with each element (i.e.
+value) in the list.
+
+
+Iteration will be extremely useful whenever you have to go over a list of stimulus,
+files, conditions, data points or any other sequence of data (remember that in
+this context data means any piece of information that the computer can process).
+
+** Iteration
+Note: relevant content only up to minute 3:35.
+#+BEGIN_EXAMPLE
+https://youtu.be/zqkDFcknZeM
+#+END_EXAMPLE
+
+
+Additional resources (diving deeper into iteration):
+
+- [[https://www.tutorialspoint.com/python/python_loops.htm][Tutorials point: conceptual explanation]]
+- [[https://docs.python.org/3/tutorial/controlflow.html][Official Python tutorial (sections 4.2 to 4.5)]]

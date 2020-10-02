@@ -1,0 +1,320 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/Mary Moreno/Proyecto Diabetes - Moreno/" . "Scripts/")
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/Mary Moreno/" . "Proyecto Diabetes - Moreno/")
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/" . "Mary Moreno/")
+ ("/Users/MBP/Box Sync/PHSU/" . "Design and stats consultation/")
+ ("/Users/MBP/Box Sync/Research/" . "blog/")
+ ("/Users/MBP/Box Sync/" . "PHSU/")
+ ("/Users/MBP/Box Sync/Research/blog/" . "Entrada 10/")
+ ("/Users/MBP/Box Sync/Research/Consultation services/PHSU/Autoestudio APA/" . "APA_self-study_evaluation_system/")
+ ("/Users/MBP/Research/Consultation services/Consultorías independientes/Leomarys/Versión nueva/" . "Datos/")
+ ("/Users/MBP/Research/Consultation services/Consultorías independientes/" . "Nilsa de la Cruz/")
+ ("/Users/MBP/Research/" . "Consultation services/")
+ ("/Users/MBP/Research/Consultation services/PHSU/Autoestudio APA/" . "APA_self-study_evaluation_system/")
+ ("/Users/MBP/Research/Consultation services/PHSU/" . "Autoestudio APA/")
+ ("/Users/MBP/Research/Consultation services/PHSU/Autoestudio APA/psmsystem/" . "Entrada de datos/")
+ ("/Users/MBP/Research/Consultation services/" . "PHSU/")
+ ("/Users/MBP/programming practice/" . "python_practice/")
+ ("/Users/MBP/Documents/Investigación/Trabajos consultoría/PHSU/Autoestudio APA/" . "psmsystem/")
+ ("/Users/MBP/Documents/Investigación/Trabajos consultoría/PHSU/" . "Autoestudio APA/")
+ ("/Users/MBP/Documents/Investigación/Trabajos consultoría/" . "PHSU/")
+ ("/Users/MBP/Documents/Investigación/" . "Trabajos consultoría/")
+ ("/Users/" . "MBP/")
+ ("/Users/MBP/Documents/proyectos/letter-rain/enchant/examples/expert/" . "getbanana/")
+ ("/Users/MBP/Documents/proyectos/letter-rain/enchant/examples/" . "expert/")
+ ("/Users/MBP/Documents/proyectos/letter-rain/enchant/" . "examples/")
+ ("/Users/MBP/Documents/proyectos/letter-rain/" . "enchant/")
+ ("/Users/MBP/Documents/proyectos/" . "Word-analisis/")
+ ("/Users/MBP/Desktop/Box Sync/" . "CEAPPR/")
+ ("/Users/MBP/Desktop/" . "Box Sync/")
+ ("/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/" . "scripts/")
+ ("/Users/MBP/Documents/Universidad/Ciencia de cómputos/" . "CCOM 3030/")
+ ("/Users/MBP/Documents/Universidad/" . "Ciencia de cómputos/")
+ ("/Users/MBP/Documents/proyectos/prepare_words-scripts/" . "testsmockfiles/")
+ ("/Users/MBP/Documents/Proyectos/crear_hojas_trabajo_lectura/" . "Niveles de dificultad/")
+ ("/Users/MBP/Documents/Proyectos/" . "crear_hojas_trabajo_lectura/")
+ ("/Users/MBP/Documents/" . "proyectos/")
+ ("/Users/MBP/python_modules/" . "libraryext/")
+ ("/Users/MBP/" . "Box Sync/")
+ ("/Users/MBTP/Desktop/" . "analisis palabras/")
+ ("/Users/MBTP/" . "Desktop/")
+ ("/Users/MBTP/Documents/Proyectos/" . "crear_hojas_trabajo_lectura/")
+ ("/Users/MBTP/Documents/" . "Proyectos/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/MBP/Box Sync/PHSU/Design and stats consultation/Mary Moreno/Proyecto Diabetes - Moreno/Scripts/"
+ "/Users/MBP/programming_practice/"
+ "/Users/MBP/Box Sync/Research/blog/"
+ "/Users/MBP/programming practice/"
+ "/Users/MBP/"
+ "/Users/MBP/Downloads/"
+ "/Users/MBP/Box Sync/Programacion/"
+ "/Users/MBP/Box Sync/Research/Consultation services/PHSU/Autoestudio APA/APA_self-study_evaluation_system/"
+ "/Users/MBP/Research/Consultation services/Consultorías independientes/Leomarys/Versión nueva/Datos/"
+ "/Users/MBP/Research/Consultation services/Consultorías independientes/Nilsa de la Cruz/"
+ "/Users/MBP/Box Sync/Disertación/"
+ "/Users/MBP/Research/Consultation services/PHSU/Autoestudio APA/APA_self-study_evaluation_system/"
+ "/Users/MBP/Research/Consultation services/PHSU/Autoestudio APA/"
+ "/Users/MBP/Research/Consultation services/PHSU/Autoestudio APA/psmsystem/"
+ "/Users/MBP/Research/Consultation services/PHSU/Autoestudio APA/Informes/"
+ "/Users/MBP/Research/Consultation services/Jacqueline Butler/"
+ "/Users/MBP/Research/Consultation services/PHSU/Autoestudio APA/psmsystem/Entrada de datos/"
+ "/Users/MBP/Desktop/"
+ "/Users/MBP/programming practice/python_practice/"
+ "/Users/MBP/Documents/proyectos/Word-analisis/"
+ "/Users/MBP/Documents/proyectos/real-words/"
+ "/Users/MBP/Documents/Investigación/Trabajos consultoría/PHSU/Autoestudio APA/psmsystem/"
+ "/Users/MBP/Documents/Investigación/Trabajos consultoría/PHSU/Autoestudio APA/psmsystem/"
+ "/Users/MBP/Documents/proyectos/letter-rain/enchant/examples/expert/getbanana/"
+ "/Users/MBP/Documents/proyectos/letter-rain/"
+ "/Users/MBP/Documents/proyectos/letter-rain/hellobear/"
+ "/Users/MBP/Documents/proyectos/enchant/examples/beginner/letter-rain/"
+ "/Users/MBP/Documents/proyectos/prepare_words-scripts/"
+ "/Users/MBP/python_practice/"
+ "/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3981/Personal statement/"
+ "/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/Juego geografia/"
+ "/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/listas/"
+ "/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/functions/"
+ "/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/"
+ "/Users/MBP/.emacs.d/"
+ "/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/stroperations/"
+ "/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/asig 1/"
+ "/Users/MBP/Documents/proyectos/prepare_words-scripts/testingfiles/"
+ "/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/"
+ "/Users/MBP/Documents/proyectos/Intervencion/"
+ "/Users/MBP/Documents/Proyectos/Word-analisis/"
+ "/Users/MBP/Documents/proyectos/prepare_words-scripts/testsmockfiles/"
+ "/Users/MBP/Desktop/analisis palabras/"
+ "/Users/MBP/Documents/Proyectos/Intervencion/"
+ "/Users/MBP/Documents/Proyectos/crear_hojas_trabajo_lectura/"
+ "/Users/MBP/python_modules/libraryext/"
+ "/Users/MBTP/Desktop/analisis palabras/"
+ "/Users/MBTP/"
+ "/Users/MBTP/Desktop/libraryext/"
+ "/Users/MBTP/Downloads/settings/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "analysis_report_diabetes.org"
+ "report_error_pythonorgmode.org"
+ "blog_home.org"
+ "sss.org"
+ ".emacs"
+ "entry06_lists.org"
+ "Box Sync Installer (1).dmg"
+ "Reference_cards.org"
+ "Reference_cards.odt"
+ "entry01_about.org"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/Mary Moreno/Proyecto Diabetes - Moreno/Scripts/" (23825 15467 280044 251000) "analysis_report_diabetes.org" "analysis_report_diabetes.pdf" "analysis_report_diabetes.tex" "analysis_report_diabetes.toc" "analysis_report_diabetes.org.~2~" "analysis_report_diabetes_exp.html" "analysis_report_diabetes.org.~1~" "obipy-resources/" "analysis_report_diabetes.out" "analysis_report_diabetes.fdb_latexmk" ".DS_Store" "analysis_report_diabetes.log" "analysis_report_diabetes.aux" "analysis_report_diabetes.html" "analysis_report_diabetes.fls" "analysis_report_diabetes_exp.org" "../" "./")
+
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/Mary Moreno/Proyecto Diabetes - Moreno/" (23794 38727 508935 102000) "personal_notes.org" "Data/" "3. IRB Form 2 - Disertación Gilliam_Rev Feb27.docx" "Scripts/" "personal_notes.docx" "12955_2014_Article_176.pdf" "Results/" "3. IRB Form 2 - Disertación Gilliam_Rev Feb27.pdf" ".DS_Store" "Informe_revisión bases datos_3-6-2019.docx" "Revisión de literatura Jan 26, 2019.pdf" "../" "./")
+
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/Mary Moreno/" (23719 26885 422372 200000) "Proyectos estudiantes/" "Proyecto Diabetes - Moreno/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/" (23774 52760 653159 359000) "Mary Moreno/" "Eliut Rivera/" "Norka Polanco/" "María Garrido/" "PHSU_Letterhead_SchoolOfBehavioralBrainSciences.docx" "Alixida Ramos/" ".DS_Store" "Julio Jimenez/" "../" "./")
+
+ ("/Users/MBP/Box Sync/PHSU/" (23761 38913 407605 590000) "Autoestudio APA/" "Institutional Assessment (PERSONAL)/" "Administrative/" "Directorio.xlsx" "Design and stats consultation/" "Analysis support BIomedical Science/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/" (23840 52115 614231 582000) "programming_practice/" ".viminfo" ".bash_history" ".pyosf/" ".aspell.es.prepl" ".gitconfig" "Ponce Health Sciences University/" ".python_history" "Downloads/" "AndroidStudioProjects/" ".sqlanywhere16/" ".aspell.en.pws" ".dvdcss/" ".bash_profile" ".spss/" ".spacemacs" "Documents/" ".npm/" ".jupyter/" ".aspell.en.prepl" ".ipynb_checkpoints/" ".zoomus/" ".Trash/" "Dropbox/" ".gradle/" "Applications/" ".vimrc" "Movies/" ".ssh/" ".org-id-locations" ".idlerc/" ".python_history-11360.tmp" "package-lock.json" ".dropbox/" "Public/" "Google Drive/" ".bash_sessions/" "Sites/" ".cups/" ".android/" "Box Sync/" ".emacs.d/" ".python_history-02134.tmp" ".dotfiles/" ".python-environments/" "emacs/" ".oracle_jre_usage/" ".lesshst" ".psychopy2/" "programming_projects/" ".matplotlib/" "Library/" "Desktop/" "OneDrive - Ponce Health Sciences University/" ".ipython/" ".psychopy3/" "Pictures/" ".local/" "OneDrive/" "org/" ".python_history-00771.tmp" ".pandoc/" ".DS_Store" ".vim/" ".python_history-14139.tmp" ".aspell.es.pws" "Music/" "../" "./")
+
+ ("/Users/MBP/programming_projects/pyspell/pyspell/" (23839 46616 528367 958000) ".git/" "settings.py" ".gitignore" "results/" "Stimuli/" "participants session progress.json" "__pycache__/" "__init__.py" "pyspell.py" ".DS_Store" "LICENSE.md" "../" "./")
+
+ ("/Users/MBP/programming_practice/" (23820 8917 946530 274000) "results.log" "results.aux" "report_error_pythonorgmode.tex" "t.py" "testapa.toc" "testlines.pdf" "fig8.png" "test.tex" "testapa.tex" "backups/" "data/" "te.log" "test_ideas.org" "te.aux" "testingapa6.tex" "a.png" "testanalysis.tex" "testapa.out" "c.png" "testtable.log" "b.png" "testtable.aux" "useapa.log" "testlines.out" "test.org" "testanalysis.pdf" "report_error_pythonorgmode.org" "obipy-resources/" "sss" "db.png" "_region_.log" "fig9.svg" "fig8.svg" "testlines.tex" "test.html" "testapa.pdf" "test.pdf" ".drag.html.swp" "da.png" "testanalysis.org" "python_practice/" "report_error_pythonorgmode.pdf" "todo/" "data.csv" "te.tex" "te.toc" "results.out" "texput.log" "testingapa6.log" "testt.org" "newtest.docx" "sss.org" "testtable.tex" "testtable.toc" "results.tex" "testing.docx" "results.toc" "te.out" "prv_testapa.log" ".move.html.swp" "testapa.aux" "test.prv/" "sss.pdf" "testapa.log" "web/" "testt.pdf" "testtable.out" "testt.odt" "_region_.tex" "te.html" "testlines.log" "testlines.aux" "testt.tex" "testt.docx" "sss.tex" "fig.svg" "results.pdf" ".DS_Store" "sss.html" "testtable.pdf" "testanalysis.py" "useapa.tex" "test.docx" "te.pdf" "testapa.dvi" "../" "./")
+
+ ("/Users/MBP/Box Sync/Research/blog/" (23722 49169 977616 50000) ".git/" "entry04_intro_python.org" "blog_home.org" "entry05_variables.org" "entry11_extract_content.org.txt" "_config.yml" "stimuli.xlsx" "entry08_functions.org" "entry03_using this site.org" "entry01_about.html" "docs/" "entry10_files.org" "entry02_why_coding.org" "Entrada 10/" "planning_experimental_posts.org.txt" "Guion secuencia multimedia_Mario Bermonti.docx" "entry01_about.tex" "entry01_about.pdf" ".DS_Store" "index.html" "entry01_about.org" "entry06_lists.org" "entry07_iteration.org" "entry09_libraries.org" "../" "./")
+
+ ("/Users/MBP/Box Sync/Research/" (23811 61266 931316 383000) "Funding/" "Revisión manuscritos para revistas/" "Consultation services/" "desktop (2014_01_07 02_16_51 UTC) (2015_12_10 01_06_09 UTC).ini" "Ayudantías/" "Tesina BA-UPRM.docx" "Promo.pdf" "Certificados para investigacion/" "Doble excepcionalidad_2019.pdf" "Recursos/" "Becas/" "Ayuda a otros/" "Presentations/" "blog/" "Talleres/" "Publications/" "Important Lit/" "Mentoria/" "Curriculum Vitae/" ".DS_Store" "Thumbs (2014_01_07 02_16_51 UTC) (2015_12_10 01_06_09 UTC).db" "Mendeley_lib/" "Research Projects/" "../" "./")
+
+ ("/Users/MBP/Box Sync/" (23815 44524 243952 388000) "comienzo.docx" "Programacion/" "firma digital MBP.jpg" "Proyectos Intervención neurocognitiva/" "Progreso phd.docx" "PHSU/" "costo de vida.xlsx" "saludoalsol/" "Dragon profiles/" "Plan de trabajo (horas semanales).xlsx" "Literature/" ".DS_Store" "Coleccion Edgar Allan Poe-E/" "Research/" "../" "./")
+
+ ("/Users/MBP/programming practice/" (23789 50220 118943 637000) "results.log" "results.aux" "report_error_pythonorgmode.tex" "t.py" "testapa.toc" "testlines.pdf" "fig8.png" "test.tex" "testapa.tex" "te.log" "te.aux" "testingapa6.tex" "a.png" "testanalysis.tex" "testapa.out" "c.png" "testtable.log" "b.png" "testtable.aux" "useapa.log" "testlines.out" "test.org" "testanalysis.pdf" "report_error_pythonorgmode.org" "obipy-resources/" "sss" "db.png" "_region_.log" "fig9.svg" "fig8.svg" "testlines.tex" "testapa.pdf" "test.pdf" ".drag.html.swp" "da.png" "testanalysis.org" "python_practice/" "report_error_pythonorgmode.pdf" "data.csv" "te.tex" "te.toc" "results.out" "texput.log" "testingapa6.log" "testt.org" "newtest.docx" "sss.org" "testtable.tex" "testtable.toc" "results.tex" "testing.docx" "results.toc" "te.out" "prv_testapa.log" ".move.html.swp" "testapa.aux" "test.prv/" "sss.pdf" "testapa.log" "web/" "testt.pdf" "testtable.out" "testt.odt" "_region_.tex" "te.html" "testlines.log" "testlines.aux" "testt.tex" "testt.docx" "sss.tex" "fig.svg" "results.pdf" ".DS_Store" "sss.html" "testtable.pdf" "testanalysis.py" "useapa.tex" "test.docx" "te.pdf" "testapa.dvi" "../" "./")
+
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/Eliut Rivera/Suicide and Emotional Regulation Project/Free recall task/" (23780 17251 23738 901000) "free recall task.py" "data/" ".git/" "free recall task.psyexp" "free recall task_lastrun.py" "free recall task_template.psyexp" ".DS_Store" "choose_blocks.csv" "exp_trials.csv" "../" "./")
+
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/Eliut Rivera/Suicide and Emotional Regulation Project/" (23790 34967 688532 16000) ".git/" "Free recall task/" ".#suicidal behavior_protocol.org" "Stimuli/" "Documentos/" "suicidal behavior_protocol.org" ".DS_Store" "Emotional Stroop Task/" "../" "./")
+
+ ("/Users/MBP/.emacs.d/" (23718 38373 670274 718000) "metaweblog/" "org2blog/" "games/" "elpa/" "network-security.data" ".org-id-locations" "highlight-current-line-0.57/" "curl-cookie-jar" ".python-environments/" "url/" "auto-save-list/" "xml-rpc-el/" "org-mode/" "scimax-master/" "projectile.cache" "projectile-bookmarks.eld" "places" "pythontemplate.py" "ido.last~" ".DS_Store" "ido.last" "snippets/" "ac-comphist.dat" "../" "./")
+
+ ("/Users/MBP/Downloads/" (23718 37751 698437 513000) "trocar.wav" "HIPPA certificate_Mario Bermonti.pdf" "~$sumen_entrevista_Psic8017.docx" "Audio Track-4.wav" "Apéndice E_Reporte de resultados_M Bermonti.docx" "Doc8.docx" "Audio Track-5.wav" "26.wav" "values-labels.png" "IRB Form 6 -Consent Form template 31-1-19.docx" "AIU data_Public Health_READY ANALYSIS.xlsx" "uc_berkeley_cds_2017-18.xlsx" "Apéndice E_Reporte de resultados_M Bermonti.pdf" "18.wav" "hoja sociodemografica 5-2-19.docx" "24.wav" "Audio Track-7.wav" "A Calzón Quitao(2019-01-29).xlsx" "CREA_total.zip" "Audio Track-5-2.wav" "Audio Track-6.wav" "Box Sync Installer.dmg" "query.iqy" "25.wav" "19.wav" "Solicitud CIPSHI_M Bermonti.pdf" "Objetivos_nuevos_suicidio.docx" "Alan Baddeley, Michael W. Eysenck, Michael C. Anderson - Memory-Psychology Press (2014).epub" "IRB Questionnaire_31-1-19 rev MBP.docx" "tabla.org" "Needs from an Assessment System.docx" "data/" "Tiempo móvil.ics" "embrear.wav" "appsurvey.zip" "trialsGC.xlsx" "info.py" "21.wav" "Audio Track-2.wav" "Boeriis et al_2012_Tracking visual.pdf" "[End]-2.wav" "A Calzón Quitao(2019-02-06).xlsx" "audacity-macos-2.3.0.dmg" "Cap 9 Layout.doc" "words_with_frequencies.txt" "Proyecto suicidio: Eliut.ics" "[End]-3.wav" "Audio Track-3.wav" "logo uprrp.jpeg" "20.wav" "es_PR.oxt" "Instructions for academic programs for completing MSCHE AIU data.docx" "UPR - Rio Piedras Campus_Action Letter.pdf" "Skype-8.42.0.60.dmg" "Consult. Moreno - PHSU.ics" "Protocolos del proyecto.docx" "2018_SuicidestigmaamongmedicalstudentsinPuertoRico.pdf" "Audio Track-3-3.wav" "Box Sync Installer (1).dmg" "exams.docx" "CREA_total 2.TXT" "22.wav" "Apéndice B_Datos sociodemográficos_M Bermonti.docx" "Hoja socio demografica 5-2-19.docx" "Retroalimentación sobre demostraciones de evaluación.docx" "anormal-2.wav" "Assessment activity request_Nydia Ortiz.pdf" "Picture1.png" "23.wav" "CV_Mario Bermonti.pdf" "Self Study- Creating a Useful Process and Report 2016.pdf" "py-span-task-master (2).zip" "Audio Track-3-2.wav" "Audio Track-4-3.wav" "53581.ppt" "SampleApp-master.zip" "AX88179_178A_macintosh_Driver_Installer_v2.13.0/" "Flux.app/" "TPSmart.apk" "Solicitud completad_M Bermonti.pdf" "PHSU - APA.ics" "Tareas_exchange.ics" ".emacs" "Audio Track-4-2.wav" "Copy of Institutional Assessment Plan_Draft.csv" "Tareas pendientes.docx" "Audio Track-6-2.wav" "Consult. PHSU facultad.ics" "UserAcceptanceForm.pdf" "scimax-master.zip" "Instructions for academic programs for completing MSCHE AIU data.pdf" "StandalonePsychoPy3-3.0.5-MacOS.dmg" "des.docx" "2018_SuicidestigmaamongmedicalstudentsinPuertoRico (1).pdf" "exams.tex" "abstract 29-1-19 (1).docx" "Microsoft Forms.pdf" "A Calzón Quitao(2019-04-04).xlsx" "pyFR.tgz" "words audio_intervention.wav" "GPowerMac_3.1.9.3.zip" "Directorio PHSU[1].pdf" "yc2_movie.mov" "gcdirection_lastrun.py" "untitled.wav" "~$rph Asgnt2 Turkish_NabilaFonseca.docx" "Carta apoyo_San Judas.pdf" "Autorización IRB_Heidi Figueroa.pdf" "Consult. Emo regulation (Eliut).ics" "gcdirection.psyexp" "PHSU: Consult. facultad.ics" "Agenda_Centralize assessment_12-13-2018.pdf" "Audio Track-2-3.wav" "Audio Track-2-2.wav" "parecido.wav" "Borrador cuestionario académica investigativa (Oct 4)_rev MBP.docx" "yugular.wav" "audio/" "untitled.psyexp" "FAQ_Jabra_BIZ_2400_2009_03_13.pdf" "PHSU: HD Network.ics" "Institutional Assessment Plan_rev ER.csv" "e.tex" "Statement.pdf" "reponer.wav" "Student Service satisfaction(1-2).xlsx" "SampleApp-master/" ".com.google.Chrome.ZCqgJt" "jabra BIZ 2400 II UC manual_EN-HR.pdf" "test.bash" "Reliab-Nunnally.docx" "plan trabajo.docx" "Consentimiento Tamizaje_privadas_rev_Bermonti.pdf" "lala/" "Microsoft_Office_16.23.19030902_BusinessPro_Installer.pkg" "Prontuario Contemporary Psychoanalytic Therapy (1).docx" "Label Track.txt" "kjh" "429-1785-1-PB.pdf" ".com.google.Chrome.tv7rkN" "PHSU - APA (ex).ics" "android-studio-ide-181.5056338-mac.dmg" "MSCHE SELF STUDY PROCESS.pdf" "Institutional_Assessment_Plan_for_Student_Learning.pdf" "~$lyaneth Laureano Vidal [english].docx" "MSCHE AIU_details by data.xlsx" "Logo-phsu.png" "Institutional Assessment Plan_30-enero-2018.docx" ".com.google.Chrome.dXPNoV" "~$anscripción entrevista PSIC 8017.docx" "Damaskinidis et al_eye-tracking semiotic.pdf" "8.wav" "des.org" "new audio/" "Tareas recurrentes.ics" "appsurvey/" "81-03832 RevC_BIZ 2400QSG_USB.PDF" "Assessment activity request_Nydia Ortiz 2.pdf" "Tares recurrentes.ics" "rla-es-master/" "promoción investigación.jpeg" "new audio_gusano/" " micro.wav" "9.wav" "exYamil_lastrun.py" "Apéndice B_Datos sociodemográficos_M Bermonti.pdf" "psychoexperiments-master.zip" "scimax-master/" "Datos Gilliam/" "py-span-task-master.zip" "CamelotAndroid-final/" "Audio Track.wav" "psychoexperiments-master/" "Skype-8.39.0.175.dmg" "[End].wav" "titeretada-2.wav" "header_academic affairs.png" "aspell6-es-1.11-2.tar.bz2" "Org-mode-and-ipython-enhancements-in-scimax.org" "PHSU - IA Pasado.ics" "IT/" "BA LLC.ics" "Assessment Activity Form(1-1) (1).xlsx" "titeretada.wav" "Disertación.ics" "Calendario marzo-mayo.xlsx" "CREA_total.TXT" "Protocol_centralize data MSCHE annual report.docx" "IPEDS201617Tablesdoc.xlsx" "casa.wav" "DS_BIZ2400_50182_V01_1403_low.pdf" "words audio recent/" "1541471064.zip" "words audio_spelling measure.wav" "Book1.xlsx" "des.pdf" "locura.wav" "Tareas.ics" ".com.google.Chrome.AGMkWg" "General.ics" "Contrato_1-10-2018_Mario Bermonti.pdf" "438-1779-1-PB.pdf" "Formulario sin título(1-1).xlsx" "Howell (2013) Statistical Methods for Psychology 2.pdf" "Literatura emotional Stroop task.zip" "palabras-sistema.zip" "General Académico.ics" "Howell (2013) Statistical Methods for Psychology 8th ed..pdf" "Consentimiento Tamizaje_privadas_rev_Bermonti.docx" ".localized" "12.wav" "Estado de cuenta nov 2018.pdf" "CamelotAndroid-final.zip" "Assessment Activity Form(1-3).xlsx" "13.wav" "perro.wav" "des.tex" "capela.wav" "test/" "py-span-task-master/" "py-span-task-master (1).zip" "Carro.ics" "Agenda_Centralize assessment_29-11-2018.pdf" "e.log" "neurocognicion _ Congreso.pdf" "11.wav" "Assessment Activity Form(1-1).xlsx" "Reminders.ics" "Toma de consentimiento y asentimiento.docx" "untitled_lastrun.py" "Agenda_Centralize assessment_29-11-2018.docx" ".DS_Store" "kjh.psyexp" "Institutional Assessment Plan_FOR SHARING.xlsx" "IRB Question 22 diciembre.docx" "charla.wav" "10.wav" "Document assessment activities_progress monitoring copy.xlsx" "words_review_2.xlsx" "Emotional Stroop Task/" "14.wav" "Flux.zip" "Flux 2.app/" "Ejemplo-5-carta-de-agradecimiento-educador-infantil.doc" "anormal.wav" "15.wav" "MyApplication/" "resumen reunión 21 nov.pdf" "PowerPoint Presentation.pdf" "Data MSCHE AIR.docx" "exYamil.psyexp" "Policy Statement- Range of Commission Action and Accreditation.pdf" "Institutional Assessment Plan_table_11-12-2018.xlsx" "17.wav" "PHSU_Letterhead_AcademicAffairs Asdf.docx" "jankowski2018.pdf" "irb forms/" "Assessment Activity Form_12-13-2018_Georgina Aguirre.pdf" "irb forms.zip" "16.wav" "PHSU - IAO.ics" "abstract 29-1-19 (1)[1].docx" "../" "./")
+
+ ("/Users/MBP/Desktop/" (23718 26161 233579 684000) "Plan de trabajo (horas semanales).xlsx alias" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Box Sync/Programacion/" (23717 22576 774143 658000) "CS50/" "Data Science/" "Emacs/" "A/" "Reference_cards.odt" "Configuraciones/" "web/" "python/" ".DS_Store" "Reference_cards.org" "todo_emacs.org" "../" "./")
+
+ ("/Users/" (23505 56550 110158 470000) "MBP/" "Shared/" ".localized" "../" "./")
+
+ ("/Users/MBP/Research/" (23625 50114 725356 787000) "Mendeley_lib/" "../" "./")
+
+ ("/Users/MBP/Box Sync/Research/blog/Entrada 10/" (23417 37201 0 0) "estimulos_crudos.txt" "Entrada _10.docx" "Entrada _10_2.docx" "clean_stimulus.py" "../" "./")
+
+ ("/Users/MBP/programming practice/python_practice/" (23631 35972 655920 373000) "readwithwhile.py" "iteratorex.py~" "simbolos.txt" "data.txt" "testexport.aux" "testexport.log" "test.tex" "importtests.py" "results.csv" "<none>.pdf" "notebook.tex" "yastest.py" "#testpsm.py#" "words.txt" "Student data.xlsx" ".ipynb_checkpoints/" "test.txt" "f.txt" "happy_face.png" "iterex.txt~" "survey4ED.xlsx" ".projectile" "testnow.csv" "_region_.log" "imgbutton.py" ".argstest.py.swp" "palabrasusadas.txt" "testpsm_notebook.py.ipynb" "palabrasaanalizar.txt" "checkmark.png" "testpsm.py~" "texput.log" "__pycache__/" "testexport.out" "testCatchingKeyInterrupt.txt" "importtests.pyc" "iteratorex.py" "webapp/" "fig.pdf" "prueba extract-words.ipynb" "testpsm.py" "fig.png" "testexport.tex" "a.py" "~$Student data.xlsx" "studentdata.xlsx" "_region_.pdf" "Untitled.ipynb" "_region_.tex" "readwithwhile.py~" "10000 palabras frecuencia.txt" "imgbutton.py~" "studentdata_complete.xlsx" "testingautosave.py" "webcontent.txt" "testexport.pdf" "missing.csv" "exceltest.xlsx" "testspelling.py" ".DS_Store" " *temp*" "Student data 2222.xlsx" "realwords.py.ipynb" "iterex.txt" "read_symbols.py" "../" "./")
+
+ ("/Users/MBP/Ponce Health Sciences University/Institutional Assessment - Documentos/Centralization of Assessment Activities/Documentation of assessment activities/MSCHE AIU/Data/" (23714 26428 48447 413000) "aiu_report.pdf" "aiu_report.org" "AIU data_report_2019-02-13.xlsx" "Academic programs (post-institutional)/" "aiu_report.tex" "AIU data_2019-03-20_READY FOR ANALYSIS.xlsx" "AIU data_report_2019-03-20.xlsx" ".#aiu_report.org" "AIU data_report_2019-02-26.xlsx" ".DS_Store" "Completers 1718.xlsx" "Sample data/" "../" "./")
+
+ ("/Users/MBP/Box Sync/Disertación/" (23452 12745 159345 774000) "Metodo/" ".git/" "Revision de literatura/" "Presentaciones/" "dissertation_protocol.docx" "CIPSHI/" "Documentos/" "dissertation_protocol.org" "Repositorio general de articulos/" "Tesis de maestría/" "dissertation_protocol.tex" "../" "./")
+
+ ("/Users/MBP/Box Sync/Research/Consultation services/PHSU/Autoestudio APA/APA_self-study_evaluation_system/" (23440 11082 0 0) "results.csv" ".git/" "tests.py" "apa_selfstudy_evaluation_system.py" "testdata.xlsx" "Student data/" "__pycache__/" "analysis.py" ".DS_Store" "old_system/" "../" "./")
+
+ ("/Users/MBP/Box Sync/Research/Consultation services/PHSU/Autoestudio APA/" (23440 13664 0 0) "Análisis estándar 5 - regresiones/" "APA_protocol.org" "Informes/" "Documentos Outcomes/" "APA_self-study_evaluation_system/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/Consultorías independientes/Leomarys/Versión nueva/Datos/" (23446 57777 0 0) "codebook.xls" "Base de datos_master.csv" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/Consultorías independientes/Leomarys/Versión nueva/" (23448 107 0 0) "scripts/" "Literatura/" "Datos/" "Cuestionarios/" "analysis_Leomarys.org" ".DS_Store" ".#analysis_Leomarys.org" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/Consultorías independientes/Leomarys/" (23446 57952 0 0) "~$Impacto de los sintomas de fibromialgia en la relación de pareja_Limpia MBP.xlsx" "Versión nueva/" "No utilizados/" "Datos exportados de survey monkey/" "Cuestionarios/" "Análisis/" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/Consultorías independientes/Nilsa de la Cruz/" (23414 57317 0 0) "Resultados del cuestionario.docx" "Plan de análisis (cotización)_Mario Bermonti.docx" "Factura_servicios de consultoría_Mario Bermonti.pdf" "Entrega de Resultados_Nilsa de la Cruz/" "datos_demo.csv" "datos_bt.csv" "Cuestionario de Investigación BT.docx" "Consultoria_Informacion_Requerida (4).docx" "analysis.pdf" "analysis.org" "1-tesis corregida en mayo.docx" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/Consultorías independientes/" (23443 64369 0 0) "Yesenia/" "Yashira/" "Sacha/" "Proyecto psic escolar, salud/" "Nilsa de la Cruz/" "Moreno/" "Miryalis/" "Milyaneth/" "Marilyn/" "Leomarys/" "Jacqueline Butler/" "Gilliam/" "Factura Nayra Rodríguez.pdf" "Elsa Castro/" "Denisse/" "Consultoria_Informacion_Requerida.docx" "Análisis para Cybelle - INTERNO/" "Ana Paola/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/PHSU/Autoestudio APA/APA_self-study_evaluation_system/" (23440 11082 0 0) "tests.py" "testdata.xlsx" "Student data/" "results.csv" "old_system/" "apa_selfstudy_evaluation_system.py" "analysis.py" "__pycache__/" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/PHSU/Autoestudio APA/" (23440 11379 0 0) "Informes/" "Documentos Outcomes/" "APA_self-study_evaluation_system/" "APA_protocol.org" "Análisis estándar 5 - regresiones/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/PHSU/Autoestudio APA/psmsystem/" (23440 10364 0 0) "~$PhD Clinical Psychology.xlsx" "tests.py" "testdata.xlsx" "runevaluation.py" "results.csv" "old_system/" "evaluationsystem.py" "Entrada de datos/" "cleaning.py" "analysisapril.py" "__pycache__/" ".ipynb_checkpoints/" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/" (23416 10551 0 0) "~$ja de cotejo servicios.docxcx" "~$forme de servicios.docxcx" "~$fo, datos a solicitar.docxcx" "Yesenia/" "Yashira/" "UCA/" "Sacha/" "Proyecto psic escolar, salud/" "promo_consultoria.jpg" "Promo consultoría.pptx" "Plantilla_Cotización_consultoria.docx" "PHSU/" "Nilsa de la Cruz/" "Moreno/" "Miryalis/" "Milyaneth/" "Marilyn/" "Libros stats shortcut" "Leomarys/" "Jacqueline Butler/" "Informe de servicios.docx" "Hoja de cotejo servicios.docx" "Gilliam/" "Factura Nayra Rodríguez.pdf" "Elsa Castro/" "Denisse/" "Consultoria_Informacion_Requerida.docx" "Análisis para Cybelle - INTERNO/" "Ana Paola/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/PHSU/Autoestudio APA/Informes/" (23432 12309 0 0) "~$forme datos y análisis_27 marzo.docx" "Proximal_Competencies_Based_Outcomes Revised.xlsx" "Proximal_Competencies_Based_Outcomes Revised MBP.xlsx" "Profession Competencies.Outcomes.Proximal_rev 26 abril.xlsx" "Neurocognitive laboratory description_short_MBP.docx" "Neurocognitive laboratory description_MBP.docx" "Neurocognitive laboratory description NELSON (30 ago)_rev MBP.docx" "Informe_descripción estudiantes_APA.docx" "Informe_24 abril.docx" "Informe tareas_ 11 noviembre 2017.docx" "Informe reunión Stephanie_30 enero.docx" "Informe predictores éxito académico_16 abril.docx" "Informe entrada de datos_8 agosto.docx" "Informe datos y análisis_27 marzo.docx" "Informe datos y análisis_19 abril.docx" "Informe datos y análisis_16 abril.docx" "Informe datos y análisis_12 abril.docx" "doctest.docx" "Datos para Proximal_Competencies_Based_Outcomes.xlsx" "Datos a solicitar a Stephanie Vega.docx" "dataentry_analysis_report.tex" "dataentry_analysis_report.org" "Analysis software description.docx" "Analysis results/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/PHSU/Design and stats consultation/" (23430 40889 0 0) "Moreno/" "Eliut/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/PHSU/Design and stats consultation/Eliut/" (23430 40895 0 0) "website/" "Suicidal Behavior/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/PHSU/Design and stats consultation/Eliut/Suicidal Behavior/" (23440 5936 0 0) "suicidal behavior_protocol.org" "Emotional Stroop/" "Documentos/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Blog programación investigación cognitivav/" (23393 49128 0 0) "Preparación estímulos/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/PHSU/Autoestudio APA/psmsystem/Entrada de datos/" (23415 13086 0 0) "~$tos restantes.docxcx" "~$Student data.xlsx" "~$forme reunión Stephanie_30 enero.docx" "student data.xlsx" "Plantilla entrada de datos.xlsx" "Fuentes de datos/" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/Jacqueline Butler/" (23414 56848 0 0) "~$datos_pre posprueba.xlsx" "resultados de la RÚBRICA-WEBQUEST.docx" "resultados de la rubrica-alumno.docx" "resultados de la pre-prueba 8 julio 2018.docx" "Resultados de la Posprueba 8 julio 2018.docx" "Plan de análisis (cotización)_Mario Bermonti.docx" "Factura_servicios de consultoria_Jaqueline Butler.pdf" "Entrega resultados_Jacqueline/" "datos_pre posprueba.csv" "datos_evaluacion webquest.csv" "datos_evaluacion actividades.csv" "analysis.pdf" "analysis.org" "2-Rubrica_evaluacion_de_la_WebQuest.doc" "2-Rubrica_evaluacion_alumnos (1).doc" "2-Pre prueba.docx" "2-Posprueba.docx" "0-Tesis-21-abril-2018-Butler.docx" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Research/blog/" (23434 58764 0 0) "Guion secuencia multimedia_Mario Bermonti.docx" "entry2_why_coding.org" "entry1_about.org" "Entrada 10/" ".git/" ".DS_Store" ".#entry3_using this site.org" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/PHSU/" (23393 63490 0 0) "Design and stats consultation/" "Comité avalúo institucional/" "Autoestudio APA/" "Administrative/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Research/Consultation services/Nilsa de la Cruz/" (23408 56182 0 0) "Resultados del cuestionario.docx" "Plan de análisis (cotización)_Mario Bermonti.docx" "datos_demo.csv" "datos_bt.xlsx" "Cuestionario de Investigación BT.docx" "Consultoria_Informacion_Requerida (4).docx" "analysis.tex" "analysis.pdf" "analysis.org" "1-tesis corregida en mayo.docx" ".DS_Store" ".#analysis.org" "../" "./")
+
+ ("/Users/MBP/Documents/Investigación/Trabajos consultoría/PHSU/Autoestudio APA/psmsystem/" (23284 19067 0 0) "~$PhD Clinical Psychology.xlsx" "Untitled.ipynb" "testdata.xlsx" "test.py" "runevaluation.py" "results.csv" "psm analysis_april 2018.ipynb" "evaluationsystem.py" "Entrada de datos/" "database report.html" "cleaning.py" "analysisapril.py" "__pycache__/" ".ipynb_checkpoints/" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Proyectos/Intervencion/" (23244 55302 0 0) "testintervention.py~" "testintervention.py" "test.py~" "test.py" "t.py~" "t.py" "storage.py~" "storage.py" "stimuli/" "settings.py~" "settings.py" "scoring.py~" "scoring.py" "ReadStimulus.py~" "past/" "libraryext/" "intervention.py~" "intervention.py" "interface.py~" "interface.py" "images/" "f.py~" "f.py" "data.py~" "data.py" "data/" "Config.txt" "cd_dir.bat" "audio.py~" "audio.py" "__pycache__/" "__init__.py~" "__init__.py" ".git/" ".DS_Store" "#testintervention.py#" "#Admi.py#" "../" "./")
+
+ ("/usr/local/share/" (23274 3649 0 0) "zsh/" "xml/" "thumbnailers/" "systemtap/" "shared-mime-info/" "python@2/" "pkgconfig/" "perl5/" "mime/" "man/" "locale/" "kivy-examples/" "jupyter/" "info/" "icons/" "gtk-doc/" "graphite2/" "gobject-introspection-1.0/" "glib-2.0/" "gitweb/" "gitk/" "git-gui/" "git-core/" "gir-1.0/" "ghostscript/" "gettext/" "gdb/" "fonts" "fontconfig/" "emacs/" "doc/" "bash-completion/" "applications/" "appdata/" "aclocal/" "../" "./")
+
+ ("/Users/MBP/Documents/proyectos/Word-analisis/" (22915 59444 0 0) "words3.txt" "words2.txt" "words.txt" "word_analysis.py~" "word_analysis.py" "testing/" "results.csv" "Palabras para hojas de trabajo_6_abril_2016.txt" "license" "invalid words.txt" "analyzer.py~" "analyzer.py" "anagrams.txt" "__pycache__/" "__init__.py" ".gitattributes" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/proyectos/Intervencion/" (23244 55302 0 0) "testintervention.py~" "testintervention.py" "test.py~" "test.py" "t.py~" "t.py" "storage.py~" "storage.py" "stimuli/" "settings.py~" "settings.py" "scoring.py~" "scoring.py" "ReadStimulus.py~" "past/" "libraryext/" "intervention.py~" "intervention.py" "interface.py~" "interface.py" "images/" "f.py~" "f.py" "data.py~" "data.py" "data/" "Config.txt" "cd_dir.bat" "audio.py~" "audio.py" "__pycache__/" "__init__.py~" "__init__.py" ".git/" ".DS_Store" "#testintervention.py#" "#Admi.py#" "../" "./")
+
+ ("/Users/MBP/Documents/proyectos/letter-rain/" (23185 58180 0 0) "Untitled" "main.js" "index.html" "img/" "enchant/" "audio/" ".projectile" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Investigación/Trabajos consultoría/PHSU/Autoestudio APA/psmsystem/" (23272 33329 0 0) "~$PhD Clinical Psychology.xlsx" "testdata.xlsx" "test.py" "runevaluation.py" "results.csv" "psm analysis_april 2018.ipynb" "notebook.tex" "hello.py" "evaluationsystem.py" "Entrada de datos/" "analysisapril.py" "__pycache__/" ".ipynb_checkpoints/" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/proyectos/" (23234 9129 0 0) "Word-analisis/" "scripts-dissertation/" "real-words/" "main.js" "letter-rain/" "Intervencion/" "index.html" "extract-words/" "crear_hojas_trabajo_lectura/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/" (23267 51866 0 0) "~$costo de vida.xlsx" "Universidad/" "SPSSInc/" "sanagustin y el alma.txt" "Recibos/" "proyectos/" "promo_consultoria.jpg" "Programas/" "Préstamos/" "PLAN DE TRABAJO.docx" "Pago membresia GCA.pdf" "multas/" "moreno_evaluaciones_clean.csv" "Marbete/" "Libros/" "Leer/" "Investigación/" "Inscripción APPR GCA.pdf" "Info caso Zoraida Pérez.docx" "EVITA/" "Estiramiento/" "emacs config/" "Docs cita plan medico/" "Curriculum Vitae/" "copia querella_Mario Bermonti.pdf" "Cita cupones/" "certificado conf anual neuro_Mario Bermonti Perez .pdf" "Certificaciones, docs oficiales/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Investigación/Trabajos consultoría/PHSU/Autoestudio APA/" (23165 62005 0 0) "student data/" "psmsystem/" "formato output.xlsx" "formato datos a procesar/" "Facturas/" "Entrada de datos/" "Documentos/" "doctoral-profession-competencies-4 Table.docx" "Contrato_Mario Bermonti.pdf" "CLINICAL TRAINING  MANUAL 2015.pdf" "Analisis preliminares/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Investigación/Trabajos consultoría/PHSU/" (23052 20741 0 0) "Consultoría estadística/" "Comité avalúo institucional/" "Autoestudio APA/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Investigación/Trabajos consultoría/" (23136 63657 0 0) "~$ja de cotejo servicios.docxcx" "~$forme de servicios.docxcx" "~$fo, datos a solicitar.docxcx" "Yesenia/" "Yashira/" "UCA/" "Proyecto psic escolar, salud/" "Promo consultoría.pptx" "PHSU/" "Miryalis/" "Milyaneth/" "Marilyn/" "Libros stats shortcut" "Leomarys/" "Informe de servicios.docx" "Info, datos a solicitar.docx" "Hoja de cotejo servicios.docx" "Factura Nayra Rodríguez.pdf" "Elsa Castro/" "Denisse/" "CURSO UPRM MORENO/" "Análisis para Cybelle - INTERNO/" "Ana Paola/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Investigación/" (23218 22635 0 0) "Trabajos consultoría/" "Thumbs (2014_01_07 02_16_51 UTC) (2015_12_10 01_06_09 UTC).db" "Tesina BA-UPRM.docx" "Revisión manuscritos para revistas/" "Recursos/" "Publicaciones/" "Presentaciones/" "Percepción Neurociencia/" "Laboratorio Neurociencia/" "Disertación/" "desktop (2014_01_07 02_16_51 UTC) (2015_12_10 01_06_09 UTC).ini" "Cognitive Research/" "Certificados por asistencia a talleres/" "Certificados para investigacion/" "Becas/" "Ayudantías/" "Ayuda a otros/" "Apuntes generales/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/proyectos/letter-rain/enchant/examples/expert/getbanana/" (22154 10920 0 0) "start.png" "nineleap.enchant.js" "main.js" "index.html" "icon0.gif" "end.png" "chara1.gif" "bg.png" "../" "./")
+
+ ("/Users/MBP/Documents/proyectos/letter-rain/enchant/examples/expert/" (23165 44954 0 0) "timeline/" "shooting/" "rpg/" "getbanana/" "collection/" "action/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/proyectos/letter-rain/enchant/examples/" (23152 50804 0 0) "windows8/" "plugins/" "expert/" "developers/" "beginner/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/proyectos/letter-rain/enchant/" (23153 51935 0 0) "sound.swf" "sound.as" "README.md" "package.json" "LICENSE.txt" "libs/" "lang/" "images/" "examples/" "enchant.png" "enchant.min.js" "doc/" "CHANGELOG.md" "build/" ".travis.yml" ".gitignore" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/proyectos/letter-rain/hellobear/" (22154 10920 0 0) "main_nocomment.js" "main.js" "index.html" "chara1.png" "../" "./")
+
+ ("/Users/MBP/Documents/proyectos/enchant/examples/beginner/letter-rain/" (23153 52391 0 0) "main.js" "index.html" "img/" "audio/" ".projectile" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Proyectos/Word-analisis/" (22915 59444 0 0) "words3.txt" "words2.txt" "words.txt" "word_analysis.py~" "word_analysis.py" "testing/" "results.csv" "Palabras para hojas de trabajo_6_abril_2016.txt" "license" "invalid words.txt" "analyzer.py~" "analyzer.py" "anagrams.txt" "__pycache__/" "__init__.py" ".gitattributes" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/proyectos/real-words/" (22919 24029 0 0) "words.txt" "webcontent.txt" "testdict.py" "t.py" "realwords.py" "position.txt" "output file.txt" "LICENCE.rst" "__init__.py" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/proyectos/prepare_words-scripts/" (22894 52664 0 0) "words.txt" "wordcleanup.py" "tests.py" "readme.txt" "raewords.txt" "cleanwords.py" "analyzed words.txt" "__pycache__/" "__init__.py" ".projectile" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/Juego geografia/" (22599 27978 0 0) "juego-cono-geografia.pdf" "geographygrame.py~" "geographygame.py~" "geographygame.py" "datost.txt~" "datost.txt" "datosprueba.txt" "datos2.txt~" "datos.txt~" "datos.txt" "basededatos.xlsx" "__init__.py" ".git/" "../" "./")
+
+ ("/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3981/Personal statement/" (22600 32236 0 0) "personalstatement_MarioBermonti_emacs.tex" "personalstatement_MarioBermonti.tex" "personal_statement_Mario_Bermonti.pdf" "personal statement_rev2.tex" "personal statement_REV/" "personal statement_draft2.docx" "personal statement_draft.docx" "personal statement.zip" "outline personal statement_Mario Bermonti.docx" "Instrucciones personal statement.pdf" "_region_.tex" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/python_practice/" (22765 22385 0 0) "testpsm_notebook.py.ipynb" "testpsm.py~" "testpsm.py" "testnow.csv" "testingautosave.py" "survey4ED.xlsx" "studentdata_complete.xlsx" "studentdata.xlsx" "simbolos.txt" "readwithwhile.py~" "readwithwhile.py" "read_symbols.py" "iterex.txt~" "iterex.txt" "iteratorex.py~" "iteratorex.py" "importtests.pyc" "importtests.py" "imgbutton.py~" "imgbutton.py" "happy_face.png" "exceltest.xlsx" "data.txt" "checkmark.png" "a.py" ".projectile" ".ipynb_checkpoints/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Investigación/Trabajos consultoría/PSM/psmsystem/" (22643 52375 0 0) "system.py~" "student data/" "evaluationsystem.py~" "evaluationsystem.py" ".git/" ".DS_Store" "#evaluationsystem.py#" "../" "./")
+
+ ("/Users/MBP/Desktop/Box Sync/CEAPPR/" (22273 12925 0 0) "Votaciones para selección de logo.doc" "Tareas que deben desarrollarse como parte de plan de trabajo de los sub comités.docx" "resumen académica.docx" "Reacción Anteproyecto Grupal  copy 2.docx" "Presentation Anteproyecto Ley REV 3-19-14 con Anejos.pdf" "Minuta 5.9.14.docx" "Minuta 12.05.14.docx" "Minuta 11.11.14.docx" "Minuta 09.12.14.docx" "Descripcion_Mario Bermonti.docx" "CEAPPR 2015/" "Anteproyecto-Ley-2014-03-11.pdf" "Agenda Reunion CE 4.11.14.doc" "Agenda Reunion CE 07 11 14 -.doc" "Agenda Reunion CE 06.13.14 -.doc" "Acta 22 marzo CEAPPR.docx" "../" "./")
+
+ ("/Users/MBP/Desktop/Box Sync/" (22541 605 0 0) "Solicitud Becas/" "saludoalsol/" "Pruebas Psicológicas/" "Proyectos Intervención neurocognitiva/" "Proyectos/" "Proyecto psic escolar, salud/" "Programacion/" "Presupuesto.xlsx" "Percepción Neurociencia/" "Libros/" "Leer/" "Laboratorio Neurociencia/" "Horas de trabajo.xlsx" "Guia telefonica UPRRP.pdf" "graduate programs.xlsx" "firma digital MBP.jpg" "Financiamiento/" "Dragon profiles/" "Documentos trabajo/" "distribucion de tiempo.xlsx" "Disponible offline/" "Disponibilidad de trabajo_Mario Bermonti.docx" "CURSO UPRM MORENO/" "Curriculum Vitae/" "Curriculo Académica Investigativa copy.docx" "Coleccion Edgar Allan Poe-E/" "Cognitive Research (mbermonti1132@hotmail.com)/" "CEAPPR/" "becas/" "analisis palabras/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/listas/" (22590 54380 0 0) "ej7.py~" "ej7.py" "ej6.py~" "ej6.py" "ej5.py~" "ej5.py" "ej4.py~" "ej4.py" "ej3.py~" "ej3.py" "ej2.py~" "ej2.py" "ej18.py~" "ej18.py" "ej17.py~" "ej17.py" "ej14.py~" "ej14.py" "ej13.py" "ej10.py~" "ej10.py" "ej1.py~" "ej1.py" "ej.15.py" "../" "./")
+
+ ("/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/functions/" (22588 13382 0 0) "ej9.py~" "ej9.py" "ej4.py~" "ej4.py" "ej3.py~" "ej3.py" "ej2.py~" "ej2.py" "ej11.py~" "ej11.py" "ej1.py~" "ej1.py" "ej0.py" "ej.4.py~" "../" "./")
+
+ ("/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/" (22588 9710 0 0) "t.py" "stroperations/" "listas/" "functions/" "ej9.py" "ej8.py" "ej7.py~" "ej7.py" "ccom3030-HW/" "__init__.py" ".projectile" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/" (22588 9710 0 0) "t.py" "stroperations/" "listas/" "functions/" "ej9.py" "ej8.py" "ej7.py~" "ej7.py" "ccom3030-HW/" "__init__.py" ".projectile" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/stroperations/" (22563 9643 0 0) "str2.py~" "str2.py" "str1.py~" "str1.py" "ej7.py~" "ej7.py" "../" "./")
+
+ ("/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/" (22527 64111 0 0) "slides_Chapter04.pdf" "slides_Chapter03.pdf" "slides_Chapter02.pdf" "scripts/" "prontuarioCCOM3030_IntACC_2017S1.pdf" "exercicio_python.pdf" "Ejercicios_practica examen 1.pdf" "computer-science-illuminated.pdf" "[Computer.ScienceAn.Overview.(11th.2011)].J.Glenn.Brookshear.pdf" ".thumbnails/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Universidad/Ciencia de cómputos/" (22492 2330 0 0) "secuencia curricular.pdf" "programa de clases _ miupi - portal de servicios electrónicos.pdf" "MATE 3151/" "cursos para usar electivas.pdf" "course flowchart.jpg" "CCOM 3981/" "CCOM 3030/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Universidad/" (22440 37195 0 0) "Programación/" "Escuela Graduada/" "Confirmation - FAFSA 2016-2017.pdf" "Ciencia de cómputos/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Universidad/Ciencia de cómputos/CCOM 3030/scripts/asig 1/" (22551 17041 0 0) "asig camello.pdf" "#camello.py#~" "#camello.py#" "../" "./")
+
+ ("/Users/MBP/Documents/proyectos/prepare_words-scripts/testingfiles/" (22521 31585 0 0) "position.txt~" "position.txt" "../" "./")
+
+ ("/Users/MBP/python_modules/libraryext/" (22513 20366 0 0) "words.txt" "test.py" "iofiles.py~" "iofiles.pyc" "iofiles.py" "cd_dir.bat" "__pycache__/" "__init__.pyc" "__init__.py" ".gitignore" ".gitattributes" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Proyectos/crear_hojas_trabajo_lectura/" (22502 51204 0 0) "words2.txt" "randomize.py~" "randomize.py" "Niveles de dificultad/" "hojas de trabajo/" "crear_hojas.py~" "crear_hojas.py" "cleaned_words.txt" "clean_words.py~" "clean_words.py" "__init__.py" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/proyectos/prepare_words-scripts/testsmockfiles/" (22430 48434 0 0) "mock_clean_empty_lines.txt~" "mock_clean_empty_lines.txt" "../" "./")
+
+ ("/Users/MBP/Desktop/analisis palabras/" (22408 257 0 0) "~$palabras rae.xlsx" "written_sa_wordlist_out.txt" "words3.txt" "words2.txt" "word_freq_cleaned_words_2.txt" "word_freq_cleaned_words.txt" "validWords.txt" "utilizadas.txt~" "utilizadas.txt" "sort.py~" "results_finales_base de datos 7 abril_POSDISCUSION.xlsx" "results_finales_base de datos 14 abril_length facto of 4, wf factor of 3_otros weights 1.xlsx" "results_finales_base de datos 14 abril_length facto of 4, wf factor of 3.xlsx" "para_limpieza.txt~" "para_limpieza.txt" "palabras_16_abril_PALABRAS SIN USAR_info frecuencia.txt" "palabras_16_abril_PALABRAS SIN USAR.txt" "palabras_16_abril_info frecuencia.txt" "palabras_16_abril.txt" "palabras_14_abril_version_final.txt~" "palabras_14_abril_version_final.txt" "palabras_14_abril.txt" "palabras validas finales~" "palabras validas finales.txt~" "palabras validas finales.txt" "palabras validas finales" "palabras utilizadas/" "palabras sin usar.txt" "palabras rae.xlsx" "palabras para prueba simbolos_utf.txt" "Palabras para hojas de trabajo_6_abril_2016 copy.txt" "palabras no validas finales" "palabras finales.txt" "palabras en orden alfabetico" "palabras eliminadas.txt~" "palabras eliminadas.txt" "palabras cortas.txt" "palabras cortas nuevas.xlsx" "p.txt~" "p.txt" "no lines.txt" "Niveles de dificultad_VERSION 7_16 abril/" "Niveles de dificultad_VERSION 6/" "Niveles de dificultad_VERSION 5/" "Niveles de dificultad_VERSION 4/" "Niveles de dificultad_VERSION 3/" "Niveles de dificultad_VERSION 2/" "Niveles de dificultad_VERSION 1/" "MBP@Marios-MacBook-Pro-2.local.20856~" "MBP@Marios-MacBook-Pro-2.local.20856" "Lista de palabras cortas 2_GC.docx" "libraryext/" "descripcion_documentos.txt" "cleaned_words.txt" "checking.xlsx" "banco palabras enlace GC.txt" ".projectile" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Proyectos/crear_hojas_trabajo_lectura/Niveles de dificultad/" (22273 20548 0 0) "nivel7.txt" "nivel6.txt" "nivel5.txt" "nivel4.txt" "nivel3.txt" "nivel2.txt" "nivel1.txt" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Documents/Proyectos/" (22239 22945 0 0) "Word-analisis/" "Intervencion/" "crear_hojas_trabajo_lectura/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/python_modules/" (22267 14115 0 0) "libraryext/" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/" (22273 13236 0 0) "Library/" "../" "./")
+
+ ("/Users/MBTP/.emacs.d/" (22272 15665 0 0) "projectile-bookmarks.eld" "places" "ido.last~" "ido.last" "highlight-current-line-0.57/" "elpa/" "auto-save-list/" "ac-comphist.dat" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/Desktop/analisis palabras/" (22272 12551 0 0) "written_sa_wordlist_out.txt" "word_freq_cleaned_words.txt" "para_limpieza.txt" "palabras para prueba simbolos_utf.txt" "palabras finales.txt" "palabras eliminadas.txt" "Niveles de dificultad_VERSION 4/" "Niveles de dificultad_VERSION 3/" "Niveles de dificultad_VERSION 2/" "Niveles de dificultad_VERSION 1/" "limpieza.py~" "limpieza.py" "libraryext/" "eliminar_palabras_muy_cortas.py~" "eliminar_palabras_muy_cortas.py" "descripcion_documentos.txt" "cleaned_words.txt" "checking.xlsx" "banco palabras enlace GC.txt" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/Documents/Proyectos/crear_hojas_trabajo_lectura/" (22270 43891 0 0) "randomize.py~" "randomize.py" "Niveles de dificultad/" "libraryext/" "hojas de trabajo_1/" "hojas de trabajo/" "hoja de trabajo 4" "hoja de trabajo 1" "crear_hojas.py~" "crear_hojas.py" "clean_words.py~" "clean_words.py" "__init__.py" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/Desktop/" (22272 10477 0 0) "~$banco palabras_info freq.xlsx" "comparacion documentos/" "analisis palabras/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/Desktop/libraryext/" (22267 7572 0 0) "words.txt" "test.py" "iofiles.py~" "iofiles.pyc" "iofiles.py" "cd_dir.bat" "__pycache__/" "__init__.pyc" "__init__.py" ".gitignore" ".gitattributes" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/Documents/Proyectos/Word-analisis/" (22255 28235 0 0) "words2.txt" "words.txt" "word_analysis.py~" "word_analysis.py" "w.txt" "testing/" "results.csv" "libraryext/" "invalid words.txt" "analyzer.py~" "analyzer.pyc" "analyzer.py" "anagrams.txt" "anagrams.csv" "__pycache__/" "__init__.py" ".gitattributes" ".git/" ".DS_Store" "#word_analysis.py#" "#analyzer.py#" "../" "./")
+
+ ("/Users/MBTP/Downloads/settings/" (22255 26301 0 0) "window-settings.el" "ui-settings.el" "text-settings.el" "python-settings.el" "ido-settings.el" "fill-column-indicator-settings.el" "cursor-settings.el" "color-theme-settings.el" "auto-complete-settings.el" "../" "./")
+
+ ("/Users/MBTP/Downloads/" (22255 26000 0 0) "~$rph Asgnt2 Turkish_NabilaFonseca.docx" "~$lyaneth Laureano Vidal [english].docx" "written_sa_constraints_out.txt" "vrp-test transc99.wav" "VirtualBox-5.0.14-105127-OSX.dmg" "VirtualBox-5.0.12-104815-OSX.dmg" "Story Syntax Counts_final.xlsx" "sreb1.10.1630.dmg" "solicitud degi.docx" "Skype_7.20.378.dmg" "Silverlight.dmg" "Silverlight-3.dmg" "Silverlight-2.dmg" "settings/" "screen_recorder_setup.exe" "Scanned from a Xerox Multifunction Device.pdf" "Recibo" "rcpt10080313744296.pdf" "Razer_Synapse_Mac_Driver_v1.45.1.dmg" "quinto-congreso-est-inv-graduada-solicitud_Mario Bermonti.docx" "quinto-congreso-est-inv-graduada-solicitud.docx" "quinto-congreso-est-inv-graduada-solicitud (1).docx" "Psic 3002H-enero 2016.pdf" "prueba (Autosaved).xlsx" "Oracle_VM_VirtualBox_Extension_Pack-5.0.12-104815.vbox-extpack" "mwords.tar.Z" "mwords/" "Milyaneth Laureano Vidal [english].docx" "Microsoft_Office_2016_Installer.pkg" "Materiales hoja de trabajo/" "Materiales copy.docx" "mario bermonti perez cong enmienda-0001.pdf" "mario bermonti perez cong enmienda-0001-1.pdf" "lpmacosx.zip" "lpmacosx/" "jre-7u55-macosx-x64 (1).dmg" "JavaForOSX2014-001.dmg" "javaforosx.dmg" "Jabra Suite for Mac_2.5.dmg" "Invitacion participantes psicologos_M Bermonti.pdf" "Installing Jabra Suite for Mac.pdf" "installgoogledrive.dmg" "googlechrome.dmg" "Gitter-1.162.dmg" "GitHub Desktop 216.zip" "Firefox 42.0.dmg" "emacs-settings.zip" "DropboxInstaller.dmg" "deluge-1.3.12-osx-x64-inst.dmg" "deluge-1.3.11-osx-x86.tbz2" "Deluge 2.app/" "Curriculum Vitae_Mario Bermonti_Ingles (2015_12_10 01_06_09 UTC).docx" "Cipshi_Solicitud_Modificacion.doc" "CAS2 Chapter 3_February 25, 2016_REV MBP.doc" "Carta CIPSHI 1 de mayo 2015.docx" "Box Sync Installer.dmg" "blackhole.jpg" "Beca viaje DEGI Mario Bermonti.pdf" "b-flac-converter-mac-custom-cnet.dmg" "Advanced Search_ EBSCOhost_files/" "Advanced Search_ EBSCOhost.html" "AdobeReader_dc_en_a_install.dmg" "AdobeFlashPlayer_19_a_install.dmg" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/MBTP/Desktop/analisis palabras/libraryext/" (22254 62715 0 0) "words.txt" "test.py" "iofiles.py~" "iofiles.pyc" "iofiles.py" "cd_dir.bat" "__pycache__/" "__init__.pyc" "__init__.py" ".gitignore" ".gitattributes" ".git/" ".DS_Store" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

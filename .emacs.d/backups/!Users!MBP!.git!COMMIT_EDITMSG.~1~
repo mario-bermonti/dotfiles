@@ -1,0 +1,147 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is ahead of 'origin/master' by 4 commits.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   .emacs
+#
+# Changes not staged for commit:
+#	modified:   .emacs.d/elpa/archives/gnu/archive-contents
+#	modified:   .emacs.d/elpa/archives/melpa/archive-contents
+#
+# Untracked files:
+#	.DS_Store
+#	.Trash/
+#	.android/
+#	.aspell.en.prepl
+#	.aspell.en.pws
+#	.aspell.es.prepl
+#	.aspell.es.pws
+#	.bash_history
+#	.bash_profile
+#	.bash_sessions/
+#	.cups/
+#	.dropbox/
+#	.dvdcss/
+#	.emacs.d/.DS_Store
+#	.emacs.d/.org-id-locations
+#	.emacs.d/.python-environments/default/lib/python3.6/site-packages/jedi-0.13.1.dist-info/
+#	.emacs.d/.python-environments/default/lib/python3.6/site-packages/jedi/
+#	.emacs.d/.python-environments/default/lib/python3.6/site-packages/parso-0.3.1.dist-info/
+#	.emacs.d/.python-environments/default/lib/python3.6/site-packages/parso/
+#	.emacs.d/ac-comphist.dat
+#	.emacs.d/auto-save-list/.saves-1384-Marios-MacBook-Pro-4.local~
+#	.emacs.d/auto-save-list/.saves-1809-Marios-MacBook-Pro-3.local~
+#	.emacs.d/auto-save-list/.saves-2510-Marios-MacBook-Pro-4.local~
+#	.emacs.d/auto-save-list/.saves-489-Marios-MacBook-Pro-4.local~
+#	.emacs.d/auto-save-list/.saves-4924-Marios-MacBook-Pro-4.local~
+#	.emacs.d/auto-save-list/.saves-5081-Marios-MacBook-Pro-3.local~
+#	.emacs.d/auto-save-list/.saves-56486-Marios-MacBook-Pro-3.local~
+#	.emacs.d/auto-save-list/.saves-8465-Marios-MacBook-Pro-4.local~
+#	.emacs.d/backups/
+#	.emacs.d/curl-cookie-jar
+#	.emacs.d/elpa/2048-game-readme.txt
+#	.emacs.d/elpa/ace-window-20181008.1549/
+#	.emacs.d/elpa/async-20180527.1730/
+#	.emacs.d/elpa/auctex-12.1.1/
+#	.emacs.d/elpa/avy-20181126.1705/
+#	.emacs.d/elpa/biblio-20161014.2304/
+#	.emacs.d/elpa/biblio-core-20160901.1815/
+#	.emacs.d/elpa/dash-20180910.1856/
+#	.emacs.d/elpa/dash-functional-20180107.1618/
+#	.emacs.d/elpa/f-20180106.922/
+#	.emacs.d/elpa/helm-20180810.507/
+#	.emacs.d/elpa/helm-bibtex-20180612.1319/
+#	.emacs.d/elpa/helm-core-20180712.837/
+#	.emacs.d/elpa/ht-20180129.2234/
+#	.emacs.d/elpa/htmlize-20180412.1944/
+#	.emacs.d/elpa/hydra-20181110.1740/
+#	.emacs.d/elpa/hydra-20190326.1950/
+#	.emacs.d/elpa/hydra-readme.txt
+#	.emacs.d/elpa/ivy-20181126.1546/
+#	.emacs.d/elpa/js2-mode-20180724.801/
+#	.emacs.d/elpa/metaweblog-20190212.238/
+#	.emacs.d/elpa/ob-ipython-20180224.953/
+#	.emacs.d/elpa/ob-ipython-readme.txt
+#	.emacs.d/elpa/org-ref-20180803.2127/
+#	.emacs.d/elpa/org-ref-readme.txt
+#	.emacs.d/elpa/org2blog-20190309.442/
+#	.emacs.d/elpa/org2blog-readme.txt
+#	.emacs.d/elpa/ox-pandoc-20180510.1338/
+#	.emacs.d/elpa/ox-pandoc-readme.txt
+#	.emacs.d/elpa/parsebib-20180116.1427/
+#	.emacs.d/elpa/pdf-tools-20180428.1527/
+#	.emacs.d/elpa/pkg-info-20150517.1143/
+#	.emacs.d/elpa/popup-20160709.1429/
+#	.emacs.d/elpa/projectile-20181106.1631/
+#	.emacs.d/elpa/python-environment-20150310.853/
+#	.emacs.d/elpa/s-20180406.808/
+#	.emacs.d/elpa/simple-httpd-20180528.1603/
+#	.emacs.d/elpa/skewer-mode-20180706.1807/
+#	.emacs.d/elpa/tablist-20170220.335/
+#	.emacs.d/elpa/web-mode-20181104.2004/
+#	.emacs.d/elpa/with-editor-20181113.1845/
+#	.emacs.d/elpa/xml-rpc-20181002.1353/
+#	.emacs.d/elpa/yasnippet-20181015.1212/
+#	.emacs.d/elpa/yasnippet-snippets-20181107.2203/
+#	.emacs.d/ido.last
+#	.emacs.d/metaweblog/
+#	.emacs.d/network-security.data
+#	.emacs.d/org-mode/
+#	.emacs.d/org2blog/
+#	.emacs.d/projectile-bookmarks.eld
+#	.emacs.d/scimax-master/
+#	.emacs.d/snippets/
+#	.emacs.d/xml-rpc-el/
+#	.gitconfig
+#	.gradle/
+#	.idlerc/
+#	.ipynb_checkpoints/
+#	.ipython/
+#	.jupyter/
+#	.lesshst
+#	.local/
+#	.matplotlib/
+#	.npm/
+#	.oracle_jre_usage/
+#	.org-id-locations
+#	.pandoc/
+#	.psychopy2/
+#	.psychopy3/
+#	.pyosf/
+#	.python-environments/
+#	.python_history
+#	.python_history-00771.tmp
+#	.python_history-02134.tmp
+#	.python_history-11360.tmp
+#	.python_history-14139.tmp
+#	.spss/
+#	.ssh/
+#	.viminfo
+#	.vimrc
+#	AndroidStudioProjects/
+#	Applications/
+#	Box Sync/
+#	Desktop/
+#	Documents/
+#	Downloads/
+#	Dropbox/
+#	Google Drive/
+#	Library/
+#	Movies/
+#	Music/
+#	OneDrive - Ponce Health Sciences University/
+#	OneDrive/
+#	Pictures/
+#	Ponce Health Sciences University/
+#	Public/
+#	Research/
+#	Sites/
+#	org/
+#	package-lock.json
+#	programming practice/
+#

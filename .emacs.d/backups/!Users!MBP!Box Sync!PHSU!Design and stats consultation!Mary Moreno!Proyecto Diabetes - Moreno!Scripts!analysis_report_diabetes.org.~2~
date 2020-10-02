@@ -1,0 +1,626 @@
+* General functions :noexport:UsefulScript: :noexport:
+#+BEGIN_SRC ipython :session  :exports both :results output
+import tabulate
+import pandas as pd
+import numpy as np
+import statsmodels
+from statsmodels.stats.weightstats import DescrStatsW
+from statsmodels.stats.weightstats import CompareMeans
+from statsmodels.stats.weightstats import ttest_ind
+import seaborn as sns
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[133]:
+:END:
+
+
+
+This function formats df's as orgmode tables.
+#+BEGIN_SRC ipython :session  :exports results :results output
+  def format_as_table(data, showindex='always', series=False):
+      """Returns an orgmode table."""
+      if series:
+          data.name = data.index[0]
+          data = data.to_frame()
+          showindex = False
+      table = tabulate.tabulate(
+          data,
+          headers='keys',
+          tablefmt='orgtbl',
+          showindex=showindex
+      )
+      return table
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[108]:
+:END:
+
+This function formats .describe() results.
+#+BEGIN_SRC ipython :session  :exports results :results output
+  def format_descriptive_stats(data, toframe=False, transpose=False, reduce=False):
+      """Formats the results of descriptive statistics conducted by
+      the pandas' describe method into a format suitable for reporting
+      in stats reports.
+      """
+      data_formatted = data.round(2)
+      if toframe:
+          data_formatted = data_formatted.to_frame()
+      if transpose:
+          data_formatted = data_formatted.transpose()
+      # has to happen here so it SD gets the correct sentence case
+      data_formatted.rename(columns=str.capitalize, inplace=True)
+      data_formatted.rename(columns={'50%': 'Median', 'Std': 'SD'}, inplace=True)
+      if reduce:
+          data_formatted.drop(['Count', '25%', '75%'], axis=1)
+      data_formatted = data_formatted[['Mean', 'Median', 'SD', 'Min', 'Max']]
+      return data_formatted
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[109]:
+:END:
+
+This function formats the results of freq analysis (.value_counts()).
+#+BEGIN_SRC ipython :session  :exports results :results output
+  def freq_of_multiple_columns(data):
+      """Conducts frequency analysis (value_counts) to each column of a
+      pandas df and format it as a table sui
+      table for statistical
+      analysis reports.
+
+      Parameters:
+      -----------
+      data: pandas df that may contain multiple columns. This contains the
+            data that will be analyzed.
+
+      Returns: a str that contains the results for all the columns.
+      -------
+
+      Notes:
+      -----
+      1. You need to print the return value of the function in order
+         for it to appear in orgmode results.
+      2. Uses tabulate for formatting the table.
+      3. value_counts are normalized
+
+      """
+      results_formatted = ''
+      for var in data:
+          results = data[var].value_counts(normalize=True)
+          results = results.round(4).to_frame() * 100
+          na_count = data[var].isna().sum()
+          # Doesn't work (it works with similar examples
+          #results.loc['Missing values'] = na_count
+          results.columns = results.columns.str.capitalize() + ' (%)'
+          results = tabulate.tabulate(results, headers='keys', tablefmt='orgtbl', showindex='always')
+          results_formatted += '{} \n #+begin_tablenotes \n Missing values: {} \n' \
+              '#+end_tablenotes \n\n'.format(results, na_count)
+      return results_formatted
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[110]:
+:END:
+
+
+#+BEGIN_SRC ipython :session  :exports results :results output
+  def freq_of_multiple_columns1(data):
+      """Conducts frequency analysis (value_counts) to each column of a
+      pandas df and format it as a table suitable for statistical
+      analysis reports.
+
+      Parameters:
+      -----------
+      data: pandas df that may contain multiple columns. This contains the
+            data that will be analyzed.
+
+      Returns: a str that contains the results for all the columns.
+      -------
+
+      Notes:
+      -----
+      1. You need to print the return value of the function in order
+         for it to appear in orgmodes results.
+      2. Uses tabulate for formatting the table.
+      3. value_counts are normalized
+
+      """
+      results_formatted = ''
+      for var in data:
+          results = data[var].value_counts(normalize=True)
+          results = results.round(4).to_frame() * 100
+          print(results.info())
+          na_count = data[var].isna().sum()
+          # Doesn't work (it works with similar examples
+          #results.loc['d'] = na_count
+          print('c', results.columns)
+          if isinstance(results.index, pd.CategoricalIndex):
+              print('i', results.index.categories)
+          results.columns = results.columns.str.capitalize() + ' (%)'
+          results = tabulate.tabulate(results, headers='keys', tablefmt='orgtbl', showindex='always')
+          results_formatted += '{} \n #+begin_tablenotes \n Missing values: {} \n' \
+              '#+end_tablenotes \n\n'.format(results, na_count)
+      return results_formatted
+  d = pd.DataFrame({'a':[1, 2, 3, 4, 5], 'b': [11, 12, 13, 14, 15]})
+  print(freq_of_multiple_columns1(d))
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[111]:
+# output
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 5 entries, 5 to 1
+Data columns (total 1 columns):
+a    5 non-null float64
+dtypes: float64(1)
+memory usage: 80.0 bytes
+None
+c Index(['a'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 5 entries, 15 to 11
+Data columns (total 1 columns):
+b    5 non-null float64
+dtypes: float64(1)
+memory usage: 80.0 bytes
+None
+c Index(['b'], dtype='object')
+|----+---------|
+|    |   A (%) |
+|----+---------|
+|  5 |      20 |
+|  4 |      20 |
+|  3 |      20 |
+|  2 |      20 |
+|  1 |      20 |
+|----+---------|
+ #+begin_tablenotes
+ Missing values: 0
+#+end_tablenotes
+
+|----+---------|
+|    |   B (%) |
+|----+---------|
+| 15 |      20 |
+| 14 |      20 |
+| 13 |      20 |
+| 12 |      20 |
+| 11 |      20 |
+|----+---------|
+ #+begin_tablenotes
+ Missing values: 0
+#+end_tablenotes
+
+
+
+:END:
+
+* Data preparation
+** General
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_dir = '../Data/18-03-2019/'
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[112]:
+:END:
+** Demo data
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_demo_path = '{}Demo_bd_diabetes 18_marzo_19_PVG_REV.xlsx'.format(data_dir)
+  data_demo_master = pd.read_excel(data_demo_path)
+  data_demo_master.info(verbose=True)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[113]:
+# output
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 49 entries, 0 to 48
+Data columns (total 116 columns):
+Code                                   int64
+group                                  object
+demo_ado1_age                          int64
+demo_ado2_gender                       object
+demo_ado3_school                       object
+demo_ado4_grade                        object
+demo_ado5_attention                    object
+demo_ado5_control                      object
+demo_ado5_think                        object
+demo_ado5_organized                    object
+demo_ado5_motivation                   object
+demo_ado5_strategies                   object
+demo_ado5_evaluation                   object
+demo_ado5_remember                     object
+demo_ado5_problemsolving               object
+demo_ado6_people                       object
+demo_ado6_radio                        object
+demo_ado6_television                   object
+demo_ado6_newspaper                    object
+demo_ado6_magazines                    object
+demo_ado6_internet                     object
+demo_ado6_family                       object
+demo_ado6_camps                        object
+demo_ado6_conferences                  object
+demo_ado6_supportgroups                object
+demo_ado6_organizations                object
+demo_ado6_professional                 object
+demo_ado6_professional_description     object
+demo_ado6_other                        object
+demo_ado7_foodintake                   object
+demo_ado7_other                        object
+demo_ado8_vegetable                    object
+demo_ado8_other                        object
+demo_ado9_fruits                       object
+demo_ado9_other                        float64
+demo_ado10_fastfood                    object
+demo_ado10_other                       object
+demo_ado11_excersise                   object
+demo_ado11_other                       object
+demo_ado12_smoking                     object
+demo_ado13_alcohol                     object
+demo_ado14_perception1                 object
+demo_ado15_perception2                 object
+demo_ado16_perception3                 object
+demo_ado16_description                 object
+demo_pad1_age                          int64
+demo_pad2_gender                       object
+demo_pad2_other                        float64
+demo_pad3_residence                    object
+demo_pad4_education                    object
+demo_pad4_other                        object
+demo_pad5_income                       object
+demo_pad6_medplan                      object
+demo_pad7_medpayment                   object
+demo_pad7_other                        object
+demo_pad8_plancoverage                 object
+demo_pad8_other                        object
+demo_pad9_asthma                       object
+demo_pad9_T1D                          object
+demo_pad9_T2D                          object
+demo_pad9_hypertension                 object
+demo_pad9_cardiovascular               object
+demo_pad9_cancer                       object
+demo_pad9_overweight                   object
+demo_pad9_none                         object
+demo_pad9_other                        object
+demo_pad10_people                      object
+demo_pad10_radio                       object
+demo_pad10_television                  object
+demo_pad10_newspaper                   object
+demo_pad10_magazines                   object
+demo_pad10_internet                    object
+demo_pad10_family                      object
+demo_pad10_camps                       object
+demo_pad10_conferences                 object
+demo_pad10_supportgroups               object
+demo_pad10_organizations               object
+demo_pad10_professionals               object
+demo_pad10_professional_description    object
+demo_pad10_other                       object
+demo_pad11_talktherapy                 object
+demo_pad11_occupationaltherapy         object
+demo_pad11_tutoring                    object
+demo_pad11_psytherapy                  object
+demo_pad11_other                       float64
+demo_pad12_talktherapy                 object
+demo_pad12_occutherapy                 object
+demo_pad12_tutoring                    object
+demo_pad12_psytherapy                  object
+demo_pad12_other                       float64
+demo_pad13_psy                         object
+demo_pad13_neuro                       object
+demo_pad13_behavior                    object
+demo_pad14                             object
+demo_pad14_graderepeated               float64
+demo_pad14_description                 float64
+demo_pad15_asthma                      object
+demo_pad15_T1D                         object
+demo_pad15_T2D                         object
+demo_pad15_hypertension                object
+demo_pad15_cardiovascular              object
+demo_pad15_cancer                      object
+demo_pad15_overweight                  object
+demo_pad15_none                        object
+demo_pad15_other                       object
+demo_pad16_ageofdiagnosis              int64
+demo_pad17_timewithdiabetes            object
+demo_pad18_hyperglicemicep             object
+demo_pad18_frequency                   object
+demo_pad18_mostrecent                  object
+demo_pad19_hypoglocemicep              object
+demo_pad19_frequency                   object
+demo_pad19_mostrecent                  object
+demo_pad20_treatment                   object
+demo_pad20_other                       object
+Hb1c                                   object
+dtypes: float64(6), int64(4), object(106)
+memory usage: 44.5+ KB
+
+:END:
+
+
+Clean missing data
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+data_demo_master.replace(999, np.nan, inplace=True)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[114]:
+:END:
+
+** Cognitive data
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_cog_path = '{}Cog_bd_diabetes 7_marzo_19_CDC_RR_PVG_REV.xlsx'.format(data_dir)
+  data_cog_master = pd.read_excel(data_cog_path)
+  data_cog_master.info(verbose=True)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[115]:
+# output
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 49 entries, 0 to 48
+Data columns (total 53 columns):
+Code                    49 non-null int64
+Group                   49 non-null object
+cefi_plan_ado           49 non-null int64
+cefi_att_ado            49 non-null int64
+cefi_er_ado             49 non-null int64
+cefi_flex_ado           49 non-null int64
+cefi_ini_ado            49 non-null object
+cefi_ic_ado             49 non-null int64
+cefi_orga_ado           49 non-null int64
+cefi_wm_ado             49 non-null int64
+cefi_sm_ado             49 non-null int64
+cefi_fs_ado             49 non-null int64
+cefi_ci1_ado            49 non-null int64
+cefi_ci2_ado            49 non-null object
+cefi_nis1_ado           49 non-null int64
+cefi_nis2_ado           49 non-null object
+cefi_pis1_ado           49 non-null int64
+cefi_pis2_ado           49 non-null object
+cefi_noi1_ado           49 non-null int64
+cefi_noi2_ado           49 non-null object
+cas2_pca_ado            49 non-null int64
+cas2_pcb_ado            49 non-null int64
+cas2_mat_ado            49 non-null int64
+cas2_vsr_ado            49 non-null int64
+cas2_ea_ado             49 non-null int64
+cas2_nd_ado             49 non-null int64
+cas2_ws_ado             49 non-null int64
+cas2_sr_ado             49 non-null int64
+cas2_plan_ado           49 non-null int64
+cas2_sim_ado            49 non-null int64
+cas2_att_ado            49 non-null int64
+cas2_succ_ado           49 non-null int64
+cas2_fs_ado             49 non-null int64
+cas2_description_ado    49 non-null object
+cefi_plan_pad           49 non-null int64
+cefi_att_pad            49 non-null int64
+cefi_er_pad             49 non-null int64
+cefi_flex_pad           49 non-null int64
+cefi_ini_pad            49 non-null int64
+cefi_ic_pad             49 non-null int64
+cefi_org_pad            49 non-null int64
+cefi_wm_pad             49 non-null int64
+cefi_sm_pad             49 non-null int64
+cefi_fs_pad             49 non-null int64
+cefi_ci1_pad            49 non-null object
+cefi_ci2_pad            49 non-null object
+cefi_nis1_pad           49 non-null int64
+cefi_nis2_pad           49 non-null object
+cefi_pis1_pad           49 non-null int64
+cefi_pis2_pad           49 non-null object
+cefi_noi1_pad           49 non-null int64
+cefi_noi2_pad           49 non-null object
+filter_$                49 non-null object
+dtypes: int64(40), object(13)
+memory usage: 20.4+ KB
+
+:END:
+
+Clean missing data
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+data_cog_master.replace(999, np.nan, inplace=True)
+data_cog_master.head()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[116]:
+# text/plain
+:    Code     Group  cefi_plan_ado  cefi_att_ado  cefi_er_ado  cefi_flex_ado  \
+: 0     1  Diabetes            104           107           89            108
+: 1     2  Diabetes            124           131          103            129
+: 2     3  Diabetes            112           109          103            103
+: 3     4  Diabetes             87            92          101            120
+: 4     5  Diabetes            104           116           87            108
+:
+:   cefi_ini_ado  cefi_ic_ado  cefi_orga_ado  cefi_wm_ado      ...       \
+: 0           99          100            103          104      ...
+: 1          105          124            111           93      ...
+: 2          117          117            109          110      ...
+: 3          101          100             88          104      ...
+: 4           96          107            107          106      ...
+:
+:    cefi_fs_pad  cefi_ci1_pad  \
+: 0        129.0           110
+: 1         95.0            50
+: 2        101.0           NaN
+: 3        102.0           110
+: 4         92.0           110
+:
+:                                         cefi_ci2_pad cefi_nis1_pad  \
+: 0      Inconsistent response style is not indicated.         122.0
+: 1          Inconsistent response style is indicated.          67.0
+: 2  The consistency index score could not be calcu...           0.0
+: 3      Inconsistent response style is not indicated.          94.0
+: 4  The consistency index score could not be calcu...          85.0
+:
+:                                        cefi_nis2_pad cefi_pis1_pad  \
+: 0  Negative impression response style is not indi...          78.0
+: 1   Negative impression response style is indicated.         130.0
+: 2  Negative impression response style is not indi...         106.0
+: 3  Negative impression response style is not indi...         106.0
+: 4  Negative impression response style is not indi...         115.0
+:
+:                                  cefi_pis2_pad cefi_noi1_pad  \
+: 0  Positive impression style is not indicated.           0.0
+: 1  Positive impression style is not indicated.           0.0
+: 2  Positive impression style is not indicated.           3.0
+: 3  Positive impression style is not indicated.           0.0
+: 4  Positive impression style is not indicated.           0.0
+:
+:                         cefi_noi2_pad      filter_$
+: 0     None of the items were omitted.  Not Selected
+: 1     None of the items were omitted.  Not Selected
+: 2  The rater omitted 3% of the items.  Not Selected
+: 3     None of the items were omitted.  Not Selected
+: 4     None of the items were omitted.  Not Selected
+:
+: [5 rows x 53 columns]
+:END:
+
+* Group comparisons (objective 1)
+** Assumptions
+** Group comparisons
+*** Group comparisons preparation
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  # get data for each group
+  data_control = data_group_comp.loc[
+      data_group_comp['Group'] == 'Control',
+      ['cas2_att_ado', 'cas2_plan_ado']
+  ]
+  data_diabetes = data_group_comp.loc[
+      data_group_comp['Group'] == 'Diabetes',
+      ['cas2_att_ado', 'cas2_plan_ado']
+  ]
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[121]:
+:END:
+
+*** Descriptive stats
+Get only necessary data
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_group_comp = data_cog_master[
+      ['Code',
+       'Group',
+       'cas2_att_ado',
+       'cas2_plan_ado']
+  ]
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[122]:
+:END:
+
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_group_comp_bygroup = data_group_comp.groupby('Group')
+  data_group_comp_bygroup_cog = data_group_comp_bygroup[
+      ['cas2_att_ado',
+       'cas2_plan_ado']]
+  data_group_comp_bygroup_cog.describe().transpose().round(2)
+
+  #+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[123]:
+# text/plain
+: Group                Control  Diabetes
+: cas2_att_ado  count    20.00     28.00
+:               mean     89.45     86.82
+:               std      18.13     13.67
+:               min      61.00     61.00
+:               25%      78.25     75.25
+:               50%      89.50     94.00
+:               75%     100.00     97.75
+:               max     129.00    106.00
+: cas2_plan_ado count    20.00     27.00
+:               mean     89.95     84.19
+:               std      14.94     10.83
+:               min      61.00     61.00
+:               25%      81.25     77.00
+:               50%      94.00     82.00
+:               75%      97.00     91.00
+:               max     119.00    105.00
+:END:
+
+Confidence intervals
+#########
+# Fix:
+#########
+# error in CI, but only when passed as 2-dimen array
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  descr_object_control = DescrStatsW(data_control.dropna(how='all'))
+  CI_cog_control = descr_object_control.tconfint_mean()
+  descr_object_diabetes = DescrStatsW(data_diabetes.dropna(how='all'))
+  CI_cog_diabetes = descr_object_diabetes.tconfint_mean()
+  print(CI_cog_control, CI_cog_diabetes)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[124]:
+# output
+(array([80.96373799, 82.95614896]), array([97.93626201, 96.94385104])) (array([81.52041616,         nan]), array([92.12244098,         nan]))
+
+:END:
+
+*** Group comparisons
+**** Attention
+
+#+BEGIN_SRC ipython  :session  :exports results :results output :display text/plain
+  # get data
+  data_att_control = data_control['cas2_att_ado'].to_numpy()
+  data_att_diabetes = data_diabetes['cas2_att_ado'].to_numpy()
+  print(data_att_control)
+
+  # descr_obj_att_control = DescrStatsW(data_att_control)
+  # descr_obj_att_diabetes = DescrStatsW(data_att_diabetes)
+  # compare_means_att = CompareMeans(descr_obj_att_control,
+  #                                  descr_obj_att_diabetes)
+  # print(compare_means_att.summary())
+
+
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[190]:
+# output
+
+AttributeErrorTraceback (most recent call last)
+<ipython-input-190-b32e7349ed80> in <module>()
+      1 # get data
+----> 2 data_att_control = data_control['cas2_att_ado'].to_numpy()
+      3 data_att_diabetes = data_diabetes['cas2_att_ado'].to_numpy()
+      4 print(data_att_control)
+      5
+
+/usr/local/lib/python3.6/site-packages/pandas/core/generic.py in __getattr__(self, name)
+   3612             if name in self._info_axis:
+   3613                 return self[name]
+-> 3614             return object.__getattribute__(self, name)
+   3615
+   3616     def __setattr__(self, name, value):
+
+AttributeError: 'Series' object has no attribute 'to_numpy'
+:END:
+
+**** Planning
+* Regression analysis (objective 2)

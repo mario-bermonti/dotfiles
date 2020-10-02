@@ -1,0 +1,269 @@
+% Created 2019-04-03 Wed 14:05
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Mario Bermonti Perez}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Mario Bermonti Perez},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 8.3.4)},
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section*{Analysis\hfill{}\textsc{usefulScript}}
+\label{sec:orgheadline6}
+\subsection*{Achievement data}
+\label{sec:orgheadline1}
+\begin{center}
+\begin{tabular}{lr}
+\hline
+ & Gender (\%)\\
+\hline
+F & 65.25\\
+M & 34.75\\
+\hline
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+Missing values: 8
+\end{tablenotes}
+
+\begin{center}
+\begin{tabular}{rr}
+\hline
+ & Age ranges (\%)\\
+\hline
+25-64 & 91.43\\
+18-24 & 8.57\\
+65+ & 0\\
+\hline
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+Missing values: 3
+\end{tablenotes}
+
+\begin{center}
+\begin{tabular}{lr}
+\hline
+ & Enrollment classification fall (\%)\\
+\hline
+Full-time & 98.66\\
+Part-time & 1.34\\
+\hline
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+Missing values: 269
+\end{tablenotes}
+
+\begin{center}
+\begin{tabular}{lr}
+\hline
+ & Enrollment classification spring (\%)\\
+\hline
+Full-time & 98.11\\
+Part-time & 1.89\\
+\hline
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+Missing values: 279
+\end{tablenotes}
+
+\begin{center}
+\begin{tabular}{lr}
+\hline
+ & Enrollment classification first trimester (\%)\\
+\hline
+Full-time & 85.37\\
+Part-time & 14.63\\
+\hline
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+Missing values: 895
+\end{tablenotes}
+
+\begin{center}
+\begin{tabular}{lr}
+\hline
+ & Enrollment classification second trimester (\%)\\
+\hline
+Full-time & 83.9\\
+Part-time & 16.1\\
+\hline
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+Missing values: 900
+\end{tablenotes}
+
+\begin{center}
+\begin{tabular}{lr}
+\hline
+ & Enrollment classification third trimester (\%)\\
+\hline
+Full-time & 78.86\\
+Part-time & 21.14\\
+\hline
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+Missing values: 895
+\end{tablenotes}
+
+\begin{center}
+\begin{tabular}{lr}
+\hline
+ & Enrollment classification summer (\%)\\
+\hline
+Part-time & 85\\
+Full-time & 15\\
+\hline
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+Missing values: 938
+\end{tablenotes}
+
+\begin{center}
+\begin{tabular}{lr}
+\hline
+ & Enrollment classification fall trimester (\%)\\
+\hline
+Full-time & 100\\
+\hline
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+Missing values: 1007
+\end{tablenotes}
+
+\begin{center}
+\begin{tabular}{lr}
+\hline
+ & Enrollment classification spring trimester (\%)\\
+\hline
+Full-time & 100\\
+\hline
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+Missing values: 1009
+\end{tablenotes}
+
+\begin{center}
+\begin{tabular}{lr}
+\hline
+ & Enrollment classification summer trimester (\%)\\
+\hline
+Full-time & 78.86\\
+Part-time & 21.14\\
+\hline
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+Missing values: 895
+\end{tablenotes}
+
+\begin{center}
+\begin{tabular}{lr}
+\hline
+ & Transfer (\%)\\
+\hline
+No & 85.36\\
+YES & 14.64\\
+\hline
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+Missing values: 0
+\end{tablenotes}
+
+\begin{center}
+\begin{tabular}{lr}
+\hline
+ & First generation student (\%)\\
+\hline
+No & 83.93\\
+Yes & 16.07\\
+\hline
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+Missing values: 962
+\end{tablenotes}
+
+\begin{center}
+\begin{tabular}{lr}
+\hline
+ & Ethnicity (\%)\\
+\hline
+Hispanic/Latino & 96.21\\
+Not Hispanic/Latino & 3.37\\
+Unreported & 0.42\\
+\hline
+\end{tabular}
+\end{center}
+\begin{tablenotes}
+Missing values: 69
+\end{tablenotes}
+
+\subsection*{Post-institutional data}
+\label{sec:orgheadline5}
+\subsubsection*{Mean-time to graduation}
+\label{sec:orgheadline2}
+\begin{center}
+\begin{tabular}{lrrrrrr}
+\hline
+ & Count & Mean & Median & SD & Min & Max\\
+\hline
+Time to complete degree & 207 & 3.57 & 4 & 2.1 & 1 & 10\\
+\hline
+\end{tabular}
+\end{center}
+
+
+\subsubsection*{Graduation rates}
+\label{sec:orgheadline3}
+\begin{center}
+\begin{tabular}{r}
+\hline
+Graduation Rates (\%)\\
+\hline
+20.53\\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{Retention rates}
+\label{sec:orgheadline4}
+\begin{center}
+\begin{tabular}{r}
+\hline
+Graduation Rates (\%)\\
+\hline
+95.87\\
+\hline
+\end{tabular}
+\end{center}
+\end{document}

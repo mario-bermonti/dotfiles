@@ -1,0 +1,1355 @@
+* General functions :noexport:UsefulScript:
+#+BEGIN_SRC ipython :session  :exports both :results output
+import tabulate
+import pandas as pd
+import numpy as np
+from scipy import stats
+import statsmodels
+from statsmodels.stats.weightstats import DescrStatsW
+from statsmodels.stats.weightstats import CompareMeans
+from statsmodels.stats.weightstats import ttest_ind
+from statsmodels.stats.multitest import multipletests
+import statsmodels.api as sm
+import seaborn as sns
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[386]:
+:END:
+
+
+
+This function formats df's as orgmode tables.
+#+BEGIN_SRC ipython :session  :exports results :results output
+  def format_as_table(data, showindex='always', series=False):
+      """Returns an orgmode table."""
+      if series:
+          data.name = data.index[0]
+          data = data.to_frame()
+          showindex = False
+      table = tabulate.tabulate(
+          data,
+          headers='keys',
+          tablefmt='orgtbl',
+          showindex=showindex
+      )
+      return table
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[387]:
+:END:
+
+This function formats .describe() results.
+#+BEGIN_SRC ipython :session  :exports results :results output
+  def format_descriptive_stats(data, toframe=False, transpose=False, reduce=False):
+      """Formats the results of descriptive statistics conducted by
+      the pandas' describe method into a format suitable for reporting
+      in stats reports.
+      """
+      data_formatted = data.round(2)
+      if toframe:
+          data_formatted = data_formatted.to_frame()
+      if transpose:
+          data_formatted = data_formatted.transpose()
+      # has to happen here so it SD gets the correct sentence case
+      data_formatted.rename(columns=str.capitalize, inplace=True)
+      data_formatted.rename(columns={'50%': 'Median', 'Std': 'SD'}, inplace=True)
+      if reduce:
+          data_formatted.drop(['Count', '25%', '75%'], axis=1)
+      data_formatted = data_formatted[['Mean', 'Median', 'SD', 'Min', 'Max']]
+      return data_formatted
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[388]:
+:END:
+
+This function formats the results of freq analysis (.value_counts()).
+#+BEGIN_SRC ipython :session  :exports results :results output
+  def freq_of_multiple_columns(data):
+      """Conducts frequency analysis (value_counts) to each column of a
+      pandas df and format it as a table sui
+      table for statistical
+      analysis reports.
+
+      Parameters:
+      -----------
+      data: pandas df that may contain multiple columns. This contains the
+            data that will be analyzed.
+
+      Returns: a str that contains the results for all the columns.
+      -------
+
+      Notes:
+      -----
+      1. You need to print the return value of the function in order
+         for it to appear in orgmode results.
+      2. Uses tabulate for formatting the table.
+      3. value_counts are normalized
+
+      """
+      results_formatted = ''
+      for var in data:
+          results = data[var].value_counts(normalize=True)
+          results = results.round(4).to_frame() * 100
+          na_count = data[var].isna().sum()
+          # Doesn't work (it works with similar examples
+          #results.loc['Missing values'] = na_count
+          results.columns = results.columns.str.capitalize() + ' (%)'
+          results = tabulate.tabulate(results, headers='keys', tablefmt='orgtbl', showindex='always')
+          results_formatted += '{} \n #+begin_tablenotes \n Missing values: {} \n' \
+              '#+end_tablenotes \n\n'.format(results, na_count)
+      return results_formatted
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[389]:
+:END:
+
+
+#+BEGIN_SRC ipython :session  :exports results :results output
+  def freq_of_multiple_columns1(data):
+      """Conducts frequency analysis (value_counts) to each column of a
+      pandas df and format it as a table suitable for statistical
+      analysis reports.
+
+      Parameters:
+      -----------
+      data: pandas df that may contain multiple columns. This contains the
+            data that will be analyzed.
+
+      Returns: a str that contains the results for all the columns.
+      -------
+
+      Notes:
+      -----
+      1. You need to print the return value of the function in order
+         for it to appear in orgmodes results.
+      2. Uses tabulate for formatting the table.
+      3. value_counts are normalized
+
+      """
+      results_formatted = ''
+      for var in data:
+          results = data[var].value_counts(normalize=True)
+          results = results.round(4).to_frame() * 100
+          print(results.info())
+          na_count = data[var].isna().sum()
+          # Doesn't work (it works with similar examples
+          #results.loc['d'] = na_count
+          print('c', results.columns)
+          if isinstance(results.index, pd.CategoricalIndex):
+              print('i', results.index.categories)
+          results.columns = results.columns.str.capitalize() + ' (%)'
+          results = tabulate.tabulate(results, headers='keys', tablefmt='orgtbl', showindex='always')
+          results_formatted += '{} \n #+begin_tablenotes \n Missing values: {} \n' \
+              '#+end_tablenotes \n\n'.format(results, na_count)
+      return results_formatted
+  d = pd.DataFrame({'a':[1, 2, 3, 4, 5], 'b': [11, 12, 13, 14, 15]})
+  print(freq_of_multiple_columns1(d))
+#+END_SRC
+
+#+RESULTS:
+
+:RESULTS:
+# Out[390]:
+# output
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 5 entries, 5 to 1
+Data columns (total 1 columns):
+a    5 non-null float64
+dtypes: float64(1)
+memory usage: 80.0 bytes
+None
+c Index(['a'], dtype='object')
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 5 entries, 15 to 11
+Data columns (total 1 columns):
+b    5 non-null float64
+dtypes: float64(1)
+memory usage: 80.0 bytes
+None
+c Index(['b'], dtype='object')
+|----+---------|
+|    |   A (%) |
+|----+---------|
+|  5 |      20 |
+|  4 |      20 |
+|  3 |      20 |
+|  2 |      20 |
+|  1 |      20 |
+|----+---------|
+ #+begin_tablenotes
+ Missing values: 0
+#+end_tablenotes
+
+|----+---------|
+|    |   B (%) |
+|----+---------|
+| 15 |      20 |
+| 14 |      20 |
+| 13 |      20 |
+| 12 |      20 |
+| 11 |      20 |
+|----+---------|
+ #+begin_tablenotes
+ Missing values: 0
+#+end_tablenotes
+
+
+
+:END:
+
+* Data preparation :noexport:
+** General
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_dir = '../Data/18-03-2019/'
+  fig_dir = '../Results/Figures/'
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[391]:
+:END:
+** Demo data
+
+
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_demo_path = '{}Demo_bd_diabetes 18_marzo_19_PVG_REV.xlsx'.format(data_dir)
+  data_demo_master = pd.read_excel(data_demo_path)
+  data_demo_master.info(verbose=True)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[392]:
+# output
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 49 entries, 0 to 48
+Data columns (total 116 columns):
+Code                                   int64
+group                                  object
+demo_ado1_age                          int64
+demo_ado2_gender                       object
+demo_ado3_school                       object
+demo_ado4_grade                        object
+demo_ado5_attention                    object
+demo_ado5_control                      object
+demo_ado5_think                        object
+demo_ado5_organized                    object
+demo_ado5_motivation                   object
+demo_ado5_strategies                   object
+demo_ado5_evaluation                   object
+demo_ado5_remember                     object
+demo_ado5_problemsolving               object
+demo_ado6_people                       object
+demo_ado6_radio                        object
+demo_ado6_television                   object
+demo_ado6_newspaper                    object
+demo_ado6_magazines                    object
+demo_ado6_internet                     object
+demo_ado6_family                       object
+demo_ado6_camps                        object
+demo_ado6_conferences                  object
+demo_ado6_supportgroups                object
+demo_ado6_organizations                object
+demo_ado6_professional                 object
+demo_ado6_professional_description     object
+demo_ado6_other                        object
+demo_ado7_foodintake                   object
+demo_ado7_other                        object
+demo_ado8_vegetable                    object
+demo_ado8_other                        object
+demo_ado9_fruits                       object
+demo_ado9_other                        float64
+demo_ado10_fastfood                    object
+demo_ado10_other                       object
+demo_ado11_excersise                   object
+demo_ado11_other                       object
+demo_ado12_smoking                     object
+demo_ado13_alcohol                     object
+demo_ado14_perception1                 object
+demo_ado15_perception2                 object
+demo_ado16_perception3                 object
+demo_ado16_description                 object
+demo_pad1_age                          int64
+demo_pad2_gender                       object
+demo_pad2_other                        float64
+demo_pad3_residence                    object
+demo_pad4_education                    object
+demo_pad4_other                        object
+demo_pad5_income                       object
+demo_pad6_medplan                      object
+demo_pad7_medpayment                   object
+demo_pad7_other                        object
+demo_pad8_plancoverage                 object
+demo_pad8_other                        object
+demo_pad9_asthma                       object
+demo_pad9_T1D                          object
+demo_pad9_T2D                          object
+demo_pad9_hypertension                 object
+demo_pad9_cardiovascular               object
+demo_pad9_cancer                       object
+demo_pad9_overweight                   object
+demo_pad9_none                         object
+demo_pad9_other                        object
+demo_pad10_people                      object
+demo_pad10_radio                       object
+demo_pad10_television                  object
+demo_pad10_newspaper                   object
+demo_pad10_magazines                   object
+demo_pad10_internet                    object
+demo_pad10_family                      object
+demo_pad10_camps                       object
+demo_pad10_conferences                 object
+demo_pad10_supportgroups               object
+demo_pad10_organizations               object
+demo_pad10_professionals               object
+demo_pad10_professional_description    object
+demo_pad10_other                       object
+demo_pad11_talktherapy                 object
+demo_pad11_occupationaltherapy         object
+demo_pad11_tutoring                    object
+demo_pad11_psytherapy                  object
+demo_pad11_other                       float64
+demo_pad12_talktherapy                 object
+demo_pad12_occutherapy                 object
+demo_pad12_tutoring                    object
+demo_pad12_psytherapy                  object
+demo_pad12_other                       float64
+demo_pad13_psy                         object
+demo_pad13_neuro                       object
+demo_pad13_behavior                    object
+demo_pad14                             object
+demo_pad14_graderepeated               float64
+demo_pad14_description                 float64
+demo_pad15_asthma                      object
+demo_pad15_T1D                         object
+demo_pad15_T2D                         object
+demo_pad15_hypertension                object
+demo_pad15_cardiovascular              object
+demo_pad15_cancer                      object
+demo_pad15_overweight                  object
+demo_pad15_none                        object
+demo_pad15_other                       object
+demo_pad16_ageofdiagnosis              int64
+demo_pad17_timewithdiabetes            object
+demo_pad18_hyperglicemicep             object
+demo_pad18_frequency                   object
+demo_pad18_mostrecent                  object
+demo_pad19_hypoglocemicep              object
+demo_pad19_frequency                   object
+demo_pad19_mostrecent                  object
+demo_pad20_treatment                   object
+demo_pad20_other                       object
+Hb1c                                   object
+dtypes: float64(6), int64(4), object(106)
+memory usage: 44.5+ KB
+
+:END:
+
+
+Clean missing data
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+data_demo_master.replace([999, '#NULL!'], np.nan, inplace=True)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[393]:
+:END:
+
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_demo_relevant = data_demo_master[
+      ['Code',
+       'group',
+       'Hb1c',
+       'demo_pad16_ageofdiagnosis']]
+  data_demo_relevant.head()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[394]:
+# text/plain
+:    Code     group  Hb1c  demo_pad16_ageofdiagnosis
+: 0     1  Diabetes   7.0                          2
+: 1     2  Diabetes   6.6                         10
+: 2     3  Diabetes   8.1                          8
+: 3     4  Diabetes   5.6                         11
+: 4     5  Diabetes   NaN                         11
+:END:
+
+** Cognitive data
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_cog_path = '{}Cog_bd_diabetes 7_marzo_19_CDC_RR_PVG_REV.xlsx'.format(data_dir)
+  data_cog_master = pd.read_excel(data_cog_path)
+  data_cog_master.info(verbose=True)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[395]:
+# output
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 49 entries, 0 to 48
+Data columns (total 53 columns):
+Code                    49 non-null int64
+Group                   49 non-null object
+cefi_plan_ado           49 non-null int64
+cefi_att_ado            49 non-null int64
+cefi_er_ado             49 non-null int64
+cefi_flex_ado           49 non-null int64
+cefi_ini_ado            49 non-null object
+cefi_ic_ado             49 non-null int64
+cefi_orga_ado           49 non-null int64
+cefi_wm_ado             49 non-null int64
+cefi_sm_ado             49 non-null int64
+cefi_fs_ado             49 non-null int64
+cefi_ci1_ado            49 non-null int64
+cefi_ci2_ado            49 non-null object
+cefi_nis1_ado           49 non-null int64
+cefi_nis2_ado           49 non-null object
+cefi_pis1_ado           49 non-null int64
+cefi_pis2_ado           49 non-null object
+cefi_noi1_ado           49 non-null int64
+cefi_noi2_ado           49 non-null object
+cas2_pca_ado            49 non-null int64
+cas2_pcb_ado            49 non-null int64
+cas2_mat_ado            49 non-null int64
+cas2_vsr_ado            49 non-null int64
+cas2_ea_ado             49 non-null int64
+cas2_nd_ado             49 non-null int64
+cas2_ws_ado             49 non-null int64
+cas2_sr_ado             49 non-null int64
+cas2_plan_ado           49 non-null int64
+cas2_sim_ado            49 non-null int64
+cas2_att_ado            49 non-null int64
+cas2_succ_ado           49 non-null int64
+cas2_fs_ado             49 non-null int64
+cas2_description_ado    49 non-null object
+cefi_plan_pad           49 non-null int64
+cefi_att_pad            49 non-null int64
+cefi_er_pad             49 non-null int64
+cefi_flex_pad           49 non-null int64
+cefi_ini_pad            49 non-null int64
+cefi_ic_pad             49 non-null int64
+cefi_org_pad            49 non-null int64
+cefi_wm_pad             49 non-null int64
+cefi_sm_pad             49 non-null int64
+cefi_fs_pad             49 non-null int64
+cefi_ci1_pad            49 non-null object
+cefi_ci2_pad            49 non-null object
+cefi_nis1_pad           49 non-null int64
+cefi_nis2_pad           49 non-null object
+cefi_pis1_pad           49 non-null int64
+cefi_pis2_pad           49 non-null object
+cefi_noi1_pad           49 non-null int64
+cefi_noi2_pad           49 non-null object
+filter_$                49 non-null object
+dtypes: int64(40), object(13)
+memory usage: 20.4+ KB
+
+:END:
+
+Clean missing data
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+data_cog_master.replace(999, np.nan, inplace=True)
+data_cog_master.head()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[396]:
+# text/plain
+:    Code     Group  cefi_plan_ado  cefi_att_ado  cefi_er_ado  cefi_flex_ado  \
+: 0     1  Diabetes            104           107           89            108
+: 1     2  Diabetes            124           131          103            129
+: 2     3  Diabetes            112           109          103            103
+: 3     4  Diabetes             87            92          101            120
+: 4     5  Diabetes            104           116           87            108
+:
+:   cefi_ini_ado  cefi_ic_ado  cefi_orga_ado  cefi_wm_ado  ...  cefi_fs_pad  \
+: 0           99          100            103          104  ...        129.0
+: 1          105          124            111           93  ...         95.0
+: 2          117          117            109          110  ...        101.0
+: 3          101          100             88          104  ...        102.0
+: 4           96          107            107          106  ...         92.0
+:
+:    cefi_ci1_pad                                       cefi_ci2_pad  \
+: 0           110      Inconsistent response style is not indicated.
+: 1            50          Inconsistent response style is indicated.
+: 2           NaN  The consistency index score could not be calcu...
+: 3           110      Inconsistent response style is not indicated.
+: 4           110  The consistency index score could not be calcu...
+:
+:   cefi_nis1_pad                                      cefi_nis2_pad  \
+: 0         122.0  Negative impression response style is not indi...
+: 1          67.0   Negative impression response style is indicated.
+: 2           0.0  Negative impression response style is not indi...
+: 3          94.0  Negative impression response style is not indi...
+: 4          85.0  Negative impression response style is not indi...
+:
+:   cefi_pis1_pad                                cefi_pis2_pad cefi_noi1_pad  \
+: 0          78.0  Positive impression style is not indicated.           0.0
+: 1         130.0  Positive impression style is not indicated.           0.0
+: 2         106.0  Positive impression style is not indicated.           3.0
+: 3         106.0  Positive impression style is not indicated.           0.0
+: 4         115.0  Positive impression style is not indicated.           0.0
+:
+:                         cefi_noi2_pad      filter_$
+: 0     None of the items were omitted.  Not Selected
+: 1     None of the items were omitted.  Not Selected
+: 2  The rater omitted 3% of the items.  Not Selected
+: 3     None of the items were omitted.  Not Selected
+: 4     None of the items were omitted.  Not Selected
+:
+: [5 rows x 53 columns]
+:END:
+
+
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_cog_relevant = data_cog_master[
+        ['Code',
+         'cas2_att_ado',
+         'cas2_plan_ado']]
+
+  data_cog_relevant.head()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[397]:
+# text/plain
+:    Code  cas2_att_ado  cas2_plan_ado
+: 0     1          70.0           82.0
+: 1     2          67.0           88.0
+: 2     3          73.0           68.0
+: 3     4          73.0           91.0
+: 4     5         100.0           82.0
+:END:
+
+* Group comparisons (objective 1)
+** Notes
+There are differences between the results of Mann-Whitnes and t tests.
+** Assumptions
+These are in SPSS format.
+** Group comparisons
+*** Group comparisons preparation :noexport:
+Get only necessary data
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_group_comp = data_cog_master[
+      ['Code',
+       'Group',
+       'cas2_att_ado',
+       'cas2_plan_ado']
+  ]
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[398]:
+:END:
+
+Organize data by variable (ie, process with all groups).
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  # get data for each group
+  data_att = data_group_comp.loc[:,
+                                 ['Code', 'Group', 'cas2_att_ado']]
+  data_plan = data_group_comp.loc[:,
+                                 ['Code', 'Group', 'cas2_plan_ado']]
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[399]:
+:END:
+
+
+*** Descriptive stats
+**** Tables
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_group_comp_bygroup = data_group_comp.groupby('Group')
+  data_group_comp_bygroup_cog = data_group_comp_bygroup[
+      ['cas2_att_ado',
+       'cas2_plan_ado']]
+  data_group_comp_bygroup_cog.describe().transpose().round(2)
+  #+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[400]:
+# text/plain
+: Group                Control  Diabetes
+: cas2_att_ado  count    20.00     28.00
+:               mean     89.45     86.82
+:               std      18.13     13.67
+:               min      61.00     61.00
+:               25%      78.25     75.25
+:               50%      89.50     94.00
+:               75%     100.00     97.75
+:               max     129.00    106.00
+: cas2_plan_ado count    20.00     27.00
+:               mean     89.95     84.19
+:               std      14.94     10.83
+:               min      61.00     61.00
+:               25%      81.25     77.00
+:               50%      94.00     82.00
+:               75%      97.00     91.00
+:               max     119.00    105.00
+:END:
+
+Confidence intervals
+#+BEGIN_SRC ipython :session :exports results :results output :display text/plain
+  # get att data
+  data_att_diabetes = data_att.loc[data_att['Group'] == 'Diabetes',
+                                  'cas2_att_ado']
+  data_att_control = data_att.loc[data_att['Group'] == 'Control',
+                                  'cas2_att_ado']
+
+  # get plan data
+  data_plan_diabetes = data_plan.loc[data_plan['Group'] == 'Diabetes',
+                                  'cas2_plan_ado']
+  data_plan_control = data_plan.loc[data_plan['Group'] == 'Control',
+                                  'cas2_plan_ado']
+
+  ci_object_att_diabetes = DescrStatsW(data_att_diabetes.dropna(how='all'))
+  ci_att_diabetes = ci_object_att_diabetes.tconfint_mean()
+
+  ci_object_att_control = DescrStatsW(data_att_control.dropna(how='all'))
+  ci_att_control = ci_object_control_att.tconfint_mean()
+
+  ci_object_plan_diabetes = DescrStatsW(data_plan_diabetes.dropna(how='all'))
+  ci_plan_diabetes = ci_object_plan_diabetes.tconfint_mean()
+
+  ci_object_plan_control = DescrStatsW(data_plan_control.dropna(how='all'))
+  ci_plan_control = ci_object_plan_control.tconfint_mean()
+
+  print('CI att control: ', ci_att_control)
+  print('CI att diabetes: ', ci_att_diabetes)
+  print('CI plan control: ', ci_plan_control)
+  print('CI plan diabetes: ', ci_plan_diabetes)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[452]:
+# output
+CI att control:  (80.96373799192098, 97.93626200807903)
+CI att diabetes:  (81.520416163921, 92.12244097893614)
+CI plan control:  (82.9561489587604, 96.94385104123961)
+CI plan diabetes:  (79.90198962746142, 88.46838074290896)
+
+:END:
+
+**** Figures
+***** Attention
+#+BEGIN_SRC ipython :session  :export results :display image/png
+  boxplot_att = sns.boxplot(x='Group', y='cas2_att_ado', data=data_att)
+
+  boxplot_att_fig = boxplot_att.get_figure()
+  boxplot_att_fig_path = '{}boxplot_att_bygroup.jpg'.format(fig_dir)
+  boxplot_att_fig.savefig(boxplot_att_fig_path)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[402]:
+# image/png
+[[file:obipy-resources/2a184861c8c9b35cf32116fe352ae791-7XH2J5.png]]
+:END:
+
+
+***** Planning
+#+BEGIN_SRC ipython :session  :export results :display image/png
+  boxplot_plan = sns.boxplot(x='Group', y='cas2_plan_ado', data=data_plan)
+  boxplot_plan_fig = boxplot_plan.get_figure()
+  boxplot_plan_fig_path = '{}boxplot_plan_bygroup.jpg'.format(fig_dir)
+  boxplot_plan_fig.savefig(boxplot_plan_fig_path)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[403]:
+# image/png
+[[file:obipy-resources/2a184861c8c9b35cf32116fe352ae791-ycmLEj.png]]
+:END:
+
+
+
+*** Group comparisons
+**** Attention
+
+#+BEGIN_SRC ipython  :session  :exports results :results output :display text/plain
+  # get data
+  data_att_control = data_att.loc[data_att['Group'] == 'Control', 'cas2_att_ado']
+  data_att_diabetes = data_att.loc[data_att['Group'] == 'Diabetes', 'cas2_att_ado']
+
+  descr_obj_att_control = DescrStatsW(data_att_control.dropna(how='all'))
+  descr_obj_att_diabetes = DescrStatsW(data_att_diabetes.dropna(how='all'))
+  compare_means_att = CompareMeans(descr_obj_att_control,
+                                   descr_obj_att_diabetes)
+
+  results_att_comp = compare_means_att.summary(usevar='unequal')
+  print(results_att_comp)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[404]:
+# output
+                          Test for equality of means
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+subset #1      2.6286      4.808      0.547      0.588      -7.146      12.403
+==============================================================================
+
+:END:
+
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+stats.mannwhitneyu(data_att_control, data_att_diabetes)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[405]:
+# text/plain
+: MannwhitneyuResult(statistic=256.5, pvalue=0.226655059160439)
+:END:
+
+
+**** Planning
+#+BEGIN_SRC ipython  :session  :exports results :results output :display text/plain
+  # get data
+  data_plan_control = data_plan.loc[data_plan['Group'] == 'Control',
+                                    'cas2_plan_ado']
+  data_plan_diabetes = data_plan.loc[data_plan['Group'] == 'Diabetes',
+                                     'cas2_plan_ado']
+
+  descr_obj_plan_control = DescrStatsW(data_plan_control.dropna(how='all'))
+  descr_obj_plan_diabetes = DescrStatsW(data_plan_diabetes.dropna(how='all'))
+  compare_means_plan = CompareMeans(descr_obj_plan_control,
+                                   descr_obj_plan_diabetes)
+
+  results_plan_comp = compare_means_plan.summary(usevar='unequal')
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[406]:
+:END:
+
+#+BEGIN_SRC ipython :session :exports results :results output :display text/plain
+stats.mannwhitneyu(data_plan_control, data_plan_diabetes)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[407]:
+# text/plain
+: MannwhitneyuResult(statistic=213.5, pvalue=0.052311815567260174)
+:END:
+
+*** Multiple comparisons corrections
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  results_comp_pvalues = [float(results_att_comp.data[1][4]),
+                          float(results_plan_comp.data[1][4])]
+  results_comp_pvalues_cor = multipletests(results_comp_pvalues)[1]
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[408]:
+:END:
+
+Corrected pvalues for group comparisons:
+Attention: src_ipython[:session]{results_comp_pvalues[0]} {{{results(0.588)}}}
+Planning: src_ipython[:session]{results_comp_pvalues[1]} {{{results(0.153)}}}
+
+* Regression analysis (objective 2)
+** Regression analysis preparation
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  data_reg = data_demo_relevant.copy()
+  data_reg = data_reg.loc[data_reg['group'] == 'Diabetes', :]
+  data_reg = pd.merge(data_reg,
+           data_cog_relevant,
+           how='outer',
+           on='Code')
+
+  data_reg.head()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[411]:
+# text/plain
+:    Code     group  Hb1c  demo_pad16_ageofdiagnosis  cas2_att_ado  \
+: 0     1  Diabetes   7.0                        2.0          70.0
+: 1     2  Diabetes   6.6                       10.0          67.0
+: 2     3  Diabetes   8.1                        8.0          73.0
+: 3     4  Diabetes   5.6                       11.0          73.0
+: 4     5  Diabetes   NaN                       11.0         100.0
+:
+:    cas2_plan_ado
+: 0           82.0
+: 1           88.0
+: 2           68.0
+: 3           91.0
+: 4           82.0
+:END:
+
+** Assumptions
+*** Predictor: Hb1c
+The boxplot below shows that there are 3 outliers.
+***** Boxplot
+#+BEGIN_SRC ipython :session  :export results :display image/png
+  boxplot_h1bc = sns.boxplot(y='Hb1c',
+  data=data_reg)
+  boxplot_h1bc_fig = boxplot_h1bc.get_figure()
+  boxplot_h1bc_fig_path = '{}boxplot_h1bc_bygroup.jpg'.format(fig_dir)
+  boxplot_h1bc_fig.savefig(boxplot_h1bc_fig_path)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[499]:
+# image/png
+[[file:obipy-resources/2a184861c8c9b35cf32116fe352ae791-smqclp.png]]
+:END:
+
+***** Attention
+#+BEGIN_SRC ipython :session  :export results :display image/png
+  fig_scatter_hb1c_att = sns.regplot(x='Hb1c',
+              y='cas2_att_ado',
+              data=data_reg)
+  fig_scatter_hb1c_att = fig_scatter_hb1c_att.get_figure()
+  fig_path = '{}scatterdot_hb1c_att.jpg'.format(fig_dir)
+  fig_scatter_hb1c_att.savefig(fig_path)
+
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[413]:
+# output
+/usr/local/lib/python3.6/site-packages/scipy/stats/stats.py:1706: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
+
+# image/png
+[[file:obipy-resources/2a184861c8c9b35cf32116fe352ae791-FZTsl7.png]]
+:END:
+
+With outliers removed
+#+BEGIN_SRC ipython  :session  :exports results
+  data_reg_h_low = data_reg.query('Hb1c < 10')
+  sns.regplot(x='Hb1c',
+              y='cas2_att_ado',
+              data=data_reg_h_low)
+
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[414]:
+# output
+/usr/local/lib/python3.6/site-packages/scipy/stats/stats.py:1706: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
+
+
+
+# text/plain
+: <Figure size 432x288 with 1 Axes>
+
+# image/png
+[[file:obipy-resources/2a184861c8c9b35cf32116fe352ae791-IWXrEJ.png]]
+:END:
+
+***** Planning
+#+BEGIN_SRC ipython :session  :exports results :display image/png
+  fig_scplaner_hb1c_plan = sns.regplot(x='Hb1c',
+              y='cas2_plan_ado',
+              data=data_reg)
+  fig_scplaner_hb1c_plan = fig_scplaner_hb1c_plan.get_figure()
+  fig_path = '{}scatterdot_hb1c_plan.jpg'.format(fig_dir)
+  fig_scplaner_hb1c_plan.savefig(fig_path)
+
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[415]:
+# output
+/usr/local/lib/python3.6/site-packages/scipy/stats/stats.py:1706: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
+
+# image/png
+[[file:obipy-resources/2a184861c8c9b35cf32116fe352ae791-oWW8k5.png]]
+:END:
+
+#+BEGIN_SRC ipython  :session  :exports results :display image/png
+  data_reg_h_low = data_reg.query('Hb1c < 10')
+  sns.regplot(x='Hb1c',
+              y='cas2_plan_ado',
+              data=data_reg_h_low)
+
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[431]:
+# output
+/usr/local/lib/python3.6/site-packages/scipy/stats/stats.py:1706: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
+
+# image/png
+[[file:obipy-resources/2a184861c8c9b35cf32116fe352ae791-8oNAm0.png]]
+:END:
+
+*** Predictor: Age of onset
+The boxplot below shows that there are 3 outliers.
+***** Boxplot
+#+BEGIN_SRC ipython :session  :exports results :display image/png
+  boxplot_ageofonset = sns.boxplot(y='demo_pad16_ageofdiagnosis',
+  data=data_reg)
+  boxplot_ageofonset_fig = boxplot_ageofonset.get_figure()
+  boxplot_ageofonset_fig_path = '{}boxplot_ageofonset.jpg'.format(fig_dir)
+  boxplot_ageofonset_fig.savefig(boxplot_ageofonset_fig_path)
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[501]:
+# image/png
+[[file:obipy-resources/2a184861c8c9b35cf32116fe352ae791-0Sqvxb.png]]
+:END:
+
+***** Attention
+#+BEGIN_SRC ipython :session  :export results :display image/png
+  fig_scatter_hb1c_att = sns.regplot(x='demo_pad16_ageofdiagnosis',
+              y='cas2_att_ado',
+              data=data_reg)
+  fig_scatter_hb1c_att = fig_scatter_hb1c_att.get_figure()
+  fig_path = '{}scatterdot_ageofonset_att.jpg'.format(fig_dir)
+  fig_scatter_hb1c_att.savefig(fig_path)
+
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[418]:
+# output
+/usr/local/lib/python3.6/site-packages/scipy/stats/stats.py:1706: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
+
+# image/png
+[[file:obipy-resources/2a184861c8c9b35cf32116fe352ae791-yUUWqG.png]]
+:END:
+
+***** Planning
+#+BEGIN_SRC ipython :session  :export results :display image/png
+  fig_scplaner_hb1c_plan = sns.regplot(x='demo_pad16_ageofdiagnosis',
+              y='cas2_plan_ado',
+              data=data_reg)
+  fig_scplaner_hb1c_plan = fig_scplaner_hb1c_plan.get_figure()
+  fig_path = '{}scatterdot_ageofonset_plan.jpg'.format(fig_dir)
+  fig_scplaner_hb1c_plan.savefig(fig_path)
+
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[419]:
+# output
+/usr/local/lib/python3.6/site-packages/scipy/stats/stats.py:1706: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
+
+# image/png
+[[file:obipy-resources/2a184861c8c9b35cf32116fe352ae791-N1Citd.png]]
+:END:
+
+** Descriptive stats
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+data_reg.describe().transpose().round(2).drop('Code')
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[420]:
+# text/plain
+:                            count   mean    std   min    25%   50%     75%  \
+: Hb1c                        24.0   8.02   1.87   5.6   6.88   7.7    8.25
+: demo_pad16_ageofdiagnosis   28.0   8.71   3.80   1.0   6.75   9.5   11.00
+: cas2_att_ado                48.0  87.92  15.56  61.0  76.00  92.5  100.00
+: cas2_plan_ado               47.0  86.64  12.92  61.0  78.00  85.0   97.00
+:
+:                              max
+: Hb1c                        12.0
+: demo_pad16_ageofdiagnosis   15.0
+: cas2_att_ado               129.0
+: cas2_plan_ado              119.0
+:END:
+
+** Regression model: Hb1c
+*** Attention
+**** Correlation analysis
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+data_reg[['Hb1c', 'cas2_att_ado']].corr()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[421]:
+# text/plain
+:                   Hb1c  cas2_att_ado
+: Hb1c          1.000000      0.520097
+: cas2_att_ado  0.520097      1.000000
+:END:
+**** All cases
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  hb1c_model_x = sm.add_constant(data_reg['Hb1c'])
+  hb1c_model_y = data_reg['cas2_att_ado']
+  model_hb1c = sm.OLS(hb1c_model_y,
+         hb1c_model_x,
+         missing='drop')
+  results_hb1c = model_hb1c.fit()
+  results_hb1c.summary()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[422]:
+# output
+/usr/local/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2389: FutureWarning: Method .ptp is deprecated and will be removed in a future version. Use numpy.ptp instead.
+  return ptp(axis=axis, out=out, **kwargs)
+
+# text/plain
+: <class 'statsmodels.iolib.summary.Summary'>
+: """
+:                             OLS Regression Results
+: ==============================================================================
+: Dep. Variable:           cas2_att_ado   R-squared:                       0.271
+: Model:                            OLS   Adj. R-squared:                  0.237
+: Method:                 Least Squares   F-statistic:                     8.158
+: Date:                Mon, 13 May 2019   Prob (F-statistic):            0.00918
+: Time:                        14:50:36   Log-Likelihood:                -91.430
+: No. Observations:                  24   AIC:                             186.9
+: Df Residuals:                      22   BIC:                             189.2
+: Df Model:                           1
+: Covariance Type:            nonrobust
+: ==============================================================================
+:                  coef    std err          t      P>|t|      [0.025      0.975]
+: ------------------------------------------------------------------------------
+: const         57.1671     10.488      5.451      0.000      35.416      78.918
+: Hb1c           3.6408      1.275      2.856      0.009       0.997       6.284
+: ==============================================================================
+: Omnibus:                        0.719   Durbin-Watson:                   1.662
+: Prob(Omnibus):                  0.698   Jarque-Bera (JB):                0.682
+: Skew:                          -0.060   Prob(JB):                        0.711
+: Kurtosis:                       2.183   Cond. No.                         37.6
+: ==============================================================================
+:
+: Warnings:
+: [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+: """
+:END:
+
+**** Outliers removed
+This model doesn't fit the data well at all.
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  hb1c_model_x = sm.add_constant(data_reg_h_low['Hb1c'])
+  hb1c_model_y = data_reg_h_low['cas2_att_ado']
+  model_hb1c = sm.OLS(hb1c_model_y,
+         hb1c_model_x,
+         missing='drop')
+  results_hb1c = model_hb1c.fit()
+  results_hb1c.summary()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[423]:
+# output
+/usr/local/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2389: FutureWarning: Method .ptp is deprecated and will be removed in a future version. Use numpy.ptp instead.
+  return ptp(axis=axis, out=out, **kwargs)
+
+# text/plain
+: <class 'statsmodels.iolib.summary.Summary'>
+: """
+:                             OLS Regression Results
+: ==============================================================================
+: Dep. Variable:           cas2_att_ado   R-squared:                       0.051
+: Model:                            OLS   Adj. R-squared:                 -0.002
+: Method:                 Least Squares   F-statistic:                    0.9598
+: Date:                Mon, 13 May 2019   Prob (F-statistic):              0.340
+: Time:                        14:50:37   Log-Likelihood:                -77.772
+: No. Observations:                  20   AIC:                             159.5
+: Df Residuals:                      18   BIC:                             161.5
+: Df Model:                           1
+: Covariance Type:            nonrobust
+: ==============================================================================
+:                  coef    std err          t      P>|t|      [0.025      0.975]
+: ------------------------------------------------------------------------------
+: const         60.9477     23.340      2.611      0.018      11.912     109.984
+: Hb1c           3.1133      3.178      0.980      0.340      -3.563       9.790
+: ==============================================================================
+: Omnibus:                        2.360   Durbin-Watson:                   1.676
+: Prob(Omnibus):                  0.307   Jarque-Bera (JB):                1.108
+: Skew:                          -0.042   Prob(JB):                        0.575
+: Kurtosis:                       1.850   Cond. No.                         62.7
+: ==============================================================================
+:
+: Warnings:
+: [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+: """
+:END:
+
+*** Planning
+**** Correlation analysis
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+data_reg[['Hb1c', 'cas2_plan_ado']].corr()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[424]:
+# text/plain
+:                    Hb1c  cas2_plan_ado
+: Hb1c           1.000000       0.147555
+: cas2_plan_ado  0.147555       1.000000
+:END:
+
+**** All cases
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  hb1c_model_x = sm.add_constant(data_reg['Hb1c'])
+  hb1c_model_y = data_reg['cas2_plan_ado']
+  model_hb1c = sm.OLS(hb1c_model_y,
+         hb1c_model_x,
+         missing='drop')
+  results_hb1c = model_hb1c.fit()
+  results_hb1c.summary()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[425]:
+# output
+/usr/local/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2389: FutureWarning: Method .ptp is deprecated and will be removed in a future version. Use numpy.ptp instead.
+  return ptp(axis=axis, out=out, **kwargs)
+
+# text/plain
+: <class 'statsmodels.iolib.summary.Summary'>
+: """
+:                             OLS Regression Results
+: ==============================================================================
+: Dep. Variable:          cas2_plan_ado   R-squared:                       0.022
+: Model:                            OLS   Adj. R-squared:                 -0.025
+: Method:                 Least Squares   F-statistic:                    0.4674
+: Date:                Mon, 13 May 2019   Prob (F-statistic):              0.502
+: Time:                        14:50:38   Log-Likelihood:                -86.045
+: No. Observations:                  23   AIC:                             176.1
+: Df Residuals:                      21   BIC:                             178.4
+: Df Model:                           1
+: Covariance Type:            nonrobust
+: ==============================================================================
+:                  coef    std err          t      P>|t|      [0.025      0.975]
+: ------------------------------------------------------------------------------
+: const         78.4226      9.813      7.992      0.000      58.016      98.830
+: Hb1c           0.8161      1.194      0.684      0.502      -1.666       3.299
+: ==============================================================================
+: Omnibus:                        0.121   Durbin-Watson:                   1.893
+: Prob(Omnibus):                  0.941   Jarque-Bera (JB):                0.344
+: Skew:                           0.000   Prob(JB):                        0.842
+: Kurtosis:                       2.401   Cond. No.                         36.8
+: ==============================================================================
+:
+: Warnings:
+: [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+: """
+:END:
+
+**** Outliers removed
+This model doesn't fit the data well at all.
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  hb1c_model_x = sm.add_constant(data_reg_h_low['Hb1c'])
+  hb1c_model_y = data_reg_h_low['cas2_plan_ado']
+  model_hb1c = sm.OLS(hb1c_model_y,
+         hb1c_model_x,
+         missing='drop')
+  results_hb1c = model_hb1c.fit()
+  results_hb1c.summary()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[426]:
+# output
+/usr/local/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2389: FutureWarning: Method .ptp is deprecated and will be removed in a future version. Use numpy.ptp instead.
+  return ptp(axis=axis, out=out, **kwargs)
+/usr/local/lib/python3.6/site-packages/scipy/stats/stats.py:1390: UserWarning: kurtosistest only valid for n>=20 ... continuing anyway, n=19
+  "anyway, n=%i" % int(n))
+
+# text/plain
+: <class 'statsmodels.iolib.summary.Summary'>
+: """
+:                             OLS Regression Results
+: ==============================================================================
+: Dep. Variable:          cas2_plan_ado   R-squared:                       0.015
+: Model:                            OLS   Adj. R-squared:                 -0.043
+: Method:                 Least Squares   F-statistic:                    0.2581
+: Date:                Mon, 13 May 2019   Prob (F-statistic):              0.618
+: Time:                        14:50:39   Log-Likelihood:                -67.930
+: No. Observations:                  19   AIC:                             139.9
+: Df Residuals:                      17   BIC:                             141.7
+: Df Model:                           1
+: Covariance Type:            nonrobust
+: ==============================================================================
+:                  coef    std err          t      P>|t|      [0.025      0.975]
+: ------------------------------------------------------------------------------
+: const         93.2099     17.735      5.256      0.000      55.793     130.627
+: Hb1c          -1.2368      2.434     -0.508      0.618      -6.373       3.900
+: ==============================================================================
+: Omnibus:                        0.509   Durbin-Watson:                   2.275
+: Prob(Omnibus):                  0.775   Jarque-Bera (JB):                0.604
+: Skew:                           0.275   Prob(JB):                        0.739
+: Kurtosis:                       2.321   Cond. No.                         62.8
+: ==============================================================================
+:
+: Warnings:
+: [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+: """
+:END:
+
+
+** Regression model: Age of onset
+*** Attention
+**** Correlation analysis
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+data_reg[['demo_pad16_ageofdiagnosis', 'cas2_att_ado']].corr()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[427]:
+# text/plain
+:                            demo_pad16_ageofdiagnosis  cas2_att_ado
+: demo_pad16_ageofdiagnosis                    1.00000       0.01253
+: cas2_att_ado                                 0.01253       1.00000
+:END:
+**** All cases
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  demo_pad16_ageofdiagnosis_model_x = sm.add_constant(data_reg['demo_pad16_ageofdiagnosis'])
+  demo_pad16_ageofdiagnosis_model_y = data_reg['cas2_att_ado']
+  model_demo_pad16_ageofdiagnosis = sm.OLS(demo_pad16_ageofdiagnosis_model_y,
+         demo_pad16_ageofdiagnosis_model_x,
+         missing='drop')
+  results_demo_pad16_ageofdiagnosis = model_demo_pad16_ageofdiagnosis.fit()
+  results_demo_pad16_ageofdiagnosis.summary()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[428]:
+# output
+/usr/local/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2389: FutureWarning: Method .ptp is deprecated and will be removed in a future version. Use numpy.ptp instead.
+  return ptp(axis=axis, out=out, **kwargs)
+
+# text/plain
+: <class 'statsmodels.iolib.summary.Summary'>
+: """
+:                             OLS Regression Results
+: ==============================================================================
+: Dep. Variable:           cas2_att_ado   R-squared:                       0.000
+: Model:                            OLS   Adj. R-squared:                 -0.038
+: Method:                 Least Squares   F-statistic:                  0.004083
+: Date:                Mon, 13 May 2019   Prob (F-statistic):              0.950
+: Time:                        14:50:40   Log-Likelihood:                -112.45
+: No. Observations:                  28   AIC:                             228.9
+: Df Residuals:                      26   BIC:                             231.6
+: Df Model:                           1
+: Covariance Type:            nonrobust
+: =============================================================================================
+:                                 coef    std err          t      P>|t|      [0.025      0.975]
+: ---------------------------------------------------------------------------------------------
+: const                        86.4285      6.689     12.921      0.000      72.679     100.178
+: demo_pad16_ageofdiagnosis     0.0451      0.706      0.064      0.950      -1.405       1.496
+: ==============================================================================
+: Omnibus:                        5.946   Durbin-Watson:                   1.993
+: Prob(Omnibus):                  0.051   Jarque-Bera (JB):                2.491
+: Skew:                          -0.415   Prob(JB):                        0.288
+: Kurtosis:                       1.797   Cond. No.                         24.3
+: ==============================================================================
+:
+: Warnings:
+: [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+: """
+:END:
+
+*** Planning
+**** Correlation analysis
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+data_reg[['demo_pad16_ageofdiagnosis', 'cas2_plan_ado']].corr()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[429]:
+# text/plain
+:                            demo_pad16_ageofdiagnosis  cas2_plan_ado
+: demo_pad16_ageofdiagnosis                   1.000000      -0.048183
+: cas2_plan_ado                              -0.048183       1.000000
+:END:
+
+**** All cases
+#+BEGIN_SRC ipython :session  :exports results :results output :display text/plain
+  demo_pad16_ageofdiagnosis_model_x = sm.add_constant(data_reg['demo_pad16_ageofdiagnosis'])
+  demo_pad16_ageofdiagnosis_model_y = data_reg['cas2_plan_ado']
+  model_demo_pad16_ageofdiagnosis = sm.OLS(demo_pad16_ageofdiagnosis_model_y,
+         demo_pad16_ageofdiagnosis_model_x,
+         missing='drop')
+  results_demo_pad16_ageofdiagnosis = model_demo_pad16_ageofdiagnosis.fit()
+  results_demo_pad16_ageofdiagnosis.summary()
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[430]:
+# output
+/usr/local/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2389: FutureWarning: Method .ptp is deprecated and will be removed in a future version. Use numpy.ptp instead.
+  return ptp(axis=axis, out=out, **kwargs)
+
+# text/plain
+: <class 'statsmodels.iolib.summary.Summary'>
+: """
+:                             OLS Regression Results
+: ==============================================================================
+: Dep. Variable:          cas2_plan_ado   R-squared:                       0.002
+: Model:                            OLS   Adj. R-squared:                 -0.038
+: Method:                 Least Squares   F-statistic:                   0.05817
+: Date:                Mon, 13 May 2019   Prob (F-statistic):              0.811
+: Time:                        14:50:41   Log-Likelihood:                -102.09
+: No. Observations:                  27   AIC:                             208.2
+: Df Residuals:                      25   BIC:                             210.8
+: Df Model:                           1
+: Covariance Type:            nonrobust
+: =============================================================================================
+:                                 coef    std err          t      P>|t|      [0.025      0.975]
+: ---------------------------------------------------------------------------------------------
+: const                        85.3562      5.299     16.109      0.000      74.443      96.269
+: demo_pad16_ageofdiagnosis    -0.1357      0.563     -0.241      0.811      -1.294       1.023
+: ==============================================================================
+: Omnibus:                        0.009   Durbin-Watson:                   2.407
+: Prob(Omnibus):                  0.996   Jarque-Bera (JB):                0.154
+: Skew:                          -0.038   Prob(JB):                        0.926
+: Kurtosis:                       2.638   Cond. No.                         23.7
+: ==============================================================================
+:
+: Warnings:
+: [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+: """
+:END:

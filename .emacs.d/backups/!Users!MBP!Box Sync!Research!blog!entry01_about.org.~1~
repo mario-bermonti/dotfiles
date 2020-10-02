@@ -1,0 +1,71 @@
+#+POSTID: 142
+#+BLOG: codin cognitive research
+#+DATE: [2018-08-29 Wed 20:06]
+#+OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil
+#+CATEGORY: python, coding, research, cognition, psychology
+#+TAGS: python, coding, research, cognition, psychology
+#+Title: Coding for Cognitive Research
+
+* DONE Add my CV online and update the link (a cloud like box is better because it can be updated automatically) :noexport:
+* Outline :noexport:
+** Sobre el blog:
+*** Blog: Bienvenidos, sobre usar la programación para desarrollar herramientas
+*** Usar la programación para desarrollar herramientas
+*** Contenido:
+**** Principios básicos
+**** Aplicación a la investigación
+**** Discutir principios mientras los aplicamos
+**** Combinación de recursos - no duplicar esfuerzos; poco aplicados a nuestra área
+***** Videos; enlaces a recurso externos adicionales
+****** Principios básicos - otros
+****** Aplicación a la investigación - yo
+** About me
+*** Nombre, Estudiante graduado y consultor metodológico y estadístico
+*** Intereses:
+*** Intervenciones cognitivas y educativas computarizadas
+*** Relación entre procesos cognitivos y con el aprendizaje de diferentes destrezas académicas y el procesamiento del lenguaje.
+
+
+* About this blog
+Welcome to my blog on programming for cognitive research!
+
+
+This blog teaches how to use programming to facilitate cognition research. It should
+be useful for researchers (students and faculty) who conduct cognitive, psycholinguistics,
+or educational research because it addresses how to automatize common tasks and
+teaches how to develop tools that can facilitate the research process.
+
+
+
+I'm going to use a combination of resources developed by myself, as well as
+resources available on the internet to teach:
+- the basics of programming: necessary building blocks to be able to develop your own tools
+- how to apply these principles to solve or complete common research tasks and procedures
+
+
+After we cover the basics of programming, we will address how to develop software
+that helps with common research tasks. Particularly the ones that I do the most. If
+you have tasks that you believe are related to the ones that we are addressing,
+feel free to propose new tasks to address and I will do my best to find solutions
+and write about them.
+
+
+Most of the entries will be short and long entries will be divided into series so
+they are easier to read and understand (and to write).
+
+* About me
+I'm a research design and statistics consultant for the Clinical Psychology
+faculty (PhD) at Ponce Health Sciences University (PHSU) where I also work as
+Director of Assessment and Institutional Effectiveness.
+
+Currently I'm in the process of completing my dissertation to earn my PhD
+degree from the Department of Psychology at the University of Puerto Rico.
+
+
+My areas of research focus on:
+    - reading skills and cognition
+      + reading skills and its cognitive correlates
+      + development of computerized cognitive-educational interventions
+    - metabolic disorders and cognition
+
+For more info about me, check out my [[https://app.box.com/s/ie862ci8hlppppe33ivlegxfoq2f0bwl][CV]].

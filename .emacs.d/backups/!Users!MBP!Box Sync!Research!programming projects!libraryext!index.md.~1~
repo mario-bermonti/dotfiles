@@ -1,0 +1,9 @@
+# This is my website!
+## Welcome!
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+---
+[another page](/t.md)
