@@ -1,1052 +1,1052 @@
-((("hydra" .
-   [1 0 0 0 0])
-  ("require" .
-   [1 0 0 0 0 0 0])
-  ("evil-leader/set-key" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("org2blog/wp-post-buffer-as-page" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("evil-leader/set-key-for-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("move-to-column" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("df" .
-   [1 0])
-  ("results_bt" .
-   [0 0 0 0 0 1 0 0 0 0])
-  ("find-file" .
-   [1 0 0 0 0 0 0 0 0])
-  ("gs" .
-   [1 0])
-  ("Magit" .
-   [0 0 0 0 1])
-  ("jedi:goto-definition" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("evil-scroll-page-up" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("meta" .
-   [1 0 0 0])
-  ("options" .
-   [1 0 0 0 0 0 0])
-  ("monokai-theme" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("REFLE1" .
-   [1 0 0 0 0 0])
-  ("analysisLevel" .
-   [0 0 0 0 0 0 0 0 0 1 1 0 0])
-  ("analy" .
-   [0 0 0 0 1])
-  ("analysisType" .
-   [0 0 0 0 0 0 0 0 0 1 0 0])
-  ("R6" .
-   [1 0])
-  ("R5" .
-   [1 0])
-  ("R4" .
-   [1 0])
-  ("R3" .
-   [1 0])
-  ("R2" .
-   [1 0])
-  ("dataLabel" .
-   [1 0 0 0 0 0 0 0 0])
-  ("recodedDatalist" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 1 0 0])
-  ("recodedData" .
-   [0 0 0 0 0 0 0 2 0 0 1])
-  ("recode_missing_values" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
-  ("Recode" .
-   [0 0 0 0 0 1])
-  ("inplace" .
-   [3 0 0 0 0 0 0])
-  ("file" .
-   [0 0 0 1])
-  ("cleanded" .
-   [1 0 0 0 0 0 0 0])
-  ("cleanedData" .
-   [0 0 0 0 0 0 0 1 0 0 1])
-  ("handle_missing_values" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("numpy" .
-   [1 0 0 0 0])
-  ("nan" .
-   [3 0 0])
-  ("NaN" .
-   [2 0 0])
-  ("currentStudentData" .
-   [0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0])
-  ("transformedData" .
-   [0 0 0 0 0 2 0 0 0 0 0 0 0 0 1])
-  ("DataFrame" .
-   [0 0 0 0 0 0 1 0 0])
-  ("expectedValue" .
+((("ein:connect-to-notebook-command" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ido-switch-buffer" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("jedi:show-doc" .
    [0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("columns" .
-   [2 0 0 0 0 0 0])
-  ("equals" .
-   [1 0 0 0 0 1])
-  ("Data" .
-   [1 0 0 0])
-  ("replace_alphanumeric_with_numeric_values" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
-  ("newData" .
-   [1 0 0 0 0 0 0])
-  ("prin" .
-   [2 0 0 0])
-  ("values" .
-   [2 0 0 0 0 0])
-  ("missing" .
-   [2 0 0 0 0 0 0])
-  ("studentsData" .
-   [0 0 0 0 0 0 0 0 0 1 0 0])
-  ("intersect" .
-   [1 0 0 0 0 0 0 0 0])
-  ("magit-checkout" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("kbd" .
-   [1 0 0])
-  ("global-set-key" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("else" .
-   [0 1 0 0])
-  ("presentLetterName" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("assets" .
-   [0 0 0 0 1 1])
-  ("presentLetter" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("presentletterName" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("presentName" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("P" .
-   [1])
-  ("play" .
-   [5 0 0 0])
-  ("playAudioLetter" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("currentLetter" .
-   [2 0 0 0 0 0 0 0 1 0 0 0 3])
-  ("letterHitName" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("letterName" .
-   [0 0 0 0 0 0 1 1 1 0])
-  ("Function" .
-   [0 0 0 0 1 1 0 1])
-  ("ac-js2" .
-   [0 0 0 0 0 1])
-  ("avatar" .
-   [5 0 0 0 0 0])
-  ("createAvatar" .
-   [0 0 0 0 0 0 0 1 0 0 0 0])
-  ("presentStimulus" .
-   [0 0 0 0 0 0 0 1 1 0 0 0 0 0 0])
-  ("enchant" .
-   [0 0 0 0 0 1 0])
-  ("coords" .
-   [1 0 0 0 0 0])
-  ("return" .
-   [1 0 0 0 0 0])
-  ("getRandomCoords" .
-   [0 0 0 3 0 0 0 0 0 0 0 0 0 0 0])
-  ("function" .
-   [6 0 0 0 0 0 0 0])
-  ("height" .
-   [2 0 0 1 0 1])
-  ("var" .
-   [20 0 0])
-  ("width" .
-   [5 0 0 2 3])
-  ("letter" .
-   [35 0 0 0 2 0])
-  ("moveLetters" .
-   [0 0 0 0 0 1 0 0 0 0 0])
-  ("createLetters" .
-   [0 0 0 0 0 0 2 0 0 0 0 0 0])
-  ("KeyboardInterrupt" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("originalcopy" .
-   [0 0 0 0 0 0 0 0 0 1 0 0])
-  ("originalFile" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("clean" .
-   [0 0 0 0 1])
-  ("finalWordCount" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("originalWordCount" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0])
-  ("originalWords" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("count_words" .
-   [0 0 0 0 0 0 0 0 0 0 1])
-  ("cleanup" .
-   [2 0 0 0 0 0 0])
-  ("saveData" .
-   [0 0 0 0 0 1 0 0])
-  ("analysis" .
-   [2 0 0 0 0 0 0 0])
-  ("analyze" .
-   [0 0 0 0 0 3 0])
-  ("get_original_filename" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("acceptedLetters" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("check_two_nonvalid_adjacent" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("get_short_words" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("numberOfWordsAnalyzed" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("close" .
-   [2 0 0 0 0])
-  ("outFile" .
-   [0 0 1 1 0 0 0])
-  ("results" .
-   [1 0 0 0 0 0 0])
-  ("dataManagement" .
-   [0 0 0 0 1 0 1 0 0 0 0 0 0 0])
-  ("fil" .
-   [6 0 0])
-  ("infile_filename_update" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("filename_update" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("numberOf" .
-   [0 0 0 0 0 0 0 1])
-  ("open_file_with_valid_words" .
-   [0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("open" .
-   [1 0 0 0])
-  ("numberOfTempfiles" .
-   [0 0 0 0 0 0 0 0 0 0 4 1 0 0 0 0 1])
-  ("format" .
-   [2 0 0 0 0 0])
-  ("update_temp_file" .
-   [0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1])
-  ("DataManagement" .
-   [0 0 0 0 1 1 0 0 1 0 0 0 0 1])
-  ("mkdir" .
-   [0 0 0 0 1])
-  ("exists" .
-   [0 0 0 0 1 0])
-  ("intro_message" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("request_data_filtering" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("year" .
-   [6 0 0 0])
-  ("filter_data_by_year" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("direction" .
-   [2 0 0 0 0 0 0 0 0])
-  ("obj1Criteria" .
-   [0 0 0 0 0 0 0 0 0 0 0 2])
-  ("analyses" .
-   [10 0 0 0 0 1 0 0])
-  ("Analyses" .
-   [2 0 1 3 0 0 0 2])
-  ("run_analyses_first_goal" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("iterrows" .
-   [0 0 0 0 0 1 2 0])
-  ("column" .
-   [8 0 0 0 0 0])
-  ("row" .
-   [2 0 0])
-  ("parse" .
-   [1 0 0 0 0])
-  ("pd" .
-   [5 0])
-  ("pdb" .
-   [0 0 1])
-  ("pandas" .
-   [2 0 0 0 0 0])
-  ("prints" .
-   [1 0 0 0 0 0])
-  ("appending" .
-   [1 0 0 0 0 0 0 0 0])
-  ("before" .
-   [1 0 0 0 0 0])
-  ("the" .
-   [4 0 0])
-  ("option" .
-   [3 0 0 0 0 0])
-  ("answ" .
-   [0 0 0 2])
-  ("newCountry" .
-   [0 0 0 0 2 0 0 0 0 0])
-  ("question_current" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("answe" .
-   [0 0 0 1 3])
-  ("question_population" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("userAnswer" .
-   [0 0 0 0 2 2 3 1 0 6])
-  ("correctAnswer" .
-   [0 0 0 0 0 0 0 0 3 0 0 0 1])
-  ("Correct" .
-   [0 0 0 0 0 0 1])
-  ("message" .
-   [5 0 1 0 0 0 6])
-  ("question_capital" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("country" .
-   [9 0 0 0 0 0 0])
-  ("answer" .
-   [17 0 0 0 0 1])
-  ("question_offlang" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("question_area" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("question_continent" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("lst" .
-   [1 0 0])
-  ("end" .
-   [1 0 0])
-  ("val" .
-   [1 0 0])
-  ("l" .
-   [2])
-  ("x" .
-   [3])
-  ("maxi" .
-   [2 0 0 0])
-  ("mini" .
-   [2 0 0 0])
-  ("step" .
-   [2 0 0 0])
-  ("percentageMeetingCriteria1" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("percentageMeetingCriteria4" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("averageThreshold" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("item" .
-   [5 0 0 0])
-  ("studentData" .
-   [0 0 0 0 0 0 0 0 3 0 3])
-  ("criteria_goal1_obj4_outcome4" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("criteria_similar_outcomes" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("specifications" .
-   [2 0 0 0 0 0 0 0 1 1 0 0 0 0])
-  ("criteria_evaluation_students_competency_relations" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("criteria_interpersonal_relations_personal_qualities" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("student" .
-   [7 1 0 0 0 0 0])
-  ("studentsMeetingCriteria" .
-   [0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 1 0 0 0 0 0 0 3])
-  ("item_level_criteria" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("average_level_criteria" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0])
-  ("studentMean" .
-   [0 0 0 0 0 0 0 0 1 1 1])
-  ("students" .
-   [4 0 0 0 0 0 0 1])
-  ("mean" .
-   [1 0 0 0])
-  ("average" .
-   [1 0 0 0 0 0 2])
-  ("statistics" .
-   [0 0 0 0 0 0 0 1 0 0])
-  ("threshold" .
-   [0 0 0 0 1 13 5 0 1])
-  ("result1" .
-   [2 0 0 0 0 0 0])
-  ("as" .
-   [1 0])
-  ("firstGoal" .
-   [1 0 0 0 1 2 0 0 0])
-  ("EvaluationSystem" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("nativesTraveledDistance" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("drinksLeft" .
-   [0 0 0 0 0 0 0 3 0 2])
-  ("milesTraves" .
-   [0 0 0 0 0 0 0 0 0 0 1])
-  ("pass" .
-   [0 0 0 1])
-  ("eliminate" .
-   [0 0 0 0 0 0 0 0 1])
-  ("save_data" .
-   [1 0 0 0 0 0 1 0 0])
-  ("process_words" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("numberOfLinesAnalyzed" .
-   [0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 0])
-  ("info" .
-   [4 0 0 0])
-  ("get_filename" .
-   [1 0 0 0 0 0 0 0 1 0 0 0])
-  ("cont" .
-   [1 0 0 0])
-  ("lineNumber" .
-   [0 0 0 0 0 1 0 0 0 0])
-  ("fileLength" .
-   [0 0 0 0 0 1 0 0 0 0])
-  ("get_length_of_file" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("get_position" .
-   [0 0 0 0 0 0 1 0 0 0 0 0])
-  ("position" .
-   [3 0 0 0 0 0 0 0])
-  ("infile" .
-   [14 0 0 1 1 2])
-  ("test_clean_words" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("ni" .
-   [1 0])
-  ("clean_invalid_words" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("lower" .
-   [11 0 0 0 0])
-  ("long" .
-   [0 0 1 0])
-  ("response" .
-   [1 0 0 0 0 0 0 0])
-  ("of" .
-   [1 0])
-  ("url" .
-   [3 0 0])
-  ("urljj" .
-   [1 0 0 0 0])
-  ("get_words" .
-   [0 0 0 0 0 0 0 0 1])
-  ("realWords" .
-   [0 0 0 0 1 0 0 0 0])
-  ("check_if_word_is_real" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("real" .
-   [2 0 0 0])
-  ("check_real_word" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("check_real_wrod" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("main" .
-   [3 0 0 0])
-  ("requests" .
-   [5 0 0 0 0 0 0 0])
-  ("sort_words_alphabetically" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("with" .
-   [0 4 1 0])
-  ("config" .
-   [1 0 0 0 0 0])
-  ("Button" .
-   [1 0 0 0 0 0])
-  ("PhotoImage" .
-   [0 0 0 0 0 1 0 0 0 0])
-  ("background" .
-   [1 0 0 0 1 0 0 0 0 1])
-  ("r" .
-   [3])
-  ("image" .
-   [5 0 0 0 0])
-  ("Image" .
-   [1 0 0 1 1])
-  ("ImageTk" .
-   [2 0 0 0 0 0 0])
-  ("PIL" .
-   [6 0 0])
-  ("li" .
-   [1 0])
-  ("print" .
-   [0 0 0 1 2])
-  ("filename" .
-   [43 0 0 0 0 0 0 2])
-  ("exception_on_overflow" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("range" .
-   [0 0 0 1 0])
-  ("electric-pair-mode" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("eliminatedWords" .
-   [0 0 0 0 0 0 0 1 0 1 0 0 0 0 0])
-  ("txt" .
-   [2 0 0])
-  ("remove" .
-   [3 0 0 0 0 0])
-  ("plural" .
-   [6 0 0 0 0 0])
-  ("join" .
-   [0 0 0 3])
-  ("path" .
-   [13 0 0 0])
-  ("shuffle" .
-   [1 0 0 0 0 0 2])
-  ("Get" .
-   [0 0 1])
-  ("getcwd" .
-   [0 0 0 0 0 2])
-  ("write_lines_to_file" .
-   [0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 2])
-  ("write_json" .
-   [0 0 0 0 0 0 1 0 0 0])
-  ("write" .
-   [3 0 0 0 0])
-  ("iodata2" .
-   [2 0 0 0 0 0 0])
-  ("p" .
-   [8])
-  ("split" .
-   [1 0 0 0 0])
-  ("d" .
-   [3])
-  ("valid_words" .
-   [1 0 0 0 0 0 0 0 0 0 1])
-  ("validFile" .
-   [0 0 0 0 0 2 0 0 0])
-  ("freq_data" .
-   [0 0 0 0 1 0 0 0 0])
-  ("get_data" .
-   [3 0 0 0 1 0 0 3])
-  ("read_file_lines" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 2])
-  ("iodata" .
-   [7 0 0 7 2 0])
-  ("type" .
-   [0 0 0 1])
-  ("files" .
-   [5 0 0 0 0])
-  ("difficultyLevels" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("readline" .
-   [1 0 0 0 0 0 1 0])
-  ("read" .
-   [1 0 0 0])
-  ("inFile" .
-   [0 0 0 0 0 1])
-  ("lines" .
-   [1 0 0 0 0])
-  ("it" .
-   [1 0])
-  ("lineIndex" .
-   [0 0 0 0 0 0 0 0 1])
-  ("line" .
-   [15 0 0 0])
-  ("c1" .
-   [1 0])
-  ("j" .
-   [9])
-  ("items" .
-   [7 0 0 0 0])
-  ("data" .
-   [118 0 1 4])
-  ("a" .
-   [2])
-  ("mro" .
-   [1 0 0])
-  ("defun" .
-   [1 0 0 0 0])
-  ("make-local-variable" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("jedi:server-command" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
-  ("set" .
-   [1 0 0])
-  ("list" .
-   [1 0 0 0])
-  ("executable-find" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("cadr" .
-   [1 0 0 0])
-  ("fileName" .
-   [0 0 0 0 0 0 0 1])
-  ("path2" .
-   [4 0 0 0 0])
-  ("f" .
-   [9])
-  ("append" .
-   [8 0 0 0 1 6])
-  ("words" .
-   [53 0 0 0 0])
-  ("i" .
-   [49])
-  ("k" .
-   [3])
-  ("b" .
-   [3])
-  ("v" .
-   [6])
-  ("level" .
-   [4 0 0 0 0])
-  ("pop" .
-   [1 0 0])
-  ("randrange" .
-   [1 0 0 0 0 0 0 0 0])
-  ("randint" .
-   [6 0 0 0 0 0 1])
-  ("select" .
-   [0 0 0 0 0 2])
-  ("selectedWords" .
-   [1 0 0 0 0 0 0 0 0 0 2 0 3])
-  ("word" .
-   [60 0 1 1])
-  ("selectedWord" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("determine" .
-   [2 0 0 0 0 0 0 0 0])
-  ("folder" .
-   [1 0 0 0 0 0])
-  ("filenames" .
-   [1 0 0 0 0 0 0 0 0])
-  ("libraryext" .
-   [0 0 0 0 0 1 0 1 0 0])
-  ("iofiles" .
-   [1 1 0 1 0 0 1])
-  ("clear" .
-   [0 0 0 0 1])
-  ("reset_data" .
-   [0 0 0 0 2 0 0 0 0 1])
-  ("fj" .
-   [3 0])
-  ("sort" .
-   [1 0 0 0])
-  ("kivy" .
-   [2 0 0 0])
-  ("app" .
-   [2 0 0])
-  ("App" .
-   [1 0 0])
-  ("uix" .
-   [1 0 0])
-  ("widget" .
-   [1 0 0 0 0 0])
-  ("Widget" .
-   [2 0 0 0 0 0])
-  ("Game" .
-   [1 0 0 0])
-  ("__name__" .
-   [0 0 0 0 0 0 3 2])
-  ("GameApp" .
-   [1 0 0 0 0 0 0])
-  ("usedWords" .
-   [0 0 0 0 3 1 0 0 1])
-  ("fin" .
-   [1 0 0])
-  ("index" .
-   [7 0 0 0 0])
-  ("validWord" .
-   [0 0 0 0 0 0 0 0 3])
-  ("quit" .
-   [0 2 0 0])
-  ("clean_non_words" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("validWords" .
-   [2 1 0 0 0 1 2 0 0 2])
-  ("except" .
-   [0 0 0 0 0 3])
-  ("IndexError" .
-   [0 0 0 0 0 1 0 0 0 0])
-  ("finally" .
-   [0 0 0 0 0 0 2])
-  ("IOData" .
-   [0 0 0 0 0 1])
-  ("textwrap" .
-   [0 0 0 0 1 0 0 0])
-  ("Label" .
-   [0 0 1 0 0])
-  ("checkmark" .
-   [2 0 0 0 0 0 0 0 0])
-  ("canvas" .
-   [1 0 0 0 0 0])
-  ("helpButto" .
-   [0 0 0 0 0 0 0 0 1])
-  ("forget" .
-   [0 0 0 0 1 0])
-  ("admiButto" .
-   [0 0 0 0 0 0 0 0 1])
-  ("GROOVE" .
-   [0 0 0 1 0 0])
-  ("RAISED" .
-   [0 0 0 1 0 2])
-  ("relief" .
-   [1 0 0 0 0 0])
-  ("tk" .
-   [1 0])
-  ("randomizedWord" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("correctOrder" .
-   [0 0 0 0 0 0 0 0 1 0 0 0])
-  ("c" .
-   [12])
-  ("clean_empty_lines" .
-   [0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0])
-  ("get_valid_words" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("sleep" .
-   [0 0 0 1 0])
-  ("total" .
-   [5 0 0 0 0])
-  ("number" .
-   [1 0 0 0 0 0])
-  ("chr" .
-   [0 0 1])
-  ("check_word_is_valid" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("check_valid_characters" .
-   [1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("validSymbols" .
+  ("projectile-find-file" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("projectile" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("forward-page" .
    [0 0 0 0 0 1 0 0 0 0 0 0])
-  ("Reads" .
-   [0 0 0 1 0])
-  ("unittest" .
+  ("force" .
+   [0 0 0 0 1])
+  ("scrolling" .
+   [0 0 0 0 0 0 0 0 1])
+  ("busybee-theme" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("magit-log" .
+   [1 0 0 0 0 0 0 0 0])
+  ("magit-diff" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("magit-branch-and-checkout" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("letterPath2" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("imgList" .
+   [1 0 0 0 0 0 0])
+  ("img" .
+   [2 0 0])
+  ("addChild" .
    [0 0 0 0 1 0 0 0])
-  ("test_cleanwords" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("n" .
-   [6])
-  ("result" .
-   [31 0 0 0 0 0])
-  ("ConnectionError" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("finalWords" .
-   [0 0 0 0 0 0 1 0 0 0])
-  ("done" .
-   [11 0 0 0])
-  ("choice" .
-   [8 0 0 0 0 0])
-  ("milesTraveled" .
-   [0 0 0 0 0 0 0 4 0 0 0 0 4])
-  ("nativesDistance" .
-   [0 0 0 0 0 0 0 1 3 0 0 0 0 0 4])
-  ("camelTiredness" .
-   [0 0 0 0 0 0 0 2 0 0 0 0 0 3])
-  ("traveled" .
-   [0 0 0 0 1 0 0 0])
-  ("thirst" .
-   [2 0 0 2 0 2])
-  ("Camel" .
-   [0 0 1 0 1])
-  ("miles" .
-   [1 0 0 0 0])
-  ("distanceFromTheNatives" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("canteen" .
-   [1 0 0 0 0 0 0])
-  ("no" .
-   [5 0])
-  ("natives" .
-   [1 0 0 0 0 0 0])
-  ("version2" .
-   [1 0 0 0 0 0 0 0])
-  ("counter" .
-   [3 0 0 0 0 0 0])
-  ("s" .
-   [17])
-  ("foundDiff" .
-   [0 0 0 0 0 3 0 0 1])
-  ("numberMeetingCriteria" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("percentage" .
-   [2 0 0 0 0 0 0 0 0 1])
-  ("calculate_percentage" .
-   [0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("studentTotal" .
-   [2 0 0 0 0 0 0 0 1 0 0 0])
-  ("get_total_number_of_students" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("percentageOfStudentsMeetingFirstCriteria" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("studentsMeetingSecondCriteria" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0])
-  ("criteria" .
-   [1 0 0 0 0 0 0 0])
-  ("criteria_goal1_obj1_outcome1" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("studentsMeeting" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("criteria_goal1_obj1_outcome2" .
-   [1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("percentageOfStudentsMeetingCriteria2" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("studentsMeetingSecondCriteria2" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("studentsMeetingCriteria2" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("studentsMeetingCriteria1" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("percentageOfStudentsMeetingCriteria1" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("totalnumberOfStudents" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("percentageMeetingCriteria2" .
-   [5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("score" .
-   [4 0 0 0 1])
-  ("criteria_goal1_obj2_outcome1" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("criteria_goal1_obj2_outcome2" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("courses" .
-   [1 0 0 0 0 0 0])
-  ("course" .
-   [2 0 0 0 0 0])
-  ("percentageMeetingCriteria22" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("percentageMeetingCriteria3" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("eval_criteria_item_average_level" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("eval_criteria_item_level" .
-   [2 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1])
-  ("count" .
-   [10 0 0 1 1])
-  ("cLower" .
-   [1 0 0 1 0 0])
-  ("cUpper" .
-   [0 0 0 0 0 2])
-  ("cdigit" .
-   [1 0 1 0 0 0])
-  ("currentCountryID" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1])
-  ("question_str_answer" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0])
-  ("question_multiple_choice" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("question_str_list" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("evaluationsystem" .
-   [1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1])
-  ("SystemExit" .
-   [0 0 0 0 0 0 2 0 0 0])
-  ("system" .
-   [4 0 0 0 0 0])
-  ("assert" .
-   [0 0 0 0 0 1])
-  ("test_eval_item_level" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("FirstGoal" .
-   [0 0 0 2 0 2 1 0 0])
-  ("test_eval_item_level_likert_small" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("test_eval_item_level_letters" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("B" .
-   [1])
-  ("selfj" .
-   [1 0 0 0 0])
-  ("__init__" .
-   [0 0 0 0 0 1 0 4])
-  ("debug" .
-   [2 0 0 0 0])
-  ("get_dataset" .
-   [0 0 0 0 0 2 1 0 0 0 0])
-  ("get_specified_data" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("expected" .
-   [0 0 0 0 0 0 0 1])
-  ("expectedData" .
-   [2 0 0 2 0 3 0 0 1 1 0 6])
-  ("percentagecriteria1" .
-   [2 0 0 0 0 0 3 2 1 0 0 0 0 0 0 0 0 0 1])
-  ("percentagecriteria2" .
-   [4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("percentagecriteria3" .
-   [5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("percentagecriteria4" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("get_data_obj" .
-   [0 0 0 0 0 0 0 0 0 0 0 1])
-  ("getDataFirstGoal" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("GetDataFirstGoal" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("get_data_obj1" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("obj2Criteria2" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("obj2Criteria3" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("get_data_obj2" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("get_data_obj3" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("onj" .
+  ("rootScene" .
+   [0 0 0 0 1 0 0 0 0])
+  ("presentBackground" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("new" .
    [1 0 0])
-  ("obj4Criteria" .
-   [0 0 0 0 0 0 0 0 0 0 0 4])
-  ("obj4Criteria3" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("get_data_obj4" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("get_data_obj5" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("get_data_obj6" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("obj5Criteria1" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("obj5Criteria3" .
+  ("Sprite" .
+   [1 0 0 0 0 0])
+  ("bg" .
+   [2 0])
+  ("letterID" .
+   [2 0 0 0 0 0 0 0])
+  ("currentLetter2" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("sound" .
+   [6 0 0 0 0])
+  ("detectIfHit" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("setInterval" .
+   [0 0 0 0 0 1 0 0 0 0 0])
+  ("in" .
+   [1 0])
+  ("Add" .
+   [0 0 1])
+  ("presentedLetters" .
+   [0 0 0 0 0 0 0 0 2 3 3 0 0 0 0 5])
+  ("let" .
+   [1 0 0])
+  ("class" .
+   [1 0 0 0 0])
+  ("name" .
+   [3 0 0 0])
+  ("presentLetters" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 1])
+  ("log" .
+   [21 0 0])
+  ("true" .
+   [1 0 0 0])
+  ("while" .
+   [1 0 0 0 0])
+  ("checkIfHit" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("if" .
+   [4 0])
+  ("ac-js2-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("js2-mode" .
+   [1 0 0 0 0 0 0 0])
+  ("auto-mode-alist" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("add-to-list" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("game" .
+   [3 0 0 0])
+  ("Select" .
+   [0 0 0 0 0 1])
+  ("selectRandomLetter" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1])
+  ("max" .
+   [2 0 0])
+  ("length" .
+   [0 0 0 1 0 0])
+  ("Document" .
+   [0 0 0 0 0 0 0 1])
+  ("selectedLetter" .
+   [1 0 0 0 0 0 0 0 5 3 0 0 0 1])
+  ("min" .
+   [3 0 0])
+  ("letterPath" .
+   [2 0 0 0 0 0 0 0 0 1])
+  ("letters" .
+   [5 0 0 0 0 0 0])
+  ("destroyLetter" .
+   [0 0 0 0 0 0 1 2 0 0 0 0 2])
+  ("readme" .
+   [1 0 0 0 0 0])
+  ("output" .
+   [1 0 0 0 0 0])
+  ("outputFile" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("get_output_file_ready" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("outfile" .
+   [2 0 0 0 1 0 0])
+  ("fileObj" .
+   [1 0 0 0 0 0 1])
+  ("fileP" .
+   [1 0 0 0 0])
+  ("backupFile" .
+   [0 0 0 0 0 0 0 1 0 0])
+  ("symbols" .
+   [1 0 0 0 0 0 0])
+  ("debugging" .
+   [2 0 0 0 0 0 0 0 1])
+  ("debuggin" .
+   [0 0 0 0 0 0 0 2])
+  ("test" .
+   [1 0 0 0])
+  ("cl" .
+   [1 0])
+  ("TestCleanWords" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("CleanWords" .
+   [0 0 0 0 0 1 0 0 0 1])
+  ("strip" .
+   [5 0 0 0 0])
+  ("non_an_empty_line" .
+   [0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 1])
+  ("cleanWords" .
+   [2 0 0 0 0 3 3 0 0 0])
+  ("cleanwords" .
+   [2 0 0 0 0 0 0 0 0 1])
+  ("maxLen" .
+   [2 0 1 0 2 0])
+  ("minLen" .
+   [3 0 0 0 0 0])
+  ("args" .
+   [3 0 0 0])
+  ("converted" .
+   [0 0 0 0 0 0 1 0 0])
+  ("convertedThreshold" .
+   [0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0])
+  ("value" .
+   [4 0 0 0 0])
+  ("valueEquivalence" .
+   [0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0])
+  ("convertedData" .
+   [0 0 0 0 0 0 1 0 0 7 3 0 5])
+  ("obj6Criteria3" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0])
   ("obj5Criteria" .
    [0 0 0 0 0 0 0 0 0 0 0 1])
-  ("obj6Criteria3" .
+  ("obj5Criteria3" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("convertedData" .
-   [0 0 0 0 0 0 1 0 0 7 3 0 5])
-  ("valueEquivalence" .
-   [0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0])
-  ("value" .
-   [4 0 0 0 0])
-  ("convertedThreshold" .
-   [0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0])
-  ("converted" .
-   [0 0 0 0 0 0 1 0 0])
-  ("args" .
-   [3 0 0 0])
-  ("minLen" .
-   [3 0 0 0 0 0])
-  ("maxLen" .
-   [2 0 1 0 2 0])
-  ("cleanwords" .
-   [2 0 0 0 0 0 0 0 0 1])
-  ("cleanWords" .
-   [2 0 0 0 0 3 3 0 0 0])
-  ("non_an_empty_line" .
-   [0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 1])
-  ("strip" .
-   [5 0 0 0 0])
-  ("CleanWords" .
-   [0 0 0 0 0 1 0 0 0 1])
-  ("TestCleanWords" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("cl" .
-   [1 0])
-  ("test" .
-   [1 0 0 0])
-  ("debuggin" .
-   [0 0 0 0 0 0 0 2])
-  ("debugging" .
-   [2 0 0 0 0 0 0 0 1])
-  ("symbols" .
-   [1 0 0 0 0 0 0])
-  ("backupFile" .
-   [0 0 0 0 0 0 0 1 0 0])
-  ("fileP" .
-   [1 0 0 0 0])
-  ("fileObj" .
-   [1 0 0 0 0 0 1])
-  ("outfile" .
-   [2 0 0 0 1 0 0])
-  ("get_output_file_ready" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("outputFile" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("output" .
-   [1 0 0 0 0 0])
-  ("readme" .
-   [1 0 0 0 0 0])
-  ("destroyLetter" .
-   [0 0 0 0 0 0 1 2 0 0 0 0 2])
-  ("letters" .
-   [5 0 0 0 0 0 0])
-  ("letterPath" .
-   [2 0 0 0 0 0 0 0 0 1])
-  ("min" .
-   [3 0 0])
-  ("selectedLetter" .
-   [1 0 0 0 0 0 0 0 5 3 0 0 0 1])
-  ("Document" .
+  ("obj5Criteria1" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("get_data_obj6" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("get_data_obj5" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("get_data_obj4" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("obj4Criteria3" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("obj4Criteria" .
+   [0 0 0 0 0 0 0 0 0 0 0 4])
+  ("onj" .
+   [1 0 0])
+  ("get_data_obj3" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("get_data_obj2" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("obj2Criteria3" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("obj2Criteria2" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("get_data_obj1" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("GetDataFirstGoal" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("getDataFirstGoal" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("get_data_obj" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("percentagecriteria4" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("percentagecriteria3" .
+   [5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("percentagecriteria2" .
+   [4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("percentagecriteria1" .
+   [2 0 0 0 0 0 3 2 1 0 0 0 0 0 0 0 0 0 1])
+  ("expectedData" .
+   [2 0 0 2 0 3 0 0 1 1 0 6])
+  ("expected" .
    [0 0 0 0 0 0 0 1])
-  ("length" .
-   [0 0 0 1 0 0])
-  ("max" .
-   [2 0 0])
-  ("selectRandomLetter" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1])
-  ("Select" .
+  ("get_specified_data" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("get_dataset" .
+   [0 0 0 0 0 2 1 0 0 0 0])
+  ("debug" .
+   [2 0 0 0 0])
+  ("__init__" .
+   [0 0 0 0 0 1 0 4])
+  ("selfj" .
+   [1 0 0 0 0])
+  ("B" .
+   [1])
+  ("test_eval_item_level_letters" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("test_eval_item_level_likert_small" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("FirstGoal" .
+   [0 0 0 2 0 2 1 0 0])
+  ("test_eval_item_level" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("assert" .
    [0 0 0 0 0 1])
-  ("game" .
-   [3 0 0 0])
-  ("add-to-list" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("auto-mode-alist" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("js2-mode" .
-   [1 0 0 0 0 0 0 0])
-  ("ac-js2-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("if" .
-   [4 0])
-  ("checkIfHit" .
-   [0 0 0 0 0 0 0 0 0 1])
-  ("while" .
-   [1 0 0 0 0])
-  ("true" .
-   [1 0 0 0])
-  ("log" .
-   [21 0 0])
-  ("presentLetters" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 1])
-  ("name" .
-   [3 0 0 0])
-  ("class" .
-   [1 0 0 0 0])
-  ("let" .
-   [1 0 0])
-  ("presentedLetters" .
-   [0 0 0 0 0 0 0 0 2 3 3 0 0 0 0 5])
-  ("Add" .
-   [0 0 1])
-  ("in" .
-   [1 0])
-  ("setInterval" .
-   [0 0 0 0 0 1 0 0 0 0 0])
-  ("detectIfHit" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("sound" .
-   [6 0 0 0 0])
-  ("currentLetter2" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("letterID" .
-   [2 0 0 0 0 0 0 0])
-  ("bg" .
-   [2 0])
-  ("Sprite" .
-   [1 0 0 0 0 0])
-  ("new" .
-   [1 0 0])
-  ("presentBackground" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("rootScene" .
-   [0 0 0 0 1 0 0 0 0])
-  ("addChild" .
-   [0 0 0 0 1 0 0 0])
-  ("img" .
-   [2 0 0])
-  ("imgList" .
+  ("system" .
+   [4 0 0 0 0 0])
+  ("SystemExit" .
+   [0 0 0 0 0 0 2 0 0 0])
+  ("evaluationsystem" .
+   [1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1])
+  ("question_str_list" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("question_multiple_choice" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("question_str_answer" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0])
+  ("currentCountryID" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1])
+  ("cdigit" .
+   [1 0 1 0 0 0])
+  ("cUpper" .
+   [0 0 0 0 0 2])
+  ("cLower" .
+   [1 0 0 1 0 0])
+  ("count" .
+   [10 0 0 1 1])
+  ("eval_criteria_item_level" .
+   [2 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1])
+  ("eval_criteria_item_average_level" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("percentageMeetingCriteria3" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("percentageMeetingCriteria22" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("course" .
+   [2 0 0 0 0 0])
+  ("courses" .
    [1 0 0 0 0 0 0])
-  ("letterPath2" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("magit-branch-and-checkout" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("magit-diff" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("magit-log" .
-   [1 0 0 0 0 0 0 0 0])
-  ("busybee-theme" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("scrolling" .
-   [0 0 0 0 0 0 0 0 1])
-  ("force" .
-   [0 0 0 0 1])
-  ("forward-page" .
+  ("criteria_goal1_obj2_outcome2" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("criteria_goal1_obj2_outcome1" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("score" .
+   [4 0 0 0 1])
+  ("percentageMeetingCriteria2" .
+   [5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("totalnumberOfStudents" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("percentageOfStudentsMeetingCriteria1" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("studentsMeetingCriteria1" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("studentsMeetingCriteria2" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("studentsMeetingSecondCriteria2" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("percentageOfStudentsMeetingCriteria2" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("criteria_goal1_obj1_outcome2" .
+   [1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("studentsMeeting" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("criteria_goal1_obj1_outcome1" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("criteria" .
+   [1 0 0 0 0 0 0 0])
+  ("studentsMeetingSecondCriteria" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0])
+  ("percentageOfStudentsMeetingFirstCriteria" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("get_total_number_of_students" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("studentTotal" .
+   [2 0 0 0 0 0 0 0 1 0 0 0])
+  ("calculate_percentage" .
+   [0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("percentage" .
+   [2 0 0 0 0 0 0 0 0 1])
+  ("numberMeetingCriteria" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("foundDiff" .
+   [0 0 0 0 0 3 0 0 1])
+  ("s" .
+   [17])
+  ("counter" .
+   [3 0 0 0 0 0 0])
+  ("version2" .
+   [1 0 0 0 0 0 0 0])
+  ("natives" .
+   [1 0 0 0 0 0 0])
+  ("no" .
+   [5 0])
+  ("canteen" .
+   [1 0 0 0 0 0 0])
+  ("distanceFromTheNatives" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("miles" .
+   [1 0 0 0 0])
+  ("Camel" .
+   [0 0 1 0 1])
+  ("thirst" .
+   [2 0 0 2 0 2])
+  ("traveled" .
+   [0 0 0 0 1 0 0 0])
+  ("camelTiredness" .
+   [0 0 0 0 0 0 0 2 0 0 0 0 0 3])
+  ("nativesDistance" .
+   [0 0 0 0 0 0 0 1 3 0 0 0 0 0 4])
+  ("milesTraveled" .
+   [0 0 0 0 0 0 0 4 0 0 0 0 4])
+  ("choice" .
+   [8 0 0 0 0 0])
+  ("done" .
+   [11 0 0 0])
+  ("finalWords" .
+   [0 0 0 0 0 0 1 0 0 0])
+  ("ConnectionError" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("result" .
+   [31 0 0 0 0 0])
+  ("n" .
+   [6])
+  ("test_cleanwords" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("unittest" .
+   [0 0 0 0 1 0 0 0])
+  ("Reads" .
+   [0 0 0 1 0])
+  ("validSymbols" .
    [0 0 0 0 0 1 0 0 0 0 0 0])
-  ("projectile" .
-   [0 0 0 0 0 0 0 0 0 1])
-  ("projectile-find-file" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("jedi:show-doc" .
+  ("check_valid_characters" .
+   [1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("check_word_is_valid" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("chr" .
+   [0 0 1])
+  ("number" .
+   [1 0 0 0 0 0])
+  ("total" .
+   [5 0 0 0 0])
+  ("sleep" .
+   [0 0 0 1 0])
+  ("get_valid_words" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("clean_empty_lines" .
+   [0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0])
+  ("c" .
+   [12])
+  ("correctOrder" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("randomizedWord" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("tk" .
+   [1 0])
+  ("relief" .
+   [1 0 0 0 0 0])
+  ("RAISED" .
+   [0 0 0 1 0 2])
+  ("GROOVE" .
+   [0 0 0 1 0 0])
+  ("admiButto" .
+   [0 0 0 0 0 0 0 0 1])
+  ("forget" .
+   [0 0 0 0 1 0])
+  ("helpButto" .
+   [0 0 0 0 0 0 0 0 1])
+  ("canvas" .
+   [1 0 0 0 0 0])
+  ("checkmark" .
+   [2 0 0 0 0 0 0 0 0])
+  ("Label" .
+   [0 0 1 0 0])
+  ("textwrap" .
+   [0 0 0 0 1 0 0 0])
+  ("IOData" .
+   [0 0 0 0 0 1])
+  ("finally" .
+   [0 0 0 0 0 0 2])
+  ("IndexError" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("except" .
+   [0 0 0 0 0 3])
+  ("validWords" .
+   [2 1 0 0 0 1 2 0 0 2])
+  ("clean_non_words" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("quit" .
+   [0 2 0 0])
+  ("validWord" .
+   [0 0 0 0 0 0 0 0 3])
+  ("index" .
+   [7 0 0 0 0])
+  ("fin" .
+   [1 0 0])
+  ("usedWords" .
+   [0 0 0 0 3 1 0 0 1])
+  ("GameApp" .
+   [1 0 0 0 0 0 0])
+  ("__name__" .
+   [0 0 0 0 0 0 3 2])
+  ("Game" .
+   [1 0 0 0])
+  ("Widget" .
+   [2 0 0 0 0 0])
+  ("widget" .
+   [1 0 0 0 0 0])
+  ("uix" .
+   [1 0 0])
+  ("App" .
+   [1 0 0])
+  ("app" .
+   [2 0 0])
+  ("kivy" .
+   [2 0 0 0])
+  ("sort" .
+   [1 0 0 0])
+  ("fj" .
+   [3 0])
+  ("reset_data" .
+   [0 0 0 0 2 0 0 0 0 1])
+  ("clear" .
+   [0 0 0 0 1])
+  ("iofiles" .
+   [1 1 0 1 0 0 1])
+  ("libraryext" .
+   [0 0 0 0 0 1 0 1 0 0])
+  ("filenames" .
+   [1 0 0 0 0 0 0 0 0])
+  ("folder" .
+   [1 0 0 0 0 0])
+  ("determine" .
+   [2 0 0 0 0 0 0 0 0])
+  ("selectedWord" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("word" .
+   [60 0 1 1])
+  ("selectedWords" .
+   [1 0 0 0 0 0 0 0 0 0 2 0 3])
+  ("select" .
+   [0 0 0 0 0 2])
+  ("randint" .
+   [6 0 0 0 0 0 1])
+  ("randrange" .
+   [1 0 0 0 0 0 0 0 0])
+  ("pop" .
+   [1 0 0])
+  ("level" .
+   [4 0 0 0 0])
+  ("v" .
+   [6])
+  ("b" .
+   [3])
+  ("k" .
+   [3])
+  ("i" .
+   [49])
+  ("words" .
+   [53 0 0 0 0])
+  ("append" .
+   [8 0 0 0 1 6])
+  ("f" .
+   [9])
+  ("path2" .
+   [4 0 0 0 0])
+  ("fileName" .
+   [0 0 0 0 0 0 0 1])
+  ("cadr" .
+   [1 0 0 0])
+  ("executable-find" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("list" .
+   [1 0 0 0])
+  ("set" .
+   [1 0 0])
+  ("jedi:server-command" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("make-local-variable" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("defun" .
+   [1 0 0 0 0])
+  ("mro" .
+   [1 0 0])
+  ("a" .
+   [2])
+  ("data" .
+   [118 0 1 4])
+  ("items" .
+   [7 0 0 0 0])
+  ("j" .
+   [9])
+  ("c1" .
+   [1 0])
+  ("line" .
+   [15 0 0 0])
+  ("lineIndex" .
+   [0 0 0 0 0 0 0 0 1])
+  ("it" .
+   [1 0])
+  ("lines" .
+   [1 0 0 0 0])
+  ("inFile" .
+   [0 0 0 0 0 1])
+  ("read" .
+   [1 0 0 0])
+  ("readline" .
+   [1 0 0 0 0 0 1 0])
+  ("difficultyLevels" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("files" .
+   [5 0 0 0 0])
+  ("type" .
+   [0 0 0 1])
+  ("iodata" .
+   [7 0 0 7 2 0])
+  ("read_file_lines" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 2])
+  ("get_data" .
+   [3 0 0 0 1 0 0 3])
+  ("freq_data" .
+   [0 0 0 0 1 0 0 0 0])
+  ("validFile" .
+   [0 0 0 0 0 2 0 0 0])
+  ("valid_words" .
+   [1 0 0 0 0 0 0 0 0 0 1])
+  ("d" .
+   [3])
+  ("split" .
+   [1 0 0 0 0])
+  ("p" .
+   [8])
+  ("iodata2" .
+   [2 0 0 0 0 0 0])
+  ("write" .
+   [3 0 0 0 0])
+  ("write_json" .
+   [0 0 0 0 0 0 1 0 0 0])
+  ("write_lines_to_file" .
+   [0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 2])
+  ("getcwd" .
+   [0 0 0 0 0 2])
+  ("Get" .
+   [0 0 1])
+  ("shuffle" .
+   [1 0 0 0 0 0 2])
+  ("path" .
+   [13 0 0 0])
+  ("join" .
+   [0 0 0 3])
+  ("plural" .
+   [6 0 0 0 0 0])
+  ("remove" .
+   [3 0 0 0 0 0])
+  ("txt" .
+   [2 0 0])
+  ("eliminatedWords" .
+   [0 0 0 0 0 0 0 1 0 1 0 0 0 0 0])
+  ("electric-pair-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("range" .
+   [0 0 0 1 0])
+  ("exception_on_overflow" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("filename" .
+   [43 0 0 0 0 0 0 2])
+  ("print" .
+   [0 0 0 1 2])
+  ("li" .
+   [1 0])
+  ("PIL" .
+   [6 0 0])
+  ("ImageTk" .
+   [2 0 0 0 0 0 0])
+  ("Image" .
+   [1 0 0 1 1])
+  ("image" .
+   [5 0 0 0 0])
+  ("r" .
+   [3])
+  ("background" .
+   [1 0 0 0 1 0 0 0 0 1])
+  ("PhotoImage" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("Button" .
+   [1 0 0 0 0 0])
+  ("config" .
+   [1 0 0 0 0 0])
+  ("with" .
+   [0 4 1 0])
+  ("sort_words_alphabetically" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("requests" .
+   [5 0 0 0 0 0 0 0])
+  ("main" .
+   [3 0 0 0])
+  ("check_real_wrod" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("check_real_word" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("real" .
+   [2 0 0 0])
+  ("check_if_word_is_real" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("realWords" .
+   [0 0 0 0 1 0 0 0 0])
+  ("get_words" .
+   [0 0 0 0 0 0 0 0 1])
+  ("urljj" .
+   [1 0 0 0 0])
+  ("url" .
+   [3 0 0])
+  ("of" .
+   [1 0])
+  ("response" .
+   [1 0 0 0 0 0 0 0])
+  ("long" .
+   [0 0 1 0])
+  ("lower" .
+   [11 0 0 0 0])
+  ("clean_invalid_words" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ni" .
+   [1 0])
+  ("test_clean_words" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("infile" .
+   [14 0 0 1 1 2])
+  ("position" .
+   [3 0 0 0 0 0 0 0])
+  ("get_position" .
+   [0 0 0 0 0 0 1 0 0 0 0 0])
+  ("get_length_of_file" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("fileLength" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("lineNumber" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("cont" .
+   [1 0 0 0])
+  ("get_filename" .
+   [1 0 0 0 0 0 0 0 1 0 0 0])
+  ("info" .
+   [4 0 0 0])
+  ("numberOfLinesAnalyzed" .
+   [0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 0])
+  ("process_words" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("save_data" .
+   [1 0 0 0 0 0 1 0 0])
+  ("eliminate" .
+   [0 0 0 0 0 0 0 0 1])
+  ("pass" .
+   [0 0 0 1])
+  ("milesTraves" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("drinksLeft" .
+   [0 0 0 0 0 0 0 3 0 2])
+  ("nativesTraveledDistance" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("EvaluationSystem" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("firstGoal" .
+   [1 0 0 0 1 2 0 0 0])
+  ("as" .
+   [1 0])
+  ("result1" .
+   [2 0 0 0 0 0 0])
+  ("threshold" .
+   [0 0 0 0 1 13 5 0 1])
+  ("statistics" .
+   [0 0 0 0 0 0 0 1 0 0])
+  ("average" .
+   [1 0 0 0 0 0 2])
+  ("mean" .
+   [1 0 0 0])
+  ("students" .
+   [4 0 0 0 0 0 0 1])
+  ("studentMean" .
+   [0 0 0 0 0 0 0 0 1 1 1])
+  ("average_level_criteria" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0])
+  ("item_level_criteria" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("studentsMeetingCriteria" .
+   [0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 1 0 0 0 0 0 0 3])
+  ("student" .
+   [7 1 0 0 0 0 0])
+  ("criteria_interpersonal_relations_personal_qualities" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("criteria_evaluation_students_competency_relations" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("specifications" .
+   [2 0 0 0 0 0 0 0 1 1 0 0 0 0])
+  ("criteria_similar_outcomes" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("criteria_goal1_obj4_outcome4" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("studentData" .
+   [0 0 0 0 0 0 0 0 3 0 3])
+  ("item" .
+   [5 0 0 0])
+  ("averageThreshold" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("percentageMeetingCriteria4" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("percentageMeetingCriteria1" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("step" .
+   [2 0 0 0])
+  ("mini" .
+   [2 0 0 0])
+  ("maxi" .
+   [2 0 0 0])
+  ("x" .
+   [3])
+  ("l" .
+   [2])
+  ("val" .
+   [1 0 0])
+  ("end" .
+   [1 0 0])
+  ("lst" .
+   [1 0 0])
+  ("question_continent" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("question_area" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("question_offlang" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("answer" .
+   [17 0 0 0 0 1])
+  ("country" .
+   [9 0 0 0 0 0 0])
+  ("question_capital" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("message" .
+   [5 0 1 0 0 0 6])
+  ("Correct" .
+   [0 0 0 0 0 0 1])
+  ("correctAnswer" .
+   [0 0 0 0 0 0 0 0 3 0 0 0 1])
+  ("userAnswer" .
+   [0 0 0 0 2 2 3 1 0 6])
+  ("question_population" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("answe" .
+   [0 0 0 1 3])
+  ("question_current" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("newCountry" .
+   [0 0 0 0 2 0 0 0 0 0])
+  ("answ" .
+   [0 0 0 2])
+  ("option" .
+   [3 0 0 0 0 0])
+  ("the" .
+   [4 0 0])
+  ("before" .
+   [1 0 0 0 0 0])
+  ("appending" .
+   [1 0 0 0 0 0 0 0 0])
+  ("prints" .
+   [1 0 0 0 0 0])
+  ("pandas" .
+   [2 0 0 0 0 0])
+  ("pdb" .
+   [0 0 1])
+  ("pd" .
+   [5 0])
+  ("parse" .
+   [1 0 0 0 0])
+  ("row" .
+   [2 0 0])
+  ("column" .
+   [8 0 0 0 0 0])
+  ("iterrows" .
+   [0 0 0 0 0 1 2 0])
+  ("run_analyses_first_goal" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("Analyses" .
+   [2 0 1 3 0 0 0 2])
+  ("analyses" .
+   [10 0 0 0 0 1 0 0])
+  ("obj1Criteria" .
+   [0 0 0 0 0 0 0 0 0 0 0 2])
+  ("direction" .
+   [2 0 0 0 0 0 0 0 0])
+  ("filter_data_by_year" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("year" .
+   [6 0 0 0])
+  ("request_data_filtering" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("intro_message" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("exists" .
+   [0 0 0 0 1 0])
+  ("mkdir" .
+   [0 0 0 0 1])
+  ("DataManagement" .
+   [0 0 0 0 1 1 0 0 1 0 0 0 0 1])
+  ("update_temp_file" .
+   [0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1])
+  ("format" .
+   [2 0 0 0 0 0])
+  ("numberOfTempfiles" .
+   [0 0 0 0 0 0 0 0 0 0 4 1 0 0 0 0 1])
+  ("open" .
+   [1 0 0 0])
+  ("open_file_with_valid_words" .
+   [0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("numberOf" .
+   [0 0 0 0 0 0 0 1])
+  ("filename_update" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("infile_filename_update" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("fil" .
+   [6 0 0])
+  ("dataManagement" .
+   [0 0 0 0 1 0 1 0 0 0 0 0 0 0])
+  ("results" .
+   [1 0 0 0 0 0 0])
+  ("outFile" .
+   [0 0 1 1 0 0 0])
+  ("close" .
+   [2 0 0 0 0])
+  ("numberOfWordsAnalyzed" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("get_short_words" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("check_two_nonvalid_adjacent" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("acceptedLetters" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("get_original_filename" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("analyze" .
+   [0 0 0 0 0 3 0])
+  ("analysis" .
+   [2 0 0 0 0 0 0 0])
+  ("saveData" .
+   [0 0 0 0 0 1 0 0])
+  ("cleanup" .
+   [2 0 0 0 0 0 0])
+  ("count_words" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("originalWords" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("originalWordCount" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0])
+  ("finalWordCount" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("clean" .
+   [0 0 0 0 1])
+  ("originalFile" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("originalcopy" .
+   [0 0 0 0 0 0 0 0 0 1 0 0])
+  ("KeyboardInterrupt" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("createLetters" .
+   [0 0 0 0 0 0 2 0 0 0 0 0 0])
+  ("moveLetters" .
+   [0 0 0 0 0 1 0 0 0 0 0])
+  ("letter" .
+   [35 0 0 0 2 0])
+  ("width" .
+   [5 0 0 2 3])
+  ("var" .
+   [20 0 0])
+  ("height" .
+   [2 0 0 1 0 1])
+  ("function" .
+   [6 0 0 0 0 0 0 0])
+  ("getRandomCoords" .
+   [0 0 0 3 0 0 0 0 0 0 0 0 0 0 0])
+  ("return" .
+   [1 0 0 0 0 0])
+  ("coords" .
+   [1 0 0 0 0 0])
+  ("enchant" .
+   [0 0 0 0 0 1 0])
+  ("presentStimulus" .
+   [0 0 0 0 0 0 0 1 1 0 0 0 0 0 0])
+  ("createAvatar" .
+   [0 0 0 0 0 0 0 1 0 0 0 0])
+  ("avatar" .
+   [5 0 0 0 0 0])
+  ("ac-js2" .
+   [0 0 0 0 0 1])
+  ("Function" .
+   [0 0 0 0 1 1 0 1])
+  ("letterName" .
+   [0 0 0 0 0 0 1 1 1 0])
+  ("letterHitName" .
    [0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("ido-switch-buffer" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("ein:connect-to-notebook-command" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))
+  ("currentLetter" .
+   [2 0 0 0 0 0 0 0 1 0 0 0 3])
+  ("playAudioLetter" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("play" .
+   [5 0 0 0])
+  ("P" .
+   [1])
+  ("presentName" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("presentletterName" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("presentLetter" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("assets" .
+   [0 0 0 0 1 1])
+  ("presentLetterName" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("else" .
+   [0 1 0 0])
+  ("global-set-key" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("kbd" .
+   [1 0 0])
+  ("magit-checkout" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("intersect" .
+   [1 0 0 0 0 0 0 0 0])
+  ("studentsData" .
+   [0 0 0 0 0 0 0 0 0 1 0 0])
+  ("missing" .
+   [2 0 0 0 0 0 0])
+  ("values" .
+   [2 0 0 0 0 0])
+  ("prin" .
+   [2 0 0 0])
+  ("newData" .
+   [1 0 0 0 0 0 0])
+  ("replace_alphanumeric_with_numeric_values" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("Data" .
+   [1 0 0 0])
+  ("equals" .
+   [1 0 0 0 0 1])
+  ("columns" .
+   [2 0 0 0 0 0 0])
+  ("expectedValue" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("DataFrame" .
+   [0 0 0 0 0 0 1 0 0])
+  ("transformedData" .
+   [0 0 0 0 0 2 0 0 0 0 0 0 0 0 1])
+  ("currentStudentData" .
+   [0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0])
+  ("NaN" .
+   [2 0 0])
+  ("nan" .
+   [3 0 0])
+  ("numpy" .
+   [1 0 0 0 0])
+  ("handle_missing_values" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("cleanedData" .
+   [0 0 0 0 0 0 0 1 0 0 1])
+  ("cleanded" .
+   [1 0 0 0 0 0 0 0])
+  ("file" .
+   [0 0 0 1])
+  ("inplace" .
+   [3 0 0 0 0 0 0])
+  ("Recode" .
+   [0 0 0 0 0 1])
+  ("recode_missing_values" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("recodedData" .
+   [0 0 0 0 0 0 0 2 0 0 1])
+  ("recodedDatalist" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 1 0 0])
+  ("dataLabel" .
+   [1 0 0 0 0 0 0 0 0])
+  ("R2" .
+   [1 0])
+  ("R3" .
+   [1 0])
+  ("R4" .
+   [1 0])
+  ("R5" .
+   [1 0])
+  ("R6" .
+   [1 0])
+  ("analysisType" .
+   [0 0 0 0 0 0 0 0 0 1 0 0])
+  ("analy" .
+   [0 0 0 0 1])
+  ("analysisLevel" .
+   [0 0 0 0 0 0 0 0 0 1 1 0 0])
+  ("REFLE1" .
+   [1 0 0 0 0 0])
+  ("monokai-theme" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("options" .
+   [1 0 0 0 0 0 0])
+  ("meta" .
+   [1 0 0 0])
+  ("evil-scroll-page-up" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("jedi:goto-definition" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("Magit" .
+   [0 0 0 0 1])
+  ("gs" .
+   [1 0])
+  ("find-file" .
+   [1 0 0 0 0 0 0 0 0])
+  ("results_bt" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("df" .
+   [1 0])
+  ("move-to-column" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("evil-leader/set-key-for-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("org2blog/wp-post-buffer-as-page" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("evil-leader/set-key" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("require" .
+   [1 0 0 0 0 0 0])
+  ("hydra" .
+   [1 0 0 0 0])))

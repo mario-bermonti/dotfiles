@@ -15,13 +15,19 @@
   (normal-top-level-add-subdirs-to-load-path))
 ;;====================================
 
-;; This sets up the load path so that we can override it
-(package-initialize)
-;;====================================
+;; Set the ~/.emacs.d directory as the directory which is this file.
+(setq user-emacs-directory root-dir)
+(message user-emacs-directory)
+
+(setq user-init-file (concat (file-name-as-directory root-dir) "init.el") )
+(message user-init-file)
+
 
 ;;====================================
 ;; USE-PACKAGE
 ;;====================================
+;; This sets up the load path so that we can override it
+(package-initialize)
 (eval-when-compile
   (require 'use-package))
 (setq use-package-verbose t)

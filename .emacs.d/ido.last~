@@ -2,8 +2,12 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/Mary Moreno/Proyecto Diabetes - Moreno/" . "Scripts/")
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/Mary Moreno/" . "Proyecto Diabetes - Moreno/")
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/" . "Mary Moreno/")
+ ("/Users/MBP/Box Sync/PHSU/" . "Design and stats consultation/")
  ("/Users/MBP/Box Sync/Research/" . "blog/")
- ("/Users/MBP/Box Sync/" . "Research/")
+ ("/Users/MBP/Box Sync/" . "PHSU/")
  ("/Users/MBP/Box Sync/Research/blog/" . "Entrada 10/")
  ("/Users/MBP/Box Sync/Research/Consultation services/PHSU/Autoestudio APA/" . "APA_self-study_evaluation_system/")
  ("/Users/MBP/Research/Consultation services/Consultorías independientes/Leomarys/Versión nueva/" . "Datos/")
@@ -34,7 +38,7 @@
  ("/Users/MBP/Documents/Proyectos/" . "crear_hojas_trabajo_lectura/")
  ("/Users/MBP/Documents/" . "proyectos/")
  ("/Users/MBP/python_modules/" . "libraryext/")
- ("/Users/MBP/" . "programming_practice/")
+ ("/Users/MBP/" . "Box Sync/")
  ("/Users/MBTP/Desktop/" . "analisis palabras/")
  ("/Users/MBTP/" . "Desktop/")
  ("/Users/MBTP/Documents/Proyectos/" . "crear_hojas_trabajo_lectura/")
@@ -43,6 +47,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/MBP/Box Sync/PHSU/Design and stats consultation/Mary Moreno/Proyecto Diabetes - Moreno/Scripts/"
  "/Users/MBP/programming_practice/"
  "/Users/MBP/Box Sync/Research/blog/"
  "/Users/MBP/programming practice/"
@@ -92,11 +97,11 @@
  "/Users/MBTP/"
  "/Users/MBTP/Desktop/libraryext/"
  "/Users/MBTP/Downloads/settings/"
- "/Users/MBTP/.emacs.d/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "analysis_report_diabetes.org"
  "report_error_pythonorgmode.org"
  "blog_home.org"
  "sss.org"
@@ -106,11 +111,24 @@
  "Reference_cards.org"
  "Reference_cards.odt"
  "entry01_about.org"
- "entry10_files.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/Mary Moreno/Proyecto Diabetes - Moreno/Scripts/" (23825 15467 280044 251000) "analysis_report_diabetes.org" "analysis_report_diabetes.pdf" "analysis_report_diabetes.tex" "analysis_report_diabetes.toc" "analysis_report_diabetes.org.~2~" "analysis_report_diabetes_exp.html" "analysis_report_diabetes.org.~1~" "obipy-resources/" "analysis_report_diabetes.out" "analysis_report_diabetes.fdb_latexmk" ".DS_Store" "analysis_report_diabetes.log" "analysis_report_diabetes.aux" "analysis_report_diabetes.html" "analysis_report_diabetes.fls" "analysis_report_diabetes_exp.org" "../" "./")
+
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/Mary Moreno/Proyecto Diabetes - Moreno/" (23794 38727 508935 102000) "personal_notes.org" "Data/" "3. IRB Form 2 - Disertación Gilliam_Rev Feb27.docx" "Scripts/" "personal_notes.docx" "12955_2014_Article_176.pdf" "Results/" "3. IRB Form 2 - Disertación Gilliam_Rev Feb27.pdf" ".DS_Store" "Informe_revisión bases datos_3-6-2019.docx" "Revisión de literatura Jan 26, 2019.pdf" "../" "./")
+
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/Mary Moreno/" (23719 26885 422372 200000) "Proyectos estudiantes/" "Proyecto Diabetes - Moreno/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/Box Sync/PHSU/Design and stats consultation/" (23774 52760 653159 359000) "Mary Moreno/" "Eliut Rivera/" "Norka Polanco/" "María Garrido/" "PHSU_Letterhead_SchoolOfBehavioralBrainSciences.docx" "Alixida Ramos/" ".DS_Store" "Julio Jimenez/" "../" "./")
+
+ ("/Users/MBP/Box Sync/PHSU/" (23761 38913 407605 590000) "Autoestudio APA/" "Institutional Assessment (PERSONAL)/" "Administrative/" "Directorio.xlsx" "Design and stats consultation/" "Analysis support BIomedical Science/" ".DS_Store" "../" "./")
+
+ ("/Users/MBP/" (23840 52115 614231 582000) "programming_practice/" ".viminfo" ".bash_history" ".pyosf/" ".aspell.es.prepl" ".gitconfig" "Ponce Health Sciences University/" ".python_history" "Downloads/" "AndroidStudioProjects/" ".sqlanywhere16/" ".aspell.en.pws" ".dvdcss/" ".bash_profile" ".spss/" ".spacemacs" "Documents/" ".npm/" ".jupyter/" ".aspell.en.prepl" ".ipynb_checkpoints/" ".zoomus/" ".Trash/" "Dropbox/" ".gradle/" "Applications/" ".vimrc" "Movies/" ".ssh/" ".org-id-locations" ".idlerc/" ".python_history-11360.tmp" "package-lock.json" ".dropbox/" "Public/" "Google Drive/" ".bash_sessions/" "Sites/" ".cups/" ".android/" "Box Sync/" ".emacs.d/" ".python_history-02134.tmp" ".dotfiles/" ".python-environments/" "emacs/" ".oracle_jre_usage/" ".lesshst" ".psychopy2/" "programming_projects/" ".matplotlib/" "Library/" "Desktop/" "OneDrive - Ponce Health Sciences University/" ".ipython/" ".psychopy3/" "Pictures/" ".local/" "OneDrive/" "org/" ".python_history-00771.tmp" ".pandoc/" ".DS_Store" ".vim/" ".python_history-14139.tmp" ".aspell.es.pws" "Music/" "../" "./")
+
+ ("/Users/MBP/programming_projects/pyspell/pyspell/" (23839 46616 528367 958000) ".git/" "settings.py" ".gitignore" "results/" "Stimuli/" "participants session progress.json" "__pycache__/" "__init__.py" "pyspell.py" ".DS_Store" "LICENSE.md" "../" "./")
+
  ("/Users/MBP/programming_practice/" (23820 8917 946530 274000) "results.log" "results.aux" "report_error_pythonorgmode.tex" "t.py" "testapa.toc" "testlines.pdf" "fig8.png" "test.tex" "testapa.tex" "backups/" "data/" "te.log" "test_ideas.org" "te.aux" "testingapa6.tex" "a.png" "testanalysis.tex" "testapa.out" "c.png" "testtable.log" "b.png" "testtable.aux" "useapa.log" "testlines.out" "test.org" "testanalysis.pdf" "report_error_pythonorgmode.org" "obipy-resources/" "sss" "db.png" "_region_.log" "fig9.svg" "fig8.svg" "testlines.tex" "test.html" "testapa.pdf" "test.pdf" ".drag.html.swp" "da.png" "testanalysis.org" "python_practice/" "report_error_pythonorgmode.pdf" "todo/" "data.csv" "te.tex" "te.toc" "results.out" "texput.log" "testingapa6.log" "testt.org" "newtest.docx" "sss.org" "testtable.tex" "testtable.toc" "results.tex" "testing.docx" "results.toc" "te.out" "prv_testapa.log" ".move.html.swp" "testapa.aux" "test.prv/" "sss.pdf" "testapa.log" "web/" "testt.pdf" "testtable.out" "testt.odt" "_region_.tex" "te.html" "testlines.log" "testlines.aux" "testt.tex" "testt.docx" "sss.tex" "fig.svg" "results.pdf" ".DS_Store" "sss.html" "testtable.pdf" "testanalysis.py" "useapa.tex" "test.docx" "te.pdf" "testapa.dvi" "../" "./")
 
  ("/Users/MBP/Box Sync/Research/blog/" (23722 49169 977616 50000) ".git/" "entry04_intro_python.org" "blog_home.org" "entry05_variables.org" "entry11_extract_content.org.txt" "_config.yml" "stimuli.xlsx" "entry08_functions.org" "entry03_using this site.org" "entry01_about.html" "docs/" "entry10_files.org" "entry02_why_coding.org" "Entrada 10/" "planning_experimental_posts.org.txt" "Guion secuencia multimedia_Mario Bermonti.docx" "entry01_about.tex" "entry01_about.pdf" ".DS_Store" "index.html" "entry01_about.org" "entry06_lists.org" "entry07_iteration.org" "entry09_libraries.org" "../" "./")
@@ -118,8 +136,6 @@
  ("/Users/MBP/Box Sync/Research/" (23811 61266 931316 383000) "Funding/" "Revisión manuscritos para revistas/" "Consultation services/" "desktop (2014_01_07 02_16_51 UTC) (2015_12_10 01_06_09 UTC).ini" "Ayudantías/" "Tesina BA-UPRM.docx" "Promo.pdf" "Certificados para investigacion/" "Doble excepcionalidad_2019.pdf" "Recursos/" "Becas/" "Ayuda a otros/" "Presentations/" "blog/" "Talleres/" "Publications/" "Important Lit/" "Mentoria/" "Curriculum Vitae/" ".DS_Store" "Thumbs (2014_01_07 02_16_51 UTC) (2015_12_10 01_06_09 UTC).db" "Mendeley_lib/" "Research Projects/" "../" "./")
 
  ("/Users/MBP/Box Sync/" (23815 44524 243952 388000) "comienzo.docx" "Programacion/" "firma digital MBP.jpg" "Proyectos Intervención neurocognitiva/" "Progreso phd.docx" "PHSU/" "costo de vida.xlsx" "saludoalsol/" "Dragon profiles/" "Plan de trabajo (horas semanales).xlsx" "Literature/" ".DS_Store" "Coleccion Edgar Allan Poe-E/" "Research/" "../" "./")
-
- ("/Users/MBP/" (23818 57600 731169 60000) "programming_practice/" ".viminfo" ".bash_history" ".pyosf/" ".aspell.es.prepl" ".gitconfig" "Ponce Health Sciences University/" ".python_history" "Downloads/" "AndroidStudioProjects/" ".sqlanywhere16/" ".aspell.en.pws" ".dvdcss/" ".bash_profile" ".spss/" "Documents/" ".npm/" ".jupyter/" ".aspell.en.prepl" ".ipynb_checkpoints/" ".zoomus/" "spacemacs/" ".Trash/" "Dropbox/" ".gradle/" "Applications/" ".vimrc" "Movies/" ".ssh/" ".org-id-locations" ".idlerc/" ".python_history-11360.tmp" "package-lock.json" ".dropbox/" "Public/" "Google Drive/" ".bash_sessions/" "Sites/" ".cups/" ".android/" "Box Sync/" ".emacs.d/" ".python_history-02134.tmp" ".dotfiles/" ".python-environments/" ".oracle_jre_usage/" ".lesshst" ".psychopy2/" "programming_projects/" ".matplotlib/" "Library/" "Desktop/" "OneDrive - Ponce Health Sciences University/" ".ipython/" ".psychopy3/" "Pictures/" ".local/" "OneDrive/" "org/" ".python_history-00771.tmp" ".pandoc/" ".DS_Store" ".vim/" ".python_history-14139.tmp" ".aspell.es.pws" "Music/" "Research/" "../" "./")
 
  ("/Users/MBP/programming practice/" (23789 50220 118943 637000) "results.log" "results.aux" "report_error_pythonorgmode.tex" "t.py" "testapa.toc" "testlines.pdf" "fig8.png" "test.tex" "testapa.tex" "te.log" "te.aux" "testingapa6.tex" "a.png" "testanalysis.tex" "testapa.out" "c.png" "testtable.log" "b.png" "testtable.aux" "useapa.log" "testlines.out" "test.org" "testanalysis.pdf" "report_error_pythonorgmode.org" "obipy-resources/" "sss" "db.png" "_region_.log" "fig9.svg" "fig8.svg" "testlines.tex" "testapa.pdf" "test.pdf" ".drag.html.swp" "da.png" "testanalysis.org" "python_practice/" "report_error_pythonorgmode.pdf" "data.csv" "te.tex" "te.toc" "results.out" "texput.log" "testingapa6.log" "testt.org" "newtest.docx" "sss.org" "testtable.tex" "testtable.toc" "results.tex" "testing.docx" "results.toc" "te.out" "prv_testapa.log" ".move.html.swp" "testapa.aux" "test.prv/" "sss.pdf" "testapa.log" "web/" "testt.pdf" "testtable.out" "testt.odt" "_region_.tex" "te.html" "testlines.log" "testlines.aux" "testt.tex" "testt.docx" "sss.tex" "fig.svg" "results.pdf" ".DS_Store" "sss.html" "testtable.pdf" "testanalysis.py" "useapa.tex" "test.docx" "te.pdf" "testapa.dvi" "../" "./")
 
@@ -298,12 +314,6 @@
  ("/Users/MBTP/Downloads/" (22255 26000 0 0) "~$rph Asgnt2 Turkish_NabilaFonseca.docx" "~$lyaneth Laureano Vidal [english].docx" "written_sa_constraints_out.txt" "vrp-test transc99.wav" "VirtualBox-5.0.14-105127-OSX.dmg" "VirtualBox-5.0.12-104815-OSX.dmg" "Story Syntax Counts_final.xlsx" "sreb1.10.1630.dmg" "solicitud degi.docx" "Skype_7.20.378.dmg" "Silverlight.dmg" "Silverlight-3.dmg" "Silverlight-2.dmg" "settings/" "screen_recorder_setup.exe" "Scanned from a Xerox Multifunction Device.pdf" "Recibo" "rcpt10080313744296.pdf" "Razer_Synapse_Mac_Driver_v1.45.1.dmg" "quinto-congreso-est-inv-graduada-solicitud_Mario Bermonti.docx" "quinto-congreso-est-inv-graduada-solicitud.docx" "quinto-congreso-est-inv-graduada-solicitud (1).docx" "Psic 3002H-enero 2016.pdf" "prueba (Autosaved).xlsx" "Oracle_VM_VirtualBox_Extension_Pack-5.0.12-104815.vbox-extpack" "mwords.tar.Z" "mwords/" "Milyaneth Laureano Vidal [english].docx" "Microsoft_Office_2016_Installer.pkg" "Materiales hoja de trabajo/" "Materiales copy.docx" "mario bermonti perez cong enmienda-0001.pdf" "mario bermonti perez cong enmienda-0001-1.pdf" "lpmacosx.zip" "lpmacosx/" "jre-7u55-macosx-x64 (1).dmg" "JavaForOSX2014-001.dmg" "javaforosx.dmg" "Jabra Suite for Mac_2.5.dmg" "Invitacion participantes psicologos_M Bermonti.pdf" "Installing Jabra Suite for Mac.pdf" "installgoogledrive.dmg" "googlechrome.dmg" "Gitter-1.162.dmg" "GitHub Desktop 216.zip" "Firefox 42.0.dmg" "emacs-settings.zip" "DropboxInstaller.dmg" "deluge-1.3.12-osx-x64-inst.dmg" "deluge-1.3.11-osx-x86.tbz2" "Deluge 2.app/" "Curriculum Vitae_Mario Bermonti_Ingles (2015_12_10 01_06_09 UTC).docx" "Cipshi_Solicitud_Modificacion.doc" "CAS2 Chapter 3_February 25, 2016_REV MBP.doc" "Carta CIPSHI 1 de mayo 2015.docx" "Box Sync Installer.dmg" "blackhole.jpg" "Beca viaje DEGI Mario Bermonti.pdf" "b-flac-converter-mac-custom-cnet.dmg" "Advanced Search_ EBSCOhost_files/" "Advanced Search_ EBSCOhost.html" "AdobeReader_dc_en_a_install.dmg" "AdobeFlashPlayer_19_a_install.dmg" ".localized" ".DS_Store" "../" "./")
 
  ("/Users/MBTP/Desktop/analisis palabras/libraryext/" (22254 62715 0 0) "words.txt" "test.py" "iofiles.py~" "iofiles.pyc" "iofiles.py" "cd_dir.bat" "__pycache__/" "__init__.pyc" "__init__.py" ".gitignore" ".gitattributes" ".git/" ".DS_Store" "../" "./")
-
- ("/Volumes/MBP/Linguistics Lab/randomization_spreadsheets/" (22248 7620 0 0) "testing.txt" "._A1_1.txt~" "A1_1.txt~" "._CB2_18.txt" "CB2_18.txt" "._CB2_17.txt" "CB2_17.txt" "._CB2_16.txt" "CB2_16.txt" "._C1_9.txt" "C1_9.txt" "._C1_8.txt" "C1_8.txt" "._C1_7.txt" "C1_7.txt" "._B2_15.txt" "B2_15.txt" "._B2_14.txt" "B2_14.txt" "._B2_13.txt" "B2_13.txt" "._B1_6.txt" "B1_6.txt" "._B1_5.txt" "B1_5.txt" "._B1_4.txt" "B1_4.txt" "._A2_12.txt" "A2_12.txt" "._A2_11.txt" "A2_11.txt" "._A2_10.txt" "A2_10.txt" "._A1_3.txt" "A1_3.txt" "._A1_2.txt" "A1_2.txt" "A1_1.txt" "._.DS_Store" ".DS_Store" "../" "./")
-
- ("/Users/MBTP/Documents/Proyectos/" (22239 22945 0 0) "Word-analisis/" "Intervencion/" "crear_hojas_trabajo_lectura/" ".DS_Store" "../" "./")
-
- ("/Users/MBTP/Documents/" (22240 55967 0 0) "Windows 8.1 with Update (multiple editions) (x64) - DVD (English)/" "Universidad/" "Tami/" "SPSSInc/" "Shared_code/" "Recibos/" "Psicología - Papers y recursos/" "Proyectos/" "Programas/" "programacion/" "Préstamos/" "pendrive/" "Libros/" "Leer/" "Investigación/" "Info caso Zoraida Pérez.docx" "EVITA/" "Estiramiento/" "Escuela Graduada/" "emacs config/" "Curriculum Vitae/" ".localized" ".DS_Store" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----
