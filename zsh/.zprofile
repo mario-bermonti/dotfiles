@@ -30,6 +30,9 @@ alias gotoapa="cd ~/programming_projects/APA_self-study_evaluation_system"
 
 # config tkinter to work with pyenv's pythons
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
+export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
+export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
 
 # pyenv
 #if command -v pyenv 1>/dev/null 2>&1; then
