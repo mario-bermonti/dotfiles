@@ -14,8 +14,8 @@ export PYTHON_CONFIGURE_OPTS="--with-tcltk-includes='-I/usr/local/opt/tcl-tk/inc
 
 # install pyenv
 brew install pyenv
-pyenv install 3.8.0
-pyenv global 3.8.0
+pyenv install 3.7.0
+pyenv global 3.7.0
 pyenv version
 echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zprofile
 source ~/.zprofile
