@@ -1,11 +1,16 @@
 # install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# install and config tkinter so it's used by pyenv
-echo 'export PATH="/usr/local/opt/tcl-tk/bin:$PATH"' >> ~/.zshrc
+# install and config tcl-tk so that tkinter can be used by pyenv
+export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+source ~/.zprofile
+echo "Checking tck-tk is in Path"
+echo $PATH | grep --color=auto tcl-tk
 export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
 export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
 export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
+# the version may need to be updated in the future with new releases of tcl-tk
+export PYTHON_CONFIGURE_OPTS="--with-tcltk-includes='-I/usr/local/opt/tcl-tk/include' --with-tcltk-libs='-L/usr/local/opt/tcl-tk/lib -ltcl8.6 -ltk8.6'"
 
 # install pyenv
 brew install pyenv
