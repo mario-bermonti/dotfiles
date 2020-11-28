@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: pyd
+# key: pyd
+# --
+
+\"\"\"$1
+
+Parameters
+----------
+${2:name} : ${3:type}
+    ${4:Description.}
+
+Returns
+-------
+${5:type}
+    ${6:Description}
+"""

@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: pyclass
+# key: pyc
+# --
+
+class ${1:ClassName}(${2:object}):
+    \"\"\"$3
+    \"\"\"
+
+    def __init__(self$4):
+        ${5:pass}
+

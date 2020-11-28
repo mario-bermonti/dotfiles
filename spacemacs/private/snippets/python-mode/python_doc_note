@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: python-doc-note
+# key: pydn
+# --
+
+Note
+----
+$0

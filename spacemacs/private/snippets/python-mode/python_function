@@ -3,17 +3,19 @@
 # key: pyf
 # --
 
-def ${1:function_name}($2, *args, **kwargs):
+def ${1:function_name}(${2:param}):
     \"\"\"$3
 
     Parameters
     ----------
-    ${4:name}: ${5:type}; ${6: Description}
-
+    ${4:name} : ${5:type}
+        ${6: Description.}
 
     Returns
     -------
-    ${7:name}: ${8:type}; ${9: Description}
+    ${7:type}
+        ${8: Description}
     """
-$0
+
+    $0
 
