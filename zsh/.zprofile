@@ -34,11 +34,6 @@ export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
 export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
 export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
 
-# pyenv
-#if command -v pyenv 1>/dev/null 2>&1; then
-#  eval "$(pyenv init -)"
-#fi
-
 #######################
 # Ruby
 #######################
@@ -48,9 +43,6 @@ export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH" 
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
