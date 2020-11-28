@@ -409,14 +409,22 @@ you should place your code here."
 ;;====================================
 ;; Save backups in a special directory
 (setq backup-directory-alist '(("." . "~/.emacs.d/private/backups")))
-;; (setq backup-directory-alist '(("." . "~/.spacemacs_backups/")))
 
-;; keep detailed copies
+;; backups detailed copies
 ;;============================================
 (setq delete-old-versions nil)
 (setq version-control t)
 (setq vc-make-backup-files t)
 (setq auto-save-file-name-transforms '((".*" "~/.emacs.d/private/auto-save-list/" t)))
+
+;; (setq auto-save-file-name-transforms
+;;      '((".*" (expand-file-name
+;;               (concat user-emacs-directory "private/auto-save")) t)))
+
+         ;; "~/.emacs.d/private/auto-save-list/" t)))
+;; (setq auto-save-file-name-transforms
+;;       (cons `(,(car (car auto-save-file-name-transforms)) 
+;;               ,(concat BACKDIR "\\2") t) auto-save-file-name-transforms))
 ;; (setq auto-save-file-name-transforms '((".*" "~/.spacemacs_backups/auto-save-list/" t)))
 ;;====================================
 
