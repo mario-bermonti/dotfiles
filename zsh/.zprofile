@@ -12,16 +12,6 @@ alias spacemacs="ln -fsv ~/.dotfiles/spacemacs/.emacs.d/ ~/.emacs.d; ln -fsv ~/.
 #######################
 # research projects
 alias gotodiss="cd ~/Box\ Sync/Research/Research\ Projects/Disertación\ \(DeMo\)"
-alias gotosuicide="cd ~/Box\ Sync/PHSU/Design\ and\ stats\ consultation/Eliut\ Rivera/Suicide\ and\ Emotional\ Regulation\ Project"
-alias gotoensc="cd ~/Ponce\ Health\ Sciences\ University/Evidence\ computer-assisted\ reading\ interventions\ -\ Documentos"
-alias gotoensc="cd ~/Ponce\ Health\ Sciences\ University/Evidence\ computer-assisted\ reading\ interventions\ -\ Documentos"
-
-# programming projects
-alias gotopythonpractice="cd ~/programming_practice/python_practice/"
-alias gotopyspell="cd ~/programming_projects/pyspell/pyspell"
-alias gotoint="cd ~/programming_projects/Intervencion"
-alias gotoapa="cd ~/programming_projects/APA_self-study_evaluation_system"
-
 
 #######################
 # python
