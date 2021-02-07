@@ -20,6 +20,10 @@ alias gotodiss="cd ~/Box\ Sync/Research/Research\ Projects/Disertación\ \(DeMo
 #######################
 # export PYTHONPATH="~/Library/Python/3.7/bin"
 
+# aliases for making things easier
+alias pytestp="python -m pytest"
+
+
 # config tkinter to work with pyenv's pythons
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
