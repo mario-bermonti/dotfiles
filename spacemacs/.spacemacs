@@ -40,7 +40,7 @@ values."
      html
      (python :variables
              python-enable-yapf-format-on-save t
-             python-test-runner '(pytest nose))
+             python-test-runner 'pytest)
      helm
      auto-completion
      better-defaults
