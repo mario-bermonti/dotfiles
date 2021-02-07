@@ -1,14 +1,16 @@
 #######################
-# aliases #
+# Emacs #
 #######################
+
 # syslink emacs dir and open in it
 alias emacsv="ln -fsv ~/.dotfiles/emacs/emacs-config/.emacs.d/ ~/.emacs.d; rm ~/.spacemacs"
 
 # syslink spacemacs dir and open in it
 alias spacemacs="ln -fsv ~/.dotfiles/spacemacs/.emacs.d/ ~/.emacs.d; ln -fsv ~/.dotfiles/spacemacs/.spacemacs ~/"
 
+
 #######################
-# Commonly visited dir
+# Aliases for commonly visited dir
 #######################
 # research projects
 alias gotodiss="cd ~/Box\ Sync/Research/Research\ Projects/Disertación\ \(DeMo\)"
