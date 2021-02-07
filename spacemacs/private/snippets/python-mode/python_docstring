@@ -12,6 +12,6 @@ ${2:name} : ${3:type}
 
 Returns
 -------
-${5:type}
-    ${6:Description}
+${5:name} : ${6:type}
+${7: description}
 """
