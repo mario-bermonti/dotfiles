@@ -39,7 +39,7 @@ fi
 #######################
 export PATH="$HOME/.poetry/bin:$PATH"
 
-# make running python through poetry easier
+# aliases for make running python through poetry easier
 alias pythonp="poetry run python"
 alias invokep="poetry run invoke"
 
