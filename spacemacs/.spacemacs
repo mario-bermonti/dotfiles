@@ -474,7 +474,7 @@ you should place your code here."
 
 ;; Better size for latex previews
 ;;====================================
-;;(setq org-format-latex-options (plist-put org-format-latex-options :scale 2.0))
+;; (setq org-format-latex-options (plist-put org-format-latex-options :scale 2.0))
 ;;====================================
 
 ;; Remove numbering from headings
