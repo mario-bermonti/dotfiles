@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: python method
+# key: pym
+# --
+
+def ${1:function_name}(self):
+\"\"\"$3
+
+Parameters
+----------
+${4:name} : ${5:type}
+${6:description.}
+
+Returns
+-------
+${7:name} : ${8:type}
+${9: description}
+"""
+
+$0
