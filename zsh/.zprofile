@@ -26,8 +26,12 @@ export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
 export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
 export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
 
+export PATH="$HOME/.pyenv/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init -)"
+    if [ -z "$PYENV_INITIALIZED" ]; then
+        eval "$(pyenv init -)"
+        export PYENV_INITIALIZED=1
+    fi
 fi
 
 #######################
