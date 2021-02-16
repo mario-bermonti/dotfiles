@@ -21,7 +21,7 @@ alias gotodiss="cd ~/Box\ Sync/Research/Research\ Projects/Disertación\ \(DeMo
 # export PYTHONPATH="~/Library/Python/3.7/bin"
 
 # aliases for making things easier
-alias pytestp="python -m pytest"
+alias pythontest="python -m pytest"
 
 
 # config tkinter to work with pyenv's pythons
@@ -46,6 +46,7 @@ export PATH="$HOME/.poetry/bin:$PATH"
 # aliases for make running python through poetry easier
 alias pythonp="poetry run python"
 alias invokep="poetry run invoke"
+alias pytestp="poetry run pytest"
 
 
 #######################
