@@ -44,9 +44,19 @@ fi
 export PATH="$HOME/.poetry/bin:$PATH"
 
 # aliases for make running python through poetry easier
-alias pythonp="poetry run python"
-alias invokep="poetry run invoke"
-alias pytestp="poetry run pytest"
+alias prp="poetry run python"
+alias pri="poetry run invoke"
+alias prpy="poetry run pytest"
+alias pit="poetry run invoke tests"
+alias pil="poetry run invoke lint"
+alias pic="poetry run invoke coverage"
+alias pif="poetry run invoke format"
+alias pim="poetry run invoke mypy"
+alias pih="poetry run invoke hooks"
+alias pid="poetry run invoke docs"
+alias pidt="poetry run invoke dev-tasks"
+alias piv="poetry run invoke version"
+alias picl="poetry run invoke clean"
 
 
 #######################
