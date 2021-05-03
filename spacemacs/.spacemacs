@@ -581,6 +581,7 @@ static char *gnus-pointer[] = {
  '(nrepl-message-colors
    (quote
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
+ '(org-src-window-setup (quote split-window-below))
  '(org-todo-keywords
    (quote
     ((type "TODO(t!)" "IN PROGRESS(i!)" "DELEGATED(s@)" "REVIEW(v!)" "PENDING OTHER TASKS(p@)" "|" "Optional(o@)" "DONE(d!)"))))
