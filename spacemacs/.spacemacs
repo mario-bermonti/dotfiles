@@ -52,8 +52,8 @@ values."
      (org :variables
           org-enable-github-support t
           org-enable-reveal-js-support t
-          org-babel-python-command "python3")
-
+          org-babel-python-command "python3"
+     )
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom
