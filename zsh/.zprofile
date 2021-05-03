@@ -13,7 +13,6 @@ alias spacemacs="ln -fsv ~/.dotfiles/spacemacs/.emacs.d/ ~/.emacs.d; ln -fsv ~/.
 # Aliases for commonly visited dir
 #######################
 # research projects
-alias gotodiss="cd ~/Box\ Sync/Research/Research\ Projects/Disertación\ \(DeMo\)"
 
 #######################
 # python
