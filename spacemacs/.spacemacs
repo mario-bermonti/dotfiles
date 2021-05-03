@@ -466,10 +466,6 @@ you should place your code here."
 (setq org-export-with-section-numbers nil)
 ;;====================================
 
-;; Scimax functionality
-;; ===================================
-;; (require 'scimax-org-babel-ipython-upstream)
-;;====================================
 
 )  ;; This closes the function
 
