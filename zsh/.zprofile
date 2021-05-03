@@ -12,6 +12,7 @@ alias spacemacs="ln -fsv ~/.dotfiles/spacemacs/.emacs.d/ ~/.emacs.d; ln -fsv ~/.
 #######################
 # Aliases for commonly visited dir
 #######################
+
 # research projects
 
 #######################
@@ -65,6 +66,4 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
-export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH" 
-
-
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
