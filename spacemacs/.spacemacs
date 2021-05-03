@@ -467,6 +467,12 @@ you should place your code here."
 ;;====================================
 
 
+;;============================================
+;; Github config
+;;============================================
+;; Set the default Execution mode to jar
+(setq auth-sources '("~/.authinfo"))
+
 )  ;; This closes the function
 
 
