@@ -410,16 +410,6 @@ you should place your code here."
 (setq version-control t)
 (setq vc-make-backup-files t)
 (setq auto-save-file-name-transforms '((".*" "~/.emacs.d/private/auto-save-list/" t)))
-
-;; (setq auto-save-file-name-transforms
-;;      '((".*" (expand-file-name
-;;               (concat user-emacs-directory "private/auto-save")) t)))
-
-         ;; "~/.emacs.d/private/auto-save-list/" t)))
-;; (setq auto-save-file-name-transforms
-;;       (cons `(,(car (car auto-save-file-name-transforms)) 
-;;               ,(concat BACKDIR "\\2") t) auto-save-file-name-transforms))
-;; (setq auto-save-file-name-transforms '((".*" "~/.spacemacs_backups/auto-save-list/" t)))
 ;;====================================
 
 ;;============================================
