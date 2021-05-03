@@ -39,8 +39,10 @@ values."
      javascript
      html
      (python :variables
-             python-enable-yapf-format-on-save t
              python-test-runner 'pytest)
+             python-formatter 'black
+             python-fill-column 99
+             )
      helm
      auto-completion
      better-defaults
