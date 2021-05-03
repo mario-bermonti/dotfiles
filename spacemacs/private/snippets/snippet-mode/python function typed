@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: python function typed
+# key: pyft
+# --
+
+def ${1:function_name}(${2:param}: ${3:type}) -> ${4:return_type}:
+\"\"\"$5
+
+Parameters
+----------
+${6:name} : ${7:type}
+${8: description.}
+
+Returns
+-------
+${9:name} : ${10:type}
+${11: description}
+"""
+
+$0
