@@ -39,7 +39,7 @@ values."
      javascript
      html
      (python :variables
-             python-test-runner 'pytest)
+             python-test-runner 'pytest
              python-formatter 'black
              python-fill-column 99
              )
