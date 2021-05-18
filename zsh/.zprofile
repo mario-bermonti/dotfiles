@@ -3,10 +3,10 @@
 #######################
 
 # syslink emacs dir and open in it
-alias emacsv="ln -fsv ~/.dotfiles/emacs/emacs-config/.emacs.d/ ~/.emacs.d; rm ~/.spacemacs"
+alias emacsv="ln -fsv ~/programming_projects/dotfiles/emacs/emacs-config/.emacs.d/ ~/.emacs.d; rm ~/.spacemacs"
 
 # syslink spacemacs dir and open in it
-alias spacemacs="ln -fsv ~/.dotfiles/spacemacs/.emacs.d/ ~/.emacs.d; ln -fsv ~/.dotfiles/spacemacs/.spacemacs ~/"
+alias spacemacs="ln -fsv ~/programming_projects/dotfiles/spacemacs/.emacs.d/ ~/.emacs.d; ln -fsv ~/.dotfiles/spacemacs/.spacemacs ~/"
 
 
 #######################
