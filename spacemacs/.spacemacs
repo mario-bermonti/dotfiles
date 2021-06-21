@@ -58,7 +58,9 @@ values."
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom
-             shell-default-shell 'shell)
+             shell-default-shell 'vterm
+             shell-default-term-shell "/bin/zsh"
+     )
      spell-checking
      syntax-checking
      version-control
