@@ -438,7 +438,7 @@ you should place your code here."
 ;;============================================
 (with-eval-after-load 'org
   (defun my-org-confirm-babel-evaluate (lang body)
-    (not (member lang '("python" "ipython"))))
+    (not (member lang '("python"))))
 
   (setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
   )
@@ -448,7 +448,7 @@ you should place your code here."
 ;;====================================
 (with-eval-after-load 'org
   (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
-  (add-to-list 'org-latex-minted-langs '(ipython "python"))
+  (add-to-list 'org-latex-minted-langs '("python"))
   )
 ;;====================================
 
@@ -458,7 +458,8 @@ you should place your code here."
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((python . t)
-     (ipython . t)))
+     ;; (ein . t)))
+     ))
   )
 ;;====================================
 
