@@ -42,7 +42,7 @@ values."
      (python :variables
              python-test-runner 'pytest
              python-formatter 'black
-             python-fill-column 99
+             python-fill-column 88
              )
      helm
      auto-completion
