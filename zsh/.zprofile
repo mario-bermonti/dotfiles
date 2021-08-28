@@ -58,6 +58,8 @@ alias pidt="poetry run invoke dev-tasks"
 alias piv="poetry run invoke version"
 alias picl="poetry run invoke clean"
 
+# cookicutter template
+alias pibc="poetry run cookiecutter --no-input --overwrite-if-exists -o ~/Downloads/ ."
 
 #######################
 # Ruby
