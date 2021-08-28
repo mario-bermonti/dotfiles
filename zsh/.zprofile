@@ -30,13 +30,19 @@ export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
 export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
 export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-    if [ -z "$PYENV_INITIALIZED" ]; then
-        eval "$(pyenv init -)"
-        export PYENV_INITIALIZED=1
-    fi
-fi
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+################################################
+# # old config                                 #
+# # if command -v pyenv 1>/dev/null 2>&1; then #
+# #     if [ -z "$PYENV_INITIALIZED" ]; then   #
+# #         eval "$(pyenv init -)"             #
+# #         export PYENV_INITIALIZED=1         #
+# #     fi                                     #
+# # fi                                         #
+################################################
 
 #######################
 # poetry
