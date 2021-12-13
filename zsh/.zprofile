@@ -47,7 +47,7 @@ eval "$(pyenv init --path)"
 #######################
 # poetry
 #######################
-export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="/Users/MBP/.local/bin:$PATH"
 
 # aliases for running python through poetry easier
 alias prp="poetry run python"
