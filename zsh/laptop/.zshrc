@@ -102,9 +102,3 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#########
-# pyenv #
-#########
-
-# enable pyenv
-eval "$(pyenv init -)"
