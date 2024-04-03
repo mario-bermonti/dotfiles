@@ -73,7 +73,8 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
   dotspacemacs-additional-packages '(
-                                     ;; ob-ipython
+                                     ;; jupyter
+                                     ;; ein
                                      kivy-mode
                                      )
    ;; A list of packages that cannot be updated.
@@ -423,7 +424,7 @@ you should place your code here."
 ;;============================================
 ;; Python
 ;;============================================
-(setq python-shell-interpreter "ipython")
+;; (setq python-shell-interpreter "python3")
 ;; (setq python-shell-interpreter-args "-i")
 
 ;;============================================
@@ -460,7 +461,8 @@ you should place your code here."
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((python . t)
-     ;; (ein . t)))
+     ;; (jupyter . t)
+     ;; (ein . t)
      ))
   )
 ;;====================================
