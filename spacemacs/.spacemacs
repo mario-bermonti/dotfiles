@@ -66,8 +66,20 @@ values."
      version-control
      themes-megapack
      pandoc
-     )
-   )
+     ;; (ipython-notebook :variables ein-backend 'jupyter)
+     ;; (osx :variables
+     ;;      osx-command-as       'control
+     ;;      osx-option-as        'control
+     ;;      osx-control-as       'control
+     ;;      osx-function-as      nil
+     ;;      osx-right-command-as 'left
+     ;;      osx-right-option-as  'left
+     ;;      osx-right-control-as 'left
+     ;;      osx-swap-option-and-command nil
+     ;; )
+     restructuredtext
+    )
+  )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
