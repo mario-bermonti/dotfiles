@@ -18,17 +18,24 @@ alias spacemacs="ln -fsv ~/programming_projects/dotfiles/spacemacs/.emacs.d/ ~/;
 #######################
 # python
 #######################
+
 # export PYTHONPATH="~/Library/Python/3.7/bin"
+
+# Stop python from quitting unexpectedly
+#export DYLD_FALLBACK_LIBRARY_PATH=//usr/local/opt/openssl/lib:$DYLD_LIBRARY_PATH
 
 # aliases for making things easier
 alias pythontest="python -m pytest"
 
 
+# pyenv
 # config tkinter to work with pyenv's pythons
-export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
-export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
-export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
+# export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+
+
+# export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
+# export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
+# export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -71,7 +78,11 @@ alias pibc="poetry run cookiecutter --no-input --overwrite-if-exists -o ~/Downlo
 # Ruby
 #######################
 export PATH="/usr/local/opt/ruby/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/ruby/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include"
-export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
-export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+# export LDFLAGS="-L/usr/local/opt/ruby/lib"
+# export CPPFLAGS="-I/usr/local/opt/ruby/include"
+# export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+# export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+# cocoapods
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
+export PATH="/Users/MBP/.gem/ruby/3.1.0/bin:$PATH"
