@@ -108,3 +108,14 @@ source $ZSH/oh-my-zsh.sh
 
 # enable pyenv
 eval "$(pyenv init -)"
+
+
+# dart
+## flutter
+ export PATH="/Users/MBP/coding/tools/flutter_old/bin:$PATH"
+#export PATH="/Users/MBP/coding/tools/flutter:$PATH"
+# export PATH="$PATH:/Users/MBP/Library/CloudStorage/OneDrive-Personal/coding/tools/flutter/bin"
+
+# flutterfire
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
