@@ -23,13 +23,14 @@ ZSH_THEME="robbyrussell"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+# export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -44,9 +45,8 @@ ZSH_THEME="robbyrussell"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -72,6 +72,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
          macos
+         #poetry
         )
 
 source $ZSH/oh-my-zsh.sh
@@ -102,6 +103,37 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# aliases for running python through poetry easier
+#alias prp="poetry run python"
+#alias pri="poetry run invoke"
+#alias prpy="poetry run pytest"
+#alias pit="poetry run invoke tests"
+#alias pil="poetry run invoke lint"
+#alias pic="poetry run invoke coverage"
+#alias pif="poetry run invoke format"
+#alias pim="poetry run invoke mypy"
+#alias pih="poetry run invoke hooks"
+#alias pid="poetry run invoke docs"
+#alias pidt="poetry run invoke dev-tasks"
+#alias piv="poetry run invoke version"
+#alias picl="poetry run invoke clean"
 
-# dart and flutter
-export PATH="/Users/mbp/coding/flutter/bin:$PATH"
+# cookicutter template
+#alias pibc="poetry run cookiecutter --no-input --overwrite-if-exists -o ~/Downloads/ ."
+
+#########
+# pyenv #
+#########
+
+# enable pyenv
+#eval "$(pyenv init -)"
+
+
+# dart
+## flutter
+export PATH="/Users/MBP/coding/tools/flutter/bin:$PATH"
+
+# flutterfire
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+export PATH="/opt/homebrew/bin:$PATH"
