@@ -72,7 +72,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
          macos
-         poetry
+        #  poetry
         )
 
 source $ZSH/oh-my-zsh.sh
@@ -108,15 +108,22 @@ source $ZSH/oh-my-zsh.sh
 #########
 
 # enable pyenv
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 
 
-# dart
-## flutter
- export PATH="/Users/MBP/coding/tools/flutter_old/bin:$PATH"
-#export PATH="/Users/MBP/coding/tools/flutter:$PATH"
-# export PATH="$PATH:/Users/MBP/Library/CloudStorage/OneDrive-Personal/coding/tools/flutter/bin"
+# dart & flutter
+################
+export PATH="/Users/MBP/coding/tools/flutter/bin:$PATH"
 
 # flutterfire
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+# cocoapods
+# export PATH=$HOME/.gem/bin:$PATH
+
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/MBP/.dart-cli-completion/zsh-config.zsh ]] && . /Users/MBP/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
 
